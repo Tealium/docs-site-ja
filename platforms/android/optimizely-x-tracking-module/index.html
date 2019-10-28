@@ -60,6 +60,16 @@ var utag_data = {
       
     </ul>
     
+    <div class="db dib-ns pl3"><form id="site-search-form" action="" role="search">
+  <fieldset class="bn ma0 pa0">
+    <label class="clip" for="search-input">Search</label>
+    <input type="search" id="search-input" class="needs-js bg-left bn f5 input-reset lh-solid mt3 mt0-ns pl4 pv2 w5 white"
+           placeholder="ドキュメントの検索" name="search-input" value=""
+           style="background: transparent url('/images/icons/icon-search-white.png') no-repeat 2px 10px /16px 16px;">
+  </fieldset>
+</form>
+</div>
+    
   </div>
 
 
@@ -210,7 +220,7 @@ var utag_data = {
               <li><a href="#maven%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab">Mavenインストール</a></li>
               <li><a href="#%e5%88%9d%e6%9c%9f%e5%8c%96">初期化</a></li>
               <li><a href="#%e8%87%aa%e5%8b%95%e3%83%88%e3%83%a9%e3%83%83%e3%82%ad%e3%83%b3%e3%82%b0%e3%81%95%e3%82%8c%e3%82%8b%e3%82%a4%e3%83%99%e3%83%b3%e3%83%88">自動トラッキングされるイベント</a></li>
-              <li><a href="#%e3%83%87%e3%83%bc%e3%82%bf%e5%b1%a4%e5%a4%89%e6%95%b0">データ層変数</a></li>
+              <li><a href="#%e3%83%87%e3%83%bc%e3%82%bf%e3%83%ac%e3%82%a4%e3%83%a4%e3%83%bc%e5%a4%89%e6%95%b0">データレイヤー変数</a></li>
               <ul class="toc-h3"><li><a href="#%e5%a4%89%e6%95%b0%e5%90%8d%e3%81%ae%e4%b8%8a%e6%9b%b8%e3%81%8d-%e3%82%aa%e3%83%97%e3%82%b7%e3%83%a7%e3%83%b3">変数名の上書き（オプション）</a></li>
               </nav>
   </aside></div>
@@ -321,7 +331,7 @@ myOptlyManager<span style="font-weight:bold">.</span><span style="color:#008080"
 <li><strong>&ldquo;Optimizely Event Tracked&rdquo;</strong> - Optimizely SDKがカスタムイベントを受け取ったとき（Optimizelyの<code>track</code>メソッドを手動で呼び出すことで生成）。</li>
 </ul>
 
-<h2 id="データ層変数">データ層変数</h2>
+<h2 id="データレイヤー変数">データレイヤー変数</h2>
 
 <p>トラッキングされるOptimizelyイベントには、以下のイベント属性が含まれます。</p>
 
@@ -464,7 +474,7 @@ TealiumOptimizelyEventListener<span style="font-weight:bold">.</span><span style
             
             
             <a href="/platforms/amp/data-layer-variables/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              データ層
+              データレイヤー
             </a>
           </li>
         </ul>
@@ -499,7 +509,7 @@ TealiumOptimizelyEventListener<span style="font-weight:bold">.</span><span style
             
             
             <a href="/platforms/android/data-layer-variables/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              データ層
+              データレイヤー
             </a>
           </li>
           <li class="fw4">
@@ -779,7 +789,7 @@ TealiumOptimizelyEventListener<span style="font-weight:bold">.</span><span style
             
             
             <a href="/platforms/ios/data-layer-variables/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              データ層
+              データレイヤー
             </a>
           </li>
           <li class="fw4">
@@ -1108,7 +1118,7 @@ TealiumOptimizelyEventListener<span style="font-weight:bold">.</span><span style
             
             
             <a href="/platforms/swift/data-layer/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              データ層
+              データレイヤー
             </a>
           </li>
           <li class="fw4">
@@ -1222,13 +1232,13 @@ TealiumOptimizelyEventListener<span style="font-weight:bold">.</span><span style
   </span>
 	<span id="feedback_comment">
 		<textarea id="feedback_textarea" type="text" placeholder="JA-Tell us how we can make this article better." rows="4" cols="70"></textarea>
-		<button disabled id="feedback_submit" class="f6 ph3 pv1 br2 dib tc ttu mv3 bg-primary-color white hover-bg-blue link">JA-Send Feedback</button>
+		<button disabled id="feedback_submit" class="f6 ph3 pv1 br2 dib tc ttu mv3 bg-primary-color white hover-bg-blue link">フィードバックを送信</button>
   </span>
   <span id="feedback_thank_you" style="display: none;">
      <em>JA-Thank you for your feedback!</em>
   </span>
 </div>
-<p>最終更新日 ::  2019年October月10日</p>
+<p>最終更新日 ::  2019年October月28日</p>
 
       
 
@@ -1410,6 +1420,17 @@ TealiumOptimizelyEventListener<span style="font-weight:bold">.</span><span style
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 <script src="https://use.fontawesome.com/0757c63fa2.js"></script>
 
+
+    
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script type="text/javascript">
+docsearch({
+  apiKey: '6784c7975bfcd2a1e2f86d3388d655b4',
+  indexName: 'tealium_jp',
+  inputSelector: 'input#search-input',
+  debug: "false" 
+});
+</script>
 
     
 
