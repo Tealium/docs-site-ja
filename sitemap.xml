@@ -1,1743 +1,1299 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/csharp/</loc>
+    <loc>https://docs.tealium.co.jp/platforms/csharp/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://docs.tealium.com/platforms/csharp/"
+                href="https://docs.tealium.com/platforms/csharp/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/csharp/"
+                href="https://docs.tealium.co.jp/platforms/csharp/"
                 />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/javascript/</loc>
+    <loc>https://docs.tealium.co.jp/platforms/javascript/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://docs.tealium.com/platforms/javascript/"
+                href="https://docs.tealium.com/platforms/javascript/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/javascript/"
+                href="https://docs.tealium.co.jp/platforms/javascript/"
                 />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/python/</loc>
+    <loc>https://docs.tealium.co.jp/platforms/python/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://docs.tealium.com/platforms/python/"
+                href="https://docs.tealium.com/platforms/python/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/python/"
+                href="https://docs.tealium.co.jp/platforms/python/"
                 />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/flutter/</loc>
-    <lastmod>2019-10-28T11:07:13-07:00</lastmod>
+    <loc>https://docs.tealium.co.jp/guides/</loc>
+    <lastmod>2020-05-05T13:07:26-07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://docs.tealium.com/platforms/flutter/"
+                href="https://docs.tealium.com/guides/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/flutter/"
+                href="https://docs.tealium.co.jp/guides/"
                 />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/android-tv/</loc>
-    <lastmod>2019-10-28T11:07:13-07:00</lastmod>
+    <loc>https://docs.tealium.co.jp/guides/audiencestream/getting-started/</loc>
+    <lastmod>2020-05-07T12:26:16-07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://docs.tealium.com/platforms/android-tv/"
+                href="https://docs.tealium.com/guides/audiencestream/getting-started/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/android-tv/"
+                href="https://docs.tealium.co.jp/guides/audiencestream/getting-started/"
                 />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/</loc>
-    <lastmod>2019-10-28T11:07:13-07:00</lastmod>
+    <loc>https://docs.tealium.co.jp/guides/eventstream/getting-started/</loc>
+    <lastmod>2020-05-07T12:26:16-07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://docs.tealium.com/platforms/"
+                href="https://docs.tealium.com/guides/eventstream/getting-started/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/"
+                href="https://docs.tealium.co.jp/guides/eventstream/getting-started/"
                 />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/amp/</loc>
-    <lastmod>2019-10-28T11:07:13-07:00</lastmod>
+    <loc>https://docs.tealium.co.jp/guides/iq-tag-management/getting-started/</loc>
+    <lastmod>2020-05-07T12:26:16-07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://docs.tealium.com/platforms/amp/"
+                href="https://docs.tealium.com/guides/iq-tag-management/getting-started/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/amp/"
+                href="https://docs.tealium.co.jp/guides/iq-tag-management/getting-started/"
                 />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/android-wear/</loc>
+    <loc>https://docs.tealium.co.jp/platforms/flutter/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://docs.tealium.com/platforms/android-wear/"
+                href="https://docs.tealium.com/platforms/flutter/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/android-wear/"
+                href="https://docs.tealium.co.jp/platforms/flutter/"
                 />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/android/</loc>
-    <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/android/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/android/"
-                />
+    <loc>https://docs.tealium.co.jp/platforms/android-tv/</loc>
+    <lastmod>2020-01-28T07:37:48-08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/angular/</loc>
-    <lastmod>2019-10-28T11:07:13-07:00</lastmod>
+    <loc>https://docs.tealium.co.jp/platforms/</loc>
+    <lastmod>2020-01-23T14:41:10-08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://docs.tealium.com/platforms/angular/"
+                href="https://docs.tealium.com/platforms/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/angular/"
+                href="https://docs.tealium.co.jp/platforms/"
                 />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/cordova/</loc>
+    <loc>https://docs.tealium.co.jp/platforms/amp/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://docs.tealium.com/platforms/cordova/"
+                href="https://docs.tealium.com/platforms/amp/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/cordova/"
+                href="https://docs.tealium.co.jp/platforms/amp/"
                 />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/java/</loc>
-    <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/java/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/java/"
-                />
+    <loc>https://docs.tealium.co.jp/platforms/android-wear/</loc>
+    <lastmod>2020-01-28T07:37:48-08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/node/</loc>
-    <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/node/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/node/"
-                />
+    <loc>https://docs.tealium.co.jp/platforms/android/</loc>
+    <lastmod>2020-01-28T07:37:48-08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/react-native/</loc>
+    <loc>https://docs.tealium.co.jp/platforms/angular/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://docs.tealium.com/platforms/react-native/"
+                href="https://docs.tealium.com/platforms/angular/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/react-native/"
+                href="https://docs.tealium.co.jp/platforms/angular/"
                 />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/swift/</loc>
+    <loc>https://docs.tealium.co.jp/platforms/cordova/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://docs.tealium.com/platforms/swift/"
+                href="https://docs.tealium.com/platforms/cordova/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/swift/"
+                href="https://docs.tealium.co.jp/platforms/cordova/"
                 />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/watchos/</loc>
+    <loc>https://docs.tealium.co.jp/platforms/java/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://docs.tealium.com/platforms/watchos/"
+                href="https://docs.tealium.com/platforms/java/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/watchos/"
+                href="https://docs.tealium.co.jp/platforms/java/"
                 />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/remote-commands/</loc>
+    <loc>https://docs.tealium.co.jp/platforms/node/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://docs.tealium.com/platforms/remote-commands/"
+                href="https://docs.tealium.com/platforms/node/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/remote-commands/"
+                href="https://docs.tealium.co.jp/platforms/node/"
                 />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/android-tv/install/</loc>
+    <loc>https://docs.tealium.co.jp/platforms/react-native/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://docs.tealium.com/platforms/android-tv/install/"
+                href="https://docs.tealium.com/platforms/react-native/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/android-tv/install/"
+                href="https://docs.tealium.co.jp/platforms/react-native/"
                 />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/android-wear/install/</loc>
-    <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/android-wear/install/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/android-wear/install/"
-                />
+    <loc>https://docs.tealium.co.jp/platforms/swift/</loc>
+    <lastmod>2020-01-28T07:37:48-08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/angular/install/</loc>
-    <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/angular/install/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/angular/install/"
-                />
+    <loc>https://docs.tealium.co.jp/platforms/watchos/</loc>
+    <lastmod>2020-01-28T07:37:48-08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/cordova/install/</loc>
+    <loc>https://docs.tealium.co.jp/platforms/remote-commands/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://docs.tealium.com/platforms/cordova/install/"
+                href="https://docs.tealium.com/platforms/remote-commands/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/cordova/install/"
+                href="https://docs.tealium.co.jp/platforms/remote-commands/"
                 />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/csharp/install/</loc>
-    <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/csharp/install/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/csharp/install/"
-                />
+    <loc>https://docs.tealium.co.jp/guides/audiencestream/getting-started/introduction/</loc>
+    <lastmod>2020-05-08T08:55:31-07:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/java/install/</loc>
-    <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/java/install/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/java/install/"
-                />
+    <loc>https://docs.tealium.co.jp/guides/eventstream/getting-started/introduction/</loc>
+    <lastmod>2020-05-07T12:26:16-07:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/javascript/install/</loc>
-    <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/javascript/install/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/javascript/install/"
-                />
+    <loc>https://docs.tealium.co.jp/guides/iq-tag-management/getting-started/introduction/</loc>
+    <lastmod>2020-05-07T10:46:55-07:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/node/install/</loc>
-    <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/node/install/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/node/install/"
-                />
+    <loc>https://docs.tealium.co.jp/guides/eventstream/getting-started/data-sources/</loc>
+    <lastmod>2020-05-07T12:26:16-07:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/react-native/install/</loc>
-    <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/react-native/install/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/react-native/install/"
-                />
+    <loc>https://docs.tealium.co.jp/guides/audiencestream/getting-started/attributes/</loc>
+    <lastmod>2020-05-07T12:26:16-07:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/ruby/install/</loc>
-    <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/ruby/install/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/ruby/install/"
-                />
+    <loc>https://docs.tealium.co.jp/platforms/android-tv/install/</loc>
+    <lastmod>2020-05-05T11:53:37-07:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/swift/install/</loc>
-    <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/swift/install/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/swift/install/"
-                />
+    <loc>https://docs.tealium.co.jp/platforms/android-wear/install/</loc>
+    <lastmod>2020-05-05T13:07:26-07:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/watchos/install/</loc>
+    <loc>https://docs.tealium.co.jp/platforms/angular/install/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://docs.tealium.com/platforms/watchos/install/"
+                href="https://docs.tealium.com/platforms/angular/install/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/watchos/install/"
+                href="https://docs.tealium.co.jp/platforms/angular/install/"
                 />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/http-api/endpoint-spec/</loc>
-    <lastmod>2019-10-28T11:07:13-07:00</lastmod>
+    <loc>https://docs.tealium.co.jp/platforms/cordova/install/</loc>
+    <lastmod>2020-01-23T15:54:07-08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://docs.tealium.com/platforms/http-api/endpoint-spec/"
+                href="https://docs.tealium.com/platforms/cordova/install/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/http-api/endpoint-spec/"
+                href="https://docs.tealium.co.jp/platforms/cordova/install/"
                 />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/amp/install/</loc>
-    <lastmod>2019-10-28T11:07:13-07:00</lastmod>
+    <loc>https://docs.tealium.co.jp/platforms/csharp/install/</loc>
+    <lastmod>2020-05-05T11:53:37-07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://docs.tealium.com/platforms/amp/install/"
+                href="https://docs.tealium.com/platforms/csharp/install/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/amp/install/"
+                href="https://docs.tealium.co.jp/platforms/csharp/install/"
                 />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/android/install/</loc>
-    <lastmod>2019-10-28T11:07:13-07:00</lastmod>
+    <loc>https://docs.tealium.co.jp/platforms/java/install/</loc>
+    <lastmod>2020-05-05T11:53:37-07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://docs.tealium.com/platforms/android/install/"
+                href="https://docs.tealium.com/platforms/java/install/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/android/install/"
+                href="https://docs.tealium.co.jp/platforms/java/install/"
                 />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/flutter/install/</loc>
+    <loc>https://docs.tealium.co.jp/platforms/javascript/install/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://docs.tealium.com/platforms/flutter/install/"
+                href="https://docs.tealium.com/platforms/javascript/install/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/flutter/install/"
+                href="https://docs.tealium.co.jp/platforms/javascript/install/"
                 />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/ios/install/</loc>
-    <lastmod>2019-10-28T11:07:13-07:00</lastmod>
+    <loc>https://docs.tealium.co.jp/platforms/node/install/</loc>
+    <lastmod>2020-05-05T11:53:37-07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://docs.tealium.com/platforms/ios/install/"
+                href="https://docs.tealium.com/platforms/node/install/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/ios/install/"
+                href="https://docs.tealium.co.jp/platforms/node/install/"
                 />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/python/install/</loc>
-    <lastmod>2019-10-28T11:07:13-07:00</lastmod>
+    <loc>https://docs.tealium.co.jp/platforms/react-native/install/</loc>
+    <lastmod>2020-01-23T15:54:07-08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://docs.tealium.com/platforms/python/install/"
+                href="https://docs.tealium.com/platforms/react-native/install/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/python/install/"
+                href="https://docs.tealium.co.jp/platforms/react-native/install/"
                 />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/roku/install/</loc>
-    <lastmod>2019-10-28T11:07:13-07:00</lastmod>
+    <loc>https://docs.tealium.co.jp/platforms/ruby/install/</loc>
+    <lastmod>2020-05-05T11:53:37-07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://docs.tealium.com/platforms/roku/install/"
+                href="https://docs.tealium.com/platforms/ruby/install/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/roku/install/"
+                href="https://docs.tealium.co.jp/platforms/ruby/install/"
                 />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/tvos/install/</loc>
-    <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/tvos/install/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/tvos/install/"
-                />
+    <loc>https://docs.tealium.co.jp/platforms/swift/install/</loc>
+    <lastmod>2020-01-23T15:54:07-08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/swift/track/</loc>
+    <loc>https://docs.tealium.co.jp/platforms/watchos/install/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/swift/track/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/swift/track/"
-                />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/remote-commands/how-it-works/</loc>
-    <lastmod>2019-10-28T11:07:13-07:00</lastmod>
+    <loc>https://docs.tealium.co.jp/platforms/http-api/endpoint-spec/</loc>
+    <lastmod>2020-01-23T15:54:07-08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://docs.tealium.com/platforms/remote-commands/how-it-works/"
+                href="https://docs.tealium.com/platforms/http-api/endpoint-spec/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/remote-commands/how-it-works/"
+                href="https://docs.tealium.co.jp/platforms/http-api/endpoint-spec/"
                 />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/swift/consent-manager/</loc>
-    <lastmod>2019-10-28T11:07:13-07:00</lastmod>
+    <loc>https://docs.tealium.co.jp/platforms/amp/install/</loc>
+    <lastmod>2020-05-05T11:53:37-07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://docs.tealium.com/platforms/swift/consent-manager/"
+                href="https://docs.tealium.com/platforms/amp/install/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/swift/consent-manager/"
+                href="https://docs.tealium.co.jp/platforms/amp/install/"
                 />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/swift/class-definitions/</loc>
-    <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/swift/class-definitions/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/swift/class-definitions/"
-                />
+    <loc>https://docs.tealium.co.jp/platforms/android/install/</loc>
+    <lastmod>2020-05-05T11:53:37-07:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/android/consent-manager/</loc>
-    <lastmod>2019-10-28T11:07:13-07:00</lastmod>
+    <loc>https://docs.tealium.co.jp/platforms/flutter/install/</loc>
+    <lastmod>2020-01-23T15:54:07-08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://docs.tealium.com/platforms/android/consent-manager/"
+                href="https://docs.tealium.com/platforms/flutter/install/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/android/consent-manager/"
+                href="https://docs.tealium.co.jp/platforms/flutter/install/"
                 />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/ios/consent-manager/</loc>
-    <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/ios/consent-manager/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/ios/consent-manager/"
-                />
+    <loc>https://docs.tealium.co.jp/platforms/ios/install/</loc>
+    <lastmod>2020-05-05T11:53:37-07:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/cordova/track/</loc>
-    <lastmod>2019-10-28T11:07:13-07:00</lastmod>
+    <loc>https://docs.tealium.co.jp/platforms/python/install/</loc>
+    <lastmod>2020-05-05T11:53:37-07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://docs.tealium.com/platforms/cordova/track/"
+                href="https://docs.tealium.com/platforms/python/install/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/cordova/track/"
+                href="https://docs.tealium.co.jp/platforms/python/install/"
                 />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/javascript/page-tracking/</loc>
-    <lastmod>2019-10-28T11:07:13-07:00</lastmod>
+    <loc>https://docs.tealium.co.jp/platforms/roku/install/</loc>
+    <lastmod>2020-05-05T11:53:37-07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://docs.tealium.com/platforms/javascript/page-tracking/"
+                href="https://docs.tealium.com/platforms/roku/install/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/javascript/page-tracking/"
+                href="https://docs.tealium.co.jp/platforms/roku/install/"
                 />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/swift/modules/</loc>
-    <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/swift/modules/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/swift/modules/"
-                />
+    <loc>https://docs.tealium.co.jp/platforms/tvos/install/</loc>
+    <lastmod>2020-01-23T15:54:07-08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/csharp/functions/</loc>
-    <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/csharp/functions/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/csharp/functions/"
-                />
+    <loc>https://docs.tealium.co.jp/platforms/swift/track/</loc>
+    <lastmod>2020-01-23T15:54:07-08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/java/function-definitions/</loc>
+    <loc>https://docs.tealium.co.jp/platforms/remote-commands/how-it-works/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://docs.tealium.com/platforms/java/function-definitions/"
+                href="https://docs.tealium.com/platforms/remote-commands/how-it-works/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/java/function-definitions/"
+                href="https://docs.tealium.co.jp/platforms/remote-commands/how-it-works/"
                 />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/react-native/functions/</loc>
-    <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/react-native/functions/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/react-native/functions/"
-                />
+    <loc>https://docs.tealium.co.jp/guides/eventstream/getting-started/data-sources-add/</loc>
+    <lastmod>2020-05-07T12:26:16-07:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/roku/functions/</loc>
-    <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/roku/functions/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/roku/functions/"
-                />
+    <loc>https://docs.tealium.co.jp/guides/audiencestream/getting-started/attributes-enrichments/</loc>
+    <lastmod>2020-05-07T12:26:16-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.tealium.co.jp/guides/eventstream/getting-started/data-sources-install-test/</loc>
+    <lastmod>2020-05-07T12:26:16-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.tealium.co.jp/guides/audiencestream/getting-started/attributes-badges/</loc>
+    <lastmod>2020-05-07T12:26:16-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.tealium.co.jp/platforms/swift/consent-manager/</loc>
+    <lastmod>2020-01-23T15:54:07-08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/remote-commands/integrations/</loc>
+    <loc>https://docs.tealium.co.jp/platforms/swift/class-definitions/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/remote-commands/integrations/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/remote-commands/integrations/"
-                />
+  </url>
+  
+  <url>
+    <loc>https://docs.tealium.co.jp/guides/audiencestream/getting-started/attributes-offline-data/</loc>
+    <lastmod>2020-05-07T12:26:16-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.tealium.co.jp/guides/audiencestream/getting-started/visitor-stitching/</loc>
+    <lastmod>2020-05-07T12:26:16-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.tealium.co.jp/guides/iq-tag-management/getting-started/data-layer-basics/</loc>
+    <lastmod>2020-05-07T12:26:16-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.tealium.co.jp/guides/eventstream/getting-started/live-events/</loc>
+    <lastmod>2020-05-07T12:26:16-07:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/amp/data-layer-variables/</loc>
+    <loc>https://docs.tealium.co.jp/platforms/android/consent-manager/</loc>
+    <lastmod>2020-01-23T15:54:07-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.tealium.co.jp/platforms/ios/consent-manager/</loc>
+    <lastmod>2020-01-23T15:54:07-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.tealium.co.jp/platforms/cordova/track/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://docs.tealium.com/platforms/amp/data-layer-variables/"
+                href="https://docs.tealium.com/platforms/cordova/track/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/amp/data-layer-variables/"
+                href="https://docs.tealium.co.jp/platforms/cordova/track/"
                 />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/android/data-layer-variables/</loc>
+    <loc>https://docs.tealium.co.jp/platforms/javascript/page-tracking/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/android/data-layer-variables/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/android/data-layer-variables/"
-                />
+  </url>
+  
+  <url>
+    <loc>https://docs.tealium.co.jp/platforms/swift/modules/</loc>
+    <lastmod>2020-01-23T15:54:07-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.tealium.co.jp/platforms/csharp/functions/</loc>
+    <lastmod>2020-01-23T15:54:07-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.tealium.co.jp/platforms/java/function-definitions/</loc>
+    <lastmod>2020-01-23T15:54:07-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.tealium.co.jp/platforms/react-native/functions/</loc>
+    <lastmod>2020-01-23T15:54:07-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.tealium.co.jp/platforms/roku/functions/</loc>
+    <lastmod>2020-01-23T15:54:07-08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/ios/data-layer-variables/</loc>
+    <loc>https://docs.tealium.co.jp/platforms/remote-commands/integrations/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://docs.tealium.com/platforms/ios/data-layer-variables/"
+                href="https://docs.tealium.com/platforms/remote-commands/integrations/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/ios/data-layer-variables/"
+                href="https://docs.tealium.co.jp/platforms/remote-commands/integrations/"
                 />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/ios/tag-management/</loc>
-    <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/ios/tag-management/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/ios/tag-management/"
-                />
+    <loc>https://docs.tealium.co.jp/guides/audiencestream/getting-started/visitor-stitching-id/</loc>
+    <lastmod>2020-05-07T12:26:16-07:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/csharp/release-notes/</loc>
-    <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/csharp/release-notes/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/csharp/release-notes/"
-                />
+    <loc>https://docs.tealium.co.jp/guides/iq-tag-management/getting-started/data-layer-add-variables/</loc>
+    <lastmod>2020-05-08T08:55:31-07:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/javascript/event-tracking/</loc>
-    <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/javascript/event-tracking/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/javascript/event-tracking/"
-                />
+    <loc>https://docs.tealium.co.jp/guides/audiencestream/getting-started/visitor-stitching-part1/</loc>
+    <lastmod>2020-05-07T12:26:16-07:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/android/adid-module/</loc>
-    <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/android/adid-module/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/android/adid-module/"
-                />
+    <loc>https://docs.tealium.co.jp/platforms/amp/data-layer-variables/</loc>
+    <lastmod>2020-01-23T15:54:07-08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/cordova/functions/</loc>
-    <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/cordova/functions/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/cordova/functions/"
-                />
+    <loc>https://docs.tealium.co.jp/platforms/android/data-layer-variables/</loc>
+    <lastmod>2020-01-23T15:54:07-08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/ios/lifecycle-tracking-module/</loc>
+    <loc>https://docs.tealium.co.jp/platforms/ios/data-layer-variables/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/ios/lifecycle-tracking-module/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/ios/lifecycle-tracking-module/"
-                />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/swift/data-layer/</loc>
-    <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/swift/data-layer/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/swift/data-layer/"
-                />
+    <loc>https://docs.tealium.co.jp/guides/audiencestream/getting-started/visitor-stitching-discovery/</loc>
+    <lastmod>2020-05-07T12:26:16-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.tealium.co.jp/guides/audiencestream/getting-started/visitor-stitching-part2/</loc>
+    <lastmod>2020-05-07T12:26:16-07:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/cordova/module-adid/</loc>
+    <loc>https://docs.tealium.co.jp/platforms/ios/tag-management/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.tealium.co.jp/guides/eventstream/getting-started/event-specs/</loc>
+    <lastmod>2020-05-07T12:26:16-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.tealium.co.jp/guides/audiencestream/getting-started/audiences/</loc>
+    <lastmod>2020-05-07T12:26:16-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.tealium.co.jp/guides/iq-tag-management/getting-started/tag-basics/</loc>
+    <lastmod>2020-05-08T08:55:31-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.tealium.co.jp/platforms/csharp/release-notes/</loc>
+    <lastmod>2020-01-23T14:41:10-08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://docs.tealium.com/platforms/cordova/module-adid/"
+                href="https://docs.tealium.com/platforms/csharp/release-notes/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/cordova/module-adid/"
+                href="https://docs.tealium.co.jp/platforms/csharp/release-notes/"
                 />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/android/crash-reporter-module/</loc>
+    <loc>https://docs.tealium.co.jp/platforms/javascript/event-tracking/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/android/crash-reporter-module/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/android/crash-reporter-module/"
-                />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/ios/optimizely-x-tracking-module/</loc>
+    <loc>https://docs.tealium.co.jp/platforms/android/adid-module/</loc>
+    <lastmod>2019-11-25T10:50:21+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.tealium.co.jp/platforms/cordova/functions/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/ios/optimizely-x-tracking-module/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/ios/optimizely-x-tracking-module/"
-                />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/javascript/validate/</loc>
+    <loc>https://docs.tealium.co.jp/platforms/ios/lifecycle-tracking-module/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/javascript/validate/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/javascript/validate/"
-                />
+  </url>
+  
+  <url>
+    <loc>https://docs.tealium.co.jp/guides/eventstream/getting-started/event-specs-add/</loc>
+    <lastmod>2020-05-07T12:26:16-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.tealium.co.jp/guides/iq-tag-management/getting-started/tag-basics-add-tag/</loc>
+    <lastmod>2020-05-08T08:55:31-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.tealium.co.jp/guides/eventstream/getting-started/event-specs-data-quality/</loc>
+    <lastmod>2020-05-07T12:26:16-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.tealium.co.jp/guides/iq-tag-management/getting-started/tag-basics-load-rule/</loc>
+    <lastmod>2020-05-07T12:26:16-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.tealium.co.jp/guides/iq-tag-management/getting-started/tag-basics-data-mapping/</loc>
+    <lastmod>2020-05-07T12:26:16-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.tealium.co.jp/guides/eventstream/getting-started/event-feeds/</loc>
+    <lastmod>2020-05-07T12:26:16-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.tealium.co.jp/guides/audiencestream/getting-started/connectors/</loc>
+    <lastmod>2020-05-07T12:26:16-07:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/android/release-notes/</loc>
+    <loc>https://docs.tealium.co.jp/guides/iq-tag-management/getting-started/extensions/</loc>
+    <lastmod>2020-05-08T08:55:31-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.tealium.co.jp/platforms/swift/data-layer/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/android/release-notes/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/android/release-notes/"
-                />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/ios/release-notes/</loc>
+    <loc>https://docs.tealium.co.jp/platforms/cordova/module-adid/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/ios/release-notes/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/ios/release-notes/"
-                />
+  </url>
+  
+  <url>
+    <loc>https://docs.tealium.co.jp/platforms/android/crash-reporter-module/</loc>
+    <lastmod>2020-01-23T14:41:10-08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/ios/migrate-from-4x/</loc>
+    <loc>https://docs.tealium.co.jp/platforms/ios/optimizely-x-tracking-module/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/ios/migrate-from-4x/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/ios/migrate-from-4x/"
-                />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/android/lifecycle-tracking-module/</loc>
+    <loc>https://docs.tealium.co.jp/platforms/javascript/validate/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/android/lifecycle-tracking-module/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/android/lifecycle-tracking-module/"
-                />
+  </url>
+  
+  <url>
+    <loc>https://docs.tealium.co.jp/guides/eventstream/getting-started/event-feeds-add/</loc>
+    <lastmod>2020-05-07T12:26:16-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.tealium.co.jp/guides/audiencestream/getting-started/connectors-add/</loc>
+    <lastmod>2020-05-07T12:26:16-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.tealium.co.jp/guides/iq-tag-management/getting-started/extensions-add/</loc>
+    <lastmod>2020-05-08T08:55:31-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.tealium.co.jp/guides/eventstream/getting-started/connectors/</loc>
+    <lastmod>2020-05-07T12:26:16-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.tealium.co.jp/guides/audiencestream/getting-started/trace/</loc>
+    <lastmod>2020-05-07T12:26:16-07:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/cordova/module-crash-reporter/</loc>
+    <loc>https://docs.tealium.co.jp/guides/iq-tag-management/getting-started/save-publish-basics/</loc>
+    <lastmod>2020-05-07T12:26:16-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.tealium.co.jp/platforms/android/release-notes/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/cordova/module-crash-reporter/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/cordova/module-crash-reporter/"
-                />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/flutter/release-notes/</loc>
+    <loc>https://docs.tealium.co.jp/platforms/ios/release-notes/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/flutter/release-notes/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/flutter/release-notes/"
-                />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/swift/release-notes/</loc>
+    <loc>https://docs.tealium.co.jp/platforms/ios/migrate-from-4x/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/swift/release-notes/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/swift/release-notes/"
-                />
+  </url>
+  
+  <url>
+    <loc>https://docs.tealium.co.jp/platforms/android/lifecycle-tracking-module/</loc>
+    <lastmod>2020-05-05T13:07:26-07:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/swift/module-list/</loc>
+    <loc>https://docs.tealium.co.jp/platforms/cordova/module-crash-reporter/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/swift/module-list/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/swift/module-list/"
-                />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/cordova/module-install-referrer/</loc>
+    <loc>https://docs.tealium.co.jp/platforms/flutter/release-notes/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://docs.tealium.com/platforms/cordova/module-install-referrer/"
+                href="https://docs.tealium.com/platforms/flutter/release-notes/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/cordova/module-install-referrer/"
+                href="https://docs.tealium.co.jp/platforms/flutter/release-notes/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://docs.tealium.co.jp/platforms/swift/release-notes/</loc>
+    <lastmod>2020-01-23T15:54:07-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.tealium.co.jp/guides/eventstream/getting-started/connectors-add/</loc>
+    <lastmod>2020-05-07T12:26:16-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.tealium.co.jp/guides/audiencestream/getting-started/trace-test/</loc>
+    <lastmod>2020-05-07T12:26:16-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.tealium.co.jp/guides/iq-tag-management/getting-started/saving-changes/</loc>
+    <lastmod>2020-05-07T12:26:16-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.tealium.co.jp/guides/iq-tag-management/getting-started/publish-environments/</loc>
+    <lastmod>2020-05-07T12:26:16-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.tealium.co.jp/guides/iq-tag-management/getting-started/save-publish/</loc>
+    <lastmod>2020-05-07T12:26:16-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.tealium.co.jp/guides/iq-tag-management/getting-started/install-test/</loc>
+    <lastmod>2020-05-07T12:26:16-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.tealium.co.jp/guides/eventstream/getting-started/trace/</loc>
+    <lastmod>2020-05-07T12:26:16-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.tealium.co.jp/guides/audiencestream/getting-started/save-publish/</loc>
+    <lastmod>2020-05-07T12:26:16-07:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/android/optimizely-x-tracking-module/</loc>
+    <loc>https://docs.tealium.co.jp/platforms/swift/module-list/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/android/optimizely-x-tracking-module/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/android/optimizely-x-tracking-module/"
-                />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/swift/with-objective-c/</loc>
+    <loc>https://docs.tealium.co.jp/platforms/cordova/module-install-referrer/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/swift/with-objective-c/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/swift/with-objective-c/"
-                />
+  </url>
+  
+  <url>
+    <loc>https://docs.tealium.co.jp/platforms/android/optimizely-x-tracking-module/</loc>
+    <lastmod>2019-11-25T10:50:21+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.tealium.co.jp/guides/iq-tag-management/getting-started/install-utag/</loc>
+    <lastmod>2020-05-07T12:26:16-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.tealium.co.jp/guides/iq-tag-management/getting-started/web-companion/</loc>
+    <lastmod>2020-05-07T12:26:16-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.tealium.co.jp/guides/iq-tag-management/getting-started/code-center/</loc>
+    <lastmod>2020-05-07T12:26:16-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.tealium.co.jp/guides/eventstream/getting-started/trace-test/</loc>
+    <lastmod>2020-05-07T12:26:16-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.tealium.co.jp/guides/eventstream/getting-started/save-publish/</loc>
+    <lastmod>2020-05-08T08:55:31-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.tealium.co.jp/guides/audiencestream/getting-started/next-steps/</loc>
+    <lastmod>2020-05-08T08:55:31-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.tealium.co.jp/guides/iq-tag-management/getting-started/next-steps/</loc>
+    <lastmod>2020-05-08T08:55:31-07:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/android/referrer-module/</loc>
+    <loc>https://docs.tealium.co.jp/platforms/swift/with-objective-c/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/android/referrer-module/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/android/referrer-module/"
-                />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/swift/feature-comparison/</loc>
-    <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/swift/feature-comparison/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/swift/feature-comparison/"
-                />
+    <loc>https://docs.tealium.co.jp/platforms/android/referrer-module/</loc>
+    <lastmod>2020-02-12T14:05:59-08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/javascript/settings/</loc>
-    <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/javascript/settings/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/javascript/settings/"
-                />
+    <loc>https://docs.tealium.co.jp/platforms/swift/feature-comparison/</loc>
+    <lastmod>2020-01-23T15:54:07-08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/javascript/about-utag-js/</loc>
+    <loc>https://docs.tealium.co.jp/platforms/javascript/settings/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://docs.tealium.com/platforms/javascript/about-utag-js/"
+                href="https://docs.tealium.com/platforms/javascript/settings/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/javascript/about-utag-js/"
+                href="https://docs.tealium.co.jp/platforms/javascript/settings/"
                 />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/javascript/about-utag-data/</loc>
-    <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/javascript/about-utag-data/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/javascript/about-utag-data/"
-                />
+    <loc>https://docs.tealium.co.jp/guides/eventstream/getting-started/next-steps/</loc>
+    <lastmod>2020-05-08T08:55:31-07:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/javascript/the-b-object/</loc>
+    <loc>https://docs.tealium.co.jp/platforms/javascript/about-utag-js/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/javascript/the-b-object/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/javascript/the-b-object/"
-                />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/javascript/debugging/</loc>
+    <loc>https://docs.tealium.co.jp/platforms/javascript/about-utag-data/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/javascript/debugging/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/javascript/debugging/"
-                />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/javascript/built-in-variables/</loc>
+    <loc>https://docs.tealium.co.jp/platforms/javascript/the-b-object/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/javascript/built-in-variables/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/javascript/built-in-variables/"
-                />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/javascript/release-notes/</loc>
+    <loc>https://docs.tealium.co.jp/platforms/javascript/debugging/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://docs.tealium.com/platforms/javascript/release-notes/"
+                href="https://docs.tealium.com/platforms/javascript/debugging/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/javascript/release-notes/"
+                href="https://docs.tealium.co.jp/platforms/javascript/debugging/"
                 />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/http-api/</loc>
+    <loc>https://docs.tealium.co.jp/platforms/javascript/built-in-variables/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/http-api/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/http-api/"
-                />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/ios/</loc>
-    <lastmod>2019-10-28T11:07:13-07:00</lastmod>
+    <loc>https://docs.tealium.co.jp/platforms/javascript/release-notes/</loc>
+    <lastmod>2020-01-23T15:54:07-08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://docs.tealium.com/platforms/ios/"
+                href="https://docs.tealium.com/platforms/javascript/release-notes/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/ios/"
+                href="https://docs.tealium.co.jp/platforms/javascript/release-notes/"
                 />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/roku/</loc>
-    <lastmod>2019-10-28T11:07:13-07:00</lastmod>
+    <loc>https://docs.tealium.co.jp/platforms/http-api/</loc>
+    <lastmod>2020-01-23T15:54:07-08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://docs.tealium.com/platforms/roku/"
+                href="https://docs.tealium.com/platforms/http-api/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/roku/"
+                href="https://docs.tealium.co.jp/platforms/http-api/"
                 />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/ruby/</loc>
-    <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/ruby/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/ruby/"
-                />
+    <loc>https://docs.tealium.co.jp/platforms/ios/</loc>
+    <lastmod>2020-01-28T07:37:48-08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/tvos/</loc>
+    <loc>https://docs.tealium.co.jp/platforms/roku/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://docs.tealium.com/platforms/tvos/"
+                href="https://docs.tealium.com/platforms/roku/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/tvos/"
+                href="https://docs.tealium.co.jp/platforms/roku/"
                 />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/xamarin/</loc>
+    <loc>https://docs.tealium.co.jp/platforms/ruby/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://docs.tealium.com/platforms/xamarin/"
+                href="https://docs.tealium.com/platforms/ruby/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/xamarin/"
+                href="https://docs.tealium.co.jp/platforms/ruby/"
                 />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/javascript/install-utag/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/javascript/install-utag/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/javascript/install-utag/"
-                />
+    <loc>https://docs.tealium.co.jp/platforms/tvos/</loc>
+    <lastmod>2020-01-28T07:37:48-08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/swift/module-list/appdata/</loc>
+    <loc>https://docs.tealium.co.jp/platforms/xamarin/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://docs.tealium.com/platforms/swift/module-list/appdata/"
+                href="https://docs.tealium.com/platforms/xamarin/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/swift/module-list/appdata/"
+                href="https://docs.tealium.co.jp/platforms/xamarin/"
                 />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/swift/module-list/attribution/</loc>
-    <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/swift/module-list/attribution/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/swift/module-list/attribution/"
-                />
+    <loc>https://docs.tealium.co.jp/platforms/javascript/install-utag/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/swift/module-list/autotracking/</loc>
+    <loc>https://docs.tealium.co.jp/platforms/swift/module-list/appdata/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/swift/module-list/autotracking/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/swift/module-list/autotracking/"
-                />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/swift/module-list/collect/</loc>
+    <loc>https://docs.tealium.co.jp/platforms/swift/module-list/attribution/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/swift/module-list/collect/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/swift/module-list/collect/"
-                />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/swift/module-list/connectivity/</loc>
+    <loc>https://docs.tealium.co.jp/platforms/swift/module-list/autotracking/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/swift/module-list/connectivity/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/swift/module-list/connectivity/"
-                />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/swift/module-list/crash-reporter/</loc>
-    <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/swift/module-list/crash-reporter/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/swift/module-list/crash-reporter/"
-                />
+    <loc>https://docs.tealium.co.jp/platforms/swift/module-list/collect/</loc>
+    <lastmod>2020-01-23T15:54:07-08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/swift/module-list/datasource/</loc>
+    <loc>https://docs.tealium.co.jp/platforms/swift/module-list/connectivity/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/swift/module-list/datasource/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/swift/module-list/datasource/"
-                />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/swift/module-list/defaults-storage/</loc>
+    <loc>https://docs.tealium.co.jp/platforms/swift/module-list/crash-reporter/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/swift/module-list/defaults-storage/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/swift/module-list/defaults-storage/"
-                />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/swift/module-list/delegate/</loc>
-    <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/swift/module-list/delegate/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/swift/module-list/delegate/"
-                />
+    <loc>https://docs.tealium.co.jp/platforms/swift/module-list/datasource/</loc>
+    <lastmod>2020-01-23T15:54:07-08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/swift/module-list/device-data/</loc>
+    <loc>https://docs.tealium.co.jp/platforms/swift/module-list/defaults-storage/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/swift/module-list/device-data/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/swift/module-list/device-data/"
-                />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/swift/module-list/dispatch-queue/</loc>
+    <loc>https://docs.tealium.co.jp/platforms/swift/module-list/delegate/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/swift/module-list/dispatch-queue/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/swift/module-list/dispatch-queue/"
-                />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/swift/module-list/file-storage/</loc>
+    <loc>https://docs.tealium.co.jp/platforms/swift/module-list/device-data/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/swift/module-list/file-storage/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/swift/module-list/file-storage/"
-                />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/</loc>
+    <loc>https://docs.tealium.co.jp/platforms/swift/module-list/dispatch-queue/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/"
-                />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/swift/module-list/lifecycle/</loc>
+    <loc>https://docs.tealium.co.jp/platforms/swift/module-list/file-storage/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/swift/module-list/lifecycle/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/swift/module-list/lifecycle/"
-                />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/swift/module-list/logger/</loc>
+    <loc>https://docs.tealium.co.jp/platforms/swift/module-list/lifecycle/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/swift/module-list/logger/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/swift/module-list/logger/"
-                />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/swift/module-list/persistent-data/</loc>
+    <loc>https://docs.tealium.co.jp/platforms/swift/module-list/logger/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/swift/module-list/persistent-data/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/swift/module-list/persistent-data/"
-                />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/swift/module-list/remote-commands/</loc>
+    <loc>https://docs.tealium.co.jp/platforms/swift/module-list/persistent-data/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/swift/module-list/remote-commands/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/swift/module-list/remote-commands/"
-                />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/swift/module-list/tag-management/</loc>
+    <loc>https://docs.tealium.co.jp/platforms/swift/module-list/remote-commands/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/swift/module-list/tag-management/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/swift/module-list/tag-management/"
-                />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/swift/module-list/volatile-data/</loc>
+    <loc>https://docs.tealium.co.jp/platforms/swift/module-list/tag-management/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/swift/module-list/volatile-data/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/swift/module-list/volatile-data/"
-                />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/xamarin/install/</loc>
+    <loc>https://docs.tealium.co.jp/platforms/swift/module-list/volatile-data/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/xamarin/install/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/xamarin/install/"
-                />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/swift/class-definitions/tealium/</loc>
-    <lastmod>2019-10-28T11:07:13-07:00</lastmod>
+    <loc>https://docs.tealium.co.jp/platforms/xamarin/install/</loc>
+    <lastmod>2020-05-05T13:07:26-07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://docs.tealium.com/platforms/swift/class-definitions/tealium/"
+                href="https://docs.tealium.com/platforms/xamarin/install/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/swift/class-definitions/tealium/"
+                href="https://docs.tealium.co.jp/platforms/xamarin/install/"
                 />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/swift/class-definitions/tealium-config/</loc>
-    <lastmod>2019-10-28T11:07:13-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://docs.tealium.com/platforms/swift/class-definitions/tealium-config/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/swift/class-definitions/tealium-config/"
-                />
+    <loc>https://docs.tealium.co.jp/platforms/swift/class-definitions/tealium/</loc>
+    <lastmod>2020-01-23T15:54:07-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.tealium.co.jp/platforms/swift/class-definitions/tealium-config/</loc>
+    <lastmod>2020-01-23T15:54:07-08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/swift/class-definitions/tealium-instance-manager/</loc>
+    <loc>https://docs.tealium.co.jp/platforms/swift/class-definitions/tealium-instance-manager/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.tealium.co.jp/</loc>
+    <lastmod>2020-05-05T13:07:26-07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://docs.tealium.com/platforms/swift/class-definitions/tealium-instance-manager/"
+                href="https://docs.tealium.com/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/swift/class-definitions/tealium-instance-manager/"
+                href="https://docs.tealium.co.jp/"
                 />
   </url>
   
   <url>
-    <loc>http://docs.tealium.co.jp/platforms/remote-commands/integrations/braze/</loc>
+    <loc>https://docs.tealium.co.jp/platforms/remote-commands/integrations/braze/</loc>
     <lastmod>2019-10-28T11:07:13-07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://docs.tealium.com/platforms/remote-commands/integrations/braze/"
+                href="https://docs.tealium.com/platforms/remote-commands/integrations/braze/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://docs.tealium.co.jp/platforms/remote-commands/integrations/braze/"
+                href="https://docs.tealium.co.jp/platforms/remote-commands/integrations/braze/"
                 />
   </url>
   

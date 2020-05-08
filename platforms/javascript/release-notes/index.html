@@ -11,7 +11,7 @@
     <meta name="MobileOptimized" content="320">
 
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-     <meta name="generator" content="Hugo 0.54.0" />
+     <meta name="generator" content="Hugo 0.59.0" />
 
       
         <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
@@ -25,7 +25,6 @@
         
 <script>
 var utag_data = {
-    category_name : "JavaScript (Web)",
     site_section  : "platforms",
     site_language : "ja",
     tealium_event : "page_view"
@@ -48,14 +47,26 @@ var utag_data = {
   <div class="center flex-ns flex-wrap items-center justify-start mw9">
 
     <h1 class="dim f3 lh-solid ml0-ns mr0 mr4-l mv0 pl3 pl4-ns">
-      <a href="http://docs.tealium.co.jp/"><img src="/images/icons/tealdevdocs_logo_white.svg" width="180" height="41"/></a>
+      <a href="https://docs.tealium.co.jp"><img src="/images/icons/tealdevdocs_logo_white.svg" width="180" height="41"/></a>
     </h1>
     <ul class="list ma0 pa0 dn dib-l">
       
-            
         <li class="f5 dib mr4" role="menuitem">
             
-          <a href="http://docs.tealium.co.jp/platforms/" class="dim link">プラットフォーム</a>
+          <a href="https://docs.tealium.co.jp/guides/" class="dim link">
+          手引き
+            
+            
+          </a>
+        </li>
+      
+        <li class="f5 dib mr4 active" role="menuitem">
+            
+          <a href="https://docs.tealium.co.jp/platforms/" class="dim link">
+          プラットフォーム
+            
+            
+          </a>
         </li>
       
     </ul>
@@ -172,15 +183,15 @@ var utag_data = {
             <ul class="menu-group as-main-navigation flex-0 bottom-align">
               <li class="menu-divider"></li>
               <li class="js-main-nav-section">
-                <a href="https://my.tealiumiq.com/" class="menu-list-item top-level tooltip-right" title="Universal Data Hub">
+                <a href="https://my.tealiumiq.com/" class="menu-list-item top-level tooltip-right" title="Customer Data Hub">
                     <span class="menu-large-icon">
                         <span class="as-platform-image square-xxxs is-rounded bg-transparent">
-                            <span class="inner-image UDH-icon">UDH</span>
+                            <span class="inner-image UDH-icon">CDH</span>
                         </span>
                     </span>
-                    <span class="menu-context supportLinks_buttonTitle">Universal Data Hub</span>
+                    <span class="menu-context supportLinks_buttonTitle">Customer Data Hub</span>
                 </a>
-                          <span class="tooltiptext">Universal Data Hub</span>
+                          <span class="tooltiptext">Customer Data Hub</span>
               </li>
               <li class="menu-divider"></li>
               <li class="js-toggle-leftframe">
@@ -279,9 +290,9 @@ var utag_data = {
 
 
 
+
 <div class="prose" id="prose">
-
-
+  
 
 <p><a href="https://community.tealiumiq.com/t5/JavaScript-utag-js/How-do-I-upgrade-to-the-latest-utag-js/ta-p/5042">お使いのutag.jsを更新</a>して、最新バージョンの修正点や強化点を活用しましょう。</p>
 
@@ -334,16 +345,17 @@ var utag_data = {
 
 <ul>
 <li>以前はグローバル変数<code>utag_cfg_ovrd</code>（構成上書きオブジェクト）を通じてループで使用されていたグローバル変数&rdquo;i&rdquo;の使用を廃止しました。</li>
-<li>レガシーs2sサポートを廃止しました（既にTealium iQから削除されていたので）。  クラウドデリバリーはUDHでサポートされます。</li>
-<li>utag.ut.loaderユーティリティ関数に渡されるエラーハンドラー関数のサポートを追加。  このサポートは、最新ブラウザのみを対象としています（古いブラウザでは、標準コールバック&rdquo;cb&rdquo;関数が代わりにコールされる可能性が高い &ndash; 少なくともIE7およびIE8では確認済み）。<br>
-<br /></li>
-</ul>
+<li>レガシーs2sサポートを廃止しました（既にTealium iQから削除されていたので）。  クラウドデリバリーはTealium Customer Data Hubでサポートされます。</li>
+
+<li><p>utag.ut.loaderユーティリティ関数に渡されるエラーハンドラー関数のサポートを追加。  このサポートは、最新ブラウザのみを対象としています（古いブラウザでは、標準コールバック&rdquo;cb&rdquo;関数が代わりにコールされる可能性が高い &ndash; 少なくともIE7およびIE8では確認済み）。<br></p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">utag.ut.loader({
-        <span style="color:#b84">&#34;src&#34;</span>   <span style="font-weight:bold">:</span> <span style="color:#b84">&#34;https://www.example.com/path/file.js&#34;</span>,
-        <span style="color:#b84">&#34;cb&#34;</span>    <span style="font-weight:bold">:</span> <span style="font-weight:bold">function</span>(){console.log(<span style="color:#b84">&#34;CALLBACK&#34;</span>)},
-        <span style="color:#b84">&#34;error&#34;</span> <span style="font-weight:bold">:</span> <span style="font-weight:bold">function</span>(){console.log(<span style="color:#b84">&#34;ERROR IN LOADING&#34;</span>)}
-        });
-</code></pre></div>
+    <span style="color:#b84">&#34;src&#34;</span>   <span style="font-weight:bold">:</span> <span style="color:#b84">&#34;https://www.example.com/path/file.js&#34;</span>,
+    <span style="color:#b84">&#34;cb&#34;</span>    <span style="font-weight:bold">:</span> <span style="font-weight:bold">function</span>(){console.log(<span style="color:#b84">&#34;CALLBACK&#34;</span>)},
+    <span style="color:#b84">&#34;error&#34;</span> <span style="font-weight:bold">:</span> <span style="font-weight:bold">function</span>(){console.log(<span style="color:#b84">&#34;ERROR IN LOADING&#34;</span>)}
+    });
+</code></pre></div></li>
+</ul>
+
 <h2 id="バージョン4-42">バージョン4.42</h2>
 
 <p>2016年8月リリース</p>
@@ -432,7 +444,7 @@ b[<span style="color:#b84">&#34;_t_session_id&#34;</span>] <span style="font-wei
 <p>2015年7月9日リリース</p>
 
 <ul>
-<li>訪問者エンリッチメントデータをローカルストレージ内のプロファイル固有の場所に書き込む<a href="https://community.tealiumiq.com/t5/AudienceStream/Tealium-Collect-Tag-formerly-DataCloud/ta-p/11923">Tealium Collectタグ</a>のサポートを追加。</li>
+<li>訪問者エンリッチメントデータをローカルストレージ内のプロファイル固有の場所に書き込む<a href="https://community.tealiumiq.com/t5/Tealium AudienceStream/Tealium-Collect-Tag-formerly-DataCloud/ta-p/11923">Tealium Collectタグ</a>のサポートを追加。</li>
 </ul>
 
 <h2 id="バージョン4-38">バージョン4.38</h2>
@@ -450,7 +462,6 @@ b[<span style="color:#b84">&#34;_t_session_id&#34;</span>] <span style="font-wei
 </ul>
 
 <p class="note">この拡張機能は、4.37以前のバージョンでは複数回実行される可能性があるため、それらのバージョンとの互換性がありません。</p>
-
 
 <ul>
 <li>すべてのタグが読み込まれる前にutag.viewをコールする方法のサポートが追加されました。utag.viewをコールし、DOM Readyをスコープとする拡張機能内のUIDによって特定のタグをトリガーする際に発生するバグが、これによって修正されます。</li>
@@ -583,7 +594,7 @@ utag_cfg_ovrd.waittimer<span style="font-weight:bold">=</span><span style="color
 <p>2014年2月6日リリース</p>
 
 <ul>
-<li>AudienceStream<a href="https://community.tealiumiq.com/t5/3-AudienceStream-Documentation/Data-Layer-Enrichment/ta-p/684">データレイヤーエンリッチメント</a>のサポートを導入。 これには、<a href="https://community.tealiumiq.com/t5/3-AudienceStream-Documentation/AudienceStream/ta-p/323" target="_blank">AudienceStream</a>と<a href="https://community.tealiumiq.com/t5/AudienceStream/Tealium-Collect-Tag-formerly-DataCloud/ta-p/11923" target="_blank">DataCloudタグ</a>が必要です。</li>
+<li>Tealium AudienceStream<a href="https://community.tealiumiq.com/t5/3-Tealium AudienceStream-Documentation/Data-Layer-Enrichment/ta-p/684">データレイヤーエンリッチメント</a>のサポートを導入。 これには、<a href="https://community.tealiumiq.com/t5/3-Tealium AudienceStream-Documentation/Tealium AudienceStream/ta-p/323" target="_blank">Tealium AudienceStream</a>と<a href="https://community.tealiumiq.com/t5/Tealium AudienceStream/Tealium-Collect-Tag-formerly-DataCloud/ta-p/11923" target="_blank">DataCloudタグ</a>が必要です。</li>
 <li>utag.jsは、動的メタタグを収集するために、utag.viewコールのたびに<a href="http://en.wikipedia.org/wiki/Meta_element">メタタグ</a>を読み取ります。</li>
 
 <li><p><code>utag_main</code> Cookieには、以下に示すいくつかの変更点があります。</p>
@@ -612,7 +623,7 @@ utag_cfg_ovrd.waittimer<span style="font-weight:bold">=</span><span style="color
 <li><p>既知の問題：<code>utag_main</code>セッションCookieが既に4.27より前のバージョンのutag.jsによって設定されているウェブサイトに訪問者がアクセスすると、ページ番号（_pn）とセッション番号（_sn）の値が常に<a href="http://en.wikipedia.org/wiki/NaN">NaN</a>に設定されます。 この問題は、utag.jsバージョン4.28では解決されています。</p></li>
 </ul></li>
 
-<li><p>オブジェクトをフラット化する<strong>utag.ut.flatten</strong>関数を導入。 この関数は、主にAudienceStream用のデータレイヤーエンリッチメントで使用されます。</p></li>
+<li><p>オブジェクトをフラット化する<strong>utag.ut.flatten</strong>関数を導入。 この関数は、主にTealium AudienceStream用のデータレイヤーエンリッチメントで使用されます。</p></li>
 </ul>
 
 <h2 id="バージョン4-26">バージョン4.26</h2>
@@ -643,7 +654,6 @@ utag_cfg_ovrd.waittimer<span style="font-weight:bold">=</span><span style="color
 
 <p class="note">utag.link()コールで新しいタグは読み込まれません。 この操作は、utag.view()コールでのみ行えます。</p>
 
-
 <p><strong>UIDによってタグを直接読み込む（utag.viewおよびutag.trackコールに対する更新）</strong></p>
 
 <p>特にAJAXを使用する高度な実装では、現在はutag.view()コールを使用して新しいタグを取り込み、それを（Tealium iQの[Tags]タブに表示される）タグのUIDに基づきトリガーすることができます。 これにより、すべてのタグ配信ルールがバイパスされます。</p>
@@ -670,7 +680,6 @@ utag_cfg_ovrd.waittimer<span style="font-weight:bold">=</span><span style="color
 <p><a href="#utagcfglowermeta">utag.cfg.lowermetaフラグ</a>を&rdquo;true&rdquo;に設定すれば、メタタグの小文字化を有効にできます。 これは、そのメタタグの名前と値のペアの名前にのみ適用されます。</p>
 
 <p class="note">大文字と小文字の混在するクエリ文字列パラメータがある場合は、それに正確に一致するように[Data Sources]タブのデータソースの名前を更新する必要があります。 また、このクエリ文字列タイプのデータソースを参照するすべてのコードも更新しなければなりません。</p>
-
 
 <p><strong>utag_main Cookie内の新しい値</strong></p>
 
@@ -859,19 +868,54 @@ utag_cfg_ovrd.nocookie<span style="font-weight:bold">=</span><span style="font-w
 
 </div>
 
+<b class="pv1 br2 dib tc mv3 link">
+
+	<div date-pref class="white">
+		
+			<a href="https://docs.tealium.co.jp/platforms/javascript/built-in-variables/" title="ビルトイン変数 "><svg class="fill-current" height="18px" viewBox="0 0 18 18" width="18px" xmlns="http://www.w3.org/2000/svg">
+    <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+    <path d="M0 0h24v24H0z" fill="none"/>
+</svg>
+ ビルトイン変数 </a>
+		
+
+	</div>
+
+</b>
+<b style="position: absolute; right:0px;" class="pv1 br2 dib tc mv3 link">
+
+	<div date-pref class="white">
+
+		
+			<a href="https://docs.tealium.co.jp/platforms/javascript/install-utag/" title="">
+			 <svg class="fill-current" height="18px" viewBox="0 0 18 18" width="18px" xmlns="http://www.w3.org/2000/svg"> <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path> <path d="M0 0h24v24H0z" fill="none"></path> </svg>
+
+			</a>
+		
+	</div>
+
+</b>
+<br>&nbsp;</br>
+
           
 
 
         </div>
       </div>
-      <div class="order-0 w-20 dn db-l pl3 sticky-l">
+      <div class="order-0 w-20 dn db-l sticky-l">
         
 <nav class="side-nav f6" role="navigation">
-  <ul class="list pa0 nl2">
+  <ul class="list pa0">
+
     
       
       
-      <li class="w-100 hover-accent-color-light fw8 mb1 bb b--moon-gray">
+      <li class="w-100 hover-accent-color-light fw8 f4 mid-gray pv1 pl2">
+        Mobile
+      </li>
+      
+      
+      <li class="w-100 hover-accent-color-light fw8 pl2">
         <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".remote-commands">Remote Commands</a>
         <ul class="remote-commands desktopmenu animated fadeIn list pl0 dn">
           <li class="fw4">
@@ -899,35 +943,7 @@ utag_cfg_ovrd.nocookie<span style="font-weight:bold">=</span><span style="font-w
       </li>
       
       
-      <li class="w-100 hover-accent-color-light fw8">
-        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".amp">AMP</a>
-        <ul class="amp desktopmenu animated fadeIn list pl0 dn">
-          <li class="fw4">
-            
-            
-            <a href="/platforms/amp/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              概要
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/amp/install/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              インストール
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/amp/data-layer-variables/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              データレイヤー
-            </a>
-          </li>
-        </ul>
-      </li>
-      
-      
-      <li class="w-100 hover-accent-color-light fw8">
+      <li class="w-100 hover-accent-color-light fw8 pl2">
         <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".android">Android</a>
         <ul class="android desktopmenu animated fadeIn list pl0 dn">
           <li class="fw4">
@@ -1004,7 +1020,7 @@ utag_cfg_ovrd.nocookie<span style="font-weight:bold">=</span><span style="font-w
       </li>
       
       
-      <li class="w-100 hover-accent-color-light fw8">
+      <li class="w-100 hover-accent-color-light fw8 pl2">
         <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".android-tv">Android TV</a>
         <ul class="android-tv desktopmenu animated fadeIn list pl0 dn">
           <li class="fw4">
@@ -1025,7 +1041,7 @@ utag_cfg_ovrd.nocookie<span style="font-weight:bold">=</span><span style="font-w
       </li>
       
       
-      <li class="w-100 hover-accent-color-light fw8">
+      <li class="w-100 hover-accent-color-light fw8 pl2">
         <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".android-wear">Android Wear</a>
         <ul class="android-wear desktopmenu animated fadeIn list pl0 dn">
           <li class="fw4">
@@ -1046,63 +1062,7 @@ utag_cfg_ovrd.nocookie<span style="font-weight:bold">=</span><span style="font-w
       </li>
       
       
-      <li class="w-100 hover-accent-color-light fw8">
-        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".angular">Angular</a>
-        <ul class="angular desktopmenu animated fadeIn list pl0 dn">
-          <li class="fw4">
-            
-            
-            <a href="/platforms/angular/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              概要
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/angular/install/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              インストール
-            </a>
-          </li>
-        </ul>
-      </li>
-      
-      
-      <li class="w-100 hover-accent-color-light fw8">
-        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".csharp">C#</a>
-        <ul class="csharp desktopmenu animated fadeIn list pl0 dn">
-          <li class="fw4">
-            
-            
-            <a href="/platforms/csharp/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              概要
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/csharp/install/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              インストール
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/csharp/functions/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              関数の定義
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/csharp/release-notes/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              リリースノート
-            </a>
-          </li>
-        </ul>
-      </li>
-      
-      
-      <li class="w-100 hover-accent-color-light fw8">
+      <li class="w-100 hover-accent-color-light fw8 pl2">
         <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".cordova">Cordova</a>
         <ul class="cordova desktopmenu animated fadeIn list pl0 dn">
           <li class="fw4">
@@ -1158,7 +1118,7 @@ utag_cfg_ovrd.nocookie<span style="font-weight:bold">=</span><span style="font-w
       </li>
       
       
-      <li class="w-100 hover-accent-color-light fw8">
+      <li class="w-100 hover-accent-color-light fw8 pl2">
         <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".flutter">Flutter</a>
         <ul class="flutter desktopmenu animated fadeIn list pl0 dn">
           <li class="fw4">
@@ -1186,29 +1146,8 @@ utag_cfg_ovrd.nocookie<span style="font-weight:bold">=</span><span style="font-w
       </li>
       
       
-      <li class="w-100 hover-accent-color-light fw8">
-        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".http-api">HTTP API</a>
-        <ul class="http-api desktopmenu animated fadeIn list pl0 dn">
-          <li class="fw4">
-            
-            
-            <a href="/platforms/http-api/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              概要
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/http-api/endpoint-spec/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              エンドポイント
-            </a>
-          </li>
-        </ul>
-      </li>
-      
-      
-      <li class="w-100 hover-accent-color-light fw8">
-        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".ios">iOS</a>
+      <li class="w-100 hover-accent-color-light fw8 pl2">
+        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".ios">iOS (Objective-C)</a>
         <ul class="ios desktopmenu animated fadeIn list pl0 dn">
           <li class="fw4">
             
@@ -1277,27 +1216,153 @@ utag_cfg_ovrd.nocookie<span style="font-weight:bold">=</span><span style="font-w
       </li>
       
       
-      <li class="w-100 hover-accent-color-light fw8">
-        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".java">Java</a>
-        <ul class="java desktopmenu animated fadeIn list pl0 dn">
+      <li class="w-100 hover-accent-color-light fw8 pl2">
+        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".swift">iOS (Swift)</a>
+        <ul class="swift desktopmenu animated fadeIn list pl0 dn">
           <li class="fw4">
             
             
-            <a href="/platforms/java/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+            <a href="/platforms/swift/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
               概要
             </a>
           </li>
           <li class="fw4">
             
             
-            <a href="/platforms/java/install/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+            <a href="/platforms/swift/install/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
               インストール
             </a>
           </li>
           <li class="fw4">
             
             
-            <a href="/platforms/java/function-definitions/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+            <a href="/platforms/swift/track/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              トラッキング
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/swift/consent-manager/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              Consent Manager
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/swift/class-definitions/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              クラスの定義
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/swift/modules/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              モジュール
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/swift/data-layer/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              データレイヤー
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/swift/release-notes/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              リリースノート
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/swift/module-list/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              モジュールのリスト
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/swift/with-objective-c/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              Objective-Cとの連携
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/swift/feature-comparison/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              機能比較
+            </a>
+          </li>
+        </ul>
+      </li>
+      
+      
+      <li class="w-100 hover-accent-color-light fw8 pl2">
+        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".tvos">iOS (tvOS)</a>
+        <ul class="tvos desktopmenu animated fadeIn list pl0 dn">
+          <li class="fw4">
+            
+            
+            <a href="/platforms/tvos/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              概要
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/tvos/install/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              インストール
+            </a>
+          </li>
+        </ul>
+      </li>
+      
+      
+      <li class="w-100 hover-accent-color-light fw8 pl2">
+        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".watchos">iOS (watchOS)</a>
+        <ul class="watchos desktopmenu animated fadeIn list pl0 dn">
+          <li class="fw4">
+            
+            
+            <a href="/platforms/watchos/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              概要
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/watchos/install/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              インストール
+            </a>
+          </li>
+        </ul>
+      </li>
+      
+      
+      <li class="w-100 hover-accent-color-light fw8 pl2">
+        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".react-native">React Native</a>
+        <ul class="react-native desktopmenu animated fadeIn list pl0 dn">
+          <li class="fw4">
+            
+            
+            <a href="/platforms/react-native/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              概要
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/react-native/install/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              インストール
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/react-native/functions/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
               関数の定義
             </a>
           </li>
@@ -1305,7 +1370,82 @@ utag_cfg_ovrd.nocookie<span style="font-weight:bold">=</span><span style="font-w
       </li>
       
       
-      <li class="w-100 hover-accent-color-light fw8 active">
+      <li class="w-100 hover-accent-color-light fw8 mb1 bb b--moon-gray pl2">
+        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".xamarin">Xamarin</a>
+        <ul class="xamarin desktopmenu animated fadeIn list pl0 dn">
+          <li class="fw4">
+            
+            
+            <a href="/platforms/xamarin/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              概要
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/xamarin/install/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              インストール
+            </a>
+          </li>
+        </ul>
+      </li>
+      
+      
+      <li class="w-100 hover-accent-color-light fw8 f4 mid-gray pv1 pl2">
+        Web
+      </li>
+      
+      
+      <li class="w-100 hover-accent-color-light fw8 pl2">
+        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".amp">AMP</a>
+        <ul class="amp desktopmenu animated fadeIn list pl0 dn">
+          <li class="fw4">
+            
+            
+            <a href="/platforms/amp/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              概要
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/amp/install/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              インストール
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/amp/data-layer-variables/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              データレイヤー
+            </a>
+          </li>
+        </ul>
+      </li>
+      
+      
+      <li class="w-100 hover-accent-color-light fw8 pl2">
+        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".angular">Angular</a>
+        <ul class="angular desktopmenu animated fadeIn list pl0 dn">
+          <li class="fw4">
+            
+            
+            <a href="/platforms/angular/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              概要
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/angular/install/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              インストール
+            </a>
+          </li>
+        </ul>
+      </li>
+      
+      
+      <li class="w-100 hover-accent-color-light fw8 active mb1 bb b--moon-gray pl2">
         <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2  primary-color" data-target=".javascript">JavaScript (Web)</a>
         <ul class="javascript desktopmenu animated fadeIn list pl0 db">
           <li class="fw4">
@@ -1396,7 +1536,96 @@ utag_cfg_ovrd.nocookie<span style="font-weight:bold">=</span><span style="font-w
       </li>
       
       
-      <li class="w-100 hover-accent-color-light fw8">
+      <li class="w-100 hover-accent-color-light fw8 f4 mid-gray pv1 pl2">
+        Server
+      </li>
+      
+      
+      <li class="w-100 hover-accent-color-light fw8 pl2">
+        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".csharp">C#</a>
+        <ul class="csharp desktopmenu animated fadeIn list pl0 dn">
+          <li class="fw4">
+            
+            
+            <a href="/platforms/csharp/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              概要
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/csharp/install/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              インストール
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/csharp/functions/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              関数の定義
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/csharp/release-notes/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              リリースノート
+            </a>
+          </li>
+        </ul>
+      </li>
+      
+      
+      <li class="w-100 hover-accent-color-light fw8 pl2">
+        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".http-api">HTTP API</a>
+        <ul class="http-api desktopmenu animated fadeIn list pl0 dn">
+          <li class="fw4">
+            
+            
+            <a href="/platforms/http-api/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              概要
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/http-api/endpoint-spec/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              エンドポイント
+            </a>
+          </li>
+        </ul>
+      </li>
+      
+      
+      <li class="w-100 hover-accent-color-light fw8 pl2">
+        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".java">Java</a>
+        <ul class="java desktopmenu animated fadeIn list pl0 dn">
+          <li class="fw4">
+            
+            
+            <a href="/platforms/java/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              概要
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/java/install/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              インストール
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/java/function-definitions/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              関数の定義
+            </a>
+          </li>
+        </ul>
+      </li>
+      
+      
+      <li class="w-100 hover-accent-color-light fw8 pl2">
         <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".node">Node</a>
         <ul class="node desktopmenu animated fadeIn list pl0 dn">
           <li class="fw4">
@@ -1417,7 +1646,7 @@ utag_cfg_ovrd.nocookie<span style="font-weight:bold">=</span><span style="font-w
       </li>
       
       
-      <li class="w-100 hover-accent-color-light fw8">
+      <li class="w-100 hover-accent-color-light fw8 pl2">
         <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".python">Python</a>
         <ul class="python desktopmenu animated fadeIn list pl0 dn">
           <li class="fw4">
@@ -1438,35 +1667,7 @@ utag_cfg_ovrd.nocookie<span style="font-weight:bold">=</span><span style="font-w
       </li>
       
       
-      <li class="w-100 hover-accent-color-light fw8">
-        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".react-native">React Native</a>
-        <ul class="react-native desktopmenu animated fadeIn list pl0 dn">
-          <li class="fw4">
-            
-            
-            <a href="/platforms/react-native/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              概要
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/react-native/install/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              インストール
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/react-native/functions/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              関数の定義
-            </a>
-          </li>
-        </ul>
-      </li>
-      
-      
-      <li class="w-100 hover-accent-color-light fw8">
+      <li class="w-100 hover-accent-color-light fw8 pl2">
         <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".roku">Roku</a>
         <ul class="roku desktopmenu animated fadeIn list pl0 dn">
           <li class="fw4">
@@ -1494,7 +1695,7 @@ utag_cfg_ovrd.nocookie<span style="font-weight:bold">=</span><span style="font-w
       </li>
       
       
-      <li class="w-100 hover-accent-color-light fw8">
+      <li class="w-100 hover-accent-color-light fw8 pl2">
         <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".ruby">Ruby</a>
         <ul class="ruby desktopmenu animated fadeIn list pl0 dn">
           <li class="fw4">
@@ -1513,153 +1714,6 @@ utag_cfg_ovrd.nocookie<span style="font-weight:bold">=</span><span style="font-w
           </li>
         </ul>
       </li>
-      
-      
-      <li class="w-100 hover-accent-color-light fw8">
-        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".swift">Swift</a>
-        <ul class="swift desktopmenu animated fadeIn list pl0 dn">
-          <li class="fw4">
-            
-            
-            <a href="/platforms/swift/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              概要
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/swift/install/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              インストール
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/swift/track/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              トラッキング
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/swift/consent-manager/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              Consent Manager
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/swift/class-definitions/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              クラスの定義
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/swift/modules/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              モジュール
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/swift/data-layer/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              データレイヤー
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/swift/release-notes/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              リリースノート
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/swift/module-list/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              モジュールのリスト
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/swift/with-objective-c/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              Objective-Cとの連携
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/swift/feature-comparison/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              機能比較
-            </a>
-          </li>
-        </ul>
-      </li>
-      
-      
-      <li class="w-100 hover-accent-color-light fw8">
-        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".tvos">tvOS</a>
-        <ul class="tvos desktopmenu animated fadeIn list pl0 dn">
-          <li class="fw4">
-            
-            
-            <a href="/platforms/tvos/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              概要
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/tvos/install/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              インストール
-            </a>
-          </li>
-        </ul>
-      </li>
-      
-      
-      <li class="w-100 hover-accent-color-light fw8">
-        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".watchos">watchOS</a>
-        <ul class="watchos desktopmenu animated fadeIn list pl0 dn">
-          <li class="fw4">
-            
-            
-            <a href="/platforms/watchos/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              概要
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/watchos/install/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              インストール
-            </a>
-          </li>
-        </ul>
-      </li>
-      
-      
-      <li class="w-100 hover-accent-color-light fw8">
-        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".xamarin">Xamarin</a>
-        <ul class="xamarin desktopmenu animated fadeIn list pl0 dn">
-          <li class="fw4">
-            
-            
-            <a href="/platforms/xamarin/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              概要
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/xamarin/install/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              インストール
-            </a>
-          </li>
-        </ul>
-      </li>
   </ul>
 </nav>
 
@@ -1673,18 +1727,19 @@ utag_cfg_ovrd.nocookie<span style="font-weight:bold">=</span><span style="font-w
       <div class="feedback_form">
   <span>
 	  <p style="display:inline">このページはお役にたちましたでしょうか？</p>
-		<button enabled id="feedback_yes" class="f6 ph3 pv1 br2 dib tc ttu mv3 bg-primary-color white hover-bg-green link">はい</button>
-	  <button enabled id="feedback_no" class="f6 ph3 pv1 br2 dib tc ttu mv3 bg-primary-color white hover-bg-green link">いいえ</button>
+		<button enabled id="feedback_yes" class="f6 ph3 pv1 br2 dib tc mv3 bg-primary-color white hover-bg-green link">はい</button>
+	  <button enabled id="feedback_no" class="f6 ph3 pv1 br2 dib tc mv3 bg-primary-color white hover-bg-green link">いいえ</button>
   </span>
 	<span id="feedback_comment">
 		<textarea id="feedback_textarea" type="text" placeholder="JA-Tell us how we can make this article better." rows="4" cols="70"></textarea>
-		<button disabled id="feedback_submit" class="f6 ph3 pv1 br2 dib tc ttu mv3 bg-primary-color white hover-bg-blue link">フィードバックを送信</button>
+    <span>最終更新日 ::  2020年January月23日
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button disabled id="feedback_submit" class="f6 ph3 pv1 br2 dib tc mv3 bg-primary-color white hover-bg-blue link">フィードバックを送信</button></span>
   </span>
   <span id="feedback_thank_you" style="display: none;">
      <em>JA-Thank you for your feedback!</em>
   </span>
 </div>
-<p>最終更新日 ::  2019年October月28日</p>
 
       
 
@@ -1704,7 +1759,13 @@ utag_cfg_ovrd.nocookie<span style="font-weight:bold">=</span><span style="font-w
 <ul class="list hidden dib ph0 ma0 scrolling-touch tc">
   
     <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/" class="ttu f6 link primary-color-light overflow hover-white db brand-font ma0 w-100 pv3 ph4">
+        <a href="https://docs.tealium.co.jp/guides/" class="ttu f6 link primary-color-light overflow hover-white db brand-font ma0 w-100 pv3 ph4">
+          手引き
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-primary w-100">
+        <a href="https://docs.tealium.co.jp/platforms/" class="ttu f6 link primary-color-light overflow hover-white db brand-font ma0 w-100 pv3 ph4">
           プラットフォーム
         </a>
     </li>
@@ -1717,135 +1778,153 @@ utag_cfg_ovrd.nocookie<span style="font-weight:bold">=</span><span style="font-w
 
 <ul class="list dib ph0 ma0 scrolling-touch tc">
   
-    <li  class="tl dib ma0 hover-bg-primary w-100 mb2 bb b--mid-gray">
-        <a href="http://docs.tealium.co.jp/platforms/remote-commands/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+    <li  class="tl dib ma0 hover-bg-primary w-100">
+        <a href="https://docs.tealium.co.jp" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+          Mobile
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-primary w-100">
+        <a href="https://docs.tealium.co.jp/platforms/remote-commands/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
           Remote Commands
         </a>
     </li>
   
     <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/amp/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
-          AMP
-        </a>
-    </li>
-  
-    <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/android/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+        <a href="https://docs.tealium.co.jp/platforms/android/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
           Android
         </a>
     </li>
   
     <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/android-tv/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+        <a href="https://docs.tealium.co.jp/platforms/android-tv/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
           Android TV
         </a>
     </li>
   
     <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/android-wear/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+        <a href="https://docs.tealium.co.jp/platforms/android-wear/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
           Android Wear
         </a>
     </li>
   
     <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/angular/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
-          Angular
-        </a>
-    </li>
-  
-    <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/csharp/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
-          C#
-        </a>
-    </li>
-  
-    <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/cordova/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+        <a href="https://docs.tealium.co.jp/platforms/cordova/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
           Cordova
         </a>
     </li>
   
     <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/flutter/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+        <a href="https://docs.tealium.co.jp/platforms/flutter/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
           Flutter
         </a>
     </li>
   
     <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/http-api/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
-          HTTP API
+        <a href="https://docs.tealium.co.jp/platforms/ios/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+          iOS (Objective-C)
         </a>
     </li>
   
     <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/ios/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
-          iOS
+        <a href="https://docs.tealium.co.jp/platforms/swift/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+          iOS (Swift)
         </a>
     </li>
   
     <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/java/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
-          Java
+        <a href="https://docs.tealium.co.jp/platforms/tvos/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+          iOS (tvOS)
         </a>
     </li>
   
     <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/javascript/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+        <a href="https://docs.tealium.co.jp/platforms/watchos/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+          iOS (watchOS)
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-primary w-100">
+        <a href="https://docs.tealium.co.jp/platforms/react-native/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+          React Native
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-primary w-100 mb2 bb b--mid-gray">
+        <a href="https://docs.tealium.co.jp/platforms/xamarin/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+          Xamarin
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-primary w-100">
+        <a href="https://docs.tealium.co.jp" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+          Web
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-primary w-100">
+        <a href="https://docs.tealium.co.jp/platforms/amp/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+          AMP
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-primary w-100">
+        <a href="https://docs.tealium.co.jp/platforms/angular/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+          Angular
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-primary w-100 mb2 bb b--mid-gray">
+        <a href="https://docs.tealium.co.jp/platforms/javascript/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
           JavaScript (Web)
         </a>
     </li>
   
     <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/node/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+        <a href="https://docs.tealium.co.jp" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+          Server
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-primary w-100">
+        <a href="https://docs.tealium.co.jp/platforms/csharp/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+          C#
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-primary w-100">
+        <a href="https://docs.tealium.co.jp/platforms/http-api/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+          HTTP API
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-primary w-100">
+        <a href="https://docs.tealium.co.jp/platforms/java/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+          Java
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-primary w-100">
+        <a href="https://docs.tealium.co.jp/platforms/node/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
           Node
         </a>
     </li>
   
     <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/python/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+        <a href="https://docs.tealium.co.jp/platforms/python/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
           Python
         </a>
     </li>
   
     <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/react-native/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
-          React Native
-        </a>
-    </li>
-  
-    <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/roku/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+        <a href="https://docs.tealium.co.jp/platforms/roku/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
           Roku
         </a>
     </li>
   
     <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/ruby/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+        <a href="https://docs.tealium.co.jp/platforms/ruby/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
           Ruby
-        </a>
-    </li>
-  
-    <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/swift/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
-          Swift
-        </a>
-    </li>
-  
-    <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/tvos/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
-          tvOS
-        </a>
-    </li>
-  
-    <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/watchos/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
-          watchOS
-        </a>
-    </li>
-  
-    <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/xamarin/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
-          Xamarin
         </a>
     </li>
   

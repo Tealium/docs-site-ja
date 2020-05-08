@@ -11,7 +11,7 @@
     <meta name="MobileOptimized" content="320">
 
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-     <meta name="generator" content="Hugo 0.54.0" />
+     <meta name="generator" content="Hugo 0.59.0" />
 
       
         <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
@@ -25,7 +25,6 @@
         
 <script>
 var utag_data = {
-    category_name : "Android",
     site_section  : "platforms",
     site_language : "ja",
     tealium_event : "page_view"
@@ -48,14 +47,26 @@ var utag_data = {
   <div class="center flex-ns flex-wrap items-center justify-start mw9">
 
     <h1 class="dim f3 lh-solid ml0-ns mr0 mr4-l mv0 pl3 pl4-ns">
-      <a href="http://docs.tealium.co.jp/"><img src="/images/icons/tealdevdocs_logo_white.svg" width="180" height="41"/></a>
+      <a href="https://docs.tealium.co.jp"><img src="/images/icons/tealdevdocs_logo_white.svg" width="180" height="41"/></a>
     </h1>
     <ul class="list ma0 pa0 dn dib-l">
       
-            
         <li class="f5 dib mr4" role="menuitem">
             
-          <a href="http://docs.tealium.co.jp/platforms/" class="dim link">プラットフォーム</a>
+          <a href="https://docs.tealium.co.jp/guides/" class="dim link">
+          手引き
+            
+            
+          </a>
+        </li>
+      
+        <li class="f5 dib mr4 active" role="menuitem">
+            
+          <a href="https://docs.tealium.co.jp/platforms/" class="dim link">
+          プラットフォーム
+            
+            
+          </a>
         </li>
       
     </ul>
@@ -172,15 +183,15 @@ var utag_data = {
             <ul class="menu-group as-main-navigation flex-0 bottom-align">
               <li class="menu-divider"></li>
               <li class="js-main-nav-section">
-                <a href="https://my.tealiumiq.com/" class="menu-list-item top-level tooltip-right" title="Universal Data Hub">
+                <a href="https://my.tealiumiq.com/" class="menu-list-item top-level tooltip-right" title="Customer Data Hub">
                     <span class="menu-large-icon">
                         <span class="as-platform-image square-xxxs is-rounded bg-transparent">
-                            <span class="inner-image UDH-icon">UDH</span>
+                            <span class="inner-image UDH-icon">CDH</span>
                         </span>
                     </span>
-                    <span class="menu-context supportLinks_buttonTitle">Universal Data Hub</span>
+                    <span class="menu-context supportLinks_buttonTitle">Customer Data Hub</span>
                 </a>
-                          <span class="tooltiptext">Universal Data Hub</span>
+                          <span class="tooltiptext">Customer Data Hub</span>
               </li>
               <li class="menu-divider"></li>
               <li class="js-toggle-leftframe">
@@ -259,9 +270,9 @@ var utag_data = {
 
 
 
+
 <div class="prose" id="prose">
-
-
+  
 
 <h2 id="要件">要件</h2>
 
@@ -274,10 +285,10 @@ var utag_data = {
 
 <p>*iQのモバイルプロファイル（「<a href="https://community.tealiumiq.com/t5/iQ-Tag-Management/Creating-a-Mobile-Profile/ta-p/16328">モバイルプロファイルの作成</a>」を参照してください）</p>
 
-<p>Universal Data Hubと併用する場合：</p>
+<p>Tealium Customer Data Hubと併用する場合：</p>
 
 <ul>
-<li>Tealium <a href="https://community.tealiumiq.com/t5/Universal-Data-Hub/tkb-p/udh">Universal Data Hub</a>アカウント</li>
+<li><a href="https://community.tealiumiq.com/t5/Customer-Data-Hub/tkb-p/udh">Tealium Customer Data Hub</a>アカウント</li>
 </ul>
 
 <h2 id="コードの取得">コードの取得</h2>
@@ -289,7 +300,6 @@ var utag_data = {
 </ul>
 
 <p class="tip">ライブラリをダウンロードせずクローンすることで、今後のリリースに向けたアップデートがしやすくなります。</p>
-
 
 <h2 id="mavenインストール">Mavenインストール</h2>
 
@@ -306,7 +316,7 @@ var utag_data = {
 <span style="font-weight:bold">}</span></code></pre></div>
 <p>Tealiumの依存関係をプロジェクトモジュールの<code>build.gradle</code>ファイルに追加します。</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">dependencies <span style="font-weight:bold">{</span>
-    implementation <span style="color:#b84">&#39;com.tealium:library:5.5.5&#39;</span>
+    implementation <span style="color:#b84">&#39;com.tealium:library:5.6.1&#39;</span>
 <span style="font-weight:bold">}</span></code></pre></div>
 <h2 id="手動インストール">手動インストール</h2>
 
@@ -327,20 +337,20 @@ var utag_data = {
 
 <li><p>Tealiumライブラリの依存関係を<code>build.gradle</code>ファイルに追加します。</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">dependencies <span style="font-weight:bold">{</span>
-    implementation<span style="font-weight:bold">(</span>name:<span style="color:#b84">&#39;tealium-5.5.5&#39;</span><span style="font-weight:bold">,</span> ext:<span style="color:#b84">&#39;aar&#39;</span><span style="font-weight:bold">)</span>
-<span style="font-weight:bold">}</span> </code></pre></div></li>
+    implementation<span style="font-weight:bold">(</span>name:<span style="color:#b84">&#39;tealium-5.6.1&#39;</span><span style="font-weight:bold">,</span> ext:<span style="color:#b84">&#39;aar&#39;</span><span style="font-weight:bold">)</span>
+<span style="font-weight:bold">}</span></code></pre></div></li>
 </ol>
 
 <h2 id="初期化">初期化</h2>
 
 <p>以下のコードをアプリケーションのサブクラス内の<code>onCreate</code>メソッドに追加します。</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">Tealium<span style="font-weight:bold">.</span><span style="color:#008080">Config</span> tealConfig <span style="font-weight:bold">=</span> Tealium<span style="font-weight:bold">.</span><span style="color:#008080">Config</span><span style="font-weight:bold">.</span><span style="color:#008080">create</span><span style="font-weight:bold">(</span>application<span style="font-weight:bold">,</span>
-                                                  <span style="color:#b84">&#34;ACCOUNT&#34;</span><span style="font-weight:bold">,</span>
-                                                  <span style="color:#b84">&#34;PROFILE&#34;</span><span style="font-weight:bold">,</span>
-                                                  <span style="color:#b84">&#34;ENVIRONMENT&#34;</span><span style="font-weight:bold">);</span>
-tealConfig<span style="font-weight:bold">.</span><span style="color:#008080">setDataSourceId</span><span style="font-weight:bold">(</span><span style="color:#b84">&#34;DATASOURCEKEY&#34;</span><span style="font-weight:bold">);</span>
-tealConfig<span style="font-weight:bold">.</span><span style="color:#008080">setForceOverrideLogLevel</span><span style="font-weight:bold">(</span><span style="color:#b84">&#34;prod&#34;</span><span style="font-weight:bold">);</span>
-Tealium<span style="font-weight:bold">.</span><span style="color:#008080">createInstance</span><span style="font-weight:bold">(</span><span style="color:#b84">&#34;INSTANCE&#34;</span><span style="font-weight:bold">,</span> tealConfig<span style="font-weight:bold">);</span></code></pre></div>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">Tealium.<span style="color:#008080">Config</span> <span style="color:#900;font-weight:bold">tealConfig</span> <span style="font-weight:bold">=</span> Tealium.<span style="color:#008080">Config</span>.<span style="color:#008080">create</span>(application,
+                                                  <span style="color:#b84">&#34;ACCOUNT&#34;</span>,
+                                                  <span style="color:#b84">&#34;PROFILE&#34;</span>,
+                                                  <span style="color:#b84">&#34;ENVIRONMENT&#34;</span>);
+tealConfig.<span style="color:#008080">setDataSourceId</span>(<span style="color:#b84">&#34;DATASOURCEKEY&#34;</span>);
+tealConfig.<span style="color:#008080">setForceOverrideLogLevel</span>(<span style="color:#b84">&#34;prod&#34;</span>);
+Tealium.<span style="color:#008080">createInstance</span>(<span style="color:#b84">&#34;INSTANCE&#34;</span>, tealConfig);</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -372,7 +382,7 @@ Tealium<span style="font-weight:bold">.</span><span style="color:#008080">create
 
 <tr>
 <td>datasource</td>
-<td>（任意）UDHのデータソースキー。</td>
+<td>（任意）Customer Data Hubのデータソースキー。</td>
 </tr>
 
 <tr>
@@ -386,35 +396,32 @@ Tealium<span style="font-weight:bold">.</span><span style="color:#008080">create
 <strong>バージョン5.5.1以降</strong> - <code>Tealium.Config</code>オブジェクトで提供されるプロファイルにデータが送信されます<br />
 <strong>バージョン5.5.0以前</strong> - データがデフォルトのプロファイル（&rdquo;main&rdquo;）に送信されます</p>
 
-
 <h2 id="ビューのトラッキング">ビューのトラッキング</h2>
 
 <p>スクリーンビューは、スクリーン名と（任意で）コンテクスチュアルビューデータという、2つのパラメータを使用して<code>trackView()</code>を呼び出すことでトラッキングできます。</p>
 
 <p class="note">スクリーン名の値はイベントデータ内で<code>screen_title</code>変数として設定されています。</p>
-
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">Map<span style="font-weight:bold">&lt;</span>String<span style="font-weight:bold">,</span> Object<span style="font-weight:bold">&gt;</span> data <span style="font-weight:bold">=</span> <span style="font-weight:bold">new</span> HashMap<span style="font-weight:bold">&lt;&gt;(</span>1<span style="font-weight:bold">);</span>
-data<span style="font-weight:bold">.</span><span style="color:#008080">put</span><span style="font-weight:bold">(</span><span style="color:#b84">&#34;someKey&#34;</span><span style="font-weight:bold">,</span> <span style="color:#b84">&#34;someValue&#34;</span><span style="font-weight:bold">);</span>
-Tealium<span style="font-weight:bold">.</span><span style="color:#008080">getInstance</span><span style="font-weight:bold">(</span><span style="color:#b84">&#34;INSTANCE&#34;</span><span style="font-weight:bold">).</span><span style="color:#008080">trackView</span><span style="font-weight:bold">(</span><span style="color:#b84">&#34;screenName&#34;</span><span style="font-weight:bold">,</span> data<span style="font-weight:bold">);</span></code></pre></div>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">Map<span style="font-weight:bold">&lt;</span>String, Object<span style="font-weight:bold">&gt;</span> <span style="color:#900;font-weight:bold">data</span> <span style="font-weight:bold">=</span> <span style="font-weight:bold">new</span> HashMap<span style="font-weight:bold">&lt;&gt;</span>(1);
+data.<span style="color:#008080">put</span>(<span style="color:#b84">&#34;someKey&#34;</span>, <span style="color:#b84">&#34;someValue&#34;</span>);
+Tealium.<span style="color:#008080">getInstance</span>(<span style="color:#b84">&#34;INSTANCE&#34;</span>).<span style="color:#008080">trackView</span>(<span style="color:#b84">&#34;screenName&#34;</span>, data);</code></pre></div>
 <h2 id="イベントのトラッキング">イベントのトラッキング</h2>
 
 <p>非ビューイベントは、イベント名と（任意で）コンテクスチュアルビューデータという、2つのパラメータを使用して<code>trackEvent()</code>を呼び出すことでトラッキングできます。</p>
 
 <p class="note">イベント名はイベントデータ内で<code>tealium_event</code>変数として設定されています。</p>
-
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">Map<span style="font-weight:bold">&lt;</span>String<span style="font-weight:bold">,</span> Object<span style="font-weight:bold">&gt;</span> data <span style="font-weight:bold">=</span> <span style="font-weight:bold">new</span> HashMap<span style="font-weight:bold">&lt;&gt;(</span>1<span style="font-weight:bold">);</span>
-data<span style="font-weight:bold">.</span><span style="color:#008080">put</span><span style="font-weight:bold">(</span><span style="color:#b84">&#34;someKey&#34;</span><span style="font-weight:bold">,</span> <span style="color:#b84">&#34;someValue&#34;</span><span style="font-weight:bold">);</span>
-Tealium<span style="font-weight:bold">.</span><span style="color:#008080">getInstance</span><span style="font-weight:bold">(</span><span style="color:#b84">&#34;INSTANCE_NAME&#34;</span><span style="font-weight:bold">).</span><span style="color:#008080">trackEvent</span><span style="font-weight:bold">(</span><span style="color:#b84">&#34;someEvent&#34;</span><span style="font-weight:bold">,</span> data<span style="font-weight:bold">);</span> </code></pre></div>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">Map<span style="font-weight:bold">&lt;</span>String, Object<span style="font-weight:bold">&gt;</span> <span style="color:#900;font-weight:bold">data</span> <span style="font-weight:bold">=</span> <span style="font-weight:bold">new</span> HashMap<span style="font-weight:bold">&lt;&gt;</span>(1);
+data.<span style="color:#008080">put</span>(<span style="color:#b84">&#34;someKey&#34;</span>, <span style="color:#b84">&#34;someValue&#34;</span>);
+Tealium.<span style="color:#008080">getInstance</span>(<span style="color:#b84">&#34;INSTANCE_NAME&#34;</span>).<span style="color:#008080">trackEvent</span>(<span style="color:#b84">&#34;someEvent&#34;</span>, data);</code></pre></div>
 <h2 id="永続性データ">永続性データ</h2>
 
 <p>永続性の値はデバイスで<a href="https://developer.android.com/reference/android/content/SharedPreferences">SharedPreferences</a>として保存され、各イベントにマージされ、アプリを終了し、再度起動しても保持されます。</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">SharedPreferences sp <span style="font-weight:bold">=</span> instance<span style="font-weight:bold">.</span><span style="color:#008080">getDataSources</span><span style="font-weight:bold">().</span><span style="color:#008080">getPersistentDataSources</span><span style="font-weight:bold">();</span>
-sp<span style="font-weight:bold">.</span><span style="color:#008080">edit</span><span style="font-weight:bold">().</span><span style="color:#008080">putInt</span><span style="font-weight:bold">(</span><span style="color:#b84">&#34;init_count&#34;</span><span style="font-weight:bold">,</span> sp<span style="font-weight:bold">.</span><span style="color:#008080">getInt</span><span style="font-weight:bold">(</span><span style="color:#b84">&#34;init_count&#34;</span><span style="font-weight:bold">,</span> 0<span style="font-weight:bold">)</span> <span style="font-weight:bold">+</span> 1<span style="font-weight:bold">).</span><span style="color:#008080">commit</span><span style="font-weight:bold">();</span></code></pre></div>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">SharedPreferences <span style="color:#900;font-weight:bold">sp</span> <span style="font-weight:bold">=</span> instance.<span style="color:#008080">getDataSources</span>().<span style="color:#008080">getPersistentDataSources</span>();
+sp.<span style="color:#008080">edit</span>().<span style="color:#008080">putInt</span>(<span style="color:#b84">&#34;init_count&#34;</span>, sp.<span style="color:#008080">getInt</span>(<span style="color:#b84">&#34;init_count&#34;</span>, 0) <span style="font-weight:bold">+</span> 1).<span style="color:#008080">commit</span>();</code></pre></div>
 <h2 id="揮発性データ">揮発性データ</h2>
 
 <p>揮発性の値は各イベントにマージされますが、アプリを終了して再起動すると破棄されます。</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">instance<span style="font-weight:bold">.</span><span style="color:#008080">getDataSources</span><span style="font-weight:bold">().</span><span style="color:#008080">getVolatileDataSources</span><span style="font-weight:bold">()</span>
-                <span style="font-weight:bold">.</span><span style="color:#008080">put</span><span style="font-weight:bold">(</span><span style="color:#b84">&#34;init_time&#34;</span><span style="font-weight:bold">,</span> System<span style="font-weight:bold">.</span><span style="color:#008080">currentTimeMillis</span><span style="font-weight:bold">());</span></code></pre></div>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">instance.<span style="color:#008080">getDataSources</span>().<span style="color:#008080">getVolatileDataSources</span>()
+                .<span style="color:#008080">put</span>(<span style="color:#b84">&#34;init_time&#34;</span>, System.<span style="color:#008080">currentTimeMillis</span>());</code></pre></div>
 <h2 id="ログレベル">ログレベル</h2>
 
 <p>ログレベルはリモート公開設定により管理され、初期化の際に設定された環境から推測されます。</p>
@@ -427,34 +434,33 @@ sp<span style="font-weight:bold">.</span><span style="color:#008080">edit</span>
 
 <p>バージョン5.3.1以降、<code>setForceOverrideLogLevel()</code>メソッドを使用してログレベルをローカルでオーバーライドできるようになっています。</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#998;font-style:italic">// options: dev, qa, prod, silent
-</span><span style="color:#998;font-style:italic"></span>tealConfig<span style="font-weight:bold">.</span><span style="color:#008080">setForceOverrideLogLevel</span><span style="font-weight:bold">(</span><span style="color:#b84">&#34;dev&#34;</span><span style="font-weight:bold">);</span></code></pre></div>
+</span><span style="color:#998;font-style:italic"></span>tealConfig.<span style="color:#008080">setForceOverrideLogLevel</span>(<span style="color:#b84">&#34;dev&#34;</span>);</code></pre></div>
 <h2 id="cookie">Cookie</h2>
 
 <p>モバイルプロファイルでTag Managementを有効にしている場合、以下のコードを追加するとCookieの管理を有効にすることができます。  これは、初期化ステートメントの後に配置する必要があります。</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">config<span style="font-weight:bold">.</span><span style="color:#008080">getEventListeners</span><span style="font-weight:bold">().</span><span style="color:#008080">add</span><span style="font-weight:bold">(</span>createCookieEnablerListener<span style="font-weight:bold">());</span>
-<span style="font-weight:bold">private</span> <span style="font-weight:bold">static</span> WebViewCreatedListener <span style="color:#900;font-weight:bold">createCookieEnablerListener</span><span style="font-weight:bold">()</span> <span style="font-weight:bold">{</span>
-    <span style="font-weight:bold">return</span> <span style="font-weight:bold">new</span> WebViewCreatedListener<span style="font-weight:bold">()</span> <span style="font-weight:bold">{</span>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">config.<span style="color:#008080">getEventListeners</span>().<span style="color:#008080">add</span>(createCookieEnablerListener());
+<span style="font-weight:bold">private</span> <span style="color:#900;font-weight:bold">static</span> WebViewCreatedListener <span style="color:#900;font-weight:bold">createCookieEnablerListener</span>() {
+    <span style="font-weight:bold">return</span> <span style="font-weight:bold">new</span> WebViewCreatedListener() {
         @Override
-        <span style="font-weight:bold">public</span> <span style="color:#458;font-weight:bold">void</span> <span style="color:#900;font-weight:bold">onWebViewCreated</span><span style="font-weight:bold">(</span>WebView webView<span style="font-weight:bold">)</span> <span style="font-weight:bold">{</span>
-            <span style="font-weight:bold">final</span> CookieManager mgr <span style="font-weight:bold">=</span> CookieManager<span style="font-weight:bold">.</span><span style="color:#008080">getInstance</span><span style="font-weight:bold">();</span>
+        <span style="font-weight:bold">public</span> <span style="color:#900;font-weight:bold">void</span> onWebViewCreated(WebView <span style="color:#900;font-weight:bold">webView</span>) {
+            <span style="font-weight:bold">final</span> <span style="color:#900;font-weight:bold">CookieManager</span> mgr <span style="font-weight:bold">=</span> CookieManager.<span style="color:#008080">getInstance</span>();
             <span style="color:#998;font-style:italic">// Accept all cookies
-</span><span style="color:#998;font-style:italic"></span>            mgr<span style="font-weight:bold">.</span><span style="color:#008080">setAcceptCookie</span><span style="font-weight:bold">(</span><span style="font-weight:bold">true</span><span style="font-weight:bold">);</span>
-            <span style="font-weight:bold">if</span> <span style="font-weight:bold">(</span>Build<span style="font-weight:bold">.</span><span style="color:#008080">VERSION</span><span style="font-weight:bold">.</span><span style="color:#008080">SDK_INT</span> <span style="font-weight:bold">&gt;=</span> Build<span style="font-weight:bold">.</span><span style="color:#008080">VERSION_CODES</span><span style="font-weight:bold">.</span><span style="color:#008080">LOLLIPOP</span><span style="font-weight:bold">)</span> <span style="font-weight:bold">{</span>
-                mgr<span style="font-weight:bold">.</span><span style="color:#008080">setAcceptThirdPartyCookies</span><span style="font-weight:bold">(</span>webView<span style="font-weight:bold">,</span> <span style="font-weight:bold">true</span><span style="font-weight:bold">);</span>
-            <span style="font-weight:bold">}</span>
-            <span style="font-weight:bold">if</span> <span style="font-weight:bold">(</span>Build<span style="font-weight:bold">.</span><span style="color:#008080">VERSION</span><span style="font-weight:bold">.</span><span style="color:#008080">SDK_INT</span> <span style="font-weight:bold">&gt;=</span> Build<span style="font-weight:bold">.</span><span style="color:#008080">VERSION_CODES</span><span style="font-weight:bold">.</span><span style="color:#008080">HONEYCOMB_MR1</span><span style="font-weight:bold">)</span> <span style="font-weight:bold">{</span>
-                CookieManager<span style="font-weight:bold">.</span><span style="color:#008080">setAcceptFileSchemeCookies</span><span style="font-weight:bold">(</span><span style="font-weight:bold">true</span><span style="font-weight:bold">);</span>
-            <span style="font-weight:bold">}</span>
-            Log<span style="font-weight:bold">.</span><span style="color:#008080">d</span><span style="font-weight:bold">(</span>TAG<span style="font-weight:bold">,</span> <span style="color:#b84">&#34;WebView &#34;</span> <span style="font-weight:bold">+</span> webView <span style="font-weight:bold">+</span> <span style="color:#b84">&#34; created and cookies enabled.&#34;</span><span style="font-weight:bold">);</span>
-        <span style="font-weight:bold">}</span>
-    <span style="font-weight:bold">};</span>
-<span style="font-weight:bold">}</span></code></pre></div>
+</span><span style="color:#998;font-style:italic"></span>            mgr.<span style="color:#008080">setAcceptCookie</span>(<span style="font-weight:bold">true</span>);
+            <span style="font-weight:bold">if</span> (Build.<span style="color:#008080">VERSION</span>.<span style="color:#008080">SDK_INT</span> <span style="font-weight:bold">&gt;=</span> Build.<span style="color:#008080">VERSION_CODES</span>.<span style="color:#008080">LOLLIPOP</span>) {
+                mgr.<span style="color:#008080">setAcceptThirdPartyCookies</span>(webView, <span style="font-weight:bold">true</span>);
+            }
+            <span style="font-weight:bold">if</span> (Build.<span style="color:#008080">VERSION</span>.<span style="color:#008080">SDK_INT</span> <span style="font-weight:bold">&gt;=</span> Build.<span style="color:#008080">VERSION_CODES</span>.<span style="color:#008080">HONEYCOMB_MR1</span>) {
+                CookieManager.<span style="color:#008080">setAcceptFileSchemeCookies</span>(<span style="font-weight:bold">true</span>);
+            }
+            Log.<span style="color:#008080">d</span>(TAG, <span style="color:#b84">&#34;WebView &#34;</span> <span style="font-weight:bold">+</span> webView <span style="font-weight:bold">+</span> <span style="color:#b84">&#34; created and cookies enabled.&#34;</span>);
+        }
+    };
+}</code></pre></div>
 <p>このコードにより、Tag Management WebViewがファーストパーティ、サードパーティ、ファイルスキームのCookieを受け入れることができます（[詳細](<a href="https://developer.android.com/reference/android/webkit/CookieManager.html#acceptCookie()）。">https://developer.android.com/reference/android/webkit/CookieManager.html#acceptCookie()）。</a></p>
 
 <p class="note">バージョン5.1.0以降では、<code>CookieManager</code>がデフォルトで<strong>有効</strong>になっています。<br />
 バージョン5.0.4以前では、<code>CookieManager</code>がデフォルトで<strong>無効</strong>になっています。<br />
 Tag Managementを使用する場合は<code>CookieManager</code>を有効にする<strong>必要</strong>があります。</p>
-
 
 <h2 id="マルチプロセスアプリ">マルチプロセスアプリ</h2>
 
@@ -475,19 +481,42 @@ Tag Managementを使用する場合は<code>CookieManager</code>を有効にす�
 
 </div>
 
+<b class="pv1 br2 dib tc mv3 link">
+</b>
+<b style="position: absolute; right:0px;" class="pv1 br2 dib tc mv3 link">
+
+	<div date-pref class="white">
+
+		
+			<a href="https://docs.tealium.co.jp/platforms/android/consent-manager/" title="Consent Manager">
+			Consent Manager <svg class="fill-current" height="18px" viewBox="0 0 18 18" width="18px" xmlns="http://www.w3.org/2000/svg"> <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path> <path d="M0 0h24v24H0z" fill="none"></path> </svg>
+
+			</a>
+		
+	</div>
+
+</b>
+<br>&nbsp;</br>
+
           
 
 
         </div>
       </div>
-      <div class="order-0 w-20 dn db-l pl3 sticky-l">
+      <div class="order-0 w-20 dn db-l sticky-l">
         
 <nav class="side-nav f6" role="navigation">
-  <ul class="list pa0 nl2">
+  <ul class="list pa0">
+
     
       
       
-      <li class="w-100 hover-accent-color-light fw8 mb1 bb b--moon-gray">
+      <li class="w-100 hover-accent-color-light fw8 f4 mid-gray pv1 pl2">
+        Mobile
+      </li>
+      
+      
+      <li class="w-100 hover-accent-color-light fw8 pl2">
         <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".remote-commands">Remote Commands</a>
         <ul class="remote-commands desktopmenu animated fadeIn list pl0 dn">
           <li class="fw4">
@@ -515,35 +544,7 @@ Tag Managementを使用する場合は<code>CookieManager</code>を有効にす�
       </li>
       
       
-      <li class="w-100 hover-accent-color-light fw8">
-        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".amp">AMP</a>
-        <ul class="amp desktopmenu animated fadeIn list pl0 dn">
-          <li class="fw4">
-            
-            
-            <a href="/platforms/amp/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              概要
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/amp/install/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              インストール
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/amp/data-layer-variables/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              データレイヤー
-            </a>
-          </li>
-        </ul>
-      </li>
-      
-      
-      <li class="w-100 hover-accent-color-light fw8 active">
+      <li class="w-100 hover-accent-color-light fw8 active pl2">
         <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2  primary-color" data-target=".android">Android</a>
         <ul class="android desktopmenu animated fadeIn list pl0 db">
           <li class="fw4">
@@ -620,7 +621,7 @@ Tag Managementを使用する場合は<code>CookieManager</code>を有効にす�
       </li>
       
       
-      <li class="w-100 hover-accent-color-light fw8">
+      <li class="w-100 hover-accent-color-light fw8 pl2">
         <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".android-tv">Android TV</a>
         <ul class="android-tv desktopmenu animated fadeIn list pl0 dn">
           <li class="fw4">
@@ -641,7 +642,7 @@ Tag Managementを使用する場合は<code>CookieManager</code>を有効にす�
       </li>
       
       
-      <li class="w-100 hover-accent-color-light fw8">
+      <li class="w-100 hover-accent-color-light fw8 pl2">
         <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".android-wear">Android Wear</a>
         <ul class="android-wear desktopmenu animated fadeIn list pl0 dn">
           <li class="fw4">
@@ -662,63 +663,7 @@ Tag Managementを使用する場合は<code>CookieManager</code>を有効にす�
       </li>
       
       
-      <li class="w-100 hover-accent-color-light fw8">
-        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".angular">Angular</a>
-        <ul class="angular desktopmenu animated fadeIn list pl0 dn">
-          <li class="fw4">
-            
-            
-            <a href="/platforms/angular/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              概要
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/angular/install/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              インストール
-            </a>
-          </li>
-        </ul>
-      </li>
-      
-      
-      <li class="w-100 hover-accent-color-light fw8">
-        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".csharp">C#</a>
-        <ul class="csharp desktopmenu animated fadeIn list pl0 dn">
-          <li class="fw4">
-            
-            
-            <a href="/platforms/csharp/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              概要
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/csharp/install/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              インストール
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/csharp/functions/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              関数の定義
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/csharp/release-notes/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              リリースノート
-            </a>
-          </li>
-        </ul>
-      </li>
-      
-      
-      <li class="w-100 hover-accent-color-light fw8">
+      <li class="w-100 hover-accent-color-light fw8 pl2">
         <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".cordova">Cordova</a>
         <ul class="cordova desktopmenu animated fadeIn list pl0 dn">
           <li class="fw4">
@@ -774,7 +719,7 @@ Tag Managementを使用する場合は<code>CookieManager</code>を有効にす�
       </li>
       
       
-      <li class="w-100 hover-accent-color-light fw8">
+      <li class="w-100 hover-accent-color-light fw8 pl2">
         <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".flutter">Flutter</a>
         <ul class="flutter desktopmenu animated fadeIn list pl0 dn">
           <li class="fw4">
@@ -802,29 +747,8 @@ Tag Managementを使用する場合は<code>CookieManager</code>を有効にす�
       </li>
       
       
-      <li class="w-100 hover-accent-color-light fw8">
-        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".http-api">HTTP API</a>
-        <ul class="http-api desktopmenu animated fadeIn list pl0 dn">
-          <li class="fw4">
-            
-            
-            <a href="/platforms/http-api/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              概要
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/http-api/endpoint-spec/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              エンドポイント
-            </a>
-          </li>
-        </ul>
-      </li>
-      
-      
-      <li class="w-100 hover-accent-color-light fw8">
-        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".ios">iOS</a>
+      <li class="w-100 hover-accent-color-light fw8 pl2">
+        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".ios">iOS (Objective-C)</a>
         <ul class="ios desktopmenu animated fadeIn list pl0 dn">
           <li class="fw4">
             
@@ -893,27 +817,153 @@ Tag Managementを使用する場合は<code>CookieManager</code>を有効にす�
       </li>
       
       
-      <li class="w-100 hover-accent-color-light fw8">
-        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".java">Java</a>
-        <ul class="java desktopmenu animated fadeIn list pl0 dn">
+      <li class="w-100 hover-accent-color-light fw8 pl2">
+        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".swift">iOS (Swift)</a>
+        <ul class="swift desktopmenu animated fadeIn list pl0 dn">
           <li class="fw4">
             
             
-            <a href="/platforms/java/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+            <a href="/platforms/swift/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
               概要
             </a>
           </li>
           <li class="fw4">
             
             
-            <a href="/platforms/java/install/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+            <a href="/platforms/swift/install/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
               インストール
             </a>
           </li>
           <li class="fw4">
             
             
-            <a href="/platforms/java/function-definitions/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+            <a href="/platforms/swift/track/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              トラッキング
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/swift/consent-manager/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              Consent Manager
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/swift/class-definitions/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              クラスの定義
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/swift/modules/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              モジュール
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/swift/data-layer/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              データレイヤー
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/swift/release-notes/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              リリースノート
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/swift/module-list/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              モジュールのリスト
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/swift/with-objective-c/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              Objective-Cとの連携
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/swift/feature-comparison/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              機能比較
+            </a>
+          </li>
+        </ul>
+      </li>
+      
+      
+      <li class="w-100 hover-accent-color-light fw8 pl2">
+        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".tvos">iOS (tvOS)</a>
+        <ul class="tvos desktopmenu animated fadeIn list pl0 dn">
+          <li class="fw4">
+            
+            
+            <a href="/platforms/tvos/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              概要
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/tvos/install/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              インストール
+            </a>
+          </li>
+        </ul>
+      </li>
+      
+      
+      <li class="w-100 hover-accent-color-light fw8 pl2">
+        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".watchos">iOS (watchOS)</a>
+        <ul class="watchos desktopmenu animated fadeIn list pl0 dn">
+          <li class="fw4">
+            
+            
+            <a href="/platforms/watchos/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              概要
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/watchos/install/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              インストール
+            </a>
+          </li>
+        </ul>
+      </li>
+      
+      
+      <li class="w-100 hover-accent-color-light fw8 pl2">
+        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".react-native">React Native</a>
+        <ul class="react-native desktopmenu animated fadeIn list pl0 dn">
+          <li class="fw4">
+            
+            
+            <a href="/platforms/react-native/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              概要
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/react-native/install/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              インストール
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/react-native/functions/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
               関数の定義
             </a>
           </li>
@@ -921,7 +971,82 @@ Tag Managementを使用する場合は<code>CookieManager</code>を有効にす�
       </li>
       
       
-      <li class="w-100 hover-accent-color-light fw8">
+      <li class="w-100 hover-accent-color-light fw8 mb1 bb b--moon-gray pl2">
+        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".xamarin">Xamarin</a>
+        <ul class="xamarin desktopmenu animated fadeIn list pl0 dn">
+          <li class="fw4">
+            
+            
+            <a href="/platforms/xamarin/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              概要
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/xamarin/install/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              インストール
+            </a>
+          </li>
+        </ul>
+      </li>
+      
+      
+      <li class="w-100 hover-accent-color-light fw8 f4 mid-gray pv1 pl2">
+        Web
+      </li>
+      
+      
+      <li class="w-100 hover-accent-color-light fw8 pl2">
+        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".amp">AMP</a>
+        <ul class="amp desktopmenu animated fadeIn list pl0 dn">
+          <li class="fw4">
+            
+            
+            <a href="/platforms/amp/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              概要
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/amp/install/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              インストール
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/amp/data-layer-variables/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              データレイヤー
+            </a>
+          </li>
+        </ul>
+      </li>
+      
+      
+      <li class="w-100 hover-accent-color-light fw8 pl2">
+        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".angular">Angular</a>
+        <ul class="angular desktopmenu animated fadeIn list pl0 dn">
+          <li class="fw4">
+            
+            
+            <a href="/platforms/angular/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              概要
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/angular/install/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              インストール
+            </a>
+          </li>
+        </ul>
+      </li>
+      
+      
+      <li class="w-100 hover-accent-color-light fw8 mb1 bb b--moon-gray pl2">
         <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".javascript">JavaScript (Web)</a>
         <ul class="javascript desktopmenu animated fadeIn list pl0 dn">
           <li class="fw4">
@@ -1012,7 +1137,96 @@ Tag Managementを使用する場合は<code>CookieManager</code>を有効にす�
       </li>
       
       
-      <li class="w-100 hover-accent-color-light fw8">
+      <li class="w-100 hover-accent-color-light fw8 f4 mid-gray pv1 pl2">
+        Server
+      </li>
+      
+      
+      <li class="w-100 hover-accent-color-light fw8 pl2">
+        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".csharp">C#</a>
+        <ul class="csharp desktopmenu animated fadeIn list pl0 dn">
+          <li class="fw4">
+            
+            
+            <a href="/platforms/csharp/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              概要
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/csharp/install/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              インストール
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/csharp/functions/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              関数の定義
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/csharp/release-notes/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              リリースノート
+            </a>
+          </li>
+        </ul>
+      </li>
+      
+      
+      <li class="w-100 hover-accent-color-light fw8 pl2">
+        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".http-api">HTTP API</a>
+        <ul class="http-api desktopmenu animated fadeIn list pl0 dn">
+          <li class="fw4">
+            
+            
+            <a href="/platforms/http-api/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              概要
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/http-api/endpoint-spec/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              エンドポイント
+            </a>
+          </li>
+        </ul>
+      </li>
+      
+      
+      <li class="w-100 hover-accent-color-light fw8 pl2">
+        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".java">Java</a>
+        <ul class="java desktopmenu animated fadeIn list pl0 dn">
+          <li class="fw4">
+            
+            
+            <a href="/platforms/java/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              概要
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/java/install/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              インストール
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/java/function-definitions/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              関数の定義
+            </a>
+          </li>
+        </ul>
+      </li>
+      
+      
+      <li class="w-100 hover-accent-color-light fw8 pl2">
         <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".node">Node</a>
         <ul class="node desktopmenu animated fadeIn list pl0 dn">
           <li class="fw4">
@@ -1033,7 +1247,7 @@ Tag Managementを使用する場合は<code>CookieManager</code>を有効にす�
       </li>
       
       
-      <li class="w-100 hover-accent-color-light fw8">
+      <li class="w-100 hover-accent-color-light fw8 pl2">
         <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".python">Python</a>
         <ul class="python desktopmenu animated fadeIn list pl0 dn">
           <li class="fw4">
@@ -1054,35 +1268,7 @@ Tag Managementを使用する場合は<code>CookieManager</code>を有効にす�
       </li>
       
       
-      <li class="w-100 hover-accent-color-light fw8">
-        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".react-native">React Native</a>
-        <ul class="react-native desktopmenu animated fadeIn list pl0 dn">
-          <li class="fw4">
-            
-            
-            <a href="/platforms/react-native/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              概要
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/react-native/install/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              インストール
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/react-native/functions/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              関数の定義
-            </a>
-          </li>
-        </ul>
-      </li>
-      
-      
-      <li class="w-100 hover-accent-color-light fw8">
+      <li class="w-100 hover-accent-color-light fw8 pl2">
         <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".roku">Roku</a>
         <ul class="roku desktopmenu animated fadeIn list pl0 dn">
           <li class="fw4">
@@ -1110,7 +1296,7 @@ Tag Managementを使用する場合は<code>CookieManager</code>を有効にす�
       </li>
       
       
-      <li class="w-100 hover-accent-color-light fw8">
+      <li class="w-100 hover-accent-color-light fw8 pl2">
         <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".ruby">Ruby</a>
         <ul class="ruby desktopmenu animated fadeIn list pl0 dn">
           <li class="fw4">
@@ -1129,153 +1315,6 @@ Tag Managementを使用する場合は<code>CookieManager</code>を有効にす�
           </li>
         </ul>
       </li>
-      
-      
-      <li class="w-100 hover-accent-color-light fw8">
-        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".swift">Swift</a>
-        <ul class="swift desktopmenu animated fadeIn list pl0 dn">
-          <li class="fw4">
-            
-            
-            <a href="/platforms/swift/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              概要
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/swift/install/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              インストール
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/swift/track/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              トラッキング
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/swift/consent-manager/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              Consent Manager
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/swift/class-definitions/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              クラスの定義
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/swift/modules/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              モジュール
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/swift/data-layer/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              データレイヤー
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/swift/release-notes/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              リリースノート
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/swift/module-list/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              モジュールのリスト
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/swift/with-objective-c/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              Objective-Cとの連携
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/swift/feature-comparison/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              機能比較
-            </a>
-          </li>
-        </ul>
-      </li>
-      
-      
-      <li class="w-100 hover-accent-color-light fw8">
-        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".tvos">tvOS</a>
-        <ul class="tvos desktopmenu animated fadeIn list pl0 dn">
-          <li class="fw4">
-            
-            
-            <a href="/platforms/tvos/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              概要
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/tvos/install/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              インストール
-            </a>
-          </li>
-        </ul>
-      </li>
-      
-      
-      <li class="w-100 hover-accent-color-light fw8">
-        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".watchos">watchOS</a>
-        <ul class="watchos desktopmenu animated fadeIn list pl0 dn">
-          <li class="fw4">
-            
-            
-            <a href="/platforms/watchos/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              概要
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/watchos/install/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              インストール
-            </a>
-          </li>
-        </ul>
-      </li>
-      
-      
-      <li class="w-100 hover-accent-color-light fw8">
-        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".xamarin">Xamarin</a>
-        <ul class="xamarin desktopmenu animated fadeIn list pl0 dn">
-          <li class="fw4">
-            
-            
-            <a href="/platforms/xamarin/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              概要
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/xamarin/install/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              インストール
-            </a>
-          </li>
-        </ul>
-      </li>
   </ul>
 </nav>
 
@@ -1289,18 +1328,19 @@ Tag Managementを使用する場合は<code>CookieManager</code>を有効にす�
       <div class="feedback_form">
   <span>
 	  <p style="display:inline">このページはお役にたちましたでしょうか？</p>
-		<button enabled id="feedback_yes" class="f6 ph3 pv1 br2 dib tc ttu mv3 bg-primary-color white hover-bg-green link">はい</button>
-	  <button enabled id="feedback_no" class="f6 ph3 pv1 br2 dib tc ttu mv3 bg-primary-color white hover-bg-green link">いいえ</button>
+		<button enabled id="feedback_yes" class="f6 ph3 pv1 br2 dib tc mv3 bg-primary-color white hover-bg-green link">はい</button>
+	  <button enabled id="feedback_no" class="f6 ph3 pv1 br2 dib tc mv3 bg-primary-color white hover-bg-green link">いいえ</button>
   </span>
 	<span id="feedback_comment">
 		<textarea id="feedback_textarea" type="text" placeholder="JA-Tell us how we can make this article better." rows="4" cols="70"></textarea>
-		<button disabled id="feedback_submit" class="f6 ph3 pv1 br2 dib tc ttu mv3 bg-primary-color white hover-bg-blue link">フィードバックを送信</button>
+    <span>最終更新日 ::  2020年May月5日
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button disabled id="feedback_submit" class="f6 ph3 pv1 br2 dib tc mv3 bg-primary-color white hover-bg-blue link">フィードバックを送信</button></span>
   </span>
   <span id="feedback_thank_you" style="display: none;">
      <em>JA-Thank you for your feedback!</em>
   </span>
 </div>
-<p>最終更新日 ::  2019年October月28日</p>
 
       
 
@@ -1320,7 +1360,13 @@ Tag Managementを使用する場合は<code>CookieManager</code>を有効にす�
 <ul class="list hidden dib ph0 ma0 scrolling-touch tc">
   
     <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/" class="ttu f6 link primary-color-light overflow hover-white db brand-font ma0 w-100 pv3 ph4">
+        <a href="https://docs.tealium.co.jp/guides/" class="ttu f6 link primary-color-light overflow hover-white db brand-font ma0 w-100 pv3 ph4">
+          手引き
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-primary w-100">
+        <a href="https://docs.tealium.co.jp/platforms/" class="ttu f6 link primary-color-light overflow hover-white db brand-font ma0 w-100 pv3 ph4">
           プラットフォーム
         </a>
     </li>
@@ -1333,135 +1379,153 @@ Tag Managementを使用する場合は<code>CookieManager</code>を有効にす�
 
 <ul class="list dib ph0 ma0 scrolling-touch tc">
   
-    <li  class="tl dib ma0 hover-bg-primary w-100 mb2 bb b--mid-gray">
-        <a href="http://docs.tealium.co.jp/platforms/remote-commands/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+    <li  class="tl dib ma0 hover-bg-primary w-100">
+        <a href="https://docs.tealium.co.jp" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+          Mobile
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-primary w-100">
+        <a href="https://docs.tealium.co.jp/platforms/remote-commands/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
           Remote Commands
         </a>
     </li>
   
     <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/amp/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
-          AMP
-        </a>
-    </li>
-  
-    <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/android/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+        <a href="https://docs.tealium.co.jp/platforms/android/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
           Android
         </a>
     </li>
   
     <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/android-tv/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+        <a href="https://docs.tealium.co.jp/platforms/android-tv/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
           Android TV
         </a>
     </li>
   
     <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/android-wear/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+        <a href="https://docs.tealium.co.jp/platforms/android-wear/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
           Android Wear
         </a>
     </li>
   
     <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/angular/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
-          Angular
-        </a>
-    </li>
-  
-    <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/csharp/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
-          C#
-        </a>
-    </li>
-  
-    <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/cordova/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+        <a href="https://docs.tealium.co.jp/platforms/cordova/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
           Cordova
         </a>
     </li>
   
     <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/flutter/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+        <a href="https://docs.tealium.co.jp/platforms/flutter/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
           Flutter
         </a>
     </li>
   
     <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/http-api/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
-          HTTP API
+        <a href="https://docs.tealium.co.jp/platforms/ios/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+          iOS (Objective-C)
         </a>
     </li>
   
     <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/ios/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
-          iOS
+        <a href="https://docs.tealium.co.jp/platforms/swift/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+          iOS (Swift)
         </a>
     </li>
   
     <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/java/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
-          Java
+        <a href="https://docs.tealium.co.jp/platforms/tvos/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+          iOS (tvOS)
         </a>
     </li>
   
     <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/javascript/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+        <a href="https://docs.tealium.co.jp/platforms/watchos/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+          iOS (watchOS)
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-primary w-100">
+        <a href="https://docs.tealium.co.jp/platforms/react-native/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+          React Native
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-primary w-100 mb2 bb b--mid-gray">
+        <a href="https://docs.tealium.co.jp/platforms/xamarin/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+          Xamarin
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-primary w-100">
+        <a href="https://docs.tealium.co.jp" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+          Web
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-primary w-100">
+        <a href="https://docs.tealium.co.jp/platforms/amp/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+          AMP
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-primary w-100">
+        <a href="https://docs.tealium.co.jp/platforms/angular/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+          Angular
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-primary w-100 mb2 bb b--mid-gray">
+        <a href="https://docs.tealium.co.jp/platforms/javascript/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
           JavaScript (Web)
         </a>
     </li>
   
     <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/node/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+        <a href="https://docs.tealium.co.jp" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+          Server
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-primary w-100">
+        <a href="https://docs.tealium.co.jp/platforms/csharp/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+          C#
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-primary w-100">
+        <a href="https://docs.tealium.co.jp/platforms/http-api/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+          HTTP API
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-primary w-100">
+        <a href="https://docs.tealium.co.jp/platforms/java/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+          Java
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-primary w-100">
+        <a href="https://docs.tealium.co.jp/platforms/node/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
           Node
         </a>
     </li>
   
     <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/python/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+        <a href="https://docs.tealium.co.jp/platforms/python/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
           Python
         </a>
     </li>
   
     <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/react-native/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
-          React Native
-        </a>
-    </li>
-  
-    <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/roku/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+        <a href="https://docs.tealium.co.jp/platforms/roku/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
           Roku
         </a>
     </li>
   
     <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/ruby/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+        <a href="https://docs.tealium.co.jp/platforms/ruby/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
           Ruby
-        </a>
-    </li>
-  
-    <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/swift/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
-          Swift
-        </a>
-    </li>
-  
-    <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/tvos/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
-          tvOS
-        </a>
-    </li>
-  
-    <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/watchos/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
-          watchOS
-        </a>
-    </li>
-  
-    <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/xamarin/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
-          Xamarin
         </a>
     </li>
   

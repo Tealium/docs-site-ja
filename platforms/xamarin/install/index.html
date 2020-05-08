@@ -11,7 +11,7 @@
     <meta name="MobileOptimized" content="320">
 
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-     <meta name="generator" content="Hugo 0.54.0" />
+     <meta name="generator" content="Hugo 0.59.0" />
 
       
         <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
@@ -25,7 +25,6 @@
         
 <script>
 var utag_data = {
-    category_name : "Xamarin",
     site_section  : "platforms",
     site_language : "ja",
     tealium_event : "page_view"
@@ -48,14 +47,26 @@ var utag_data = {
   <div class="center flex-ns flex-wrap items-center justify-start mw9">
 
     <h1 class="dim f3 lh-solid ml0-ns mr0 mr4-l mv0 pl3 pl4-ns">
-      <a href="http://docs.tealium.co.jp/"><img src="/images/icons/tealdevdocs_logo_white.svg" width="180" height="41"/></a>
+      <a href="https://docs.tealium.co.jp"><img src="/images/icons/tealdevdocs_logo_white.svg" width="180" height="41"/></a>
     </h1>
     <ul class="list ma0 pa0 dn dib-l">
       
-            
         <li class="f5 dib mr4" role="menuitem">
             
-          <a href="http://docs.tealium.co.jp/platforms/" class="dim link">プラットフォーム</a>
+          <a href="https://docs.tealium.co.jp/guides/" class="dim link">
+          手引き
+            
+            
+          </a>
+        </li>
+      
+        <li class="f5 dib mr4 active" role="menuitem">
+            
+          <a href="https://docs.tealium.co.jp/platforms/" class="dim link">
+          プラットフォーム
+            
+            
+          </a>
         </li>
       
     </ul>
@@ -172,15 +183,15 @@ var utag_data = {
             <ul class="menu-group as-main-navigation flex-0 bottom-align">
               <li class="menu-divider"></li>
               <li class="js-main-nav-section">
-                <a href="https://my.tealiumiq.com/" class="menu-list-item top-level tooltip-right" title="Universal Data Hub">
+                <a href="https://my.tealiumiq.com/" class="menu-list-item top-level tooltip-right" title="Customer Data Hub">
                     <span class="menu-large-icon">
                         <span class="as-platform-image square-xxxs is-rounded bg-transparent">
-                            <span class="inner-image UDH-icon">UDH</span>
+                            <span class="inner-image UDH-icon">CDH</span>
                         </span>
                     </span>
-                    <span class="menu-context supportLinks_buttonTitle">Universal Data Hub</span>
+                    <span class="menu-context supportLinks_buttonTitle">Customer Data Hub</span>
                 </a>
-                          <span class="tooltiptext">Universal Data Hub</span>
+                          <span class="tooltiptext">Customer Data Hub</span>
               </li>
               <li class="menu-divider"></li>
               <li class="js-toggle-leftframe">
@@ -265,9 +276,9 @@ var utag_data = {
 
 
 
+
 <div class="prose" id="prose">
-
-
+  
 
 <h2 id="サンプルアプリ">サンプルアプリ</h2>
 
@@ -306,7 +317,6 @@ var utag_data = {
 
 <p class="note">バインディングライブラリは、単独で使用可能です。 ライブラリが自動的に生成されるということは、プラットフォームごとに大きく異なる名前空間ができることになり、開発作業が必要以上に複雑になります。 代わりに共通ライブラリや、プラットフォーム固有の抽象ライブラリを利用することを推奨しています。</p>
 
-
 <h3 id="ライフサイクルモジュール">ライフサイクルモジュール</h3>
 
 <p>プラットフォームに関連するDLLを参照することで、任意のライフサイクルモジュールを利用できます。 これらはネイティブ同等のSDKのためのバインディングライブラリです。</p>
@@ -337,13 +347,15 @@ var utag_data = {
 
 <div class="code-tabs">
   <ul class="nav nav-tabs"></ul>
-  <div class="tab-content"><div class="tab-pane" data-lang="Android" title="Android">
+  <div class="tab-content">
+<div class="tab-pane" data-lang="Android" title="Android">
   <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="font-weight:bold">using</span> <span style="color:#555">Tealium.Droid</span>;
 <span style="color:#998;font-style:italic">//...
 </span><span style="color:#998;font-style:italic"></span>
 ITealiumInstanceManager instanceManager = <span style="font-weight:bold">new</span> TealiumInstanceManager(<span style="font-weight:bold">new</span> TealiumInstanceFactoryDroid(&lt;myAndroidApplication&gt;));
 <span style="color:#998;font-style:italic">//Optional Lifecycle Module enablement - must reference Tealium.Platform.Lifecycle.Droid.dll
-</span><span style="color:#998;font-style:italic"></span>TealiumLifecycleManager.SetLifecycleAutoTracking = TealiumDroid.Lifecycle.TealiumLifecycleControlDelegation.SetLifecycleAutoTracking;</code></pre></div>
+</span><span style="color:#998;font-style:italic"></span>TealiumLifecycleManager.SetLifecycleAutoTracking = TealiumDroid.Lifecycle.TealiumLifecycleControlDelegation.SetLifecycleAutoTracking;
+</code></pre></div>
 </div>
 
 <div class="tab-pane" data-lang="iOS" title="iOS">
@@ -352,11 +364,12 @@ ITealiumInstanceManager instanceManager = <span style="font-weight:bold">new</sp
 </span><span style="color:#998;font-style:italic"></span>
 ITealiumInstanceManager instanceManager = <span style="font-weight:bold">new</span> TealiumInstanceManager(<span style="font-weight:bold">new</span> TealiumInstanceFactoryIOS());
 <span style="color:#998;font-style:italic">//Optional Lifecycle Module enablement - must reference Tealium.Platform.Lifecycle.iOS.dll
-</span><span style="color:#998;font-style:italic"></span>TealiumLifecycleManager.SetLifecycleAutoTracking =TealiumIOS.Lifecycle.TealiumLifecycleControlDelegation.SetLifecycleAutoTracking;</code></pre></div>
-</div>
-</div>
+</span><span style="color:#998;font-style:italic"></span>TealiumLifecycleManager.SetLifecycleAutoTracking =TealiumIOS.Lifecycle.TealiumLifecycleControlDelegation.SetLifecycleAutoTracking;
+</code></pre></div>
 </div>
 
+<p></div>
+</div></p>
 
 <h2 id="初期化">初期化</h2>
 
@@ -370,10 +383,12 @@ ITealiumInstanceManager instanceManager = <span style="font-weight:bold">new</sp
                                              <span style="color:#b84">&#34;account&#34;</span>,
                                              <span style="color:#b84">&#34;profile&#34;</span>,
                                              <span style="color:#b84">&#34;prod&#34;</span>,
-                                             <span style="font-weight:bold">false</span>); // Optional Auto Lifecycle AutoTracking (<span style="font-weight:bold">default</span>: <span style="font-weight:bold">true</span>)</code></pre></div></li>
+                                             <span style="font-weight:bold">false</span>); <span style="color:#998;font-style:italic">// Optional Auto Lifecycle AutoTracking (default: true)
+</span></code></pre></div></li>
 
 <li><p><code>TealiumInstanceManager</code>を使用してTealiumインスタンスを作成します。Tealiumインスタンスはイベントのトラッキングに使用できます。</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">    ITealium tealium = instanceManager.CreateInstance(tealConfig);</code></pre></div></li>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">    ITealium tealium = instanceManager.CreateInstance(tealConfig);
+</code></pre></div></li>
 </ol>
 
 <h2 id="トラッキング">トラッキング</h2>
@@ -392,7 +407,8 @@ ITealiumInstanceManager instanceManager = <span style="font-weight:bold">new</sp
 
 <span style="color:#998;font-style:italic">// Track a Page View event with the title &#34;View Name&#34; along with a single piece of event data.
 </span><span style="color:#998;font-style:italic">// (equivalent to the track call above)
-</span><span style="color:#998;font-style:italic"></span>tealium.TrackView(<span style="color:#b84">&#34;View Name&#34;</span>, <span style="color:#b84">&#34;page_type&#34;</span>, <span style="color:#b84">&#34;product detail page&#34;</span>);</code></pre></div>
+</span><span style="color:#998;font-style:italic"></span>tealium.TrackView(<span style="color:#b84">&#34;View Name&#34;</span>, <span style="color:#b84">&#34;page_type&#34;</span>, <span style="color:#b84">&#34;product detail page&#34;</span>);
+</code></pre></div>
 <h4 id="イベント">イベント</h4>
 
 <p>以下の例では、イベントのトラッキングを使用しています。</p>
@@ -405,7 +421,8 @@ ITealiumInstanceManager instanceManager = <span style="font-weight:bold">new</sp
     {<span style="color:#b84">&#34;event_category&#34;</span>, <span style="color:#b84">&#34;Menu&#34;</span>},
     {<span style="color:#b84">&#34;event_action&#34;</span>, <span style="color:#b84">&#34;Button Click&#34;</span>},
     {<span style="color:#b84">&#34;event_label&#34;</span>, <span style="color:#b84">&#34;Logo&#34;</span>}
-});</code></pre></div>
+});
+</code></pre></div>
 <h2 id="イベントデータの管理">イベントデータの管理</h2>
 
 <p>ネイティブSDKと同様に、各イベントに追加するために設定できる変数タイプが、さらに2つあります。</p>
@@ -418,7 +435,8 @@ ITealiumInstanceManager instanceManager = <span style="font-weight:bold">new</sp
 tealium.AddPersistentDataSources(<span style="font-weight:bold">new</span> Dictionary&lt;<span style="color:#458;font-weight:bold">string</span>, <span style="color:#458;font-weight:bold">object</span>&gt;(<span style="color:#099">1</span>)
 {
     <span style="color:#b84">&#34;PersistentDataTest&#34;</span>, <span style="color:#b84">&#34;Example persistent value.&#34;</span>}
-});</code></pre></div></li>
+});
+</code></pre></div></li>
 
 <li><p><strong>揮発性データ</strong><br />
 揮発性データは、トラッキングコールのたびにデータディクショナリにマージされます。ただし、揮発性データはアプリケーションが終了すると消失するので、次回起動時までは保持されません。</p>
@@ -427,7 +445,8 @@ tealium.AddPersistentDataSources(<span style="font-weight:bold">new</span> Dicti
 tealium.AddVolatileDataSources(<span style="font-weight:bold">new</span> Dictionary&lt;<span style="color:#458;font-weight:bold">string</span>, <span style="color:#458;font-weight:bold">object</span>&gt;(<span style="color:#099">1</span>)
 {
     { <span style="color:#b84">&#34;VolatileDataTest&#34;</span>, <span style="color:#b84">&#34;Example volatile value.&#34;</span> }
-});</code></pre></div></li>
+});
+</code></pre></div></li>
 </ul>
 
 <h2 id="高度な構成">高度な構成</h2>
@@ -450,7 +469,8 @@ tealium.AddVolatileDataSources(<span style="font-weight:bold">new</span> Diction
             }
         };
     <span style="font-weight:bold">return</span> <span style="font-weight:bold">new</span> List&lt;IRemoteCommand&gt;() { command };
-}</code></pre></div>
+}
+</code></pre></div>
 <h3 id="デリゲートメソッド">デリゲートメソッド</h3>
 
 <p>Tealium SDK内でコードを処理ロジックに注入できるデリゲートメソッドが5つあります。</p>
@@ -489,7 +509,7 @@ Tag Managementモジュールを使用している場合に、WebViewが完全�
             <span style="font-weight:bold">return</span> shouldQueue;
         }
     };
-    
+
     DispatchSentDelegateEventListener sendingListener = <span style="font-weight:bold">new</span> DispatchSentDelegateEventListener()    
     {
         DispatchSent = (tealium, dispatch) =&gt;        
@@ -507,7 +527,7 @@ Tag Managementモジュールを使用している場合に、WebViewが完全�
             dispatch.PutString(<span style="color:#b84">&#34;KeyAddedByQueuedListener&#34;</span>, <span style="color:#b84">&#34;Value added by queuing listener.&#34;</span>);
         }
     };
-    
+
     WebViewReadyDelegateEventListener webViewListener = <span style="font-weight:bold">new</span> WebViewReadyDelegateEventListener()    
     {
         WebViewReady = (tealium, webView) =&gt;        
@@ -515,7 +535,7 @@ Tag Managementモジュールを使用している場合に、WebViewが完全�
             System.Diagnostics.Debug.WriteLine(<span style="color:#b84">&#34;Inside WebViewReady!&#34;</span>);
         }
     };
-    
+
     SettingsPublishedDelegateEventListener settingsListener = <span style="font-weight:bold">new</span> SettingsPublishedDelegateEventListener()    
     {
         SettingsPublished = (tealium) =&gt;        
@@ -530,7 +550,8 @@ Tag Managementモジュールを使用している場合に、WebViewが完全�
         webViewListener,
         settingsListener);
     <span style="font-weight:bold">return</span> advConfig;
-}</code></pre></div>
+}
+</code></pre></div>
 <h2 id="同意管理">同意管理</h2>
 
 <p>同意管理機能は、<code>Tealium.Platform.*.dlls</code>というDLLに埋め込まれた2つのネイティブSDKにより提供されます。 <code>Tealium.Common.dll</code>は、列挙型で使用する以下のカテゴリとステータスを提供します。</p>
@@ -554,7 +575,8 @@ Tag Managementモジュールを使用している場合に、WebViewが完全�
 </span><span style="color:#998;font-style:italic"></span>tealConfig.IsConsentManagerEnabled = <span style="font-weight:bold">true</span>;
 
 <span style="color:#998;font-style:italic">// initialise your Tealium Instance:
-</span><span style="color:#998;font-style:italic"></span><span style="color:#458;font-weight:bold">var</span> tealium = instanceManager.CreateInstance(tealConfig);</code></pre></div>
+</span><span style="color:#998;font-style:italic"></span><span style="color:#458;font-weight:bold">var</span> tealium = instanceManager.CreateInstance(tealConfig);
+</code></pre></div>
 <h3 id="同意ステータス">同意ステータス</h3>
 
 <p>AndroidおよびiOSのネイティブSDKと同様に、同意管理が有効になっている場合、新しいユーザーは未知の状態だと見なされます。 同意ステータスがオプトインまたはオプトアウトされ、各イベントが送信または消去されるまで、トラッキング要求がキューに登録されます。</p>
@@ -573,10 +595,11 @@ Tag Managementモジュールを使用している場合に、WebViewが完全�
 <span style="color:#998;font-style:italic">// or none:
 </span><span style="color:#998;font-style:italic"></span>tealConfig.InitialUserConsentCategories = ConsentManager.NoCategories;
 <span style="color:#998;font-style:italic">// or partial opt-in, only to Analytics and Mobile categories.
-</span><span style="color:#998;font-style:italic"></span>tealConfig.InitialUserConsentCategories = <span style="font-weight:bold">new</span> ConsentCategory<span style="color:#008080">[]</span>{
+</span><span style="color:#998;font-style:italic"></span>tealConfig.InitialUserConsentCategories = <span style="font-weight:bold">new</span> ConsentCategory[]{
     ConsentManager.ConsentCategory.Analytics,
         ConsentManager.ConsentCategory.Mobile
-};</code></pre></div>
+};
+</code></pre></div>
 <h3 id="同意選択">同意選択</h3>
 
 <p>Tealiumインスタンスから<code>ConsentManager</code>プロパティを介して、Consent Managerと直接やりとりできます。</p>
@@ -587,17 +610,19 @@ Tag Managementモジュールを使用している場合に、WebViewが完全�
 tealium.ConsentManager.UserConsentStatus = ConsentManager.ConsentStatus.Consented;
 
 <span style="color:#998;font-style:italic">// The above will inherently opt the user into all categories as none have been provide.
-</span><span style="color:#998;font-style:italic">// To grant consent and opt into a subset of categories you can use the overload:
-</span><span style="color:#998;font-style:italic"></span>tealium.ConsentManager.UserConsentStatusWithCategories(ConsentManager.ConsentStatus.Consented, <span style="font-weight:bold">new</span> ConsentCategory<span style="color:#008080">[]</span>{
+</span><span style="color:#998;font-style:italic">// To grant consent and opt into a subset of categories, use the overload:
+</span><span style="color:#998;font-style:italic"></span>tealium.ConsentManager.UserConsentStatusWithCategories(ConsentManager.ConsentStatus.Consented, <span style="font-weight:bold">new</span> ConsentCategory[]{
     ConsentManager.ConsentCategory.Analytics
-});</code></pre></div>
+});
+</code></pre></div>
 <h3 id="リセット">リセット</h3>
 
 <p>現在選択されている同意設定をリセットするための追加のオプションが利用できます。 このオプションを使用するとユーザーのステータスは<code>Unknown</code>に戻り、以降のイベントが再度キューに登録されるようになります。</p>
 
 <p>完全に無効にするには、以下の例のように<code>TealiumConfig</code>オブジェクトで無効化します。</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">ITealium tealium = instanceManager.GetExistingInstance(TealiumConsts.INSTANCE_ID);
-tealium.ConsentManager.ResetUserConsentPreferences();</code></pre></div>
+tealium.ConsentManager.ResetUserConsentPreferences();
+</code></pre></div>
 <h2 id="リソース">リソース</h2>
 
 <p>以下のセクションでは、Tealium for iOSおよびTealium for Androidの詳細情報が記載された、TealiumおよびXamarinのリソースへのリンクを紹介します。</p>
@@ -611,7 +636,7 @@ tealium.ConsentManager.ResetUserConsentPreferences();</code></pre></div>
 <li><a href="/platforms/android/">Tealium for Android</a></li>
 </ul>
 
-<p>UDHサービス（AudienceStream、EventStream、DataAccess）だけを使用している場合は、Xamarinプロジェクトのネイティブコードとして<a href="/platforms/csharp/">C#向けのTealiumライブラリ</a>を利用できる可能性があります。</p>
+<p>Tealium Customer Data Hubサービス（Tealium AudienceStream、EventStream、DataAccess）だけを使用している場合は、Xamarinプロジェクトのネイティブコードとして<a href="/platforms/csharp/">C#向けのTealiumライブラリ</a>を利用できる可能性があります。</p>
 
 <h3 id="ベンダードキュメント">ベンダードキュメント</h3>
 
@@ -626,19 +651,31 @@ tealium.ConsentManager.ResetUserConsentPreferences();</code></pre></div>
 
 </div>
 
+<b class="pv1 br2 dib tc mv3 link">
+</b>
+<b style="position: absolute; right:0px;" class="pv1 br2 dib tc mv3 link">
+</b>
+<br>&nbsp;</br>
+
           
 
 
         </div>
       </div>
-      <div class="order-0 w-20 dn db-l pl3 sticky-l">
+      <div class="order-0 w-20 dn db-l sticky-l">
         
 <nav class="side-nav f6" role="navigation">
-  <ul class="list pa0 nl2">
+  <ul class="list pa0">
+
     
       
       
-      <li class="w-100 hover-accent-color-light fw8 mb1 bb b--moon-gray">
+      <li class="w-100 hover-accent-color-light fw8 f4 mid-gray pv1 pl2">
+        Mobile
+      </li>
+      
+      
+      <li class="w-100 hover-accent-color-light fw8 pl2">
         <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".remote-commands">Remote Commands</a>
         <ul class="remote-commands desktopmenu animated fadeIn list pl0 dn">
           <li class="fw4">
@@ -666,35 +703,7 @@ tealium.ConsentManager.ResetUserConsentPreferences();</code></pre></div>
       </li>
       
       
-      <li class="w-100 hover-accent-color-light fw8">
-        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".amp">AMP</a>
-        <ul class="amp desktopmenu animated fadeIn list pl0 dn">
-          <li class="fw4">
-            
-            
-            <a href="/platforms/amp/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              概要
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/amp/install/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              インストール
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/amp/data-layer-variables/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              データレイヤー
-            </a>
-          </li>
-        </ul>
-      </li>
-      
-      
-      <li class="w-100 hover-accent-color-light fw8">
+      <li class="w-100 hover-accent-color-light fw8 pl2">
         <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".android">Android</a>
         <ul class="android desktopmenu animated fadeIn list pl0 dn">
           <li class="fw4">
@@ -771,7 +780,7 @@ tealium.ConsentManager.ResetUserConsentPreferences();</code></pre></div>
       </li>
       
       
-      <li class="w-100 hover-accent-color-light fw8">
+      <li class="w-100 hover-accent-color-light fw8 pl2">
         <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".android-tv">Android TV</a>
         <ul class="android-tv desktopmenu animated fadeIn list pl0 dn">
           <li class="fw4">
@@ -792,7 +801,7 @@ tealium.ConsentManager.ResetUserConsentPreferences();</code></pre></div>
       </li>
       
       
-      <li class="w-100 hover-accent-color-light fw8">
+      <li class="w-100 hover-accent-color-light fw8 pl2">
         <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".android-wear">Android Wear</a>
         <ul class="android-wear desktopmenu animated fadeIn list pl0 dn">
           <li class="fw4">
@@ -813,63 +822,7 @@ tealium.ConsentManager.ResetUserConsentPreferences();</code></pre></div>
       </li>
       
       
-      <li class="w-100 hover-accent-color-light fw8">
-        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".angular">Angular</a>
-        <ul class="angular desktopmenu animated fadeIn list pl0 dn">
-          <li class="fw4">
-            
-            
-            <a href="/platforms/angular/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              概要
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/angular/install/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              インストール
-            </a>
-          </li>
-        </ul>
-      </li>
-      
-      
-      <li class="w-100 hover-accent-color-light fw8">
-        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".csharp">C#</a>
-        <ul class="csharp desktopmenu animated fadeIn list pl0 dn">
-          <li class="fw4">
-            
-            
-            <a href="/platforms/csharp/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              概要
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/csharp/install/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              インストール
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/csharp/functions/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              関数の定義
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/csharp/release-notes/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              リリースノート
-            </a>
-          </li>
-        </ul>
-      </li>
-      
-      
-      <li class="w-100 hover-accent-color-light fw8">
+      <li class="w-100 hover-accent-color-light fw8 pl2">
         <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".cordova">Cordova</a>
         <ul class="cordova desktopmenu animated fadeIn list pl0 dn">
           <li class="fw4">
@@ -925,7 +878,7 @@ tealium.ConsentManager.ResetUserConsentPreferences();</code></pre></div>
       </li>
       
       
-      <li class="w-100 hover-accent-color-light fw8">
+      <li class="w-100 hover-accent-color-light fw8 pl2">
         <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".flutter">Flutter</a>
         <ul class="flutter desktopmenu animated fadeIn list pl0 dn">
           <li class="fw4">
@@ -953,29 +906,8 @@ tealium.ConsentManager.ResetUserConsentPreferences();</code></pre></div>
       </li>
       
       
-      <li class="w-100 hover-accent-color-light fw8">
-        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".http-api">HTTP API</a>
-        <ul class="http-api desktopmenu animated fadeIn list pl0 dn">
-          <li class="fw4">
-            
-            
-            <a href="/platforms/http-api/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              概要
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/http-api/endpoint-spec/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              エンドポイント
-            </a>
-          </li>
-        </ul>
-      </li>
-      
-      
-      <li class="w-100 hover-accent-color-light fw8">
-        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".ios">iOS</a>
+      <li class="w-100 hover-accent-color-light fw8 pl2">
+        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".ios">iOS (Objective-C)</a>
         <ul class="ios desktopmenu animated fadeIn list pl0 dn">
           <li class="fw4">
             
@@ -1044,27 +976,153 @@ tealium.ConsentManager.ResetUserConsentPreferences();</code></pre></div>
       </li>
       
       
-      <li class="w-100 hover-accent-color-light fw8">
-        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".java">Java</a>
-        <ul class="java desktopmenu animated fadeIn list pl0 dn">
+      <li class="w-100 hover-accent-color-light fw8 pl2">
+        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".swift">iOS (Swift)</a>
+        <ul class="swift desktopmenu animated fadeIn list pl0 dn">
           <li class="fw4">
             
             
-            <a href="/platforms/java/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+            <a href="/platforms/swift/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
               概要
             </a>
           </li>
           <li class="fw4">
             
             
-            <a href="/platforms/java/install/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+            <a href="/platforms/swift/install/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
               インストール
             </a>
           </li>
           <li class="fw4">
             
             
-            <a href="/platforms/java/function-definitions/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+            <a href="/platforms/swift/track/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              トラッキング
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/swift/consent-manager/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              Consent Manager
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/swift/class-definitions/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              クラスの定義
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/swift/modules/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              モジュール
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/swift/data-layer/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              データレイヤー
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/swift/release-notes/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              リリースノート
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/swift/module-list/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              モジュールのリスト
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/swift/with-objective-c/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              Objective-Cとの連携
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/swift/feature-comparison/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              機能比較
+            </a>
+          </li>
+        </ul>
+      </li>
+      
+      
+      <li class="w-100 hover-accent-color-light fw8 pl2">
+        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".tvos">iOS (tvOS)</a>
+        <ul class="tvos desktopmenu animated fadeIn list pl0 dn">
+          <li class="fw4">
+            
+            
+            <a href="/platforms/tvos/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              概要
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/tvos/install/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              インストール
+            </a>
+          </li>
+        </ul>
+      </li>
+      
+      
+      <li class="w-100 hover-accent-color-light fw8 pl2">
+        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".watchos">iOS (watchOS)</a>
+        <ul class="watchos desktopmenu animated fadeIn list pl0 dn">
+          <li class="fw4">
+            
+            
+            <a href="/platforms/watchos/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              概要
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/watchos/install/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              インストール
+            </a>
+          </li>
+        </ul>
+      </li>
+      
+      
+      <li class="w-100 hover-accent-color-light fw8 pl2">
+        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".react-native">React Native</a>
+        <ul class="react-native desktopmenu animated fadeIn list pl0 dn">
+          <li class="fw4">
+            
+            
+            <a href="/platforms/react-native/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              概要
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/react-native/install/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              インストール
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/react-native/functions/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
               関数の定義
             </a>
           </li>
@@ -1072,7 +1130,82 @@ tealium.ConsentManager.ResetUserConsentPreferences();</code></pre></div>
       </li>
       
       
-      <li class="w-100 hover-accent-color-light fw8">
+      <li class="w-100 hover-accent-color-light fw8 active mb1 bb b--moon-gray pl2">
+        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2  primary-color" data-target=".xamarin">Xamarin</a>
+        <ul class="xamarin desktopmenu animated fadeIn list pl0 db">
+          <li class="fw4">
+            
+            
+            <a href="/platforms/xamarin/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              概要
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/xamarin/install/" class="db link pl3 pr2 pv1 bg-secondary white">
+              インストール
+            </a>
+          </li>
+        </ul>
+      </li>
+      
+      
+      <li class="w-100 hover-accent-color-light fw8 f4 mid-gray pv1 pl2">
+        Web
+      </li>
+      
+      
+      <li class="w-100 hover-accent-color-light fw8 pl2">
+        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".amp">AMP</a>
+        <ul class="amp desktopmenu animated fadeIn list pl0 dn">
+          <li class="fw4">
+            
+            
+            <a href="/platforms/amp/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              概要
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/amp/install/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              インストール
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/amp/data-layer-variables/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              データレイヤー
+            </a>
+          </li>
+        </ul>
+      </li>
+      
+      
+      <li class="w-100 hover-accent-color-light fw8 pl2">
+        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".angular">Angular</a>
+        <ul class="angular desktopmenu animated fadeIn list pl0 dn">
+          <li class="fw4">
+            
+            
+            <a href="/platforms/angular/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              概要
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/angular/install/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              インストール
+            </a>
+          </li>
+        </ul>
+      </li>
+      
+      
+      <li class="w-100 hover-accent-color-light fw8 mb1 bb b--moon-gray pl2">
         <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".javascript">JavaScript (Web)</a>
         <ul class="javascript desktopmenu animated fadeIn list pl0 dn">
           <li class="fw4">
@@ -1163,7 +1296,96 @@ tealium.ConsentManager.ResetUserConsentPreferences();</code></pre></div>
       </li>
       
       
-      <li class="w-100 hover-accent-color-light fw8">
+      <li class="w-100 hover-accent-color-light fw8 f4 mid-gray pv1 pl2">
+        Server
+      </li>
+      
+      
+      <li class="w-100 hover-accent-color-light fw8 pl2">
+        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".csharp">C#</a>
+        <ul class="csharp desktopmenu animated fadeIn list pl0 dn">
+          <li class="fw4">
+            
+            
+            <a href="/platforms/csharp/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              概要
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/csharp/install/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              インストール
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/csharp/functions/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              関数の定義
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/csharp/release-notes/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              リリースノート
+            </a>
+          </li>
+        </ul>
+      </li>
+      
+      
+      <li class="w-100 hover-accent-color-light fw8 pl2">
+        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".http-api">HTTP API</a>
+        <ul class="http-api desktopmenu animated fadeIn list pl0 dn">
+          <li class="fw4">
+            
+            
+            <a href="/platforms/http-api/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              概要
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/http-api/endpoint-spec/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              エンドポイント
+            </a>
+          </li>
+        </ul>
+      </li>
+      
+      
+      <li class="w-100 hover-accent-color-light fw8 pl2">
+        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".java">Java</a>
+        <ul class="java desktopmenu animated fadeIn list pl0 dn">
+          <li class="fw4">
+            
+            
+            <a href="/platforms/java/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              概要
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/java/install/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              インストール
+            </a>
+          </li>
+          <li class="fw4">
+            
+            
+            <a href="/platforms/java/function-definitions/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
+              関数の定義
+            </a>
+          </li>
+        </ul>
+      </li>
+      
+      
+      <li class="w-100 hover-accent-color-light fw8 pl2">
         <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".node">Node</a>
         <ul class="node desktopmenu animated fadeIn list pl0 dn">
           <li class="fw4">
@@ -1184,7 +1406,7 @@ tealium.ConsentManager.ResetUserConsentPreferences();</code></pre></div>
       </li>
       
       
-      <li class="w-100 hover-accent-color-light fw8">
+      <li class="w-100 hover-accent-color-light fw8 pl2">
         <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".python">Python</a>
         <ul class="python desktopmenu animated fadeIn list pl0 dn">
           <li class="fw4">
@@ -1205,35 +1427,7 @@ tealium.ConsentManager.ResetUserConsentPreferences();</code></pre></div>
       </li>
       
       
-      <li class="w-100 hover-accent-color-light fw8">
-        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".react-native">React Native</a>
-        <ul class="react-native desktopmenu animated fadeIn list pl0 dn">
-          <li class="fw4">
-            
-            
-            <a href="/platforms/react-native/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              概要
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/react-native/install/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              インストール
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/react-native/functions/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              関数の定義
-            </a>
-          </li>
-        </ul>
-      </li>
-      
-      
-      <li class="w-100 hover-accent-color-light fw8">
+      <li class="w-100 hover-accent-color-light fw8 pl2">
         <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".roku">Roku</a>
         <ul class="roku desktopmenu animated fadeIn list pl0 dn">
           <li class="fw4">
@@ -1261,7 +1455,7 @@ tealium.ConsentManager.ResetUserConsentPreferences();</code></pre></div>
       </li>
       
       
-      <li class="w-100 hover-accent-color-light fw8">
+      <li class="w-100 hover-accent-color-light fw8 pl2">
         <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".ruby">Ruby</a>
         <ul class="ruby desktopmenu animated fadeIn list pl0 dn">
           <li class="fw4">
@@ -1280,153 +1474,6 @@ tealium.ConsentManager.ResetUserConsentPreferences();</code></pre></div>
           </li>
         </ul>
       </li>
-      
-      
-      <li class="w-100 hover-accent-color-light fw8">
-        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".swift">Swift</a>
-        <ul class="swift desktopmenu animated fadeIn list pl0 dn">
-          <li class="fw4">
-            
-            
-            <a href="/platforms/swift/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              概要
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/swift/install/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              インストール
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/swift/track/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              トラッキング
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/swift/consent-manager/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              Consent Manager
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/swift/class-definitions/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              クラスの定義
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/swift/modules/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              モジュール
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/swift/data-layer/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              データレイヤー
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/swift/release-notes/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              リリースノート
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/swift/module-list/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              モジュールのリスト
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/swift/with-objective-c/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              Objective-Cとの連携
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/swift/feature-comparison/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              機能比較
-            </a>
-          </li>
-        </ul>
-      </li>
-      
-      
-      <li class="w-100 hover-accent-color-light fw8">
-        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".tvos">tvOS</a>
-        <ul class="tvos desktopmenu animated fadeIn list pl0 dn">
-          <li class="fw4">
-            
-            
-            <a href="/platforms/tvos/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              概要
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/tvos/install/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              インストール
-            </a>
-          </li>
-        </ul>
-      </li>
-      
-      
-      <li class="w-100 hover-accent-color-light fw8">
-        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".watchos">watchOS</a>
-        <ul class="watchos desktopmenu animated fadeIn list pl0 dn">
-          <li class="fw4">
-            
-            
-            <a href="/platforms/watchos/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              概要
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/watchos/install/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              インストール
-            </a>
-          </li>
-        </ul>
-      </li>
-      
-      
-      <li class="w-100 hover-accent-color-light fw8 active">
-        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2  primary-color" data-target=".xamarin">Xamarin</a>
-        <ul class="xamarin desktopmenu animated fadeIn list pl0 db">
-          <li class="fw4">
-            
-            
-            <a href="/platforms/xamarin/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary ">
-              概要
-            </a>
-          </li>
-          <li class="fw4">
-            
-            
-            <a href="/platforms/xamarin/install/" class="db link pl3 pr2 pv1 bg-secondary white">
-              インストール
-            </a>
-          </li>
-        </ul>
-      </li>
   </ul>
 </nav>
 
@@ -1440,18 +1487,19 @@ tealium.ConsentManager.ResetUserConsentPreferences();</code></pre></div>
       <div class="feedback_form">
   <span>
 	  <p style="display:inline">このページはお役にたちましたでしょうか？</p>
-		<button enabled id="feedback_yes" class="f6 ph3 pv1 br2 dib tc ttu mv3 bg-primary-color white hover-bg-green link">はい</button>
-	  <button enabled id="feedback_no" class="f6 ph3 pv1 br2 dib tc ttu mv3 bg-primary-color white hover-bg-green link">いいえ</button>
+		<button enabled id="feedback_yes" class="f6 ph3 pv1 br2 dib tc mv3 bg-primary-color white hover-bg-green link">はい</button>
+	  <button enabled id="feedback_no" class="f6 ph3 pv1 br2 dib tc mv3 bg-primary-color white hover-bg-green link">いいえ</button>
   </span>
 	<span id="feedback_comment">
 		<textarea id="feedback_textarea" type="text" placeholder="JA-Tell us how we can make this article better." rows="4" cols="70"></textarea>
-		<button disabled id="feedback_submit" class="f6 ph3 pv1 br2 dib tc ttu mv3 bg-primary-color white hover-bg-blue link">フィードバックを送信</button>
+    <span>最終更新日 ::  2020年May月5日
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button disabled id="feedback_submit" class="f6 ph3 pv1 br2 dib tc mv3 bg-primary-color white hover-bg-blue link">フィードバックを送信</button></span>
   </span>
   <span id="feedback_thank_you" style="display: none;">
      <em>JA-Thank you for your feedback!</em>
   </span>
 </div>
-<p>最終更新日 ::  2019年October月28日</p>
 
       
 
@@ -1471,7 +1519,13 @@ tealium.ConsentManager.ResetUserConsentPreferences();</code></pre></div>
 <ul class="list hidden dib ph0 ma0 scrolling-touch tc">
   
     <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/" class="ttu f6 link primary-color-light overflow hover-white db brand-font ma0 w-100 pv3 ph4">
+        <a href="https://docs.tealium.co.jp/guides/" class="ttu f6 link primary-color-light overflow hover-white db brand-font ma0 w-100 pv3 ph4">
+          手引き
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-primary w-100">
+        <a href="https://docs.tealium.co.jp/platforms/" class="ttu f6 link primary-color-light overflow hover-white db brand-font ma0 w-100 pv3 ph4">
           プラットフォーム
         </a>
     </li>
@@ -1484,135 +1538,153 @@ tealium.ConsentManager.ResetUserConsentPreferences();</code></pre></div>
 
 <ul class="list dib ph0 ma0 scrolling-touch tc">
   
-    <li  class="tl dib ma0 hover-bg-primary w-100 mb2 bb b--mid-gray">
-        <a href="http://docs.tealium.co.jp/platforms/remote-commands/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+    <li  class="tl dib ma0 hover-bg-primary w-100">
+        <a href="https://docs.tealium.co.jp" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+          Mobile
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-primary w-100">
+        <a href="https://docs.tealium.co.jp/platforms/remote-commands/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
           Remote Commands
         </a>
     </li>
   
     <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/amp/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
-          AMP
-        </a>
-    </li>
-  
-    <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/android/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+        <a href="https://docs.tealium.co.jp/platforms/android/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
           Android
         </a>
     </li>
   
     <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/android-tv/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+        <a href="https://docs.tealium.co.jp/platforms/android-tv/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
           Android TV
         </a>
     </li>
   
     <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/android-wear/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+        <a href="https://docs.tealium.co.jp/platforms/android-wear/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
           Android Wear
         </a>
     </li>
   
     <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/angular/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
-          Angular
-        </a>
-    </li>
-  
-    <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/csharp/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
-          C#
-        </a>
-    </li>
-  
-    <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/cordova/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+        <a href="https://docs.tealium.co.jp/platforms/cordova/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
           Cordova
         </a>
     </li>
   
     <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/flutter/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+        <a href="https://docs.tealium.co.jp/platforms/flutter/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
           Flutter
         </a>
     </li>
   
     <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/http-api/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
-          HTTP API
+        <a href="https://docs.tealium.co.jp/platforms/ios/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+          iOS (Objective-C)
         </a>
     </li>
   
     <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/ios/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
-          iOS
+        <a href="https://docs.tealium.co.jp/platforms/swift/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+          iOS (Swift)
         </a>
     </li>
   
     <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/java/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
-          Java
+        <a href="https://docs.tealium.co.jp/platforms/tvos/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+          iOS (tvOS)
         </a>
     </li>
   
     <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/javascript/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+        <a href="https://docs.tealium.co.jp/platforms/watchos/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+          iOS (watchOS)
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-primary w-100">
+        <a href="https://docs.tealium.co.jp/platforms/react-native/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+          React Native
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-primary w-100 mb2 bb b--mid-gray">
+        <a href="https://docs.tealium.co.jp/platforms/xamarin/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+          Xamarin
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-primary w-100">
+        <a href="https://docs.tealium.co.jp" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+          Web
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-primary w-100">
+        <a href="https://docs.tealium.co.jp/platforms/amp/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+          AMP
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-primary w-100">
+        <a href="https://docs.tealium.co.jp/platforms/angular/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+          Angular
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-primary w-100 mb2 bb b--mid-gray">
+        <a href="https://docs.tealium.co.jp/platforms/javascript/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
           JavaScript (Web)
         </a>
     </li>
   
     <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/node/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+        <a href="https://docs.tealium.co.jp" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+          Server
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-primary w-100">
+        <a href="https://docs.tealium.co.jp/platforms/csharp/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+          C#
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-primary w-100">
+        <a href="https://docs.tealium.co.jp/platforms/http-api/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+          HTTP API
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-primary w-100">
+        <a href="https://docs.tealium.co.jp/platforms/java/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+          Java
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-primary w-100">
+        <a href="https://docs.tealium.co.jp/platforms/node/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
           Node
         </a>
     </li>
   
     <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/python/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+        <a href="https://docs.tealium.co.jp/platforms/python/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
           Python
         </a>
     </li>
   
     <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/react-native/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
-          React Native
-        </a>
-    </li>
-  
-    <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/roku/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+        <a href="https://docs.tealium.co.jp/platforms/roku/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
           Roku
         </a>
     </li>
   
     <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/ruby/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
+        <a href="https://docs.tealium.co.jp/platforms/ruby/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
           Ruby
-        </a>
-    </li>
-  
-    <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/swift/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
-          Swift
-        </a>
-    </li>
-  
-    <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/tvos/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
-          tvOS
-        </a>
-    </li>
-  
-    <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/watchos/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
-          watchOS
-        </a>
-    </li>
-  
-    <li  class="tl dib ma0 hover-bg-primary w-100">
-        <a href="http://docs.tealium.co.jp/platforms/xamarin/" class="ttu f6 link primary-color-light  hover-white db brand-font ma0 w-100 pv2 ph4">
-          Xamarin
         </a>
     </li>
   
