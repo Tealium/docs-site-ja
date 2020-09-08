@@ -473,6 +473,16 @@
   </url>
   
   <url>
+    <loc>https://docs.tealium.co.jp/integrations/</loc>
+    <lastmod>2020-09-08T08:33:56-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.tealium.co.jp/integrations/server-side-connectors/</loc>
+    <lastmod>2020-09-08T08:33:56-07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://docs.tealium.co.jp/platforms/ios-swift/api/tealium-config/</loc>
     <lastmod>2020-08-27T14:00:18-07:00</lastmod>
     <xhtml:link
@@ -815,6 +825,11 @@
                 hreflang="ja"
                 href="https://docs.tealium.co.jp/platforms/android-java/api/data-sources/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://docs.tealium.co.jp/integrations/server-side-connectors/facebook-conversions/</loc>
+    <lastmod>2020-09-08T08:33:56-07:00</lastmod>
   </url>
   
   <url>
@@ -1905,16 +1920,6 @@
   <url>
     <loc>https://docs.tealium.co.jp/platforms/ios-swift/data-management/</loc>
     <lastmod>2020-08-27T14:00:18-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://docs.tealium.com/platforms/ios-swift/data-management/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://docs.tealium.co.jp/platforms/ios-swift/data-management/"
-                />
   </url>
   
   <url>
