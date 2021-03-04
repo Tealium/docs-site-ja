@@ -80,7 +80,7 @@ var utag_data = {
       
     </ul>
     
-    <div class="db dib-ns pl3"><form id="site-search-form" action="" role="search">
+    <div class="db dib-ns pl3 mr4"><form id="site-search-form" action="" role="search">
   <fieldset class="bn ma0 pa0">
     <label class="clip" for="search-input">Search</label>
     <input type="search" id="search-input" class="needs-js bg-left bn f5 input-reset lh-solid mt3 mt0-ns pl4 pv2 w5 white"
@@ -90,6 +90,15 @@ var utag_data = {
 </form>
 </div>
     
+
+    <ul class="list ma0 pa0 dn dib-l">
+      <li class="f5 dib">
+         <i class="fa fa-globe" style="color: rgba(255, 255, 255, .6)" aria-hidden="true"></i>
+      </li>
+      <li class="f5 dib mr4"><a href="https://docs.tealium.com/">English</a>
+</li>
+    </ul>
+
   </div>
 
 
@@ -136,6 +145,16 @@ var utag_data = {
                             <span class="menu-context supportLinks_buttonTitle">Product Guides</span>
                         </a>
                           <span class="tooltiptext">Product Guides</span>
+                    </li>
+                    <li class="menu-divider"></li>
+                    <li class="js-main-nav-section" data-section="kb">
+                        <a href="https://community.tealiumiq.com/t5/Knowledge-Base/ct-p/kb" class="menu-list-item top-level tooltip-right">
+                            <span class="menu-large-icon">
+                                <i class="fal fa-head-side-brain"></i>
+                            </span>
+                            <span class="menu-context">Knowledge Base</span>
+                        </a>
+                          <span class="tooltiptext"> Knowledge Base </span>
                     </li>
                     <li class="menu-divider"></li>
                     <li class="js-main-nav-section active">
@@ -237,7 +256,7 @@ var utag_data = {
 
   
     
-      <a href="/platforms/iq-tag-management/getting-started" class="f6 fw8 mb0 link mid-gray dim mr3">
+      <a href="/guides/iq-tag-management/getting-started/" class="f6 fw8 mb0 link mid-gray dim mr3">
         IQ TAG MANAGEMENT/GETTING STARTED
       </a>
     
@@ -266,7 +285,7 @@ var utag_data = {
 
 <h2 id="拡張機能の追加">拡張機能の追加</h2>
 
-<p>拡張機能は、データ層変数のデフォルト値を設定するときによく使用されます。これを行うには、変数の値を設定する必要があります（値が設定されていない場合のみ）。この手順では、Set Data Values拡張機能を使って、<code>page_name</code>を<code>document title</code>という名前の組み込み変数の値に設定しますが、<code>page_name</code>が値を設定されていない場合に限ります。</p>
+<p>拡張機能は、データレイヤー変数のデフォルト値を設定するときによく使用されます。これを行うには、変数の値を設定する必要があります（値が設定されていない場合のみ）。この手順では、Set Data Values拡張機能を使って、<code>page_name</code>を<code>document title</code>という名前の組み込み変数の値に設定しますが、<code>page_name</code>が値を設定されていない場合に限ります。</p>
 
 <p>この拡張機能を追加するには、以下の手順を使用します。</p>
 
@@ -289,7 +308,7 @@ var utag_data = {
 </ul></li>
 </ol>
 
-<p>拡張機能が構成され、データ層で<code>page_name</code>変数に値が設定されていない場合に、<code>document title</code>の値が代わりに使用されます。これは、拡張機能のほんの一例です。その他の拡張機能を確認してみてください。</p>
+<p>拡張機能が構成され、データレイヤーで<code>page_name</code>変数に値が設定されていない場合に、<code>document title</code>の値が代わりに使用されます。これは、拡張機能のほんの一例です。その他の拡張機能を確認してみてください。</p>
 
 </div>
 
@@ -343,46 +362,28 @@ var utag_data = {
   
   
   
-  <li class="w-100 hover-accent-color-light fw8 f4 mid-gray pv1 pl2" data-level="1">iQ Tag Management</li>
-    
   
-  
-
-      
-
-  
-  
-  
-  
-  
-  
-      
-      
-      
-      
-      <li class="w-100 hover-accent-color-light fw8 active" data-level="1">
-        <a href="javascript:void(0)" class="js-toggle dib w-100 link pv2 mid-gray hover-accent-color-light pl2 pr2 primary-color expanded " data-target=".iq-tag-management-getting-started">はじめに</a>
-        <ul class="iq-tag-management-getting-started desktopmenu animated fadeIn list pl0 db">
-            
-
-  
-  
-  
-  
-  
-  
-      
-      
-      
-      
-      <li class="w-100 hover-accent-color-light fw4 " data-level="2">
-        <a href="/guides/iq-tag-management/getting-started/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".iq-tag-management-getting-started-overview">概要</a>
+    <li class="w-100 hover-accent-color-light fw8 f4 mid-gray pv1 pl2" data-level="1">iQ Tag Management
       </li>
-      
     
   
   
 
+      
+
+  
+  
+  
+  
+  
+  
+    
+      
+      
+      
+      <li class="w-100 hover-accent-color-light fw8  active" data-level="1">
+        <a href="javascript:void(0)" class="js-toggle dib w-100 link pv2 mid-gray hover-accent-color-light pl2 pr2 primary-color expanded " data-target=".iq-tag-management-getting-started">はじめに</a>
+        <ul class="iq-tag-management-getting-started desktopmenu animated fadeIn list pl0">
             
 
   
@@ -391,11 +392,11 @@ var utag_data = {
   
   
   
+    
       
       
       
-      
-      <li class="w-100 hover-accent-color-light fw4 " data-level="2">
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
         <a href="/guides/iq-tag-management/getting-started/introduction/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".iq-tag-management-getting-started-introduction">はじめに</a>
       </li>
       
@@ -411,12 +412,12 @@ var utag_data = {
   
   
   
+    
       
       
       
-      
-      <li class="w-100 hover-accent-color-light fw4 " data-level="2">
-        <a href="/guides/iq-tag-management/getting-started/data-layer-basics/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".iq-tag-management-getting-started-data-layer-basics">データ層の基本</a>
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
+        <a href="/guides/iq-tag-management/getting-started/data-layer-basics/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".iq-tag-management-getting-started-data-layer-basics">データレイヤーの基本</a>
       </li>
       
     
@@ -431,12 +432,12 @@ var utag_data = {
   
   
   
+    
       
       
       
-      
-      <li class="w-100 hover-accent-color-light fw4 " data-level="2">
-        <a href="/guides/iq-tag-management/getting-started/data-layer-add-variables/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".iq-tag-management-getting-started-data-layer-add-variables">データ層の基本: 共通変数の追加</a>
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
+        <a href="/guides/iq-tag-management/getting-started/data-layer-add-variables/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".iq-tag-management-getting-started-data-layer-add-variables">データレイヤーの基本: 共通変数の追加</a>
       </li>
       
     
@@ -451,11 +452,11 @@ var utag_data = {
   
   
   
+    
       
       
       
-      
-      <li class="w-100 hover-accent-color-light fw4 " data-level="2">
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
         <a href="/guides/iq-tag-management/getting-started/tag-basics/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".iq-tag-management-getting-started-tag-basics">タグの基本</a>
       </li>
       
@@ -471,11 +472,11 @@ var utag_data = {
   
   
   
+    
       
       
       
-      
-      <li class="w-100 hover-accent-color-light fw4 " data-level="2">
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
         <a href="/guides/iq-tag-management/getting-started/tag-basics-add-tag/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".iq-tag-management-getting-started-tag-basics-add-tag">タグの基本: タグの追加</a>
       </li>
       
@@ -491,11 +492,11 @@ var utag_data = {
   
   
   
+    
       
       
       
-      
-      <li class="w-100 hover-accent-color-light fw4 " data-level="2">
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
         <a href="/guides/iq-tag-management/getting-started/tag-basics-load-rule/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".iq-tag-management-getting-started-tag-basics-load-rule">タグの基本: 読み込みルールの追加</a>
       </li>
       
@@ -511,11 +512,11 @@ var utag_data = {
   
   
   
+    
       
       
       
-      
-      <li class="w-100 hover-accent-color-light fw4 " data-level="2">
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
         <a href="/guides/iq-tag-management/getting-started/tag-basics-data-mapping/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".iq-tag-management-getting-started-tag-basics-data-mapping">タグの基本: データマッピングの追加</a>
       </li>
       
@@ -531,11 +532,11 @@ var utag_data = {
   
   
   
+    
       
       
       
-      
-      <li class="w-100 hover-accent-color-light fw4 " data-level="2">
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
         <a href="/guides/iq-tag-management/getting-started/extensions/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".iq-tag-management-getting-started-extensions">拡張機能</a>
       </li>
       
@@ -551,11 +552,11 @@ var utag_data = {
   
   
   
+    
       
       
       
-      
-      <li class="w-100 hover-accent-color-light fw4 " data-level="2">
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
         <a href="/guides/iq-tag-management/getting-started/extensions-add/" class="db link pl3 pr2 pv1 bg-secondary white" data-target=".iq-tag-management-getting-started-extensions-add">拡張機能: 拡張機能の追加</a>
       </li>
       
@@ -571,11 +572,11 @@ var utag_data = {
   
   
   
+    
       
       
       
-      
-      <li class="w-100 hover-accent-color-light fw4 " data-level="2">
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
         <a href="/guides/iq-tag-management/getting-started/save-publish-basics/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".iq-tag-management-getting-started-save-publish-basics&#34;">保存と公開</a>
       </li>
       
@@ -591,11 +592,11 @@ var utag_data = {
   
   
   
+    
       
       
       
-      
-      <li class="w-100 hover-accent-color-light fw4 " data-level="2">
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
         <a href="/guides/iq-tag-management/getting-started/saving-changes/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".iq-tag-management-getting-started-saving-changes&#34;">変更の保存</a>
       </li>
       
@@ -611,11 +612,11 @@ var utag_data = {
   
   
   
+    
       
       
       
-      
-      <li class="w-100 hover-accent-color-light fw4 " data-level="2">
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
         <a href="/guides/iq-tag-management/getting-started/publish-environments/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".iq-tag-management-getting-started-publish-environments&#34;">公開環境</a>
       </li>
       
@@ -631,11 +632,11 @@ var utag_data = {
   
   
   
+    
       
       
       
-      
-      <li class="w-100 hover-accent-color-light fw4 " data-level="2">
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
         <a href="/guides/iq-tag-management/getting-started/save-publish/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".iq-tag-management-getting-started-save-publish&#34;">保存と公開</a>
       </li>
       
@@ -651,11 +652,11 @@ var utag_data = {
   
   
   
+    
       
       
       
-      
-      <li class="w-100 hover-accent-color-light fw4 " data-level="2">
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
         <a href="/guides/iq-tag-management/getting-started/install-test/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".iq-tag-management-getting-started-install-test&#34;">インストールとテスト</a>
       </li>
       
@@ -671,11 +672,11 @@ var utag_data = {
   
   
   
+    
       
       
       
-      
-      <li class="w-100 hover-accent-color-light fw4 " data-level="2">
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
         <a href="/guides/iq-tag-management/getting-started/install-utag/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".iq-tag-management-getting-started-install-utag&#34;">utag_dataとutag.jsのインストール</a>
       </li>
       
@@ -691,11 +692,11 @@ var utag_data = {
   
   
   
+    
       
       
       
-      
-      <li class="w-100 hover-accent-color-light fw4 " data-level="2">
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
         <a href="/guides/iq-tag-management/getting-started/code-center/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".iq-tag-management-getting-started-code-center&#34;">コードセンターの使用</a>
       </li>
       
@@ -711,11 +712,11 @@ var utag_data = {
   
   
   
+    
       
       
       
-      
-      <li class="w-100 hover-accent-color-light fw4 " data-level="2">
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
         <a href="/guides/iq-tag-management/getting-started/web-companion/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".iq-tag-management-getting-started-web-companion&#34;">Web Companionの検証</a>
       </li>
       
@@ -731,11 +732,11 @@ var utag_data = {
   
   
   
+    
       
       
       
-      
-      <li class="w-100 hover-accent-color-light fw4 " data-level="2">
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
         <a href="/guides/iq-tag-management/getting-started/next-steps/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".iq-tag-management-getting-started-next-steps&#34;">次のステップ</a>
       </li>
       
@@ -757,7 +758,9 @@ var utag_data = {
   
   
   
-  <li class="w-100 hover-accent-color-light fw8 f4 mid-gray pv1 pl2" data-level="1">EventStream</li>
+  
+    <li class="w-100 hover-accent-color-light fw8 f4 mid-gray pv1 pl2" data-level="1">EventStream
+      </li>
     
   
   
@@ -770,11 +773,11 @@ var utag_data = {
   
   
   
+    
       
       
       
-      
-      <li class="w-100 hover-accent-color-light fw8" data-level="1">
+      <li class="w-100 hover-accent-color-light fw8 " data-level="1">
         <a href="javascript:void(0)" class="js-toggle dib w-100 link pv2 mid-gray hover-accent-color-light pl2 pr2  " data-target=".eventstream-getting-started">はじめに</a>
         <ul class="eventstream-getting-started desktopmenu animated fadeIn list pl0 dn">
             
@@ -785,31 +788,11 @@ var utag_data = {
   
   
   
-      
-      
-      
-      
-      <li class="w-100 hover-accent-color-light fw4 " data-level="2">
-        <a href="/guides/eventstream/getting-started/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".eventstream-getting-started-overview">概要</a>
-      </li>
-      
     
-  
-  
-
-            
-
-  
-  
-  
-  
-  
-  
       
       
       
-      
-      <li class="w-100 hover-accent-color-light fw4 " data-level="2">
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
         <a href="/guides/eventstream/getting-started/introduction/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".eventstream-getting-started-introduction">はじめに</a>
       </li>
       
@@ -825,11 +808,11 @@ var utag_data = {
   
   
   
+    
       
       
       
-      
-      <li class="w-100 hover-accent-color-light fw4 " data-level="2">
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
         <a href="/guides/eventstream/getting-started/data-sources/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".eventstream-getting-started-data-sources">データソース</a>
       </li>
       
@@ -845,11 +828,11 @@ var utag_data = {
   
   
   
+    
       
       
       
-      
-      <li class="w-100 hover-accent-color-light fw4 " data-level="2">
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
         <a href="/guides/eventstream/getting-started/data-sources-add/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".eventstream-getting-started-data-sources-add">データソース: データソースの追加</a>
       </li>
       
@@ -865,11 +848,11 @@ var utag_data = {
   
   
   
+    
       
       
       
-      
-      <li class="w-100 hover-accent-color-light fw4 " data-level="2">
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
         <a href="/guides/eventstream/getting-started/data-sources-install-test/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".eventstream-getting-started-data-sources-install-test">データソース: インストールとテスト</a>
       </li>
       
@@ -885,11 +868,11 @@ var utag_data = {
   
   
   
+    
       
       
       
-      
-      <li class="w-100 hover-accent-color-light fw4 " data-level="2">
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
         <a href="/guides/eventstream/getting-started/live-events/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".eventstream-getting-started-live-events">Live Events</a>
       </li>
       
@@ -905,11 +888,11 @@ var utag_data = {
   
   
   
+    
       
       
       
-      
-      <li class="w-100 hover-accent-color-light fw4 " data-level="2">
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
         <a href="/guides/eventstream/getting-started/event-specs/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".eventstream-getting-started-event-specs">イベント仕様</a>
       </li>
       
@@ -925,11 +908,11 @@ var utag_data = {
   
   
   
+    
       
       
       
-      
-      <li class="w-100 hover-accent-color-light fw4 " data-level="2">
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
         <a href="/guides/eventstream/getting-started/event-specs-add/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".eventstream-getting-started-event-specs-add">イベント仕様: 仕様の追加</a>
       </li>
       
@@ -945,11 +928,11 @@ var utag_data = {
   
   
   
+    
       
       
       
-      
-      <li class="w-100 hover-accent-color-light fw4 " data-level="2">
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
         <a href="/guides/eventstream/getting-started/event-specs-data-quality/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".eventstream-getting-started-event-specs-data-quality">イベント仕様: データ品質</a>
       </li>
       
@@ -965,11 +948,11 @@ var utag_data = {
   
   
   
+    
       
       
       
-      
-      <li class="w-100 hover-accent-color-light fw4 " data-level="2">
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
         <a href="/guides/eventstream/getting-started/event-feeds/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".eventstream-getting-started-event-feeds">イベントフィード</a>
       </li>
       
@@ -985,11 +968,11 @@ var utag_data = {
   
   
   
+    
       
       
       
-      
-      <li class="w-100 hover-accent-color-light fw4 " data-level="2">
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
         <a href="/guides/eventstream/getting-started/event-feeds-add/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".eventstream-getting-started-event-feeds-add">イベントフィード: フィードの追加</a>
       </li>
       
@@ -1005,11 +988,11 @@ var utag_data = {
   
   
   
+    
       
       
       
-      
-      <li class="w-100 hover-accent-color-light fw4 " data-level="2">
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
         <a href="/guides/eventstream/getting-started/connectors/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".eventstream-getting-started-connectors">コネクタ</a>
       </li>
       
@@ -1025,11 +1008,11 @@ var utag_data = {
   
   
   
+    
       
       
       
-      
-      <li class="w-100 hover-accent-color-light fw4 " data-level="2">
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
         <a href="/guides/eventstream/getting-started/connectors-add/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".eventstream-getting-started-connectors-add">コネクタ: コネクタの追加</a>
       </li>
       
@@ -1045,11 +1028,11 @@ var utag_data = {
   
   
   
+    
       
       
       
-      
-      <li class="w-100 hover-accent-color-light fw4 " data-level="2">
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
         <a href="/guides/eventstream/getting-started/trace/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".eventstream-getting-started-trace">トレース</a>
       </li>
       
@@ -1065,11 +1048,11 @@ var utag_data = {
   
   
   
+    
       
       
       
-      
-      <li class="w-100 hover-accent-color-light fw4 " data-level="2">
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
         <a href="/guides/eventstream/getting-started/trace-test/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".eventstream-getting-started-trace-test">トレース: トレースでのテスト</a>
       </li>
       
@@ -1085,11 +1068,11 @@ var utag_data = {
   
   
   
+    
       
       
       
-      
-      <li class="w-100 hover-accent-color-light fw4 " data-level="2">
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
         <a href="/guides/eventstream/getting-started/save-publish/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".eventstream-getting-started-save-publish">保存と公開</a>
       </li>
       
@@ -1105,11 +1088,11 @@ var utag_data = {
   
   
   
+    
       
       
       
-      
-      <li class="w-100 hover-accent-color-light fw4 " data-level="2">
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
         <a href="/guides/eventstream/getting-started/next-steps/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".eventstream-getting-started-next-steps">次のステップ</a>
       </li>
       
@@ -1131,7 +1114,9 @@ var utag_data = {
   
   
   
-  <li class="w-100 hover-accent-color-light fw8 f4 mid-gray pv1 pl2" data-level="1">AudienceStream</li>
+  
+    <li class="w-100 hover-accent-color-light fw8 f4 mid-gray pv1 pl2" data-level="1">AudienceStream
+      </li>
     
   
   
@@ -1144,11 +1129,11 @@ var utag_data = {
   
   
   
+    
       
       
       
-      
-      <li class="w-100 hover-accent-color-light fw8" data-level="1">
+      <li class="w-100 hover-accent-color-light fw8 " data-level="1">
         <a href="javascript:void(0)" class="js-toggle dib w-100 link pv2 mid-gray hover-accent-color-light pl2 pr2  " data-target=".audiencestream-getting-started">はじめに</a>
         <ul class="audiencestream-getting-started desktopmenu animated fadeIn list pl0 dn">
             
@@ -1159,31 +1144,11 @@ var utag_data = {
   
   
   
-      
-      
-      
-      
-      <li class="w-100 hover-accent-color-light fw4 " data-level="2">
-        <a href="/guides/audiencestream/getting-started/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".audiencestream-getting-started-overview">概要</a>
-      </li>
-      
     
-  
-  
-
-            
-
-  
-  
-  
-  
-  
-  
       
       
       
-      
-      <li class="w-100 hover-accent-color-light fw4 " data-level="2">
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
         <a href="/guides/audiencestream/getting-started/introduction/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".audiencestream-getting-started-introduction">はじめに</a>
       </li>
       
@@ -1199,11 +1164,11 @@ var utag_data = {
   
   
   
+    
       
       
       
-      
-      <li class="w-100 hover-accent-color-light fw4 " data-level="2">
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
         <a href="/guides/audiencestream/getting-started/attributes/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".audiencestream-getting-started-attributes">属性</a>
       </li>
       
@@ -1219,11 +1184,11 @@ var utag_data = {
   
   
   
+    
       
       
       
-      
-      <li class="w-100 hover-accent-color-light fw4 " data-level="2">
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
         <a href="/guides/audiencestream/getting-started/attributes-enrichments/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".audiencestream-getting-started-attributes-enrichments">属性: エンリッチメント</a>
       </li>
       
@@ -1239,11 +1204,11 @@ var utag_data = {
   
   
   
+    
       
       
       
-      
-      <li class="w-100 hover-accent-color-light fw4 " data-level="2">
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
         <a href="/guides/audiencestream/getting-started/attributes-badges/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".audiencestream-getting-started-attributes-badges">属性: バッジ</a>
       </li>
       
@@ -1259,11 +1224,11 @@ var utag_data = {
   
   
   
+    
       
       
       
-      
-      <li class="w-100 hover-accent-color-light fw4 " data-level="2">
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
         <a href="/guides/audiencestream/getting-started/attributes-offline-data/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".audiencestream-getting-started-attributes-offline-data">属性: オフラインデータ（オムニチャネル）</a>
       </li>
       
@@ -1279,11 +1244,11 @@ var utag_data = {
   
   
   
+    
       
       
       
-      
-      <li class="w-100 hover-accent-color-light fw4 " data-level="2">
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
         <a href="/guides/audiencestream/getting-started/visitor-stitching/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".audiencestream-getting-started-visitor-stitching">Visitor Stitching</a>
       </li>
       
@@ -1299,11 +1264,11 @@ var utag_data = {
   
   
   
+    
       
       
       
-      
-      <li class="w-100 hover-accent-color-light fw4 " data-level="2">
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
         <a href="/guides/audiencestream/getting-started/visitor-stitching-id/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".audiencestream-getting-started-visitor-stitching-id">Visitor Stitching: 訪問者ID</a>
       </li>
       
@@ -1319,11 +1284,11 @@ var utag_data = {
   
   
   
+    
       
       
       
-      
-      <li class="w-100 hover-accent-color-light fw4 " data-level="2">
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
         <a href="/guides/audiencestream/getting-started/visitor-stitching-part1/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".audiencestream-getting-started-visitor-stitching-part1">Visitor Stitching: パート1</a>
       </li>
       
@@ -1339,11 +1304,11 @@ var utag_data = {
   
   
   
+    
       
       
       
-      
-      <li class="w-100 hover-accent-color-light fw4 " data-level="2">
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
         <a href="/guides/audiencestream/getting-started/visitor-stitching-part2/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".audiencestream-getting-started-visitor-stitching-part2">Visitor Stitching: パート 2</a>
       </li>
       
@@ -1359,11 +1324,11 @@ var utag_data = {
   
   
   
+    
       
       
       
-      
-      <li class="w-100 hover-accent-color-light fw4 " data-level="2">
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
         <a href="/guides/audiencestream/getting-started/visitor-stitching-discovery/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".audiencestream-getting-started-visitor-stitching-discovery">Visitor Stitching: 検出</a>
       </li>
       
@@ -1379,11 +1344,11 @@ var utag_data = {
   
   
   
+    
       
       
       
-      
-      <li class="w-100 hover-accent-color-light fw4 " data-level="2">
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
         <a href="/guides/audiencestream/getting-started/audiences/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".audiencestream-getting-started-audiences">オーディエンス</a>
       </li>
       
@@ -1399,11 +1364,11 @@ var utag_data = {
   
   
   
+    
       
       
       
-      
-      <li class="w-100 hover-accent-color-light fw4 " data-level="2">
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
         <a href="/guides/audiencestream/getting-started/connectors/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".audiencestream-getting-started-connectors">コネクタ</a>
       </li>
       
@@ -1419,11 +1384,11 @@ var utag_data = {
   
   
   
+    
       
       
       
-      
-      <li class="w-100 hover-accent-color-light fw4 " data-level="2">
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
         <a href="/guides/audiencestream/getting-started/connectors-add/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".audiencestream-getting-started-connectors-add">コネクタ: コネクタの追加</a>
       </li>
       
@@ -1439,11 +1404,11 @@ var utag_data = {
   
   
   
+    
       
       
       
-      
-      <li class="w-100 hover-accent-color-light fw4 " data-level="2">
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
         <a href="/guides/audiencestream/getting-started/trace/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".audiencestream-getting-started-trace">トレース</a>
       </li>
       
@@ -1459,11 +1424,11 @@ var utag_data = {
   
   
   
+    
       
       
       
-      
-      <li class="w-100 hover-accent-color-light fw4 " data-level="2">
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
         <a href="/guides/audiencestream/getting-started/trace-test/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".audiencestream-getting-started-trace-test">トレース: トレースでのテスト</a>
       </li>
       
@@ -1479,11 +1444,11 @@ var utag_data = {
   
   
   
+    
       
       
       
-      
-      <li class="w-100 hover-accent-color-light fw4 " data-level="2">
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
         <a href="/guides/audiencestream/getting-started/save-publish/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".audiencestream-getting-started-save-publish">保存と公開</a>
       </li>
       
@@ -1499,12 +1464,586 @@ var utag_data = {
   
   
   
+    
       
       
       
-      
-      <li class="w-100 hover-accent-color-light fw4 " data-level="2">
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
         <a href="/guides/audiencestream/getting-started/next-steps/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".audiencestream-getting-started-next-steps">次のステップ</a>
+      </li>
+      
+    
+  
+  
+
+        </ul>
+      </li>
+      
+    
+  
+  
+
+      
+
+  
+  
+  
+  
+  
+  
+    <li class="w-100 hover-accent-color-light fw8 f4 mid-gray pv1 pl2" data-level="1">Predict ML
+      </li>
+    
+  
+  
+
+      
+
+  
+  
+  
+  
+  
+  
+    
+      
+      
+      
+      <li class="w-100 hover-accent-color-light fw8 " data-level="1">
+        <a href="javascript:void(0)" class="js-toggle dib w-100 link pv2 mid-gray hover-accent-color-light pl2 pr2  " data-target=".predict-getting-started">はじめに</a>
+        <ul class="predict-getting-started desktopmenu animated fadeIn list pl0 dn">
+            
+
+  
+  
+  
+  
+  
+  
+    <li class="w-100 hover-accent-color-light fw8 f5 mid-gray pv1 pl3" data-level="2">概要
+      </li>
+    
+  
+  
+
+            
+
+  
+  
+  
+  
+  
+  
+    
+      
+      
+      
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
+        <a href="/guides/predict/getting-started/introduction-to-predict/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".predict-introduction-to-predict">予測の紹介</a>
+      </li>
+      
+    
+  
+  
+
+            
+
+  
+  
+  
+  
+  
+  
+    
+      
+      
+      
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
+        <a href="/guides/predict/getting-started/terminology/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".predict-terminology">用語集</a>
+      </li>
+      
+    
+  
+  
+
+            
+
+  
+  
+  
+  
+  
+  
+    
+      
+      
+      
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
+        <a href="/guides/predict/getting-started/available-tiers/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".predict-available-tiers">使用可能な階層</a>
+      </li>
+      
+    
+  
+  
+
+            
+
+  
+  
+  
+  
+  
+  
+    
+      
+      
+      
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
+        <a href="/guides/predict/getting-started/prerequisites/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".predict-prerequisites">前提条件</a>
+      </li>
+      
+    
+  
+  
+
+            
+
+  
+  
+  
+  
+  
+  
+    <li class="w-100 hover-accent-color-light fw8 f5 mid-gray pv1 pl3" data-level="2">戦略と目的
+      </li>
+    
+  
+  
+
+            
+
+  
+  
+  
+  
+  
+  
+    
+      
+      
+      
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
+        <a href="/guides/predict/getting-started/approaches/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".predict-approaches">複数のアプローチ</a>
+      </li>
+      
+    
+  
+  
+
+            
+
+  
+  
+  
+  
+  
+  
+    
+      
+      
+      
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
+        <a href="/guides/predict/getting-started/data-readiness/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".predict-data-readiness">データの準備</a>
+      </li>
+      
+    
+  
+  
+
+            
+
+  
+  
+  
+  
+  
+  
+    
+      
+      
+      
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
+        <a href="/guides/predict/getting-started/model-scores-and-ratings/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".predict-model-scores-and-ratings">モデルのスコアとレーティング</a>
+      </li>
+      
+    
+  
+  
+
+            
+
+  
+  
+  
+  
+  
+  
+    <li class="w-100 hover-accent-color-light fw8 f5 mid-gray pv1 pl3" data-level="2">モデル作成
+      </li>
+    
+  
+  
+
+            
+
+  
+  
+  
+  
+  
+  
+    
+      
+      
+      
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
+        <a href="/guides/predict/getting-started/about-models/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".predict-about-models">モデルについて</a>
+      </li>
+      
+    
+  
+  
+
+            
+
+  
+  
+  
+  
+  
+  
+    
+      
+      
+      
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
+        <a href="/guides/predict/getting-started/adding-a-model/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".predict-adding-a-model">モデルの追加</a>
+      </li>
+      
+    
+  
+  
+
+            
+
+  
+  
+  
+  
+  
+  
+    
+      
+      
+      
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
+        <a href="/guides/predict/getting-started/review-and-start-training/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".predict-review-and-start-training">確認とトレーニングの開始</a>
+      </li>
+      
+    
+  
+  
+
+            
+
+  
+  
+  
+  
+  
+  
+    <li class="w-100 hover-accent-color-light fw8 f5 mid-gray pv1 pl3" data-level="2">モデル評価
+      </li>
+    
+  
+  
+
+            
+
+  
+  
+  
+  
+  
+  
+    
+      
+      
+      
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
+        <a href="/guides/predict/getting-started/evaluating-the-trained-version/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".predict-evaluating-the-trained-version">トレーニング済みバージョンの評価</a>
+      </li>
+      
+    
+  
+  
+
+            
+
+  
+  
+  
+  
+  
+  
+    
+      
+      
+      
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
+        <a href="/guides/predict/getting-started/retraining-a-model/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".predict-retraining-a-model">モデルの再トレーニング</a>
+      </li>
+      
+    
+  
+  
+
+            
+
+  
+  
+  
+  
+  
+  
+    
+      
+      
+      
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
+        <a href="/guides/predict/getting-started/deploying-a-model/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".predict-deploying-a-model">モデルのデプロイ</a>
+      </li>
+      
+    
+  
+  
+
+            
+
+  
+  
+  
+  
+  
+  
+    
+      
+      
+      
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
+        <a href="/guides/predict/getting-started/deleting-a-model/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".predict-deleting-a-model">モデルの削除</a>
+      </li>
+      
+    
+  
+  
+
+            
+
+  
+  
+  
+  
+  
+  
+    <li class="w-100 hover-accent-color-light fw8 f5 mid-gray pv1 pl3" data-level="2">モデル監視
+      </li>
+    
+  
+  
+
+            
+
+  
+  
+  
+  
+  
+  
+    
+      
+      
+      
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
+        <a href="/guides/predict/getting-started/viewing-model-health/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".predict-viewing-model-health">モデルの正常性の表示</a>
+      </li>
+      
+    
+  
+  
+
+            
+
+  
+  
+  
+  
+  
+  
+    
+      
+      
+      
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
+        <a href="/guides/predict/getting-started/deployed-model-health-scores/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".predict-deployed-model-health-scores">デプロイ済みモデルの正常性スコア</a>
+      </li>
+      
+    
+  
+  
+
+            
+
+  
+  
+  
+  
+  
+  
+    <li class="w-100 hover-accent-color-light fw8 f5 mid-gray pv1 pl3" data-level="2">オーディエンスの予測
+      </li>
+    
+  
+  
+
+            
+
+  
+  
+  
+  
+  
+  
+    
+      
+      
+      
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
+        <a href="/guides/predict/getting-started/audience-considerations/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".predict-audience-considerations">オーディエンスの検討事項</a>
+      </li>
+      
+    
+  
+  
+
+            
+
+  
+  
+  
+  
+  
+  
+    <li class="w-100 hover-accent-color-light fw8 f5 mid-gray pv1 pl3" data-level="2">高度なトピック
+      </li>
+    
+  
+  
+
+            
+
+  
+  
+  
+  
+  
+  
+    
+      
+      
+      
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
+        <a href="/guides/predict/getting-started/model-retraining-recommendations/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".predict-model-retraining-recommendations">モデルの再トレーニングに関する推奨</a>
+      </li>
+      
+    
+  
+  
+
+            
+
+  
+  
+  
+  
+  
+  
+    
+      
+      
+      
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
+        <a href="/guides/predict/getting-started/how-visitor-stitching-affects-predict-models/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".predict-how-visitor-stitching-affects-predict-models">Visitor Stitchingが予測モデルに影響を与える方法</a>
+      </li>
+      
+    
+  
+  
+
+            
+
+  
+  
+  
+  
+  
+  
+    
+      
+      
+      
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
+        <a href="/guides/predict/getting-started/data-compliance-and-usage/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".predict-data-compliance-and-usage">データのコンプライアンスと使用方法</a>
+      </li>
+      
+    
+  
+  
+
+            
+
+  
+  
+  
+  
+  
+  
+    
+      
+      
+      
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
+        <a href="/guides/predict/getting-started/machine-learning-vs-artificial-intelligence/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".predict-machine-learning-vs-artificial-intelligence">マシンラーニングと人工知能（AI）の比較</a>
+      </li>
+      
+    
+  
+  
+
+            
+
+  
+  
+  
+  
+  
+  
+    
+      
+      
+      
+      <li class="w-100 hover-accent-color-light fw4 f6" data-level="2">
+        <a href="/guides/predict/getting-started/machine-learning-concepts-and-technology/" class="db link pl3 pr2 pv1 primary-color hover-bg-primary " data-target=".predict-machine-learning-concepts-and-technology">マシンラーニングのコンセプトとテクノロジー</a>
       </li>
       
     
@@ -1536,7 +2075,7 @@ var utag_data = {
   </span>
 	<span id="feedback_comment">
 		<textarea id="feedback_textarea" type="text" placeholder="ページの改善にご協力ください。" rows="4" cols="70"></textarea>
-    <span>最終更新日 ::  2020年August月27日
+    <span>最終更新日 ::  2021年March月2日
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <button disabled id="feedback_submit" class="f6 ph3 pv1 br2 dib tc mv3 bg-primary-color white hover-bg-blue link">フィードバックを送信</button></span>
   </span>
