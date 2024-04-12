@@ -11,7 +11,7 @@
     <meta name="MobileOptimized" content="320">
 
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-     <meta name="generator" content="Hugo 0.98.0" />
+     <meta name="generator" content="Hugo 0.111.3">
 
       
         <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
@@ -162,6 +162,8 @@ var utag_data = {
     
     
     
+    
+    
 
     
       <div id="menu" class="order-0 w-auto max-vh-100 overflow-hidden overflow-y-scroll dn db-ns sticky-l pt3 pl125" style="width:280px;">
@@ -173,6 +175,7 @@ var utag_data = {
   </ul>
   <ul class="list pa0"><li data-level="1" class="relative w-100 fw8 f4 mv2 text-color-primary pv1 ind2"><a href="/administration/" class="dib w-100 link text-color-primary hover-primary-color"><span class="pb2">管理</span></a>
         <ul data-level="1" class="administration desktopmenu animated fadeIn list pl0 mt2"><li data-level="2" class="relative w-100 hover-accent-color-light fw4 f5  ">
+        <a href="/administration/account-organization/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".">アカウントの組織化</a></li><li data-level="2" class="relative w-100 hover-accent-color-light fw4 f5  ">
         <a href="/administration/about-permissions/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".about-platform-permissions">プラットフォームの権限について</a></li><li class="relative w-100 fw8 f5 ">
         <a href="javascript:void(0)" class="js-toggle dib w-100 link text-color-primary hover-primary-color pv2 ind2 pr2  " data-target=".platform-permissions-migration-guide">プラットフォーム権限移行ガイド</a>
         <ul class="pl2  platform-permissions-migration-guide desktopmenu animated fadeIn list  dn"><li data-level="3" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
@@ -184,7 +187,17 @@ var utag_data = {
       </li><li data-level="2" class="relative w-100 hover-accent-color-light fw4 f5  ">
         <a href="/administration/admin-roles/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".admin-roles">管理者の役割</a></li><li data-level="2" class="relative w-100 hover-accent-color-light fw4 f5  ">
         <a href="/administration/permission-groups/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".permission-groups">権限グループ</a></li><li data-level="2" class="relative w-100 hover-accent-color-light fw4 f5  ">
-        <a href="/administration/users/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".users">ユーザー</a></li></ul></li></ul>
+        <a href="/administration/users/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".users">ユーザー</a></li><li class="relative w-100 fw8 f5 ">
+        <a href="javascript:void(0)" class="js-toggle dib w-100 link text-color-primary hover-primary-color pv2 ind2 pr2  " data-target=".single-sign-on">シングルサインオン (SSO)</a>
+        <ul class="pl2  single-sign-on desktopmenu animated fadeIn list  dn"><li data-level="3" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
+        <a href="/administration/single-sign-on/sso/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".set-up-single-sign-on">SSOの設定</a></li><li data-level="3" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
+        <a href="/administration/single-sign-on/certificates/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".single-sign-on-certificate-status">証明書のステータス</a></li><li data-level="3" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
+        <a href="/administration/single-sign-on/manage/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".single-sign-on-manage-connections">接続の管理</a></li><li data-level="3" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
+        <a href="/administration/single-sign-on/adfs/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".sso-adfs-idp">ADFS（アクティブディレクトリ）</a></li><li data-level="3" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
+        <a href="/administration/single-sign-on/azure/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".sso-azure-idp">Azure</a></li><li data-level="3" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
+        <a href="/administration/single-sign-on/okta/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".sso-okta-idp">Okta</a></li></ul>
+      </li><li data-level="2" class="relative w-100 hover-accent-color-light fw4 f5  ">
+        <a href="/administration/release-notes/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".release-notes-administration">リリースノート</a></li></ul></li></ul>
 </nav>
 </div>
     
@@ -193,21 +206,27 @@ var utag_data = {
       <div class="w-100" role="banner">
         <div class="w-100 pt4 pb2">
           <p class="f2 f2-l fw6 m0 lh-title ma0 pb3">プラットフォーム管理</p>
-          <p class="lh-copy f4 w-90-ns fw2 silver pv0 mv0">Tealiumは、許可グループと管理者ロールを通じてアカウントとプロファイルへのユーザーアクセスを管理するための統一された権限システムを提供します。</p>
+          <p class="lh-copy f4 w-90-ns fw2 silver pv0 mv0">Tealiumは、権限グループと管理者ロールを通じてアカウントとプロファイルへのユーザーアクセスを管理するための統一された権限システムを提供します。</p>
          </div>
 
         <div id="section-grid" class="flex flex-wrap w-100 pt3 pb6"><p>あなたのアカウントがどのバージョンの権限を使用しているかを判断する方法：</p>
 <ul>
-<li><strong>レガシー権限</strong> - 管理メニューには<strong>ユーザー管理</strong>が表示されます。レガシーからプラットフォーム権限にアカウントを移行するには、カスタマーサクセスマネージャーに連絡してください。</li>
-<li><strong>プラットフォーム権限</strong> - 管理メニューには<strong>権限管理</strong>が表示されます。
+<li><strong>レガシー権限</strong> - 管理メニューに <strong>ユーザー管理</strong> が表示されます。レガシーからプラットフォーム権限にアカウントを移行するには、カスタマーサクセスマネージャーに連絡してください。</li>
+<li><strong>プラットフォーム権限</strong> - 管理メニューに <strong>権限管理</strong> が表示されます。
 <ul>
-<li><strong>プラットフォーム権限</strong>画面に<strong>権限の強制</strong>が表示されている場合、あなたはEEAバージョンのプラットフォーム権限を使用しています。</li>
+<li><strong>プラットフォーム権限</strong>画面に <strong>権限の強制</strong> が表示されている場合、あなたはEEAバージョンのプラットフォーム権限を使用しています。</li>
 </ul>
 </li>
 </ul>
 <p>GAバージョンのプラットフォーム権限は、<a href="/administration/permissions-system-migration-guide/permissions-enforcement/">権限の強制</a>の存在を除いて、EEAバージョンと同一です。</p>
 <p class="note"><i class="fa fa-exclamation-triangle"></i>あなたのアカウントがどのバージョンの権限を使用しているかまだわからない場合は、アカウント管理者に連絡してください。</p>
 <h2 id="はじめに">はじめに</h2>
+<div class="card card-link ba b--light w-40-m w-30-l w-80 mr4 mb3 bg-white dib f11 ">
+  <a href="/administration/account-organization/" class="w-100 flex items-center">
+  <img src="/images/icons/icon-sitemap-light.svg" class="fl di pr3" width="24" height="24"/>
+<p>アカウントの組織化</p>
+  </a>
+</div>
 <div class="card card-link ba b--light w-40-m w-30-l w-80 mr4 mb3 bg-white dib f11 ">
   <a href="/administration/about-permissions/" class="w-100 flex items-center">
   <img src="/images/icons/icon-gear.svg" class="fl di pr3" width="24" height="24"/>
@@ -216,7 +235,7 @@ var utag_data = {
 </div>
 <div class="card card-link ba b--light w-40-m w-30-l w-80 mr4 mb3 bg-white dib f11 ">
   <a href="/administration/permissions-system-migration-guide/" class="w-100 flex items-center">
-  <img src="/images/icons/icon-star.svg" class="fl di pr3" width="24" height="24"/>
+  <img src="/images/icons/icon-book-solid.svg" class="fl di pr3" width="24" height="24"/>
 <p>移行ガイド</p>
   </a>
 </div>
@@ -224,12 +243,12 @@ var utag_data = {
 <div class="card card-link ba b--light w-40-m w-30-l w-80 mr4 mb3 bg-white dib f11 ">
   <a href="/administration/permission-groups/" class="w-100 flex items-center">
   <img src="/images/icons/icon-users.svg" class="fl di pr3" width="24" height="24"/>
-<p>許可グループ</p>
+<p>権限グループ</p>
   </a>
 </div>
 <div class="card card-link ba b--light w-40-m w-30-l w-80 mr4 mb3 bg-white dib f11 ">
   <a href="/administration/users/" class="w-100 flex items-center">
-  <img src="/images/icons/icon-id.svg" class="fl di pr3" width="24" height="24"/>
+  <img src="/images/icons/icon-user-solid.svg" class="fl di pr3" width="24" height="24"/>
 <p>ユーザーの管理</p>
   </a>
 </div>
@@ -241,7 +260,7 @@ var utag_data = {
 </div>
 <h2 id="セキュリティ">セキュリティ</h2>
 <div class="card card-link ba b--light w-40-m w-30-l w-80 mr4 mb3 bg-white dib f11 ">
-  <a href="/iq-tag-management/administration/single-sign-on/sso/" class="w-100 flex items-center">
+  <a href="/administration/single-sign-on/sso/" class="w-100 flex items-center">
   <img src="/images/icons/icon-shake.svg" class="fl di pr3" width="24" height="24"/>
 <p>シングルサインオン (SSO)</p>
   </a>
@@ -272,14 +291,14 @@ var utag_data = {
 </div>
 <div class="card card-link ba b--light w-40-m w-30-l w-80 mr4 mb3 bg-white dib f11 ">
   <a href="/iq-tag-management/administration/security/api-keys/" class="w-100 flex items-center">
-  <img src="/images/icons/icon-code.svg" class="fl di pr3" width="24" height="24"/>
+  <img src="/images/icons/icon-key-skeleton-solid.svg" class="fl di pr3" width="24" height="24"/>
 <p>APIキー</p>
   </a>
 </div>
 <h2 id="クライアントサイド管理">クライアントサイド管理</h2>
 <div class="card card-link ba b--light w-40-m w-30-l w-80 mr4 mb3 bg-white dib f11 ">
   <a href="/iq-tag-management/administration/user-permissions/about/" class="w-100 flex items-center">
-  <img src="/images/icons/icon-id.svg" class="fl di pr3" width="24" height="24"/>
+  <img src="/images/icons/icon-user-solid.svg" class="fl di pr3" width="24" height="24"/>
 ユーザー管理 (レガシー)
   </a>
 </div>
@@ -298,7 +317,7 @@ GitHubへのリンク
 <h2 id="サーバーサイド管理">サーバーサイド管理</h2>
 <div class="card card-link ba b--light w-40-m w-30-l w-80 mr4 mb3 bg-white dib f11 ">
   <a href="/server-side/administration/user-permissions/about/" class="w-100 flex items-center">
-  <img src="/images/icons/icon-id.svg" class="fl di pr3" width="24" height="24"/>
+  <img src="/images/icons/icon-user-solid.svg" class="fl di pr3" width="24" height="24"/>
 <p>ユーザー権限 (レガシー)</p>
   </a>
 </div>
@@ -503,6 +522,14 @@ GitHubへのリンク
     <li  class="tl dib ma0 hover-bg-primary w-100">
         <a href="https://docs.tealium.co.jp/tech-partners/" class="f5 link primary-color-light overflow hover-white db ma0 w-100 pv3 ph4">
           テクノロジーパートナー
+        </a>
+    </li>
+  
+  
+  
+    <li  class="tl dib ma0 hover-bg-primary w-100">
+        <a href="https://docs.tealium.co.jp/partners/" class="f5 link primary-color-light overflow hover-white db ma0 w-100 pv3 ph4">
+          パートナー統合
         </a>
     </li>
   

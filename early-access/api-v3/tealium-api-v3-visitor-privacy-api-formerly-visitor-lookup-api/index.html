@@ -11,7 +11,7 @@
     <meta name="MobileOptimized" content="320">
 
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-     <meta name="generator" content="Hugo 0.98.0" />
+     <meta name="generator" content="Hugo 0.111.3">
 
       
         <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
@@ -120,6 +120,12 @@ var utag_data = {
         <a href="/early-access/platform-permissions/ea/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".">早期アクセスリリース</a></li><li data-level="3" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
         <a href="/early-access/platform-permissions/pii-account-roles/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".">PIIとアカウントレベルのロール</a></li></ul>
       </li><li class="relative w-100 fw8 f5 ">
+        <a href="javascript:void(0)" class="js-toggle dib w-100 link text-color-primary hover-primary-color pv2 ind2 pr2  " data-target=".moments-api">モーメンツ API</a>
+        <ul class="pl2  moments-api desktopmenu animated fadeIn list  dn"><li data-level="3" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
+        <a href="/early-access/moments-api/about/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".early-access-about-moments-api">について</a></li><li data-level="3" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
+        <a href="/early-access/moments-api/manage/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".early-access-moments-api-manage-engines">エンジンの管理</a></li><li data-level="3" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
+        <a href="/early-access/moments-api/endpoint/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".early-access-moments-api-endpoint">エンドポイント</a></li></ul>
+      </li><li class="relative w-100 fw8 f5 ">
         <a href="javascript:void(0)" class="js-toggle dib w-100 link text-color-primary hover-primary-color pv2 ind2 pr2  " data-target=".moments-iq">モーメンツiQ</a>
         <ul class="pl2  moments-iq desktopmenu animated fadeIn list  dn"><li data-level="3" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
         <a href="/early-access/moments-iq/about/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".">Moments iQについて</a></li><li data-level="3" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
@@ -167,25 +173,25 @@ var utag_data = {
 
   
     <p class="f4 fw3 lh-copy">
-      Visitor Privacy API（旧称：Visitor Lookup API）は、データ主体アクセス要求に応えるため、一般データ保護規則（GDPR）の準拠をサポートするために、顧客データハブから訪問プロファイルレコードをクエリするために使用されます。
+      Visitor Privacy API（旧称：Visitor Lookup API）は、データ主体アクセス要求に応えるため、一般データ保護規則（GDPR）の準拠をサポートするために、顧客データハブから訪問者プロファイルレコードをクエリするために使用されます。
     </p>
   
 </div>
 
 <div class="prose nested-links" id="prose">
-  <p>このAPIを使用すると、特定の訪問に関する既知のデータを取得したり、訪問レコードを削除したり、削除リクエストのステータスを確認したりすることができます。</p>
-<p class="note"><i class="fa fa-exclamation-triangle"></i>この記事では、Tealium v3 APIの使用方法について説明します。<a href="/api/getting-started/auth/">以前のTealium v2 API</a>も引き続き利用できますが、将来的には非推奨となります。</p>
+  <p>このAPIを使用すると、特定の訪問者に関する既知のデータを取得したり、訪問者レコードを削除したり、削除リクエストのステータスを確認したりすることができます。</p>
+<p class="note"><i class="fa fa-exclamation-triangle"></i>この記事では、Tealium v3 APIの使用方法について説明します。以前の<a href="/api/visitor-privacy/about/">Visitor Privacy v2 API</a>も引き続き利用できますが、将来的には非推奨となります。</p>
 <h2 id="動作原理">動作原理</h2>
-<p>訪問の検索は、アカウントからの<a href="/server-side/visitor-stitching/visitor-id-attribute/">訪問ID</a>属性に基づいて行われます。</p>
+<p>訪問者の検索は、アカウントからの<a href="/server-side/visitor-stitching/visitor-id-attribute/">Visitor ID</a>属性に基づいて行われます。</p>
 <h3 id="制限と使用目的">制限と使用目的</h3>
 <p>Visitor Privacy APIは、GDPRやCCPAなどの規制要件を満たすために設計されており、高いボリュームの使用には適していません。このAPIへの接続は、常に1つ（1）のみ開いていることを推奨します。1日あたりのAPI呼び出し回数が1000回を超えると予想される場合は、アカウントマネージャーに連絡してください。</p>
 <h2 id="レート制限">レート制限</h2>
 <p>Visitor Privacy APIのデフォルトのレート制限は、1秒あたり50リクエストです。</p>
 <h2 id="認証">認証</h2>
-<p class="note"><i class="fa fa-exclamation-triangle"></i>ベアラトークンは、すべてのAPI呼び出しの認証に使用されますが、APIキーは認証呼び出しでのみ使用されます。ベアラトークンに加えて、認証応答には、後続のサーバーサイドAPI呼び出しで使用する必要がある、リージョン固有のホスト名も含まれます。</p>
-<p>APIキーからベアラトークンを生成する方法については、<a href="/early-access/api-v3/tealium-api-v3-getting-started-early-access/">Tealium API V3 入門</a>ガイドを参照してください。</p>
-<h2 id="訪問フィールド">訪問フィールド</h2>
-<p>訪問は、以下のフィールドを含むJSONオブジェクトとして返されます。</p>
+<p class="note"><i class="fa fa-exclamation-triangle"></i>ベアラートークンは、すべてのAPI呼び出しの認証に使用され、APIキーではありません。APIキーは認証呼び出しでのみ使用されます。ベアラートークンに加えて、認証応答には、後続のサーバーサイドAPI呼び出しで使用する必要がある、リージョン固有のホスト名も含まれます。</p>
+<p>ベアラートークンをAPIキーから生成する方法については、<a href="/early-access/api-v3/tealium-api-v3-getting-started-early-access/">Tealium API V3 Getting Started</a>ガイドを参照してください。</p>
+<h2 id="訪問者フィールド">訪問者フィールド</h2>
+<p>訪問者は、以下のフィールドを含むJSONオブジェクトとして返されます。</p>
 <table>
 <thead>
 <tr>
@@ -198,12 +204,12 @@ var utag_data = {
 <tr>
 <td><code>live</code></td>
 <td>ブール値</td>
-<td>訪問が現在ライブセッション中である場合は<code>true</code>に構成されます。</td>
+<td>訪問者が現在ライブセッション中である場合は<code>true</code>に設定されます。</td>
 </tr>
 <tr>
 <td><code>visitor</code></td>
 <td>オブジェクト</td>
-<td>属性データタイプごとにサブオブジェクトを持つ訪問オブジェクト：<ul><li>訪問ID：<code>secondary_ids : { }</code></li><li>数値/数値の配列：<br> <code>&quot;metrics&quot; : { }</code><br> <code>&quot;metric_lists&quot; : { }</code></li><li>文字列/文字列の配列/文字列のセット：<br><code>&quot;properties&quot; : { }</code><br> <code>&quot;property_lists&quot; : { }</code><br> <code>&quot;property_sets&quot; : { }</code><br> <code>&quot;audiences&quot; : { }</code></li><li>ブール値/ブール値の配列：<br> <code>&quot;flags&quot; : { }</code><br> <code>&quot;flag_lists&quot; : { }</code></li><li>日付：<code>&quot;dates&quot; : { }</code></li><li>バッジ：<code>&quot;badges&quot; : { }</code></li><li>集計：<code>&quot;metric_sets&quot; : { }</code></li></ul></td>
+<td>属性データタイプごとにサブオブジェクトを持つ訪問者オブジェクト：<ul><li>訪問者ID：<code>secondary_ids : { }</code></li><li>数値/数値の配列：<br> <code>&quot;metrics&quot; : { }</code><br> <code>&quot;metric_lists&quot; : { }</code></li><li>文字列/文字列の配列/文字列のセット：<br><code>&quot;properties&quot; : { }</code><br> <code>&quot;property_lists&quot; : { }</code><br> <code>&quot;property_sets&quot; : { }</code><br> <code>&quot;audiences&quot; : { }</code></li><li>ブール値/ブール値の配列：<br> <code>&quot;flags&quot; : { }</code><br> <code>&quot;flag_lists&quot; : { }</code></li><li>日付：<code>&quot;dates&quot; : { }</code></li><li>バッジ：<code>&quot;badges&quot; : { }</code></li><li>集計：<code>&quot;metric_sets&quot; : { }</code></li></ul></td>
 </tr>
 </tbody>
 </table>
@@ -236,7 +242,7 @@ var utag_data = {
 </span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;利用したオペレーティングシステムの累計（お気に入り）&#34;</span>: <span style="color:#e6db74">&#34;Mac OS X&#34;</span>
 </span></span><span style="display:flex;"><span>        },
 </span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;flags&#34;</span>: {
-</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;再訪問&#34;</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;再訪問者&#34;</span>: <span style="color:#66d9ef">true</span>
 </span></span><span style="display:flex;"><span>        },
 </span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;badges&#34;</span>: [<span style="color:#e6db74">&#34;Unbadged&#34;</span>],
 </span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;metric_sets&#34;</span>: {
@@ -258,14 +264,14 @@ var utag_data = {
 </span></span><span style="display:flex;"><span>        }
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h2 id="訪問の取得">訪問の取得</h2>
-<p>次のGETコマンドを使用して、訪問レコードを取得します。</p>
+</span></span></code></pre></div><h2 id="訪問者の取得">訪問者の取得</h2>
+<p>次のGETコマンドを使用して、訪問者レコードを取得します。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>GET /v3/privacy/visitor/accounts/<span style="color:#f92672">{</span>account<span style="color:#f92672">}</span>/profiles/<span style="color:#f92672">{</span>profile<span style="color:#f92672">}</span>?attributeId<span style="color:#f92672">={</span>attributeId<span style="color:#f92672">}</span>&amp;attributeValue<span style="color:#f92672">={</span>attributeValue<span style="color:#f92672">}</span>&amp;prettyName<span style="color:#f92672">={</span>prettyName<span style="color:#f92672">}</span>
 </span></span></code></pre></div><p>このコマンドでは、次のパラメータを使用します。</p>
 <ul>
 <li><code>attributeId</code>
 <ul>
-<li>アカウントからの<a href="/server-side/visitor-stitching/visitor-id-attribute/">訪問ID属性</a>を表す数値ID。</li>
+<li>アカウントからの<a href="/server-side/visitor-stitching/visitor-id-attribute/">Visitor ID属性</a>を表す数値ID。</li>
 </ul>
 </li>
 <li><code>attributeValue</code>
@@ -285,7 +291,7 @@ var utag_data = {
 </ul>
 </li>
 </ul>
-<p class="note"><i class="fa fa-exclamation-triangle"></i>この呼び出しでは、認証APIで返されたリージョン固有のホストを使用する必要があります。詳細については、<a href="/early-access/api-v3/tealium-api-v3-getting-started-early-access/#region-specific-host">入門 &gt; リージョン固有のホスト</a>を参照してください。</p>
+<p class="note"><i class="fa fa-exclamation-triangle"></i>この呼び出しでは、認証APIで返されたリージョン固有のホストを使用する必要があります。詳細については、<a href="/early-access/api-v3/tealium-api-v3-getting-started-early-access/#region-specific-host">Getting Started &gt; Region-Specific Host</a>を参照してください。</p>
 <h3 id="必要な権限">必要な権限</h3>
 <ul>
 <li>サーバーサイドのリーダー、エディター、またはパブリッシャー</li>
@@ -298,7 +304,7 @@ var utag_data = {
 </span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span> --data-urlencode <span style="color:#e6db74">&#39;attributeValue=user@example.com&#39;</span> <span style="color:#ae81ff">\
 </span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span> --data <span style="color:#e6db74">&#39;prettyName=true&#39;</span>
 </span></span></code></pre></div><h3 id="応答の例-1">応答の例</h3>
-<p>応答のフォーマットについては、例の訪問オブジェクトを参照してください。</p>
+<p>応答のフォーマットについては、例の訪問者オブジェクトを参照してください。</p>
 <h3 id="エラーメッセージ">エラーメッセージ</h3>
 <p>このタスクの潜在的なエラーメッセージは次のとおりです。</p>
 <table>
@@ -331,26 +337,26 @@ var utag_data = {
 </tr>
 </tbody>
 </table>
-<h2 id="訪問の削除">訪問の削除</h2>
-<p>1つ以上の訪問レコードを削除する前に、次の点に注意してください。</p>
+<h2 id="訪問者の削除">訪問者の削除</h2>
+<p>1つ以上の訪問者レコードを削除する前に、次の点に注意してください。</p>
 <ul>
-<li>訪問レコードの削除リクエストは、訪問ID値に関連するすべてのデータの削除（ステッチされた訪問レコードを含む）をもたらします。</li>
+<li>訪問者レコードの削除リクエストは、訪問者IDの値に関連するすべてのデータの削除をもたらします。これには、ステッチされた訪問者レコードも含まれます。</li>
 <li>削除リクエストは処理のためにキューに入れられ、1〜4日かかる場合があります。</li>
-<li>訪問が別の訪問に置き換えられた場合、または別の訪問によって置き換えられた場合、ステッチされたすべての訪問が削除されます。</li>
+<li>訪問者が別の訪問者に置き換えられた場合、または別の訪問者によって置き換えられた場合、ステッチされたすべての訪問者が削除されます。</li>
 <li>DELETEコマンドのパラメータは、URLエンコードされたフォームフィールドとして渡す必要があります。クエリ文字列パラメータとしてではありません。</li>
 </ul>
-<p>次のDELETEコマンドを使用して、訪問レコードを削除します。</p>
+<p>次のDELETEコマンドを使用して、訪問者レコードを削除します。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>DELETE /v3/visitor/privacy/accounts/<span style="color:#f92672">{</span>account<span style="color:#f92672">}</span>/profiles/<span style="color:#f92672">{</span>profile<span style="color:#f92672">}</span>
 </span></span><span style="display:flex;"><span>  attributeID<span style="color:#f92672">={</span>value<span style="color:#f92672">}</span>
 </span></span><span style="display:flex;"><span>  attributeValue<span style="color:#f92672">={</span>value<span style="color:#f92672">}</span>
 </span></span></code></pre></div><p>このコマンドでは、次のパラメータを使用します。</p>
 <ul>
 <li><code>attributeId</code><br>
-アカウントからの<a href="/server-side/visitor-stitching/visitor-id-attribute/">訪問ID属性</a>を表す数値ID。</li>
+アカウントからの<a href="/server-side/visitor-stitching/visitor-id-attribute/">Visitor ID属性</a>を表す数値ID。</li>
 <li><code>attributeValue</code><br>
 検索する値。</li>
 </ul>
-<p class="note"><i class="fa fa-exclamation-triangle"></i>この呼び出しでは、認証APIで返されたリージョン固有のホストを使用する必要があります。詳細については、<a href="/early-access/api-v3/tealium-api-v3-getting-started-early-access/#region-specific-host">入門 &gt; リージョン固有のホスト</a>を参照してください。</p>
+<p class="note"><i class="fa fa-exclamation-triangle"></i>この呼び出しでは、認証APIで返されたリージョン固有のホストを使用する必要があります。詳細については、<a href="/early-access/api-v3/tealium-api-v3-getting-started-early-access/#region-specific-host">Getting Started &gt; Region-Specific Host</a>を参照してください。</p>
 <h3 id="必要な権限-1">必要な権限</h3>
 <ul>
 <li>サーバーサイドのパブリッシャー</li>
@@ -363,7 +369,7 @@ var utag_data = {
 </span></span><span style="display:flex;"><span>--data-urlencode <span style="color:#e6db74">&#34;attributeValue=user@example.com&#34;</span>
 </span></span></code></pre></div><h3 id="応答の例-2">応答の例</h3>
 <p>削除リクエストへの応答には、<code>transaction_id</code>とステータスが含まれます。<code>transaction_id</code>は、前のリクエストのステータスを確認するためにGETトランザクション呼び出しで使用されます。次のステータス文字列が可能です：<strong>PENDING</strong>、<strong>SUCCESS</strong>、または<strong>FAILED</strong>。</p>
-<p>成功した応答では、202 Acceptedメッセージと<code>transactionId</code>の値が表示されます。同じ<code>account</code>、<code>profile</code>、<code>attributeId</code>、<code>attributeValue</code>を持つリクエストが既に<strong>PENDING</strong>のトランザクションステータスで存在する場合、既存のトランザクションIDが返されます。</p>
+<p>成功した応答では、202 Acceptedメッセージが表示され、<code>transactionId</code>の値が返されます。同じ<code>account</code>、<code>profile</code>、<code>attributeId</code>、<code>attributeValue</code>を持つリクエストが既に<strong>PENDING</strong>のトランザクションステータスで存在する場合、既存のトランザクションIDが返されます。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span><span style="color:#f92672">&#34;transactionId&#34;</span> : <span style="color:#e6db74">&#34;{transactionId1}&#34;</span>
 </span></span><span style="display:flex;"><span>}
@@ -396,7 +402,7 @@ var utag_data = {
 </tbody>
 </table>
 <h2 id="トランザクションの取得">トランザクションの取得</h2>
-<p>トランザクションとは、DELETE訪問リクエストを指します。DELETE訪問リクエストは後で処理されるため、<code>transaction_id</code>はそのリクエストの一意のレコードであり、処理ステータスを確認する際に使用されるIDです。</p>
+<p>トランザクションとは、DELETE訪問者リクエストを指します。DELETE訪問者リクエストは後で処理されるため、<code>transaction_id</code>はそのリクエストの一意のレコードであり、処理ステータスを確認する際に使用されるIDです。</p>
 <p>次のGETコマンドを使用して、トランザクションのステータスを確認します。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>GET /v3/privacy/visitor/accounts/<span style="color:#f92672">{</span>account<span style="color:#f92672">}</span>/profiles/<span style="color:#f92672">{</span>profile<span style="color:#f92672">}</span>/transactions/<span style="color:#f92672">{</span>transaction_id<span style="color:#f92672">}</span>
 </span></span></code></pre></div><h3 id="必要な権限-2">必要な権限</h3>
@@ -404,7 +410,7 @@ var utag_data = {
 <li>サーバーサイドのリーダー、エディター、またはパブリッシャー</li>
 </ul>
 <h3 id="curlリクエストの例-2">cURLリクエストの例</h3>
-<p>APIキーからベアラトークンを生成する方法については、<a href="/early-access/api-v3/tealium-api-v3-getting-started-early-access/">Tealium API V3 入門</a>ガイドを参照してください。APIキーではなく、ベアラトークンがAPI呼び出しで使用されます。</p>
+<p>APIキーからベアラートークンを生成する方法については、<a href="/early-access/api-v3/tealium-api-v3-getting-started-early-access/">Tealium API V3 Getting Started</a>ガイドを参照してください。ベアラートークンはAPI呼び出しで使用されます。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -H <span style="color:#e6db74">&#39;Authorization: Bearer {token}&#39;</span> <span style="color:#ae81ff">\
 </span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>https://platform.tealiumapis.com/v3/privacy/visitor/accounts/my_account/profiles/main/transactions/0123456789
 </span></span></code></pre></div><h3 id="応答の例-3">応答の例</h3>
@@ -436,8 +442,8 @@ var utag_data = {
 </tr>
 </tbody>
 </table>
-<h2 id="訪問id属性の取得">訪問ID属性の取得</h2>
-<p>次のGETコマンドを使用して、アカウントで利用可能な訪問ID属性のリストを取得します。</p>
+<h2 id="visitor-id属性の取得">Visitor ID属性の取得</h2>
+<p>次のGETコマンドを使用して、アカウントで利用可能なVisitor ID属性のリストを取得します。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>GET /v3/privacy/visitor/accounts/<span style="color:#f92672">{</span>account<span style="color:#f92672">}</span>/profiles/<span style="color:#f92672">{</span>profile<span style="color:#f92672">}</span>/ids
 </span></span></code></pre></div><h3 id="必要な権限-3">必要な権限</h3>
 <ul>
@@ -447,7 +453,7 @@ var utag_data = {
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -H <span style="color:#e6db74">&#39;Authorization: Bearer {token}&#39;</span> <span style="color:#ae81ff">\
 </span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>https://platform.tealiumapis.com/v3/privacy/visitor/accounts/my_account/profiles/main/ids
 </span></span></code></pre></div><h3 id="応答の例-4">応答の例</h3>
-<p>このコマンドの応答は、数値IDと訪問ID属性の名前を表すキー/値のペアのオブジェクトです。</p>
+<p>このコマンドの応答は、数値IDとVisitor ID属性の名前を表すキー/値のペアのオブジェクトです。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;43&#34;</span> : <span style="color:#e6db74">&#34;Email Address&#34;</span>,
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;57&#34;</span> : <span style="color:#e6db74">&#34;Tax ID Number&#34;</span>
@@ -540,7 +546,7 @@ var utag_data = {
 
         </div>
         <div class="bt-l b--moon-gray pt3 f6">
-          <p>最終更新日 ::  2024年March月29日
+          <p>最終更新日 ::  2024年April月11日
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           </p>
         </div>
@@ -558,14 +564,14 @@ var utag_data = {
               <ul class="toc-h3"><li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E5%88%B6%E9%99%90%E3%81%A8%E4%BD%BF%E7%94%A8%E7%9B%AE%E7%9A%84" href="javascript:void(0)">制限と使用目的</a></li>
               </ul><li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%83%AC%E3%83%BC%E3%83%88%E5%88%B6%E9%99%90" href="javascript:void(0)">レート制限</a></li>
               <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E8%AA%8D%E8%A8%BC" href="javascript:void(0)">認証</a></li>
-              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E8%A8%AA%E5%95%8F%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB%E3%83%89" href="javascript:void(0)">訪問フィールド</a></li>
+              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E8%A8%AA%E5%95%8F%E8%80%85%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB%E3%83%89" href="javascript:void(0)">訪問者フィールド</a></li>
               <ul class="toc-h3"><li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E5%BF%9C%E7%AD%94%E3%81%AE%E4%BE%8B" href="javascript:void(0)">応答の例</a></li>
-              </ul><li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E8%A8%AA%E5%95%8F%E3%81%AE%E5%8F%96%E5%BE%97" href="javascript:void(0)">訪問の取得</a></li>
+              </ul><li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E8%A8%AA%E5%95%8F%E8%80%85%E3%81%AE%E5%8F%96%E5%BE%97" href="javascript:void(0)">訪問者の取得</a></li>
               <ul class="toc-h3"><li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E5%BF%85%E8%A6%81%E3%81%AA%E6%A8%A9%E9%99%90" href="javascript:void(0)">必要な権限</a></li>
               <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#curl%E3%83%AA%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88%E3%81%AE%E4%BE%8B" href="javascript:void(0)">cURLリクエストの例</a></li>
               <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E5%BF%9C%E7%AD%94%E3%81%AE%E4%BE%8B" href="javascript:void(0)">応答の例</a></li>
               <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%82%A8%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8" href="javascript:void(0)">エラーメッセージ</a></li>
-              </ul><li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E8%A8%AA%E5%95%8F%E3%81%AE%E5%89%8A%E9%99%A4" href="javascript:void(0)">訪問の削除</a></li>
+              </ul><li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E8%A8%AA%E5%95%8F%E8%80%85%E3%81%AE%E5%89%8A%E9%99%A4" href="javascript:void(0)">訪問者の削除</a></li>
               <ul class="toc-h3"><li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E5%BF%85%E8%A6%81%E3%81%AA%E6%A8%A9%E9%99%90" href="javascript:void(0)">必要な権限</a></li>
               <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#curl%E3%83%AA%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88%E3%81%AE%E4%BE%8B" href="javascript:void(0)">cURLリクエストの例</a></li>
               <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E5%BF%9C%E7%AD%94%E3%81%AE%E4%BE%8B" href="javascript:void(0)">応答の例</a></li>
@@ -575,7 +581,7 @@ var utag_data = {
               <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#curl%E3%83%AA%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88%E3%81%AE%E4%BE%8B" href="javascript:void(0)">cURLリクエストの例</a></li>
               <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E5%BF%9C%E7%AD%94%E3%81%AE%E4%BE%8B" href="javascript:void(0)">応答の例</a></li>
               <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%82%A8%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8" href="javascript:void(0)">エラーメッセージ</a></li>
-              </ul><li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E8%A8%AA%E5%95%8Fid%E5%B1%9E%E6%80%A7%E3%81%AE%E5%8F%96%E5%BE%97" href="javascript:void(0)">訪問ID属性の取得</a></li>
+              </ul><li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#visitor-id%E5%B1%9E%E6%80%A7%E3%81%AE%E5%8F%96%E5%BE%97" href="javascript:void(0)">Visitor ID属性の取得</a></li>
               <ul class="toc-h3"><li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E5%BF%85%E8%A6%81%E3%81%AA%E6%A8%A9%E9%99%90" href="javascript:void(0)">必要な権限</a></li>
               <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#curl%E3%83%AA%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88%E3%81%AE%E4%BE%8B" href="javascript:void(0)">cURLリクエストの例</a></li>
               <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E5%BF%9C%E7%AD%94%E3%81%AE%E4%BE%8B" href="javascript:void(0)">応答の例</a></li>
@@ -773,6 +779,14 @@ var utag_data = {
   
   
     <li  class="tl dib ma0 hover-bg-primary w-100">
+        <a href="https://docs.tealium.co.jp/partners/" class="f5 link primary-color-light overflow hover-white db ma0 w-100 pv3 ph4">
+          パートナー統合
+        </a>
+    </li>
+  
+  
+  
+    <li  class="tl dib ma0 hover-bg-primary w-100">
         <a href="https://docs.tealium.co.jp/glossary/" class="f5 link primary-color-light overflow hover-white db ma0 w-100 pv3 ph4">
           用語集
         </a>
@@ -875,6 +889,12 @@ var utag_data = {
       <li  class="tl dib ma0 hover-bg-primary w-100">
       <a href="https://docs.tealium.co.jp/early-access/platform-permissions/" class="f5 link primary-color-light  hover-white db ma0 w-100 pv2 ph4">
           プラットフォームの権限
+      </a>
+      </li>
+      
+      <li  class="tl dib ma0 hover-bg-primary w-100">
+      <a href="https://docs.tealium.co.jp/early-access/moments-api/" class="f5 link primary-color-light  hover-white db ma0 w-100 pv2 ph4">
+          モーメンツ API
       </a>
       </li>
       

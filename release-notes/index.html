@@ -11,7 +11,7 @@
     <meta name="MobileOptimized" content="320">
 
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-     <meta name="generator" content="Hugo 0.98.0" />
+     <meta name="generator" content="Hugo 0.111.3">
 
       
         <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
@@ -250,6 +250,14 @@ var utag_data = {
 
       <li class="relative w-100 fw5 f5">
       
+        <a href="/partners/" class="db link hover-primary-color pv1 mb2 text-color-primary hover-primary-color " data-target=".partners-overview">パートナー統合</a>
+      
+      </li>
+        
+        
+
+      <li class="relative w-100 fw5 f5">
+      
         <a href="/glossary/" class="db link hover-primary-color pv1 mb2 text-color-primary hover-primary-color " data-target=".">用語集</a>
       
       </li>
@@ -320,89 +328,158 @@ var utag_data = {
           
           
 
+          <h2 class="rn-section" id="flutter用tealiumリリースノート"><a href="/platforms/flutter/release-notes/">Flutter用Tealiumリリースノート</a></h2>
+          <div class="f3"id="250-2024年3月">2.5.0 (2024年3月)</div>
+<ul>
+<li>XCode 15をサポートするためにiOSの依存関係を更新しました。</li>
+<li>最小のiOSデプロイメントターゲットを12.0に引き上げました。</li>
+<li>Androidの依存関係を最新バージョンに更新しました。</li>
+</ul>
+        
+          
+          
+
+          <h2 class="rn-section" id="nativescript用tealiumリリースノート"><a href="/platforms/nativescript/release-notes/">Nativescript用Tealiumリリースノート</a></h2>
+          <div class="f3"id="114-2022年7月">1.1.4 (2022年7月)</div>
+<ul>
+<li>Kotlinの依存関係を1.4.1にアップグレード</li>
+<li>Swiftの依存関係を2.6.4にアップグレード</li>
+<li>設定に<a href="/platforms/nativescript/api/tealium-config/#overridecollectprofile"><code>overrideCollectProfile</code></a>、<a href="/platforms/nativescript/api/tealium-config/#overridecollectdomain"><code>overrideCollectDomain</code></a>、および<a href="/platforms/nativescript/api/tealium-config/#sessioncountingenabled"><code>sessionCountingEnabled</code></a>キーを追加</li>
+<li>Tealiumインスタンスに<a href="/platforms/nativescript/api/tealium/#gathertrackdata"><code>gatherTrackData</code></a>メソッドを追加</li>
+</ul>
+        
+          
+          
+
+          <h2 class="rn-section" id="react-native用tealiumリリースノート"><a href="/platforms/react-native/release-notes/">React Native用Tealiumリリースノート</a></h2>
+          <div class="f3"id="232-2023年11月">2.3.2 (2023年11月)</div>
+<ul>
+<li>親プロジェクトからのKotlinバージョンの使用を許可するために、Androidの<code>build.gradle</code>ファイルを更新しました。</li>
+</ul>
+        
+          
+          
+
+          <h2 class="rn-section" id="tealium-for-android-java-リリースノート"><a href="/platforms/android-java/release-notes/">Tealium for Android (Java) リリースノート</a></h2>
+          <p>Tealium for Androidの変更点の完全なリストについては、<a href="https://github.com/Tealium/tealium-android/blob/master/CHANGELOG.md">GitHubの変更ログ</a>を参照してください。</p>
+<div class="f3"id="596-2023年7月">5.9.6 (2023年7月)</div>
+<ul>
+<li>Gradleの更新、およびAndroidの<code>compileSdkVersion</code>と<code>targetSdkVersion</code>がすべてのモジュールでバージョン33に増加。</li>
+</ul>
+        
+          
+          
+
           <h2 class="rn-section" id="tealium-for-android-kotlin-リリースノート"><a href="/platforms/android-kotlin/release-notes/">Tealium for Android (Kotlin) リリースノート</a></h2>
           <p>Tealium for Android (Kotlin) の変更の完全なリストについては、<a href="https://github.com/Tealium/tealium-kotlin/blob/master/CHANGELOG.md">GitHubの変更ログ</a>を参照してください。</p>
-<div class="f3"id="1512022年10月">1.5.1（2022年10月）</div>
+<div class="f3"id="155-2023年9月">1.5.5 (2023年9月)</div>
 <ul>
-<li>バグ修正 - イベントが誤った順序でディスパッチャーに到着する問題を修正しました</li>
+<li>バグ修正: ProGuardの調整により、<code>BatchDispatch$Companion</code>クラスが見つからない問題を解決しました。</li>
+<li>マイナーなlintの警告修正</li>
 </ul>
         
           
           
 
           <h2 class="rn-section" id="tealium-for-iosswiftリリースノート"><a href="/platforms/ios-swift/release-notes/">Tealium for iOS（Swift）リリースノート</a></h2>
-          <div class="f3"id="21012023年8月">2.10.1（2023年8月）</div>
+          <div class="f3"id="21232024年3月">2.12.3（2024年3月）</div>
 <p><strong>低影響の変更</strong></p>
 <ul>
-<li>Objective-Cライブラリからの前回の移行から残っていたデータレイヤーのデータを削除しました：<code>app_version</code>、<code>uuid</code>、<code>visitor_id</code>、<code>last_track_event</code>、<code>last_session_created</code>。</li>
-<li><code>+load</code>メソッドがSwiftクラスの<code>obj-c</code>カテゴリで定義されているため、XCode 15 betaでのクラッシュを防ぎました。</li>
+<li>ディスクスペースカテゴリのプライバシーマニフェスト<code>NSPrivacyAccessedAPITypeReasons</code>を修正しました。</li>
 </ul>
         
           
           
 
           <h2 class="rn-section" id="tealium-universal-tag-utagjs-リリースノート"><a href="/platforms/javascript/release-notes/">Tealium Universal Tag (utag.js) リリースノート</a></h2>
-          <p><a href="https://support.tealiumiq.com/en/support/solutions/articles/36000363470">utag.jsのテンプレートを更新</a>して、最新の修正と機能エンリッチメントを活用してください。</p>
-<h3 id="utagjsバージョン450以降へのアップデート">utag.jsバージョン4.50以降へのアップデート</h3>
-<p>バージョン4.50以降にアップデートする際には、以下の手順をお勧めします。</p>
+          <p><a href="https://support.tealiumiq.com/en/support/solutions/articles/36000363470">最新の修正と改善を活用するために、<code>utag.js</code> テンプレートを更新</a>してください。</p>
+<h3 id="utagjs-バージョン-450-以降への更新"><code>utag.js</code> バージョン 4.50 以降への更新</h3>
+<p>バージョン 4.50 以降に更新する際には、以下の手順をお勧めします。</p>
+<p class="note"><i class="fa fa-exclamation-triangle"></i>Tealium Collect タグとすべてのアクティブな同意管理テンプレート、特にイベントログ機能を更新してください。</p>
 <ul>
-<li>Tealium Collectタグとすべてのアクティブな同意管理テンプレート、特にイベントログ機能を更新してください。</li>
-<li>同じサイトで複数のiQプロファイルを実行している場合は、次の手順を完了してください。これにより、サイト上のすべての<code>utag.js</code>インスタンスが新しいクッキーの動作を同時に使用し、競合や互換性の問題を防ぐことができます。
+<li>
+<p>同じサイトで複数の iQ プロファイルを実行している場合、サイト上のすべての <code>utag.js</code> テンプレートを最新バージョンに更新するために、次の手順を実行してください。</p>
 <ol>
-<li>すべての<code>utag.js</code>テンプレートを最新バージョンに更新してください。</li>
-<li>各プロファイルの<a href="/platforms/javascript/settings/#split_cookie"><code>split_cookie</code></a>オーバーライドを<code>false</code>に構成して、レガシーのクッキーの動作を使用し、トランジションの期間中にサイト上でまだ実行されている古いバージョンのutag.jsとの互換性を維持してください。</li>
-<li>すべての<code>utag.js</code>テンプレートが更新され、レガシーのクッキーの動作を維持するために<code>split_cookie</code>オーバーライドが構成されている場合、すべてのプロファイルからクッキーオーバーライドを同時に削除できます。</li>
+<li>すべての <code>utag.js</code> テンプレートを最新バージョンに更新します。</li>
+<li>各プロファイルの <a href="/platforms/javascript/settings/#split_cookie"><code>split_cookie</code></a> オーバーライドを <code>false</code> に設定して、レガシーのクッキー動作を使用し、サイト上で引き続き実行されている古いバージョンの utag.js との互換性を維持します。</li>
+<li>すべての <code>utag.js</code> テンプレートが更新され、レガシーのクッキー動作を維持するために <code>split_cookie</code> オーバーライドが設定されている場合、すべてのプロファイルからクッキーオーバーライドを同時に削除できます。</li>
 </ol>
 </li>
+<li>
+<p>Tealium Collect タグの Visitor ID (<code>v_id</code>) に依存関係がある場合は、<code>always_set_v_id</code> オプションを <code>true</code> に設定して、その値が適切なタイミングで設定され続けるようにしてください。Visitor ID の使用例は次のとおりです。</p>
+<ul>
+<li>Cookie 同期タグ。</li>
+<li>トラブルシューティングおよびダウンストリームデータウェアハウスでの使用のために、<code>tealium_visitor_id</code> を Adobe や GA4 のようなアナリティクスタグにマッピングすること。</li>
 </ul>
+</li>
+</ul>
+<p>詳細については、<a href="/platforms/javascript/settings/#always_set_v_id">Settings: <code>always_set_v_id</code></a>を参照してください。</p>
 <div class="f3"id="2023年9月">2023年9月</div>
 <h3 id="451">4.51</h3>
 <ul>
-<li><code>utag.js</code>バージョン4.50で特定のブラウザとタイムゾーン/地域構成を使用した場合のクッキーの有効期限の問題を修正しました。</li>
+<li><code>utag.js</code> バージョン 4.50 を使用している場合の特定のブラウザとタイムゾーン/地域設定でのクッキーの有効期限の問題を修正しました。</li>
 </ul>
 <h3 id="450">4.50</h3>
-<p>バージョン4.50では、<code>utag.js</code>によって書き込まれるクッキーについての透明性と制御が向上しています。</p>
-<p>以前は、マルチバリュークッキー（マルチクッキー）の使用を推奨していました。しかし、データプライバシーの監査などの透明性とシンプルさへの要求の増加により、推奨事項を見直しました。現在は、<code>utag.js</code>のデフォルトの動作として、スタンドアロンのクッキーの使用を推奨しています。</p>
+<p>バージョン 4.50 では、<code>utag.js</code> によって書き込まれるクッキーに関する透明性と制御が向上しています。</p>
+<p>以前は、マルチバリュークッキー（マルチクッキー）の使用を推奨していました。しかし、データプライバシーの監査などの透明性とシンプルさへの要求の増加に伴い、推奨事項を見直しました。現在は、スタンドアロンのクッキーを使用することを推奨しており、これが <code>utag.js</code> のデフォルトの動作になっています。</p>
 <p>このリリースには、以下の更新が含まれています。</p>
 <ul>
-<li>単一のマルチバリュークッキーではなく、別々の<code>utag_main</code>クッキーを書き込みます。複数の値を単一のクッキーに格納する従来の動作を使用するには、<a href="/platforms/javascript/settings/#split_cookie"><code>split_cookie</code></a>を<code>false</code>に構成してください。</li>
-<li><code>utag_main_v_id</code>の責任を<code>utag.js</code>からTealium Collectタグに移動します。<code>utag.js</code>が<code>utag_main_v_id</code>クッキーを構成するようにするには、<a href="/platforms/javascript/settings/#always_set_v_id"><code>always_set_v_id</code></a>を<code>true</code>に構成してください。</li>
-<li>同意管理クッキーの<code>id</code>要素を追加して、同意のログを記録します。このクッキーが最初に構成されると、見つかったすべての<code>utag_main_v_id</code>の値と一致しますが、その後は変更されません。この動作は、ユーザーとログのイベントの間のリンクを維持することを優先しますが、すべての場合で一致が保証されるわけではありません。</li>
-<li>関連する<a href="/iq-tag-management/templates/about/">テンプレート</a>を更新することで簡単にアップグレードできます。</li>
-<li>以下のutag構成を追加しました：
+<li>複数の個別の <code>utag_main</code> クッキーを書き込むようになりました。複数の値を単一のクッキーに格納する従来の動作を使用するには、<a href="/platforms/javascript/settings/#split_cookie"><code>split_cookie</code></a> を <code>false</code> に設定してください。</li>
+<li><code>utag_main_v_id</code> の責任を <code>utag.js</code> から Tealium Collect タグに移しました。<code>utag.js</code> が <code>utag_main_v_id</code> クッキーを設定するようにするには、<a href="/platforms/javascript/settings/#always_set_v_id"><code>always_set_v_id</code></a> を <code>true</code> に設定してください。</li>
+<li>同意管理クッキーのログ記録用に同意マネージャークッキーに新しい <code>id</code> 要素を追加しました。このクッキーが最初に設定されると、見つかったすべての <code>utag_main_v_id</code> の値と一致しますが、その後は変更されません。この動作は、ユーザーとログ記録されたイベントの間のリンクを維持することを優先するものですが、すべての場合で一致が保証されるわけではありません。</li>
+<li>関連する <a href="/iq-tag-management/templates/about/">テンプレート</a> を更新することで簡単にアップグレードできます。</li>
+<li>次の utag 設定を追加しました：
 <ul>
-<li><a href="/platforms/javascript/settings/#split_cookie"><code>split_cookie</code></a> - レガシーの単一のマルチバリュークッキーを使用するには<code>false</code>に構成します。</li>
-<li><a href="/platforms/javascript/settings/#split_cookie_allowlist"><code>split_cookie_allowlist</code></a> - <code>utag_main</code>名前空間を使用して構成できるクッキー名の配列を指定します。</li>
-<li><a href="/platforms/javascript/settings/#always_set_v_id"><code>always_set_v_id</code></a> - <code>utag.js</code>が<code>utag_main_v_id</code>クッキーまたは<code>utag_main</code>の<code>v_id</code>コンポーネントを構成するように強制します。</li>
+<li><a href="/platforms/javascript/settings/#split_cookie"><code>split_cookie</code></a> - レガシーの単一のマルチバリュークッキーを使用するには <code>false</code> に設定します。</li>
+<li><a href="/platforms/javascript/settings/#split_cookie_allowlist"><code>split_cookie_allowlist</code></a> - <code>utag_main</code> 名前空間を使用して設定できるクッキー名の配列を指定します。</li>
+<li><a href="/platforms/javascript/settings/#always_set_v_id"><code>always_set_v_id</code></a> - <code>utag.js</code> が <code>utag_main_v_id</code> クッキーまたは <code>utag_main</code> の <code>v_id</code> コンポーネントを設定するように強制します。</li>
 </ul>
 </li>
-<li>以下のテンプレートを更新しました：
+<li>次のテンプレートを更新しました：
 <ul>
-<li><code>utag.js</code>（<code>loader</code>）をバージョン4.50に更新して、クッキーの動作を更新します。</li>
-<li><code>cmGeneral</code>をバージョン3.0.12に更新して、同意ログテンプレートからデバイスIDを生成または取得するための集中ロジックを追加します。</li>
-<li><code>cmDoNotSell</code>をバージョン1.4.0に更新して、集中ロジックを呼び出します。</li>
-<li><code>fullConsentEventHandler</code>をバージョン1.0.3に更新して、集中ロジックを呼び出します。</li>
-<li><code>partialConsentEventHandler</code>をバージョン1.0.3に更新して、集中ロジックを呼び出します。</li>
-<li><code>Collect</code>をバージョン<code>tv:20064.20230519</code>（2023年5月にリリース）に更新します。</li>
+<li><code>utag.js</code> (<code>loader</code>) をバージョン 4.50 に更新してクッキーの動作を更新</li>
+<li><code>cmGeneral</code> をバージョン 3.0.12 に更新して、同意ログテンプレートからデバイス ID を生成または取得するための集中ロジックを追加</li>
+<li><code>cmDoNotSell</code> をバージョン 1.4.0 に更新して、集中ロジックを呼び出す</li>
+<li><code>fullConsentEventHandler</code> をバージョン 1.0.3 に更新して、集中ロジックを呼び出す</li>
+<li><code>partialConsentEventHandler</code> をバージョン 1.0.3 に更新して、集中ロジックを呼び出す</li>
+<li><code>Collect</code> をバージョン <code>tv:20064.20230519</code>（2023年5月にリリース）に更新</li>
 </ul>
 </li>
 </ul>
-<p>utag 4.50以降の透明性向上のための新しい構成の詳細については、<a href="https://tealium.com/blog/customer-experience/enhancing-cookie-transparency-with-utag-4-51-a-comprehensive-introduction/">utag 4.51によるクッキーの透明性の向上</a>を参照してください。</p>
+<p>utag 4.50 以降の透明性向上のための新しい設定の詳細については、<a href="https://tealium.com/blog/customer-experience/enhancing-cookie-transparency-with-utag-4-51-a-comprehensive-introduction/">Enhancing Cookie Transparency with utag 4.51</a>を参照してください。</p>
+        
+          
+          
+
+          <h2 class="rn-section" id="xamarin用tealiumリリースノート"><a href="/platforms/xamarin/release-notes/">Xamarin用Tealiumリリースノート</a></h2>
+          <div class="f3"id="210-2023年2月">2.1.0 (2023年2月)</div>
+<ul>
+<li>Tealiumのネイティブライブラリ依存関係を更新しました。Tealium Swift <code>2.9.1</code> と Tealium Kotlin <code>1.5.1</code>。</li>
+<li>訪問者の切り替えをサポートするためのメソッドを実装しました：
+<ul>
+<li>アプリで複数のユーザーを識別するために使用されるキーを指定するための設定オプション<a href="/platforms/xamarin/api/#class-tealiumconfig"><code>visitorIdentityKey</code></a>のサポートを追加しました。</li>
+<li>新しい訪問者IDをクリアして生成する<a href="/platforms/xamarin/api/#resetvisitorid"><code>ResetVisitorId()</code></a>メソッドを追加しました。</li>
+<li>デバイス上のすべての保存された訪問者IDをクリアするための設定オプション<a href="/platforms/xamarin/api/#clearstoredvisitorids"><code>clearStoredVisitorIds</code></a>のサポートを追加しました。</li>
+</ul>
+</li>
+<li>同意イベントで送信される同意カテゴリ属性の名前を上書きするための設定オプション<a href="/platforms/xamarin/api/#class-tealiumconfig"><code>overrideConsentCategoriesKey</code></a>を追加しました。</li>
+</ul>
         
           
           
 
           <h2 class="rn-section" id="サーバーサイドコネクタのリリースノート"><a href="/server-side-connectors/release-notes/">サーバーサイドコネクタのリリースノート</a></h2>
-          <div class="f3"id="2023年12月20日">2023年12月20日</div>
-<h4 id="新機能">新機能</h4>
+          <div class="f3"id="2024年4月10日">2024年4月10日</div>
+<h4 id="新しいコネクタ">新しいコネクタ</h4>
 <ul>
-<li>新しいマーケットプレイスコネクタ: <a href="/server-side-connectors/adobe-campaign-standard-oauth-connector/">Adobe Campaign Standard (oAuth)</a>。</li>
-<li>新しいマーケットプレイスコネクタ: Yandex Metrica</li>
+<li>新しいマーケットプレイスコネクタ: <a href="/server-side-connectors/taboola-audiences-connector/">Taboolaオーディエンスコネクタ</a>。</li>
 </ul>
-<h4 id="修正">修正</h4>
+<h4 id="更新と修正">更新と修正</h4>
 <ul>
-<li><a href="/server-side-connectors/adobe-analytics-connector/">Adobe Analyticsコネクタ</a>を更新し、新しいブランドアクションをサポートするようにしました。</li>
-<li><a href="/server-side-connectors/facebook-audiences-customer-provided-credentials-connector/">Facebook Audience (Customer Provided Credentials)コネクタ</a>を更新し、コールバックURLが正しくTealiumにリダイレクトされない問題を修正しました。</li>
+<li><a href="/server-side-connectors/amazon-ads-audience-management-connector/">Amazon広告オーディエンス管理コネクタ</a>を更新し、<strong>API URL</strong>のドロップダウンで地域をリスト表示するようにしました。</li>
+<li><a href="/server-side-connectors/branch-events-connector/">Branchイベントコネクタ</a>を更新し、<code>device_advertising_id</code>パラメータを処理できるようにし、マッピングのパラメータリストに<strong>Developer Identity</strong>と<strong>Device Fingerprinting</strong>を追加しました。</li>
+<li><a href="/server-side-connectors/google-ads-conversions-connector/">Google Adsコンバージョンコネクタ</a>を更新し、タイムアウトを5秒から10秒に増やしました。</li>
+<li><a href="/server-side-connectors/marketo-connector/">Marketoコネクタ</a>を更新し、リストエントリを300件に制限し、リストでカスタムIDを許可するようにしました。</li>
 </ul>
         
           
@@ -419,10 +496,22 @@ var utag_data = {
           
 
           <h2 class="rn-section" id="サーバーサイド同意管理リリースノート"><a href="/server-side/consent/release-notes/">サーバーサイド同意管理リリースノート</a></h2>
-          <div class="f3"id="2023年11月">2023年11月</div>
+          <div class="f3"id="2022年10月">2022年10月</div>
 <h4 id="修正">修正</h4>
 <ul>
-<li>AudienceStreamの目的を修正し、削除時に適切に割り当て解除されるようにしました。</li>
+<li>グローバルプライバシーコントロールヘッダー（Sec-GPC）を、受信イベントペイロードの <code>global_privacy_control_opt_out</code> として公開しました。
+<ul>
+<li>イベントレベルの属性は自動的に追加されません。</li>
+<li>可能な値は <code>true</code>（Sec-GPC: 1）、<code>false</code>（Sec-GPC:0）または未割り当て（ヘッダーがない場合）です。</li>
+<li>GPCとTealiumでGPCシグナルを尊重する方法についての詳細は、<a href="/iq-tag-management/consent/consent-management/global-privacy-control/about/">グローバルプライバシーコントロールについて</a>を参照してください。</li>
+</ul>
+</li>
+<li>EventStream内の<a href="/server-side/consent/event-specs/">Tealium同意変更イベント</a>の同意に基づくフィルタリングを削除しました。
+<ul>
+<li>これらのイベントは、任意の同意ログ記録先にストリーム化することができます。</li>
+<li>他のイベントやAudienceStreamの動作に関する同意関連のフィルタリングに変更はありません。</li>
+</ul>
+</li>
 </ul>
         
           
@@ -490,38 +579,32 @@ var utag_data = {
           
 
           <h2 class="rn-section" id="ロードルールリリースノート"><a href="/iq-tag-management/load-rules/release-notes/">ロードルールリリースノート</a></h2>
-          <div class="f3"id="2023年11月15日">2023年11月15日</div>
+          <div class="f3"id="2024年4月3日">2024年4月3日</div>
 <h4 id="修正">修正</h4>
 <ul>
-<li>画面が狭くなったときに閉じるボタンが表示されるようにUIの問題を修正しました。</li>
+<li><strong>ロードルール</strong>画面を更新して、ロードルールに関連する同意のアイコンと数を追加しました。</li>
 </ul>
         
           
           
 
           <h2 class="rn-section" id="クライアントサイドタグのリリースノート"><a href="/client-side-tags/release-notes/">クライアントサイドタグのリリースノート</a></h2>
-          <div class="f3"id="2023年12月20日">2023年12月20日</div>
-<h4 id="新機能">新機能</h4>
-<h4 id="修正">修正</h4>
+          <div class="f3"id="2024年4月10日">2024年4月10日</div>
+<h4 id="更新と修正">更新と修正</h4>
 <ul>
-<li><a href="/client-side-tags/google-cloud-retail-tag/">Google Cloud Retailタグ</a>を更新し、イベント固有のパラメータと追加のパラメータをeコマースマッピングに追加し、属性の不一致を修正しました。</li>
-<li><a href="/client-side-tags/tiktok-pixel-tag/">TikTok Pixelタグ</a>を更新し、<strong>Order ID</strong>を標準のトラッキングパラメータに追加して、Auto Purchase Tracking機能の問題を修正しました。</li>
+<li><a href="/client-side-tags/mixpanel-tag/">Mixpanelタグ</a>を新しいベンダー情報と実装ガイドリンクで更新しました。</li>
+<li><a href="/client-side-tags/adobe-experience-platform-web-sdk-tag/">Adobe Experience Platform Web SDKタグ</a>を修正して、イベントが正しくカウンターを処理できるようにしました。</li>
+<li><a href="/client-side-tags/adobe-experience-platform-web-sdk-tag/">Adobe Experience Platform Web SDKタグ</a>を更新して、Analyticsの製品レベルのeVar、<code>categoryIDs</code>、<code>renderDecisions</code>、および<code>personalization.surfaces</code>属性を追加しました。</li>
 </ul>
         
           
           
 
           <h2 class="rn-section" id="クライアントサイドの同意管理リリースノート"><a href="/iq-tag-management/consent/consent-management/release-notes/">クライアントサイドの同意管理リリースノート</a></h2>
-          <div class="f3"id="2024年2月14日">2024年2月14日</div>
+          <div class="f3"id="2024年2月28日">2024年2月28日</div>
 <h4 id="更新と修正">更新と修正</h4>
 <ul>
-<li>Consent Manager <code>cmGeneral</code> テンプレートをv3.0.13に更新しました：
-<ul>
-<li><code>shouldTagFire</code> 関数の名前を <code>shouldBlockTag</code> に変更し、その目的をより明確にしました（動作は変わりません）。</li>
-<li>UIDで呼び出されるタグが、同意強制が適用されないはずの場合でも、オプトアウトしたユーザーに対してブロックされる問題を修正しました。</li>
-<li>オプトインとオプトアウトのモジュール間の相互作用を改善しました。</li>
-</ul>
-</li>
+<li>Consent Managerの<code>cmGeneral</code>テンプレートをv3.1.0に更新し、<a href="/iq-tag-management/consent/google-consent-mode/"><code>tealiumConsentRegister</code></a>機能を追加して同意信号のアクセスを容易にしました。</li>
 </ul>
         
           
@@ -578,10 +661,19 @@ var utag_data = {
           
 
           <h2 class="rn-section" id="リリースノートの保存と公開"><a href="/iq-tag-management/save-publish/release-notes/">リリースノートの保存と公開</a></h2>
-          <div class="f3"id="2023年12月20日">2023年12月20日</div>
-<h4 id="改善点">改善点</h4>
+          <div class="f3"id="2024年2月14日">2024年2月14日</div>
+<h4 id="更新と修正">更新と修正</h4>
 <ul>
-<li><a href="/iq-tag-management/save-publish/version-history/"><strong>バージョン画面</strong></a>で見えるバージョンの数を20に増やしました。</li>
+<li>&ldquo;custom&quot;という名前のカスタム環境への公開を防ぐ問題を修正しました。</li>
+</ul>
+        
+          
+          
+
+          <h2 class="rn-section" id="リモートコマンドリリースノート"><a href="/platforms/remote-commands/release-notes/">リモートコマンドリリースノート</a></h2>
+          <div class="f3"id="2024年3月">2024年3月</div>
+<ul>
+<li>AttributionモジュールのSKAdNetwork実装をXCode15をサポートするように更新しました。</li>
 </ul>
         
           
@@ -593,6 +685,24 @@ var utag_data = {
 <ul>
 <li>ユーザーが拡張機能を更新した後に<strong>拡張機能</strong>タブの検索フィールドがリセットされる問題を修正しました。</li>
 </ul>
+        
+          
+          
+
+          <h2 class="rn-section" id="管理リリースノート"><a href="/administration/release-notes/">管理リリースノート</a></h2>
+          <div class="f3"id="2024年4月">2024年4月</div>
+<h4 id="更新と修正">更新と修正</h4>
+<p>Tealiumのインフラストラクチャは、サーバーサイドのトラフィックが増加した場合でもシームレスな操作を維持するために拡張されています。私たちはすべてのデータ処理地域にIPアドレスを追加しています。</p>
+<p>許可リスト（セーフリストやホワイトリストとも呼ばれます）を使用している場合は、新しいIPアドレスを追加してエラーレートが増加することなく操作を続けてください。</p>
+<p>追加のIPアドレスは以下の日付で導入されます：</p>
+<ul>
+<li>2024年4月29日 - 米国（オレゴン）</li>
+<li>2024年5月6日 - EU（アイルランドとフランクフルト）</li>
+<li>2024年5月13日 - APJ（香港、シドニー、東京）</li>
+<li>2024年5月20日 - 米国（US East 1）</li>
+</ul>
+<p>新しいIPアドレスがロールアウト日前に現在の許可リストに追加されていない場合、コネクタエラー、機能アクションエラーの増加、および非S3ファイルサービスからのファイルが読み取られないことに気付くかもしれません。</p>
+<p>許可するIPアドレスの完全なリストと、変更後の問題に対する設定のテスト方法については、<a href="/server-side/administration/ip-allow-list/">許可するTealium IPアドレス</a>を参照してください。</p>
         
           
           
@@ -641,9 +751,14 @@ var utag_data = {
       <nav id="TableOfContents"><ul class="toc-h2"><li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#net-maui%E7%94%A8tealium%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%E3%83%8E%E3%83%BC%E3%83%88" href="javascript:void(0)">.NET MAUI用Tealiumリリースノート</a></li>
               <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#cordova%E7%94%A8tealium%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%E3%83%8E%E3%83%BC%E3%83%88" href="javascript:void(0)">Cordova用Tealiumリリースノート</a></li>
               <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#dataaccess%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%E3%83%8E%E3%83%BC%E3%83%88" href="javascript:void(0)">DataAccessリリースノート</a></li>
+              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#flutter%E7%94%A8tealium%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%E3%83%8E%E3%83%BC%E3%83%88" href="javascript:void(0)">Flutter用Tealiumリリースノート</a></li>
+              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#nativescript%E7%94%A8tealium%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%E3%83%8E%E3%83%BC%E3%83%88" href="javascript:void(0)">Nativescript用Tealiumリリースノート</a></li>
+              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#react-native%E7%94%A8tealium%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%E3%83%8E%E3%83%BC%E3%83%88" href="javascript:void(0)">React Native用Tealiumリリースノート</a></li>
+              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#tealium-for-android-java-%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%E3%83%8E%E3%83%BC%E3%83%88" href="javascript:void(0)">Tealium for Android (Java) リリースノート</a></li>
               <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#tealium-for-android-kotlin-%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%E3%83%8E%E3%83%BC%E3%83%88" href="javascript:void(0)">Tealium for Android (Kotlin) リリースノート</a></li>
               <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#tealium-for-iosswift%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%E3%83%8E%E3%83%BC%E3%83%88" href="javascript:void(0)">Tealium for iOS（Swift）リリースノート</a></li>
               <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#tealium-universal-tag-utagjs-%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%E3%83%8E%E3%83%BC%E3%83%88" href="javascript:void(0)">Tealium Universal Tag (utag.js) リリースノート</a></li>
+              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#xamarin%E7%94%A8tealium%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%E3%83%8E%E3%83%BC%E3%83%88" href="javascript:void(0)">Xamarin用Tealiumリリースノート</a></li>
               <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%B5%E3%82%A4%E3%83%89%E3%82%B3%E3%83%8D%E3%82%AF%E3%82%BF%E3%81%AE%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%E3%83%8E%E3%83%BC%E3%83%88" href="javascript:void(0)">サーバーサイドコネクタのリリースノート</a></li>
               <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%B5%E3%82%A4%E3%83%89%E7%AE%A1%E7%90%86%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%E3%83%8E%E3%83%BC%E3%83%88" href="javascript:void(0)">サーバーサイド管理リリースノート</a></li>
               <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%B5%E3%82%A4%E3%83%89%E5%90%8C%E6%84%8F%E7%AE%A1%E7%90%86%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%E3%83%8E%E3%83%BC%E3%83%88" href="javascript:void(0)">サーバーサイド同意管理リリースノート</a></li>
@@ -661,7 +776,9 @@ var utag_data = {
               <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%83%97%E3%83%AD%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%E3%83%8E%E3%83%BC%E3%83%88" href="javascript:void(0)">プロファイルリリースノート</a></li>
               <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%83%A9%E3%83%99%E3%83%AB%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%E3%83%8E%E3%83%BC%E3%83%88" href="javascript:void(0)">ラベルリリースノート</a></li>
               <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%E3%83%8E%E3%83%BC%E3%83%88%E3%81%AE%E4%BF%9D%E5%AD%98%E3%81%A8%E5%85%AC%E9%96%8B" href="javascript:void(0)">リリースノートの保存と公開</a></li>
+              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%83%AA%E3%83%A2%E3%83%BC%E3%83%88%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%E3%83%8E%E3%83%BC%E3%83%88" href="javascript:void(0)">リモートコマンドリリースノート</a></li>
               <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD%E3%81%AE%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%E3%83%8E%E3%83%BC%E3%83%88" href="javascript:void(0)">拡張機能のリリースノート</a></li>
+              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E7%AE%A1%E7%90%86%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%E3%83%8E%E3%83%BC%E3%83%88" href="javascript:void(0)">管理リリースノート</a></li>
               <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E5%90%8C%E6%84%8F%E7%B5%B1%E5%90%88%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%E3%83%8E%E3%83%BC%E3%83%88" href="javascript:void(0)">同意統合リリースノート</a></li>
               </nav>
   </aside></nav>
@@ -851,6 +968,14 @@ var utag_data = {
     <li  class="tl dib ma0 hover-bg-primary w-100">
         <a href="https://docs.tealium.co.jp/tech-partners/" class="f5 link primary-color-light overflow hover-white db ma0 w-100 pv3 ph4">
           テクノロジーパートナー
+        </a>
+    </li>
+  
+  
+  
+    <li  class="tl dib ma0 hover-bg-primary w-100">
+        <a href="https://docs.tealium.co.jp/partners/" class="f5 link primary-color-light overflow hover-white db ma0 w-100 pv3 ph4">
+          パートナー統合
         </a>
     </li>
   

@@ -6,12 +6,12 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
      
-    <title>RTB House リターゲティングタグ構成ガイド | クライアントサイドタグ | Tealium開発者ドキュメント</title>
+    <title>RTB House リターゲティングタグ設定ガイド | クライアントサイドタグ | Tealium開発者ドキュメント</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-     <meta name="generator" content="Hugo 0.98.0" />
+     <meta name="generator" content="Hugo 0.111.3">
 
       
         <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
@@ -180,6 +180,7 @@ var utag_data = {
         <a href="/client-side-tags/criteo-onetag-tag/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".criteo-onetag-tag">Criteo OneTag</a></li><li data-level="1" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
         <a href="/client-side-tags/cubed-attribution-tag/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".cubed-attribution-tag">CUBED アトリビューション</a></li><li data-level="1" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
         <a href="/client-side-tags/dataxu-cookie-matching-service-tag/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".dataxu-cookie-matching-service-tag">DataXu Cookie Matching Service</a></li><li data-level="1" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
+        <a href="/client-side-tags/decibel-insight-tag.md/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".decibel-insight-tag">Decibel Insight</a></li><li data-level="1" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
         <a href="/client-side-tags/digilant-tag/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".digilant-tag">Digilant</a></li><li data-level="1" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
         <a href="/client-side-tags/distribute-travel-tag/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".distribute-travel-tag">Distribute Travelの配布</a></li><li data-level="1" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
         <a href="/client-side-tags/dun-amp-bradstreet-web-visitor-id-tag/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".dun-amp-bradstreet-web-visitor-id-tag">Dun &amp; Bradstreet Web Visitor ID</a></li><li data-level="1" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
@@ -218,6 +219,7 @@ var utag_data = {
         <a href="/client-side-tags/google-ads-remarketing-tag/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".google-ads-remarketing-tag">Google Adsリマーケティング</a></li><li data-level="1" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
         <a href="/client-side-tags/setting-up-advertising-features-in-google-analytics-for-ios-and-android/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".setting-up-advertising-features-in-google-analytics-for-ios-and-android">Google Analytics - iOSとAndroid向け広告機能</a></li><li data-level="1" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
         <a href="/client-side-tags/google-analytics-4-ga4-tag/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".google-analytics-4-ga4-tag-setup-guide">Google Analytics 4（GA4）</a></li><li data-level="1" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
+        <a href="/client-side-tags/google-analytics-cookie-matching-service-tag/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".google-analytics-cookie-matching-service-tag-setup-guide">Google Analytics Cookie Matching Service</a></li><li data-level="1" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
         <a href="/client-side-tags/google-analytics-gtagjs-tag/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".google-analytics-gtagjs-tag">Google Analytics（gtag.js）</a></li><li data-level="1" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
         <a href="/client-side-tags/google-analytics-series/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".google-analytics-series">Google Analytics（シリーズ）</a></li><li data-level="1" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
         <a href="/client-side-tags/google-cloud-retail-tag/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".google-cloud-retail-tag">Google Cloud Retail</a></li><li data-level="1" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
@@ -404,7 +406,7 @@ var utag_data = {
 </ul>
 </nav>
 
-<h1 class="lh-title mt30 mb3">RTB House リターゲティングタグ構成ガイド</h1>
+<h1 class="lh-title mt30 mb3">RTB House リターゲティングタグ設定ガイド</h1>
 </header>
 
 <div class="mv2 mid-gray fn w-100">
@@ -412,7 +414,7 @@ var utag_data = {
 
   
     <p class="f4 fw3 lh-copy">
-      この記事では、RTB House リターゲティングタグの構成方法について説明します。
+      この記事では、RTB House リターゲティングタグの設定方法について説明します。
     </p>
   
 </div>
@@ -420,28 +422,28 @@ var utag_data = {
 <div class="prose nested-links" id="prose">
   <h2 id="タグのヒント">タグのヒント</h2>
 <ul>
-<li>次の<a href="/iq-tag-management/extensions/extensions-list/e-commerce-extension/">E-Commerce extension</a>パラメーターをサポートしています：
+<li>次の <a href="/iq-tag-management/extensions/extensions-list/e-commerce-extension/">E-Commerce extension</a> パラメーターをサポートしています:
 <ul>
 <li>オファーID (<code>_cprod</code>)</li>
 <li>コンバージョンID (<code>_corder</code>)</li>
 <li>コンバージョン値 (<code>_ctotal</code>)</li>
 <li>カテゴリーID (<code>_ccat</code>)</li>
-<li>OfferIdsは、ページに表示されるオファーのIDのリストです。例えば、<code>ID1</code>、<code>ID2</code>、<code>ID3</code>、<code>ID4</code>、<code>ID5</code>。リストには最大5つのIDを含めることができます。</li>
 </ul>
 </li>
+<li>UIDは匿名化されたユーザーIDであるべきです（例えば、ユーザーのメールアドレスやログインに基づいています）。もし提供されない場合、タグは <code>unknown</code> の値を送信します。</li>
 </ul>
-<h2 id="タグの構成">タグの構成</h2>
-<p>タグマーケットプレイスに移動して新しいタグを追加します。詳細については、<a href="/iq-tag-management/tags/about/">About tags</a>を参照してください。</p>
-<p>タグを追加する際には、以下の構成を行います：</p>
+<h2 id="タグの設定">タグの設定</h2>
+<p>タグマーケットプレイスに移動して新しいタグを追加します。詳細については、<a href="/iq-tag-management/tags/about/">タグについて</a>を参照してください。</p>
+<p>タグを追加する際には、以下の設定を行います:</p>
 <ul>
 <li><strong>Tagging Hash</strong>: あなたのRTB House Tagging Hash。</li>
 <li><strong>Region Subdomain</strong>: あなたのRTB House Region Subdomain。</li>
 </ul>
 <h2 id="ロードルール">ロードルール</h2>
-<p>すべてのページでタグをロードするか、タグがロードされる条件を構成します。詳細については、<a href="/iq-tag-management/load-rules/about/">About load rules</a>を参照してください。</p>
+<p>すべてのページでタグをロードするか、タグがロードされる条件を設定します。詳細については、<a href="/iq-tag-management/load-rules/about/">ロードルールについて</a>を参照してください。</p>
 <h2 id="データマッピング">データマッピング</h2>
-<p>マッピングは、データレイヤー変数からベンダータグの対応する宛先変数へのデータ送信のプロセスです。詳細については、<a href="/iq-tag-management/data-mappings/about/">About data mappings</a>を参照してください。</p>
-<p>利用可能なカテゴリーは以下の通りです：</p>
+<p>マッピングは、データレイヤー変数からベンダータグの対応する宛先変数へデータを送信するプロセスです。詳細については、<a href="/iq-tag-management/data-mappings/about/">データマッピングについて</a>を参照してください。</p>
+<p>利用可能なカテゴリーは以下の通りです:</p>
 <h3 id="スタンダード">スタンダード</h3>
 <table>
 <thead>
@@ -462,6 +464,11 @@ var utag_data = {
 <td style="text-align:left">String</td>
 <td style="text-align:left">サイズ</td>
 </tr>
+<tr>
+<td style="text-align:left"><code>uid</code></td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">UID</td>
+</tr>
 </tbody>
 </table>
 <h3 id="e-commerce">E-Commerce</h3>
@@ -475,9 +482,14 @@ var utag_data = {
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left"><code>offerId</code> (<code>_cprod</code>を上書き)</td>
-<td style="text-align:left">[文字列の配列]</td>
+<td style="text-align:left"><code>offerId</code></td>
+<td style="text-align:left">String</td>
 <td style="text-align:left">オファーID</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>offerIds</code> (Overrides <code>_cprod</code>)</td>
+<td style="text-align:left">Array of Strings</td>
+<td style="text-align:left">オファーID群</td>
 </tr>
 <tr>
 <td style="text-align:left"><code>conversionClass</code></td>
@@ -490,24 +502,24 @@ var utag_data = {
 <td style="text-align:left">コンバージョンサブクラス</td>
 </tr>
 <tr>
-<td style="text-align:left"><code>conversionId</code> (<code>_corder</code>を上書き)</td>
+<td style="text-align:left"><code>conversionId</code> (Overrides <code>_corder</code>)</td>
 <td style="text-align:left">String</td>
 <td style="text-align:left">コンバージョンID</td>
 </tr>
 <tr>
-<td style="text-align:left"><code>conversionValue</code> (<code>_ctotal</code>を上書き)</td>
+<td style="text-align:left"><code>conversionValue</code> (Overrides <code>_ctotal</code>)</td>
 <td style="text-align:left">String</td>
 <td style="text-align:left">コンバージョン値</td>
 </tr>
 <tr>
-<td style="text-align:left"><code>categoryId</code> (<code>_ccat</code>を上書き)</td>
-<td style="text-align:left">[文字列の配列]</td>
+<td style="text-align:left"><code>categoryId</code></td>
+<td style="text-align:left">String</td>
 <td style="text-align:left">カテゴリーID</td>
 </tr>
 </tbody>
 </table>
 <h3 id="イベント">イベント</h3>
-<p>イベントのマッピングについては、<a href="/iq-tag-management/data-mappings/manage/#add-an-event-mapping">Create an Event Mapping</a>を参照してください。</p>
+<p>イベントのマッピングについては、<a href="/iq-tag-management/data-mappings/manage/#add-an-event-mapping">イベントマッピングの作成</a>を参照してください。</p>
 <table>
 <thead>
 <tr>
@@ -574,74 +586,9 @@ var utag_data = {
 </tr>
 </tbody>
 </table>
-<h3 id="イベント固有のパラメータ">イベント固有のパラメータ</h3>
-<p>イベントのマッピングについては、<a href="/iq-tag-management/data-mappings/manage/#add-an-event-mapping">Create an Event Mapping</a>を参照してください。</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">変数</th>
-<th style="text-align:left">説明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left"><code>home</code></td>
-<td style="text-align:left">ホーム</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>category</code></td>
-<td style="text-align:left">カテゴリー</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>sales</code></td>
-<td style="text-align:left">セールまたはプロモーション</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>newoffers</code></td>
-<td style="text-align:left">新製品</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>offer</code></td>
-<td style="text-align:left">商品</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>wishlist</code></td>
-<td style="text-align:left">お気に入りリスト</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>size</code></td>
-<td style="text-align:left">商品サイズ選択</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>offlinecheck</code></td>
-<td style="text-align:left">オフラインストアチェック</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>listing</code></td>
-<td style="text-align:left">検索結果</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>basketadd</code></td>
-<td style="text-align:left">ショッピングカート - カートに追加</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>basketstatus</code></td>
-<td style="text-align:left">ショッピングカート - ステータス</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>startorder</code></td>
-<td style="text-align:left">注文プロセス開始</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>conversion</code></td>
-<td style="text-align:left">注文確認</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>custom</code></td>
-<td style="text-align:left">カスタム</td>
-</tr>
-</tbody>
-</table>
+<h3 id="イベント特有のパラメーター">イベント特有のパラメーター</h3>
+<p>このカテゴリーを使用して、選択したイベントのみのパラメーターをマップします。</p>
+<p>イベントのマッピングについては、<a href="/iq-tag-management/data-mappings/manage/#add-an-event-mapping">イベントマッピングの作成</a>を参照してください。</p>
 
 </div>
 
@@ -702,7 +649,7 @@ var utag_data = {
 
         </div>
         <div class="bt-l b--moon-gray pt3 f6">
-          <p>最終更新日 ::  2023年April月6日
+          <p>最終更新日 ::  2024年April月11日
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           </p>
         </div>
@@ -717,13 +664,13 @@ var utag_data = {
   <aside class="fixed-lTK mw5 right-0 f6 bl b--light-gray pv4 pv0-ns ph3 nested-copy-line-height">
       <p class="b ttu">このページで</p>
       <nav id="TableOfContents"><ul class="toc-h2"><li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%82%BF%E3%82%B0%E3%81%AE%E3%83%92%E3%83%B3%E3%83%88" href="javascript:void(0)">タグのヒント</a></li>
-              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%82%BF%E3%82%B0%E3%81%AE%E6%A7%8B%E6%88%90" href="javascript:void(0)">タグの構成</a></li>
+              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%82%BF%E3%82%B0%E3%81%AE%E8%A8%AD%E5%AE%9A" href="javascript:void(0)">タグの設定</a></li>
               <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%83%AD%E3%83%BC%E3%83%89%E3%83%AB%E3%83%BC%E3%83%AB" href="javascript:void(0)">ロードルール</a></li>
               <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%83%87%E3%83%BC%E3%82%BF%E3%83%9E%E3%83%83%E3%83%94%E3%83%B3%E3%82%B0" href="javascript:void(0)">データマッピング</a></li>
               <ul class="toc-h3"><li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%80%E3%83%BC%E3%83%89" href="javascript:void(0)">スタンダード</a></li>
               <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#e-commerce" href="javascript:void(0)">E-Commerce</a></li>
               <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88" href="javascript:void(0)">イベント</a></li>
-              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E5%9B%BA%E6%9C%89%E3%81%AE%E3%83%91%E3%83%A9%E3%83%A1%E3%83%BC%E3%82%BF" href="javascript:void(0)">イベント固有のパラメータ</a></li>
+              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E7%89%B9%E6%9C%89%E3%81%AE%E3%83%91%E3%83%A9%E3%83%A1%E3%83%BC%E3%82%BF%E3%83%BC" href="javascript:void(0)">イベント特有のパラメーター</a></li>
               </nav>
   </aside></nav>
 
@@ -917,6 +864,14 @@ var utag_data = {
   
   
     <li  class="tl dib ma0 hover-bg-primary w-100">
+        <a href="https://docs.tealium.co.jp/partners/" class="f5 link primary-color-light overflow hover-white db ma0 w-100 pv3 ph4">
+          パートナー統合
+        </a>
+    </li>
+  
+  
+  
+    <li  class="tl dib ma0 hover-bg-primary w-100">
         <a href="https://docs.tealium.co.jp/glossary/" class="f5 link primary-color-light overflow hover-white db ma0 w-100 pv3 ph4">
           用語集
         </a>
@@ -980,6 +935,8 @@ var utag_data = {
 
 <div class="docsmenu mobilemenu dn" style="overflow-y:scroll;">
     <ul class="list dib ph0 ma0 scrolling-touch tc">
+  
+  
   
   
   

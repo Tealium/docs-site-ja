@@ -6,12 +6,12 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
      
-    <title>AdRoll Smart Pixelタグ構成ガイド | クライアントサイドタグ | Tealium開発者ドキュメント</title>
+    <title>AdRoll Smart Pixelタグ設定ガイド（廃止） | クライアントサイドタグ | Tealium開発者ドキュメント</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-     <meta name="generator" content="Hugo 0.98.0" />
+     <meta name="generator" content="Hugo 0.111.3">
 
       
         <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
@@ -180,6 +180,7 @@ var utag_data = {
         <a href="/client-side-tags/criteo-onetag-tag/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".criteo-onetag-tag">Criteo OneTag</a></li><li data-level="1" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
         <a href="/client-side-tags/cubed-attribution-tag/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".cubed-attribution-tag">CUBED アトリビューション</a></li><li data-level="1" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
         <a href="/client-side-tags/dataxu-cookie-matching-service-tag/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".dataxu-cookie-matching-service-tag">DataXu Cookie Matching Service</a></li><li data-level="1" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
+        <a href="/client-side-tags/decibel-insight-tag.md/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".decibel-insight-tag">Decibel Insight</a></li><li data-level="1" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
         <a href="/client-side-tags/digilant-tag/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".digilant-tag">Digilant</a></li><li data-level="1" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
         <a href="/client-side-tags/distribute-travel-tag/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".distribute-travel-tag">Distribute Travelの配布</a></li><li data-level="1" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
         <a href="/client-side-tags/dun-amp-bradstreet-web-visitor-id-tag/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".dun-amp-bradstreet-web-visitor-id-tag">Dun &amp; Bradstreet Web Visitor ID</a></li><li data-level="1" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
@@ -218,6 +219,7 @@ var utag_data = {
         <a href="/client-side-tags/google-ads-remarketing-tag/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".google-ads-remarketing-tag">Google Adsリマーケティング</a></li><li data-level="1" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
         <a href="/client-side-tags/setting-up-advertising-features-in-google-analytics-for-ios-and-android/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".setting-up-advertising-features-in-google-analytics-for-ios-and-android">Google Analytics - iOSとAndroid向け広告機能</a></li><li data-level="1" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
         <a href="/client-side-tags/google-analytics-4-ga4-tag/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".google-analytics-4-ga4-tag-setup-guide">Google Analytics 4（GA4）</a></li><li data-level="1" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
+        <a href="/client-side-tags/google-analytics-cookie-matching-service-tag/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".google-analytics-cookie-matching-service-tag-setup-guide">Google Analytics Cookie Matching Service</a></li><li data-level="1" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
         <a href="/client-side-tags/google-analytics-gtagjs-tag/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".google-analytics-gtagjs-tag">Google Analytics（gtag.js）</a></li><li data-level="1" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
         <a href="/client-side-tags/google-analytics-series/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".google-analytics-series">Google Analytics（シリーズ）</a></li><li data-level="1" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
         <a href="/client-side-tags/google-cloud-retail-tag/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".google-cloud-retail-tag">Google Cloud Retail</a></li><li data-level="1" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
@@ -404,7 +406,7 @@ var utag_data = {
 </ul>
 </nav>
 
-<h1 class="lh-title mt30 mb3">AdRoll Smart Pixelタグ構成ガイド</h1>
+<h1 class="lh-title mt30 mb3">AdRoll Smart Pixelタグ設定ガイド（廃止）</h1>
 </header>
 
 <div class="mv2 mid-gray fn w-100">
@@ -412,23 +414,24 @@ var utag_data = {
 
   
     <p class="f4 fw3 lh-copy">
-      この記事では、Tealium iQタグ管理アカウントでAdRoll Smart Pixelタグを構成する方法について説明します。
+      この記事では、Tealium iQタグ管理アカウントでAdRoll Smart Pixelタグを設定する方法について説明します。
     </p>
   
 </div>
 
 <div class="prose nested-links" id="prose">
-  <h2 id="タグのヒント">タグのヒント</h2>
+  <p class="note"><i class="fa fa-exclamation-triangle"></i>このコネクタは現在廃止され、タグマーケットプレイスでは利用できなくなりました。現在のコネクタについては、<a href="/client-side-tags/adroll-pixel-tag/">Adroll Pixelタグ設定ガイド</a>をご覧ください。</p>
+<h2 id="タグのヒント">タグのヒント</h2>
 <ul>
-<li>初回のページロード後、<code>adroll_record_user</code>オブジェクトのマッピングからデータを取得した<code>adroll_record_user</code>関数によって、後続の呼び出しが行われます。</li>
+<li>初回のページロード後、<code>adroll_record_user</code>オブジェクトのマッピングからデータを取得した<code>adroll_record_user</code>関数によって、続けて呼び出しが行われます。</li>
 <li><code>name=param</code>を追加するには、マッピングツールボックスを使用して<code>adroll_segments</code>に値をマップします。サンプル値は<code>checkout</code>または<code>orderconfirm</code>です。</li>
-<li><code>_corder</code>を<code>adroll_custom_data.ORDER_ID</code>にマップするなど、マッピングを使用して<code>adroll_custom_data</code>の値を構成します。</li>
-<li><code>adroll_conversion_value</code>は自動的にE-Commerce Extensionから<code>_csubtototal</code>にマップされます。</li>
-<li><code>adroll_conversion_value</code>パラメータは、Order IDが構成されている場合にのみ構成されます。</li>
+<li><code>_corder</code>を<code>adroll_custom_data.ORDER_ID</code>にマップするなど、マッピングを使用して<code>adroll_custom_data</code>の値を設定します。</li>
+<li><code>adroll_conversion_value</code>はE-Commerce Extensionから<code>_csubtototal</code>に自動的にマップされます。</li>
+<li><code>adroll_conversion_value</code>パラメータは、Order IDが設定されている場合にのみ設定されます。</li>
 </ul>
-<h2 id="タグの構成">タグの構成</h2>
+<h2 id="タグの設定">タグの設定</h2>
 <p>まず、Tealiumのタグマーケットプレイスに移動し、AdRoll Smart Pixelタグを追加します（<a href="/iq-tag-management/tags/manage/">タグの追加方法</a>について詳しくはこちら）。</p>
-<p>タグを追加したら、以下の構成を行います：</p>
+<p>タグを追加したら、以下の設定を行います：</p>
 <ul>
 <li>
 <p><strong>広告主ID</strong></p>
@@ -444,9 +447,9 @@ var utag_data = {
 </li>
 </ul>
 <h2 id="データマッピング">データマッピング</h2>
-<p>マッピングとは、<a href="/iq-tag-management/data-layer/data-layer-variables/">データレイヤー変数</a>からベンダータグの対応する宛先変数にデータを送信するプロセスです。変数をタグの宛先にマップする方法については、<a href="/iq-tag-management/data-mappings/manage/">Data Mappings</a>を参照してください。</p>
+<p>マッピングとは、<a href="/iq-tag-management/data-layer/data-layer-variables/">データレイヤー変数</a>からベンダータグの対応する宛先変数にデータを送信するプロセスです。変数をタグの宛先にマップする方法については、<a href="/iq-tag-management/data-mappings/manage/">データマッピング</a>を参照してください。</p>
 <p>利用可能なカテゴリは以下の通りです：</p>
-<h3 id="標準">標準</h3>
+<h3 id="スタンダード">スタンダード</h3>
 <table>
 <thead>
 <tr>
@@ -580,9 +583,9 @@ var utag_data = {
   <aside class="fixed-lTK mw5 right-0 f6 bl b--light-gray pv4 pv0-ns ph3 nested-copy-line-height">
       <p class="b ttu">このページで</p>
       <nav id="TableOfContents"><ul class="toc-h2"><li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%82%BF%E3%82%B0%E3%81%AE%E3%83%92%E3%83%B3%E3%83%88" href="javascript:void(0)">タグのヒント</a></li>
-              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%82%BF%E3%82%B0%E3%81%AE%E6%A7%8B%E6%88%90" href="javascript:void(0)">タグの構成</a></li>
+              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%82%BF%E3%82%B0%E3%81%AE%E8%A8%AD%E5%AE%9A" href="javascript:void(0)">タグの設定</a></li>
               <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%83%87%E3%83%BC%E3%82%BF%E3%83%9E%E3%83%83%E3%83%94%E3%83%B3%E3%82%B0" href="javascript:void(0)">データマッピング</a></li>
-              <ul class="toc-h3"><li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E6%A8%99%E6%BA%96" href="javascript:void(0)">標準</a></li>
+              <ul class="toc-h3"><li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%80%E3%83%BC%E3%83%89" href="javascript:void(0)">スタンダード</a></li>
               </nav>
   </aside></nav>
 
@@ -776,6 +779,14 @@ var utag_data = {
   
   
     <li  class="tl dib ma0 hover-bg-primary w-100">
+        <a href="https://docs.tealium.co.jp/partners/" class="f5 link primary-color-light overflow hover-white db ma0 w-100 pv3 ph4">
+          パートナー統合
+        </a>
+    </li>
+  
+  
+  
+    <li  class="tl dib ma0 hover-bg-primary w-100">
         <a href="https://docs.tealium.co.jp/glossary/" class="f5 link primary-color-light overflow hover-white db ma0 w-100 pv3 ph4">
           用語集
         </a>
@@ -839,6 +850,8 @@ var utag_data = {
 
 <div class="docsmenu mobilemenu dn" style="overflow-y:scroll;">
     <ul class="list dib ph0 ma0 scrolling-touch tc">
+  
+  
   
   
   
