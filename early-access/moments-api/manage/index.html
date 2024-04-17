@@ -179,7 +179,8 @@ var utag_data = {
 </div>
 
 <div class="prose nested-links" id="prose">
-  <h2 id="エンジンの作成">エンジンの作成</h2>
+  <p class="note"><i class="fa fa-exclamation-triangle"></i>アカウントにMoments APIを有効にするには、アカウントマネージャーに連絡してください。</p>
+<h2 id="エンジンの作成">エンジンの作成</h2>
 <p>エンジンを作成するには、以下の手順を完了します：</p>
 <ol>
 <li>
@@ -189,7 +190,7 @@ var utag_data = {
 <p><strong>Details</strong>画面で、以下のエンジン詳細を設定します：</p>
 <ul>
 <li><strong>Name</strong>: エンジンの名前を入力します。</li>
-<li><strong>Enable Engine</strong>: エンジンをオンとオフに切り替えます。エンジンエンドポイントはデフォルトではオフです。エンジンを有効にし、訪問者がアクティブなセッションをログし、システム内でイベントを生成すると、訪問者のデータが利用可能になります。</li>
+<li><strong>Enable Engine</strong>: エンジンをオンとオフに切り替えます。エンジンエンドポイントはデフォルトでオフになっています。エンジンを有効にし、訪問者がアクティブなセッションをログし、システム内でイベントを生成すると、訪問者のデータが利用可能になります。</li>
 <li><strong>Domain Allow List</strong>: このエンドポイントを使用できるドメインを指定します。詳細については、<a href="/early-access/moments-api/about/#domain-allow-list">About Moments API &gt; Domain allow list</a>を参照してください。</li>
 </ul>
 </li>
@@ -200,7 +201,7 @@ var utag_data = {
 <p><strong>Response</strong>画面で、エンジンに含めるオーディエンス、バッジ、属性を選択します。<strong>Example Response</strong>パネルを使用して選択を確認できます。<p class="note"><i class="fa fa-exclamation-triangle"></i>大きなレスポンスでオーディエンス、バッジ、属性の名前を使用すると、ペイロードサイズが増える可能性があります。<br><strong>Select all current and future audiences</strong>機能を使用すると、後でオーディエンスが削除された場合でも、エンジンデータをパージするか、データが期限切れになるまでMoments APIエンジンに含まれ続ける可能性があります。</p></p>
 </li>
 <li>
-<p>エンジンを作成するには<strong>Next</strong>をクリックします。</p>
+<p><strong>Next</strong>をクリックしてエンジンを作成します。</p>
 </li>
 <li>
 <p><strong>Summary</strong>画面で、一意のエンドポイントURLを含むエンドポイント詳細を確認します。</p>
@@ -219,7 +220,7 @@ var utag_data = {
 <li><strong>Moments API</strong>画面で、データをパージしたいエンジンの隣にあるアクションメニューをクリックし、<strong>Purge Data</strong>を選択します。</li>
 <li><strong>Edit Engines</strong>画面で、スライドアウトアクションから<strong>Purge Data</strong>をクリックします。</li>
 </ol>
-<p>データパージ後、以前に保存されていた訪問者データは利用できなくなります。</p>
+<p>データパージ後、以前に保存されていた訪問者のデータは利用できなくなります。</p>
 
 </div>
 

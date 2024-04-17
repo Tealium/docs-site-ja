@@ -180,17 +180,23 @@ var utag_data = {
 
 <div class="prose nested-links" id="prose">
   <p class="note"><i class="fa fa-exclamation-triangle"></i>Moments iQは現在、早期アクセス段階にあり、一部のお客様のみが利用可能です。この機能を試してみたい場合は、Tealiumサポート担当者にお問い合わせください。</p>
-<h2 id="必要条件">必要条件</h2>
-<p>Moments iQをサーバーサイドの製品と統合する予定の場合、以下が必要となります：</p>
+<h2 id="要件">要件</h2>
+<p>Moments iQには以下の製品が必要です：</p>
 <ul>
-<li>Tealium AudienceStreamまたはTealium EventStream。</li>
-<li><a href="/server-side/attributes/data-layer-enrichment/">Data Layer Enrichment</a>が有効になっていること。</li>
-<li>最新バージョンの<a href="/client-side-tags/tealium-collect-tag/">Tealium Collect tag</a>。</li>
+<li>Tealium iQタグ管理</li>
 </ul>
-<h2 id="動作方法">動作方法</h2>
-<p>Moments iQを使用すると、訪問からリアルタイムで嗜好や感情（いわゆるゼロパーティデータ）を収集するウェブサイト上の体験を作成できます。このデータを使用すると、追加のツールを必要とせずに、訪問が何を求めているのか、また、彼らがあなたのブランドにどのように見られたいのかをよりよく理解できます。より充実したオーディエンスを作成することで、より深く、より意味のある顧客関係を築くことができ、訪問の体験をさらにパーソナライズしたり、コネクタを通じて彼らと関わることができます。</p>
-<p>ゼロパーティデータとは、顧客から直接収集した情報のことです。彼らの嗜好、購入意向、最近のショッピング体験について具体的な質問をすることができます。ゼロパーティデータは宣言的なものであり、ファーストパーティデータは訪問の活動、例えばあなたのサイトでの閲覧活動や購入から推測されます。</p>
-<p>体験の例：</p>
+<p>Moments iQをサーバーサイド製品と統合するには、以下が必要です：</p>
+<ul>
+<li>Tealium AudienceStreamまたはTealium EventStream</li>
+<li><a href="/client-side-tags/tealium-collect-tag/">Tealium Collectタグ</a>の最新バージョン</li>
+</ul>
+<p>Moments iQのルールでAudienceStream変数を使用するには、以下が必要です：</p>
+<ul>
+<li><a href="/server-side/attributes/data-layer-enrichment/">Data Layer Enrichment</a>が有効になっていること</li>
+</ul>
+<h2 id="moments-iqについて">Moments iQについて</h2>
+<p>Moments iQは、訪問者からリアルタイムで好みや感情（いわゆるゼロパーティデータ）を収集するウェブサイト上の埋め込み型またはモーダル型のエクスペリエンスを作成することができます。ゼロパーティデータは、顧客から直接収集した情報であり、ファーストパーティデータは、訪問者の活動（例えば、あなたのサイトでの閲覧活動や購入）から推測されるデータです。このデータを使用すると、訪問者が何を求めているのか、現在の意図は何か、そして彼らがあなたのブランドにどのように見られたいのかをよりよく理解することができ、追加のツールを必要とせずに、このデータを訪問者のプロファイルに付加することで、より豊かで正確なオーディエンスを作成し、顧客とのより意味のある関係を築くことができます。</p>
+<p>以下の例は、訪問者の職務機能に関する情報を収集します：</p>
 <figure><a class="slb" href="/images/moments-iq/moments-iq-example.png"><img src="/images/moments-iq/moments-iq-example.png"
          alt="Moments iQ Example"
          title="Moments iQ Example"/>
@@ -199,29 +205,30 @@ var utag_data = {
 <h2 id="機能">機能</h2>
 <p>Moments iQは以下の機能を提供します：</p>
 <ul>
+<li><strong>簡単なインストール</strong>
+Moments iQの設定は、既存のJavaScriptライブラリ(<code>utag.js</code>)のインストールと一緒にバンドルされています。サイト上で追加のコードは必要ありません。</li>
 <li><strong>複数の質問形式</strong><br>
-訪問をサイト上の適切な体験に導く質問をカスタマイズします。</li>
+ラジオボタン、チェックボックス、テキストボックスの回答をサポートしています。</li>
 <li><strong>カスタムスタイルと外観</strong><br>
-サイトのルック＆フィールに合わせて、訪問にシームレスな体験を提供します。また、ページ上の任意の位置に体験を配置したり、スタイル付きのモーダルウィンドウで体験をポップアップさせることもできます。</li>
-<li><strong>ルールとイベントでターゲット構成</strong><br>
-体験がページに表示されるか、体験の表示をトリガーする訪問の行動を決定する条件を構成します。</li>
+サイトのルック＆フィールに合わせて、訪問者にシームレスな体験を提供します。また、ページ上の任意の位置に体験を配置したり、スタイル付きのモーダルウィンドウで体験をポップアップさせることもできます。</li>
+<li><strong>精密なターゲティング</strong><br>
+ロードルール、訪問者データ、イベントリスナーを活用して、体験が表示されるタイミング、場所、対象者を決定します。</li>
 <li><strong>プライバシーバイデザイン</strong><br>
-プロファイル構成に基づいて、データが適切に収集、処理、保存されます。</li>
+訪問者の同意設定に基づいて、データが適切に収集、変換、送信されます。</li>
 <li><strong>シームレスな統合</strong><br>
-イベントデータをAudienceStreamに送信して、訪問プロファイルをエンリッチメントしたり、バッジを割り当てたり、オーディエンスメンバーシップを更新してコネクタをトリガーします。</li>
+イベントデータをAudienceStreamに送信して、訪問者プロファイルを強化したり、バッジを割り当てたり、オーディエンスメンバーシップを更新してコネクタをトリガーします。</li>
 <li><strong>リアルタイムデータ収集</strong><br>
-訪問のプロファイルを即座に更新して、即時のパーソナライゼーションとより良いユーザーエクスペリエンスを提供します。</li>
+訪問者のプロファイルを即座に更新して、即時のパーソナライゼーション、より正確な訪問者プロファイルを実現したり、レスポンスを何千もの統合に送信します。</li>
 </ul>
-<p>Moments iQの構成は、既存のJavaScriptライブラリ(<code>utag.js</code>)のインストールにバンドルされています。サイト上で追加のコードは必要ありません。</p>
 <h2 id="手順">手順</h2>
-<p>Moments iQは、<a href="/early-access/moments-iq/manage/">Moments iQ tag</a>の以下の画面を通じて構成されます：</p>
+<p>Moments iQは、<a href="/early-access/moments-iq/manage/">Moments iQタグ</a>の以下の画面を通じて設定されます：</p>
 <ul>
-<li><strong>タグ構成</strong>：ページ上でのタグの位置と外観を構成します。</li>
-<li><strong>ロードルールとイベントリスナー</strong>：体験がページに表示されるか、体験の表示をトリガーする訪問の行動を決定する条件を構成します。</li>
-<li><strong>データマッピング</strong>：構成オプションのオーバーライドを構成します。</li>
+<li><strong>タグ設定</strong>：ページ上での体験の位置と外観を設定します。</li>
+<li><strong>ロードルールとイベントリスナー</strong>：体験が表示されるタイミング、場所、対象者を決定する条件を設定します。</li>
+<li><strong>データマッピング</strong>：プロンプトのスタイルや設定を設定し、上書きするための高度な設定。</li>
 </ul>
 <h2 id="イベント">イベント</h2>
-<p>訪問が体験を送信または閉じると、ブラウザは関連するデータを含む<code>utag.track</code>コールを送信し、タグと拡張機能が処理します。</p>
+<p>訪問者が体験を送信または閉じると、ブラウザは関連するデータを含む<code>utag.track</code>コールを送信し、タグと拡張機能が処理します。</p>
 <p>Moments iQのイベントは以下の変数を使用します：</p>
 <table>
 <thead>
@@ -235,33 +242,45 @@ var utag_data = {
 <tbody>
 <tr>
 <td><code>tealium_event</code></td>
-<td>String</td>
-<td>イベントは以下のいずれかの値を含みます：<ul><li><code>momentsiq_close</code>：訪問がウィンドウを閉じた場合、通常は閉じるボタンで。</li><li><code>momentsiq_submit</code>：訪問が主要なボタンをクリックした場合、質問に答えたかどうかに関わらず。</li></ul></td>
+<td>文字列</td>
+<td>イベントは以下の値のいずれかを含みます：<ul><li><code>momentsiq_close</code>：訪問者がウィンドウを閉じた場合、通常は閉じるボタンを使用します。</li><li><code>momentsiq_submit</code>：訪問者が主要なボタンをクリックした場合、質問に答えたかどうかに関わらず。</li></ul></td>
 <td><code>momentsiq_close</code></td>
 </tr>
 <tr>
 <td><code>momentsiq_question1</code></td>
-<td>String</td>
-<td>訪問が答えた質問の名前。質問に答えなかった場合、この変数は空白です。</td>
+<td>文字列</td>
+<td>体験で尋ねられた質問。</td>
 <td><code>あなたの好きな色は何ですか？</code></td>
 </tr>
 <tr>
+<td><code>momentsiq_questions_answered</code></td>
+<td>文字列</td>
+<td>訪問者が答えた質問。訪問者が質問に答えなかった場合、この変数は空白です。この変数を使用すると、最終的に空白の値をフィルタリングしてデータの汚染を避けることができます。</td>
+<td><code>&quot;test1&quot;</code></td>
+</tr>
+<tr>
 <td><code>momentsiq_question1_type</code></td>
-<td>String</td>
-<td>訪問が主要なボタンをクリックした場合、質問のタイプ（<code>checkbox</code>、<code>text</code>、または<code>radio</code>）</td>
+<td>文字列</td>
+<td>訪問者が主要なボタンをクリックした場合、質問のタイプ（<code>checkbox</code>、<code>text</code>、または<code>radio</code>）</td>
 <td><code>radio</code></td>
 </tr>
 <tr>
 <td><code>momentsiq_id</code></td>
-<td>Number</td>
-<td>タグのUID。</td>
+<td>数値</td>
+<td>タグUID。</td>
 <td><code>34</code></td>
 </tr>
 <tr>
 <td><code>momentsiq_answer1</code></td>
-<td>String</td>
-<td>訪問が主要なボタンをクリックした場合、訪問が入力または選択した答えまたは答え。複数の答えはパイプ (|) 文字で区切られます。</td>
+<td>文字列</td>
+<td>訪問者が主要なボタンをクリックした場合、訪問者が入力または選択した回答または回答。複数の回答はパイプ(|)文字で区切られます。</td>
 <td><code>赤</code></td>
+</tr>
+<tr>
+<td><code>momentsiq_suppress</code></td>
+<td>訪問者が戻ってきたときに自動的に体験を抑制するかどうか。</td>
+<td><code>never</code></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -271,20 +290,23 @@ var utag_data = {
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;tealium_event&#34;</span>: <span style="color:#e6db74">&#34;momentsiq_submit&#34;</span>,
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;momentsiq_id&#34;</span>: <span style="color:#e6db74">&#34;54&#34;</span>,
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;momentsiq_question1_type&#34;</span>: <span style="color:#e6db74">&#34;radio&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;momentsiq_questions_answered&#34;</span>: <span style="color:#e6db74">&#34;question1&#34;</span>,
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;momentsiq_question1&#34;</span>: <span style="color:#e6db74">&#34;あなたの好きな色は何ですか？&#34;</span>,
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;momentsiq_answer1&#34;</span>: <span style="color:#e6db74">&#34;青&#34;</span>
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>これは、複数の答えが提出されたチェックボックス体験のイベントです：</p>
+</span></span></code></pre></div><p>これは、複数の回答が提出されたチェックボックス体験のイベントです：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;tealium_event&#34;</span>: <span style="color:#e6db74">&#34;momentsiq_submit&#34;</span>,
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;momentsiq_id&#34;</span>: <span style="color:#e6db74">&#34;55&#34;</span>,
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;momentsiq_question1_type&#34;</span>: <span style="color:#e6db74">&#34;checkbox&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;momentsiq_questions_answered&#34;</span>: <span style="color:#e6db74">&#34;question1&#34;</span>,
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;momentsiq_question1&#34;</span>: <span style="color:#e6db74">&#34;あなたの好きな色は何ですか？&#34;</span>,
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;momentsiq_answer1&#34;</span>: <span style="color:#e6db74">&#34;青|紫&#34;</span>
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>これは、訪問が回答または提出する前に閉じた体験のイベントです：</p>
+</span></span></code></pre></div><p>これは、訪問者が回答または提出する前に体験を閉じたイベントです：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;tealium_event&#34;</span> : <span style="color:#e6db74">&#34;momentsiq_close&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;momentsiq_questions_answered&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;momentsiq_id&#34;</span>  : <span style="color:#e6db74">&#34;56&#34;</span>
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>Moments iQ体験の基本的な例については、<a href="/early-access/moments-iq/example/">Moments iQ example</a>を参照してください。</p>
@@ -347,8 +369,8 @@ var utag_data = {
 
   <aside class="fixed-lTK mw5 right-0 f6 bl b--light-gray pv4 pv0-ns ph3 nested-copy-line-height">
       <p class="b ttu">このページで</p>
-      <nav id="TableOfContents"><ul class="toc-h2"><li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E5%BF%85%E8%A6%81%E6%9D%A1%E4%BB%B6" href="javascript:void(0)">必要条件</a></li>
-              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E5%8B%95%E4%BD%9C%E6%96%B9%E6%B3%95" href="javascript:void(0)">動作方法</a></li>
+      <nav id="TableOfContents"><ul class="toc-h2"><li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E8%A6%81%E4%BB%B6" href="javascript:void(0)">要件</a></li>
+              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#moments-iq%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" href="javascript:void(0)">Moments iQについて</a></li>
               <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E6%A9%9F%E8%83%BD" href="javascript:void(0)">機能</a></li>
               <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E6%89%8B%E9%A0%86" href="javascript:void(0)">手順</a></li>
               <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88" href="javascript:void(0)">イベント</a></li>

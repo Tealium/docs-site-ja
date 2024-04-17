@@ -7805,7 +7805,7 @@
                 />
   </url><url>
     <loc>https://docs.tealium.co.jp/iq-tag-management/consent/consent-integrations/custom-cmp/</loc>
-    <lastmod>2024-04-11T19:19:10-07:00</lastmod>
+    <lastmod>2024-04-12T10:23:07-07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -10027,6 +10027,19 @@
                 href="https://docs.tealium.co.jp/platforms/amp/track/"
                 />
   </url><url>
+    <loc>https://docs.tealium.co.jp/platforms/android-kotlin/track/</loc>
+    <lastmod>2024-04-11T19:19:10-07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://docs.tealium.com/platforms/android-kotlin/track/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://docs.tealium.co.jp/platforms/android-kotlin/track/"
+                />
+  </url><url>
     <loc>https://docs.tealium.co.jp/platforms/csharp/track/</loc>
     <lastmod>2024-03-29T09:07:56-07:00</lastmod>
     <xhtml:link
@@ -10077,19 +10090,6 @@
                 rel="alternate"
                 hreflang="ja"
                 href="https://docs.tealium.co.jp/platforms/android-java/track/"
-                />
-  </url><url>
-    <loc>https://docs.tealium.co.jp/platforms/android-kotlin/track/</loc>
-    <lastmod>2024-04-11T19:19:10-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://docs.tealium.com/platforms/android-kotlin/track/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://docs.tealium.co.jp/platforms/android-kotlin/track/"
                 />
   </url><url>
     <loc>https://docs.tealium.co.jp/platforms/angular/track/</loc>
@@ -11587,19 +11587,6 @@
                 href="https://docs.tealium.co.jp/client-side-tags/neustar-idmp-site-activity-tag/"
                 />
   </url><url>
-    <loc>https://docs.tealium.co.jp/server-side-connectors/amazon-ads-audience-management-connector/</loc>
-    <lastmod>2023-11-17T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://docs.tealium.com/server-side-connectors/amazon-ads-audience-management-connector/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://docs.tealium.co.jp/server-side-connectors/amazon-ads-audience-management-connector/"
-                />
-  </url><url>
     <loc>https://docs.tealium.co.jp/server-side-connectors/amazon-ads-conversions-connector/</loc>
     <lastmod>2023-08-03T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -12625,19 +12612,6 @@
                 rel="alternate"
                 hreflang="ja"
                 href="https://docs.tealium.co.jp/server-side-connectors/google-ads-enhanced-conversions-for-leads-connector/"
-                />
-  </url><url>
-    <loc>https://docs.tealium.co.jp/client-side-tags/amazon-advertising-tag/</loc>
-    <lastmod>2023-09-07T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://docs.tealium.com/client-side-tags/amazon-advertising-tag/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://docs.tealium.co.jp/client-side-tags/amazon-advertising-tag/"
                 />
   </url><url>
     <loc>https://docs.tealium.co.jp/server-side-connectors/basis-technologies-dsp-connector/</loc>
@@ -15496,16 +15470,6 @@
   </url><url>
     <loc>https://docs.tealium.co.jp/server-side-connectors/dialogone-connector/</loc>
     <lastmod>2020-01-24T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://docs.tealium.com/server-side-connectors/dialogone-connector/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://docs.tealium.co.jp/server-side-connectors/dialogone-connector/"
-                />
   </url><url>
     <loc>https://docs.tealium.co.jp/server-side-connectors/clickatell-connector/</loc>
     <lastmod>2020-01-24T00:00:00+00:00</lastmod>
@@ -17912,6 +17876,18 @@
                 href="https://docs.tealium.co.jp/server-side-connectors/adobe-aep-connector/"
                 />
   </url><url>
+    <loc>https://docs.tealium.co.jp/server-side-connectors/adobe-journey-optimizer-connector/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://docs.tealium.com/server-side-connectors/adobe-journey-optimizer-connector/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://docs.tealium.co.jp/server-side-connectors/adobe-journey-optimizer-connector/"
+                />
+  </url><url>
     <loc>https://docs.tealium.co.jp/iq-tag-management/extensions/extensions-list/adobe-target-extension/</loc>
     <lastmod>2024-03-29T09:07:56-07:00</lastmod>
     <xhtml:link
@@ -18001,6 +17977,32 @@
                 rel="alternate"
                 hreflang="ja"
                 href="https://docs.tealium.co.jp/client-side-tags/amazon-ads-server-tag/"
+                />
+  </url><url>
+    <loc>https://docs.tealium.co.jp/server-side-connectors/amazon-ads-audience-management-connector/</loc>
+    <lastmod>2024-03-29T09:07:56-07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://docs.tealium.com/server-side-connectors/amazon-ads-audience-management-connector/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://docs.tealium.co.jp/server-side-connectors/amazon-ads-audience-management-connector/"
+                />
+  </url><url>
+    <loc>https://docs.tealium.co.jp/client-side-tags/amazon-advertising-tag/</loc>
+    <lastmod>2024-03-29T09:07:56-07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://docs.tealium.com/client-side-tags/amazon-advertising-tag/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://docs.tealium.co.jp/client-side-tags/amazon-advertising-tag/"
                 />
   </url><url>
     <loc>https://docs.tealium.co.jp/client-side-tags/amazon-advertising-cookie-matching-service-tag/</loc>
@@ -18693,7 +18695,7 @@
                 />
   </url><url>
     <loc>https://docs.tealium.co.jp/rc-tags/iq_tabs_consent_integrations/index.json</loc>
-    <lastmod>2024-04-11T19:19:10-07:00</lastmod>
+    <lastmod>2024-04-12T10:23:07-07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -18885,6 +18887,18 @@
                 rel="alternate"
                 hreflang="ja"
                 href="https://docs.tealium.co.jp/client-side-tags/kissmetrics-tag/"
+                />
+  </url><url>
+    <loc>https://docs.tealium.co.jp/server-side-connectors/launchdarkly-audience-cohorting/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://docs.tealium.com/server-side-connectors/launchdarkly-audience-cohorting/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://docs.tealium.co.jp/server-side-connectors/launchdarkly-audience-cohorting/"
                 />
   </url><url>
     <loc>https://docs.tealium.co.jp/server-side-connectors/launchdarkly-metric-import-api-connector/</loc>
@@ -20752,19 +20766,6 @@
                 href="https://docs.tealium.co.jp/iq-tag-management/tealium-tools/environment-switcher/"
                 />
   </url><url>
-    <loc>https://docs.tealium.co.jp/server-side-connectors/recent/</loc>
-    <lastmod>2024-03-29T09:07:56-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://docs.tealium.com/server-side-connectors/recent/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://docs.tealium.co.jp/server-side-connectors/recent/"
-                />
-  </url><url>
     <loc>https://docs.tealium.co.jp/client-side-tags/recent/</loc>
     <lastmod>2024-03-29T09:07:56-07:00</lastmod>
     <xhtml:link
@@ -20776,6 +20777,19 @@
                 rel="alternate"
                 hreflang="ja"
                 href="https://docs.tealium.co.jp/client-side-tags/recent/"
+                />
+  </url><url>
+    <loc>https://docs.tealium.co.jp/server-side-connectors/recent/</loc>
+    <lastmod>2024-03-29T09:07:56-07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://docs.tealium.com/server-side-connectors/recent/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://docs.tealium.co.jp/server-side-connectors/recent/"
                 />
   </url><url>
     <loc>https://docs.tealium.co.jp/server-side/attributes/data-types/tally/</loc>

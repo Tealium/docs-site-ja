@@ -231,7 +231,7 @@ var utag_data = {
         <a href="/iq-tag-management/extensions/extensions-list/e-commerce-extension/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".e-commerce-extension">Eコマース</a></li><li data-level="4" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
         <a href="/iq-tag-management/extensions/extensions-list/advanced-javascript-code-extension/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".advanced-javascript-code-extension">JavaScriptコードの拡張機能</a></li><li data-level="4" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
         <a href="/iq-tag-management/extensions/extensions-list/javascript-code-basic-extension/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".javascript-code-extension-basic">JavaScriptコード（基本）</a></li><li data-level="4" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
-        <a href="/iq-tag-management/extensions/extensions-list/jquery-clickhandler-extension/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".jquery-clickhandler-extension">jQuery clickHandler (jQuery v1.6 以下)</a></li><li data-level="4" class="selected relative w-100 hover-accent-color-light fw4 f5  ind2">
+        <a href="/iq-tag-management/extensions/extensions-list/jquery-clickhandler-extension/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".jquery-clickhandler-extension">jQuery clickHandler (jQuery v1.6 およびそれ以下)</a></li><li data-level="4" class="selected relative w-100 hover-accent-color-light fw4 f5  ind2">
         <a href="/iq-tag-management/extensions/extensions-list/jquery-onhandler-extension/" class="db link pr2 pv2  bg-secondary primary-color " data-target=".jquery-onhandler-extension">jQuery onHandler (jQuery 1.7以降)</a></li><li data-level="4" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
         <a href="/iq-tag-management/extensions/extensions-list/flatten-json-objects-extension/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".flatten-json-objects-extension">JSONオブジェクトのフラット化</a></li><li data-level="4" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
         <a href="/iq-tag-management/extensions/extensions-list/tealium-events-extension/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".tealium-events-extension">Tealiumイベント</a></li><li data-level="4" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
@@ -434,53 +434,58 @@ var utag_data = {
 </div>
 
 <div class="prose nested-links" id="prose">
-  <h2 id="前提条件">前提条件</h2>
+  <p class="note"><i class="fa fa-exclamation-triangle"></i>組み込みのイベントリスナーシステムは、jQueryを使用せずにトラッキングイベントのリスニングとトリガーを行うノーコードソリューションを提供します。詳細は、<a href="/iq-tag-management/events/about/">イベントについて</a>を参照してください。</p>
+<h2 id="必要条件">必要条件</h2>
+<p>この拡張機能には以下が必要です：</p>
 <ul>
-<li>jQuery バージョン1.7以上</li>
+<li>jQueryバージョン1.7以降</li>
 </ul>
-<h2 id="仕組み">仕組み</h2>
-<p>jQuery onHandler拡張機能は、追跡するためのjQueryセレクタ識別子を選択し、次にトリガーアクションイベントのタイプを選択することで動作します。クリック、マウスダウン、フォーカスなどの標準的なページ上のイベントは、カスタムJavaScriptコードを提供することで追跡することができます。</p>
-<h2 id="拡張機能の使用">拡張機能の使用</h2>
+<h2 id="動作方法">動作方法</h2>
+<p>jQuery onHandler拡張機能は、トラッキング対象となるjQueryセレクタ識別子を選択し、次にトリガーアクションイベントのタイプを選択することで動作します。クリック、マウスダウン、フォーカスなどの標準的なページ上のイベントは、カスタムJavaScriptコードを提供することでトラッキングできます。</p>
+<h2 id="拡張機能の使用方法">拡張機能の使用方法</h2>
 <p>始める前に、<a href="/iq-tag-management/extensions/about/">拡張機能の動作方法</a>について理解しておいてください。</p>
-<p>拡張機能が追加されると、いくつかの構成オプションがあります。<a href="http://api.jquery.com/on/">jQuery on() メソッド</a>に馴染みがあるなら、これらの構成は馴染み深いものになるでしょう。</p>
+<p>拡張機能が追加されると、いくつかの設定オプションがあります。<a href="http://api.jquery.com/on/">jQuery on() メソッド</a>に馴染みがある場合、これらの設定は馴染み深いものとなります。</p>
 <ul>
 <li>
-<p><strong>jQuery Selector</strong>: イベントをトリガーする主要な選択要素から要素をフィルタリングするためのセレクタ文字列。</p>
+<p><strong>jQueryセレクタ</strong>：イベントをトリガーする主要な選択要素から要素をフィルタリングするためのセレクタ文字列。</p>
 </li>
 <li>
-<p><strong>Primary Selector</strong>: (デフォルト: <code>body</code>) ターゲットとする要素の親セレクタ文字列。</p>
+<p><strong>主要なセレクタ</strong>：（デフォルト：<code>body</code>）対象とする要素の親セレクタ文字列。</p>
 </li>
 <li>
-<p><strong>Trigger On</strong>: アクションをトリガーするイベントタイプ。</p>
+<p><strong>トリガーするイベント</strong>：アクションをトリガーするイベントタイプ。</p>
 <ul>
-<li><strong>show</strong>: 隠れていた要素がページ上に表示されるとき。</li>
-<li><strong>hide</strong>: 表示されていた要素がページから隠れるとき。</li>
-<li><strong>click</strong>: マウスポインタが要素の上にあり、マウスボタンが押されてから離されるとき。</li>
-<li><strong>mousedown</strong>: マウスポインタが要素の上にあり、マウスボタンが押されるとき。</li>
-<li><strong>mouseup</strong>: マウスポインタが要素の上にあり、マウスボタンが離されるとき。</li>
-<li><strong>mouseover</strong>: マウスポインタが要素に入るとき。</li>
-<li><strong>change</strong>: <code>&lt;input&gt;</code>、<code>&lt;select&gt;</code>、<code>&lt;textarea&gt;</code> 要素内の値が変更されるとき</li>
-<li><strong>blur</strong>: 要素がフォーカスを失うとき、例えばマウスがそれから離れたときやタブキーが押されたとき。</li>
-<li><strong>focus</strong>: 要素がフォーカスを得るとき、例えばマウスクリックやタブキーで選択されたとき。</li>
+<li><strong>show</strong>：隠れていた要素がページに表示されるとき。</li>
+<li><strong>hide</strong>：表示されていた要素がページから隠れるとき。</li>
+<li><strong>click</strong>：マウスポインタが要素の上にあり、マウスボタンが押されてから離されるとき。</li>
+<li><strong>mousedown</strong>：マウスポインタが要素の上にあり、マウスボタンが押されるとき。</li>
+<li><strong>mouseup</strong>：マウスポインタが要素の上にあり、マウスボタンが離されるとき。</li>
+<li><strong>mouseover</strong>：マウスポインタが要素に入るとき。</li>
+<li><strong>change</strong>：<code>&lt;input&gt;</code>、<code>&lt;select&gt;</code>、<code>&lt;textarea&gt;</code>要素内の値が変更されるとき。</li>
+<li><strong>blur</strong>：要素がフォーカスを失うとき、例えばマウスがそれから離れたときやタブキーが押されたとき。</li>
+<li><strong>focus</strong>：要素がフォーカスを得るとき、例えばマウスクリックやタブキーで選択されたとき。</li>
 </ul>
 </li>
 <li>
-<p><strong>Tracking Event</strong>: イベントがトリガーされたときのアクション。</p>
+<p><strong>トラッキングイベント</strong>：イベントがトリガーされたときに行うアクション。</p>
 <ul>
-<li><strong>link</strong>: <code>utag.link()</code>を呼び出す</li>
-<li><strong>view</strong>: <code>utag.view()</code>を呼び出す</li>
-<li><strong>custom</strong>: あなたが提供するコードを実行する</li>
+<li><strong>link</strong>：<code>utag.link()</code>を呼び出す</li>
+<li><strong>view</strong>：<code>utag.view()</code>を呼び出す</li>
+<li><strong>custom</strong>：提供したコードを実行する</li>
 </ul>
 </li>
 <li>
-<p><strong>Set To</strong>: リンクとビューのアクションと一緒に使用され、<code>utag.view()</code>と<code>utag.link()</code>に渡されるデータレイヤー変数を構成することができます。</p>
+<p><strong>Set</strong>：設定したい変数を選択します。</p>
 </li>
 <li>
-<p><strong>Condition</strong>: (オプション) 拡張機能が全体として実行されるかどうかを制御する条件を追加することができます。</p>
+<p><strong>To</strong>：変数に割り当てたい値のタイプを選択します。隣のテキストフィールドに新しい値を入力します。さらに変数を設定したい場合は、テキストボックスの最後にある**+**ボタンをクリックします。</p>
+</li>
+<li>
+<p><strong>Condition</strong>：（オプション）拡張機能が全体として実行されるかどうかを制御する条件を追加できます。</p>
 </li>
 </ul>
 <h3 id="生成されるコード">生成されるコード</h3>
-<p>この拡張機能のために生成されるJavaScriptコードは、<strong>Tracking Event</strong>と<strong>Set To</strong>の構成によって異なります。構成は以下の形式のコードを生成します：</p>
+<p>この拡張機能のために生成されるJavaScriptコードは、<strong>トラッキングイベント</strong>と<strong>Set To</strong>の設定により異なります。設定は以下の形式のコードを生成します：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">$</span>( <span style="color:#e6db74">&#34;**Primary Selector**&#34;</span> ).<span style="color:#a6e22e">on</span>( <span style="color:#e6db74">&#34;**Trigger On**&#34;</span>, <span style="color:#e6db74">&#34;**jQuery Selector**&#34;</span>, <span style="color:#66d9ef">function</span>() {
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">// ------------------
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">// Tracking Event: link (or view)
@@ -495,38 +500,38 @@ var utag_data = {
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">// Your code here
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
 </span></span><span style="display:flex;"><span>});
-</span></span></code></pre></div><p><strong>Tracking Event</strong>が<code>link</code>または<code>view</code>に構成されているとき、実行されるコードは単純に対応するutagトラッキング呼び出し、<code>utag.link()</code>または<code>utag.view()</code>への呼び出しです。<strong>Set To</strong>オプションを使用してデータレイヤー変数を構成する場合、それらはトラッキングメソッドに渡されるインラインオブジェクトとして表示されます。</p>
-<p><strong>Tracking Event</strong>を<strong>custom</strong>に構成すると、テキストボックスに提供するコードが実行されます。</p>
+</span></span></code></pre></div><p><strong>トラッキングイベント</strong>が<code>link</code>または<code>view</code>に設定されている場合、実行されるコードは単純に対応するutagトラッキング呼び出し、<code>utag.link()</code>または<code>utag.view()</code>の呼び出しです。<strong>Set To</strong>オプションを使用してデータレイヤー変数を設定する場合、それらはトラッキングメソッドに渡されるインラインオブジェクトとして表示されます。</p>
+<p><strong>トラッキングイベント</strong>を<strong>custom</strong>に設定すると、テキストボックスに提供したコードが実行されます。</p>
 <h3 id="セレクタの決定">セレクタの決定</h3>
 <p>ページ要素のセレクタを決定する方法は多数あります。この記事<a href="https://support.tealiumiq.com/en/support/solutions/articles/36000363465-how-to-determine-the-css-selector-of-an-element">要素のCSSセレクタの決定方法</a>で詳しく読むことができます。</p>
 <h3 id="操作の順序">操作の順序</h3>
 <p>この拡張機能は常にDOM Readyで実行されることに注意してください。これは、ページの読み込み時に一度だけ実行され、All Tags拡張機能からはバンド外で実行されます。<a href="/iq-tag-management/getting-started/order-of-operations/">操作の順序</a>について詳しく学びましょう。</p>
 <h3 id="データレイヤーとの連携">データレイヤーとの連携</h3>
-<p>この拡張機能では、条件を作成したり、トラッキング呼び出しで値を構成したりするために、データレイヤー内の変数を参照する必要があることがよくあります。これがどのように動作するかを知っておくことは重要です。</p>
+<p>この拡張機能では、条件を作成したり、トラッキング呼び出しで値を設定したりするために、データレイヤー内の変数を参照する必要があることがよくあります。これがどのように動作するかを理解しておくことは重要で、拡張機能が期待通りに動作していることを確認できます。</p>
 <h3 id="条件">条件</h3>
-<p>この拡張機能に条件を追加すると、値は<code>utag.data</code>オブジェクトで参照されます。これは、Universal Tagがページ内で実行されるときに作成されるデータオブジェクトです。</p>
-<h3 id="変数の構成">変数の構成</h3>
-<p>ビューイベントやリンクイベントをトリガーする場合、トラッキングイベントの一部としてデータレイヤー変数を構成することもあります。変数を構成しない場合、空のトラッキングが行われます：</p>
+<p>この拡張機能に条件を追加すると、値は<code>utag.data</code>オブジェクトで参照されます。これは、Universal Tagがページで実行されるときに作成されるデータオブジェクトです。</p>
+<h3 id="変数の設定">変数の設定</h3>
+<p>viewイベントやlinkイベントをトリガーする場合、トラッキングイベントの一部としてデータレイヤー変数を設定することも多いでしょう。変数を設定しない場合、空のトラッキング呼び出しが行われます：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">utag</span>.<span style="color:#a6e22e">link</span>(); <span style="color:#75715e">// or utag.view()
-</span></span></span></code></pre></div><p>変数を構成する場合、それらは構成され、匿名データオブジェクトとしてトラッキング呼び出しに渡されます。このような形になります：</p>
+</span></span></span></code></pre></div><p>変数を設定する場合、それらは設定され、匿名データオブジェクトとしてトラッキング呼び出しに渡されます。このような形になります：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">utag</span>.<span style="color:#a6e22e">link</span>({
 </span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;variable1&#34;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;value1&#34;</span>,
 </span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;variable2&#34;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;value2&#34;</span>
 </span></span><span style="display:flex;"><span>});
-</span></span></code></pre></div><p>構成できる値は標準のオプションを使用します：</p>
+</span></span></code></pre></div><p>設定する値は標準のオプションを使用できます：</p>
 <ul>
-<li><strong>Text</strong>: 値はそのまま渡されます。</li>
-<li><strong>Variable</strong>: 値は<code>utag.data</code>から取得されます。</li>
-<li><strong>JS Code</strong>: <code>$(this)</code>オブジェクトを参照して、イベントアイテムに基づく動的な値にアクセスできます。</li>
+<li><strong>Text</strong>：値はそのままの形で渡されます。</li>
+<li><strong>Variable</strong>：値は<code>utag.data</code>から取得されます。</li>
+<li><strong>JS Code</strong>：<code>$(this)</code>オブジェクトを参照して、イベントアイテムに基づく動的な値を取得できます。</li>
 </ul>
 <h3 id="例">例</h3>
-<p>ページ上にフィードバックフォームがあり、その送信ボタンのクリックを追跡して、入力されたコメントと訪問のログインユーザー名を収集したいとします。呼び出したいトラッキング呼び出しは次のようになります：</p>
+<p>ページ上にフィードバックフォームがあり、その送信ボタンのクリックをトラッキングして送信されたコメントと訪問者のログインユーザー名を収集したいとします。呼び出したいトラッキング呼び出しは次のようになります：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">utag</span>.<span style="color:#a6e22e">link</span>({
 </span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;tealium_event&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;feedback_submitted&#39;</span>,
 </span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;feedback_message&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&#39;</span>,
 </span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;username&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&#39;</span>
 </span></span><span style="display:flex;"><span>})
-</span></span></code></pre></div><p>このイベントをjQuery拡張機能で構成するには、送信ボタンのセレクタと3つのデータレイヤー変数が必要です。イベントの名前はハードコーディングされ、ユーザー名はすでにページUDOに記入されていますが、フィードバックメッセージはフォームから動的に取得する必要があります。この例では、フィードバックフォームのIDは<code>feedbackForm</code>です。</p>
+</span></span></code></pre></div><p>このイベントをjQuery拡張機能で設定するには、送信ボタンのセレクタと3つのデータレイヤー変数が必要です。イベントの名前はハードコーディングされ、ユーザー名はすでにページUDOに入力されていますが、フィードバックメッセージはフォームから動的に取得する必要があります。この例では、フィードバックフォームのIDは<code>feedbackForm</code>です。</p>
 <p>拡張機能でこれがどのように見えるか見てみましょう：</p>
 <figure><a class="slb" href="/images/iq-tag-management/jquery-extension-example.png"><img src="/images/iq-tag-management/jquery-extension-example.png"
          alt="jQuery extension example"
@@ -534,8 +539,8 @@ var utag_data = {
     </a>
 </figure>
 <p>この例では、ボタンのセレクタを決定する必要がありました：<code>input.submit-action</code>。</p>
-<p>ページ上に複数の送信ボタンがある可能性があるため、<strong>Primary Selector</strong>も構成して、セレクタをフィードバックフォームだけに絞り込みました。</p>
-<p>フィードバックテキストは、jQueryを使用してフォーム内の<code>textarea</code>入力の値を動的に取得します。また、<code>username</code>変数はすでにUDOに構成されているので、その値を再利用してトラッキング呼び出しに含めることができます。この拡張機能は、ページ上で次のコードを生成します：</p>
+<p>ページ上に複数の送信ボタンがある場合もあるため、<strong>Primary Selector</strong>も設定して、セレクタをフィードバックフォームだけに絞り込みました。</p>
+<p>フィードバックテキストは、jQueryを使用してフォーム内の<code>textarea</code>入力の値を動的に取得します。また、<code>username</code>変数はすでにUDOに設定されているため、その値を再利用してトラッキング呼び出しに含めることができます。この拡張機能は、ページ上で次のコードを生成します：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">jQuery</span>(<span style="color:#e6db74">&#39;#feedbackForm&#39;</span>).<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#39;mousedown&#39;</span>, <span style="color:#e6db74">&#39;input.submit-action&#39;</span>, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">e</span>) {
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">utag</span>.<span style="color:#a6e22e">link</span>({
 </span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;tealium_event&#34;</span>     <span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;feedback_submitted&#39;</span>,
@@ -567,11 +572,11 @@ var utag_data = {
   <a href="/iq-tag-management/extensions/extensions-list/jquery-clickhandler-extension/"
     class="inline-flex items-center-ns ba b--black-10 br3 pa3">
     <svg class="w1" data-icon="chevronLeft" viewBox="0 0 32 32" style="fill:currentcolor;height:100%">
-      <title>"jQuery clickHandler (jQuery v1.6 以下) "</title>
+      <title>"jQuery clickHandler (jQuery v1.6 およびそれ以下) "</title>
       <path d="M20 1 L24 5 L14 16 L24 27 L20 31 L6 16 z"></path>
     </svg>
    <section class="tr pl3">
-      <div>jQuery clickHandler (jQuery v1.6 以下)</div>
+      <div>jQuery clickHandler (jQuery v1.6 およびそれ以下)</div>
     </section>
   </a>
   
@@ -617,15 +622,15 @@ var utag_data = {
 
   <aside class="fixed-lTK mw5 right-0 f6 bl b--light-gray pv4 pv0-ns ph3 nested-copy-line-height">
       <p class="b ttu">このページで</p>
-      <nav id="TableOfContents"><ul class="toc-h2"><li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E5%89%8D%E6%8F%90%E6%9D%A1%E4%BB%B6" href="javascript:void(0)">前提条件</a></li>
-              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E4%BB%95%E7%B5%84%E3%81%BF" href="javascript:void(0)">仕組み</a></li>
-              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD%E3%81%AE%E4%BD%BF%E7%94%A8" href="javascript:void(0)">拡張機能の使用</a></li>
+      <nav id="TableOfContents"><ul class="toc-h2"><li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E5%BF%85%E8%A6%81%E6%9D%A1%E4%BB%B6" href="javascript:void(0)">必要条件</a></li>
+              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E5%8B%95%E4%BD%9C%E6%96%B9%E6%B3%95" href="javascript:void(0)">動作方法</a></li>
+              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD%E3%81%AE%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95" href="javascript:void(0)">拡張機能の使用方法</a></li>
               <ul class="toc-h3"><li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E7%94%9F%E6%88%90%E3%81%95%E3%82%8C%E3%82%8B%E3%82%B3%E3%83%BC%E3%83%89" href="javascript:void(0)">生成されるコード</a></li>
               <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%82%BB%E3%83%AC%E3%82%AF%E3%82%BF%E3%81%AE%E6%B1%BA%E5%AE%9A" href="javascript:void(0)">セレクタの決定</a></li>
               <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E6%93%8D%E4%BD%9C%E3%81%AE%E9%A0%86%E5%BA%8F" href="javascript:void(0)">操作の順序</a></li>
               <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%83%87%E3%83%BC%E3%82%BF%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC%E3%81%A8%E3%81%AE%E9%80%A3%E6%90%BA" href="javascript:void(0)">データレイヤーとの連携</a></li>
               <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E6%9D%A1%E4%BB%B6" href="javascript:void(0)">条件</a></li>
-              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E5%A4%89%E6%95%B0%E3%81%AE%E6%A7%8B%E6%88%90" href="javascript:void(0)">変数の構成</a></li>
+              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E5%A4%89%E6%95%B0%E3%81%AE%E8%A8%AD%E5%AE%9A" href="javascript:void(0)">変数の設定</a></li>
               <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E4%BE%8B" href="javascript:void(0)">例</a></li>
               </nav>
   </aside></nav>

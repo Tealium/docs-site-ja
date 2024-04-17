@@ -6,7 +6,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
      
-    <title>AudienceStreamを使用したMoments iQ専門知識の例 | モーメンツiQ | Tealium開発者ドキュメント</title>
+    <title>AudienceStreamを使用したMoments iQの専門知識の例 | モーメンツiQ | Tealium開発者ドキュメント</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
@@ -165,7 +165,7 @@ var utag_data = {
 </ul>
 </nav>
 
-<h1 class="lh-title mt30 mb3">AudienceStreamを使用したMoments iQ専門知識の例</h1>
+<h1 class="lh-title mt30 mb3">AudienceStreamを使用したMoments iQの専門知識の例</h1>
 </header>
 
 <div class="mv2 mid-gray fn w-100">
@@ -173,45 +173,37 @@ var utag_data = {
 
   
     <p class="f4 fw3 lh-copy">
-      この記事では、訪問を専門知識の評価を通じて導き、この情報で訪問のプロフィールをエンリッチするMoments iQの経験の例を提供します。
+      この記事では、訪問者を専門知識の評価を通じて導き、この情報で訪問者のプロフィールを豊かにするMoments iQの経験の例を提供します。
     </p>
   
 </div>
 
 <div class="prose nested-links" id="prose">
-  <p>次の例では、電子機器のサイトに経験を埋め込み、訪問にその専門知識のレベルを尋ねます。その後、この情報で訪問のプロフィールを豊かにします。これにより、訪問が製品ラインにどれだけ慣れているかを判断し、ホームインストールサービス、スピーカーケーブル、または延長保証などの追加サービスや製品を提案するために使用することができます。</p>
-<h2 id="必要条件">必要条件</h2>
+  <p>以下の例では、電子機器のサイトに経験を埋め込み、訪問者の専門知識のレベルを尋ねます。その後、この情報で訪問者のプロフィールを豊かにします。これにより、訪問者が製品ラインに対してどの程度の快適さを持っているかを判断するのに役立ちます。これは、ホームインストールサービス、スピーカーケーブル、または延長保証などの追加のサービスや製品を提案するために使用するかもしれません。</p>
+<h2 id="要件">要件</h2>
 <p>この例では、以下が必要です：</p>
 <ul>
 <li>Moments iQ。</li>
 <li>Tealium AudienceStream。</li>
-<li><a href="/server-side/attributes/data-layer-enrichment/">Data Layer Enrichment</a>が有効になっていること。</li>
-<li><a href="/client-side-tags/tealium-collect-tag/">Tealium Collect tag</a>の最新バージョン。</li>
+<li>最新版の <a href="/client-side-tags/tealium-collect-tag/">Tealium Collect tag</a>。</li>
 </ul>
-<h2 id="ステップ1データレイヤー変数の作成">ステップ1：データレイヤー変数の作成</h2>
-<p>以下のMoments iQ変数を<strong>CSVからの一括インポート</strong>を使用してデータレイヤーに追加します：</p>
-<pre tabindex="0"><code>momentsiq_question1, UDO Variable
-momentsiq_question1_type, UDO Variable
-momentsid_id, UDO Variable
-momentsiq_answer1, UDO Variable
-</code></pre><p>一括でデータレイヤー変数を追加する方法の詳細については、<a href="/iq-tag-management/data-layer/manage-variables/#bulk-import-variables">変数の管理</a>を参照してください。</p>
-<h2 id="ステップ2タグの作成">ステップ2：タグの作成</h2>
-<p>以下の経験はカテゴリーページに表示されます。</p>
-<p>訪問との最初のエンゲージメントのために、以下のプロパティを持つTealium Moments iQタグを追加して<a href="/early-access/moments-iq/manage/#create-a-moments-iq-tag">Moments iQ経験を作成</a>します：</p>
+<h2 id="ステップ1タグを作成する">ステップ1：タグを作成する</h2>
+<p>以下の経験はホームページに表示されます。</p>
+<p>訪問者との最初のエンゲージメントのために、以下のプロパティを持つTealium Moments iQタグを追加して<a href="/early-access/moments-iq/manage/#create-a-moments-iq-tag">Moments iQの経験を作成します</a>：</p>
 <ul>
-<li><strong>タイトル</strong>： <code>訪問の専門知識</code></li>
+<li><strong>タイトル</strong>： <code>訪問者の専門知識</code></li>
 <li><strong>経験の配置</strong>： <code>中央</code></li>
 <li><strong>経験のタイプ</strong>： <code>埋め込み</code></li>
 <li><strong>経験の位置</strong>： <code>開始後</code></li>
 <li><strong>リダイレクトがタブを開く</strong>： <code>偽</code></li>
 <li><strong>ヘッダーテキスト</strong>： <code>専門知識</code></li>
 <li><strong>メインテキスト</strong>： <code>あなたを知るために私たちを助けてください</code></li>
-<li><strong>質問テキスト</strong>： <code>ホームシアター機器に関するあなたの経験レベルは何ですか？</code></li>
+<li><strong>質問テキスト</strong>： <code>ホームシアター機器に対するあなたの経験レベルは何ですか？</code></li>
 <li><strong>回答タイプ</strong>： <code>ラジオボタン</code></li>
 <li><strong>回答</strong>： <code>[&quot;プロフェッショナル&quot;,&quot;アドバンスド&quot;,&quot;ベーシック&quot;,&quot;なし&quot;]</code></li>
 </ul>
 <p><strong>配置セレクター</strong>の下に、経験をロードしたいCSSプロパティを入力します（例えば、<code>div.col-main</code>）。</p>
-<h3 id="ロードルールの作成">ロードルールの作成</h3>
+<h3 id="ロードルールを作成する">ロードルールを作成する</h3>
 <p>経験をホームページでのみロードするために、以下のプロパティを持つ<strong>ホームページ</strong>ロードルールを作成します：</p>
 <ul>
 <li><strong>変数</strong>： <code>js.page_type</code></li>
@@ -219,8 +211,8 @@ momentsiq_answer1, UDO Variable
 <li><strong>値</strong>： <code>ホーム</code></li>
 </ul>
 <p>この例の目的のために、タグUIDが<code>123</code>であると仮定しましょう。</p>
-<h2 id="ステップ4audiencestream属性の作成">ステップ4：AudienceStream属性の作成</h2>
-<p>経験からの値で属性をエンリッチするためにAudienceStreamを構成するには、以下の手順を使用します：</p>
+<h2 id="ステップ2audiencestreamの属性を作成する">ステップ2：AudienceStreamの属性を作成する</h2>
+<p>経験からの値で属性を豊かにするためにAudienceStreamを設定するには、以下の手順を使用します：</p>
 <ol>
 <li>まだ存在しない場合は、以下の属性を作成します：
 <ul>
@@ -236,20 +228,19 @@ momentsiq_answer1, UDO Variable
 </ul>
 </li>
 </ol>
-<p>複数の経験や経験のセットを最終的に作成するため、経験からの<code>tealium_event</code>値がそれらが意図する属性だけをエンリッチすることを確認する必要があります。適切な経験から<code>tealium_event</code>値が来ているかどうかを確認するために、属性のルールを更新します。</p>
-<p>この例では、<code>momentsiq_id</code>が作成した経験のUIDと一致するかどうかを確認するために、<strong>Customer_Expertise</strong>訪問属性のルールを更新します。これにより、この例の経験だけが<strong>Customer_Expertise</strong>属性をエンリッチすることを保証します。</p>
-<pre tabindex="0"><code>Set Customer_Expertise to momentsiq_answer1
-WHEN Any event
-IF &#34;Expertise Level Answered&#34;
-  tealium_event equals momentsiq_submit
-  AND
-  momentsiq_id equals 123
-</code></pre><h2 id="結果">結果</h2>
-<p>訪問がホームページをロードすると、ホームページは<code>div.col-main</code>プロパティの開始後に経験を埋め込みます。</p>
+<p>複数の経験や経験のセットを最終的に作成するため、<code>tealium_event</code>の値が適切な経験からのみ属性を豊かにするように確認する必要があります。属性のルールを更新して、<code>tealium_event</code>の値が適切な経験から来ているかどうかを確認します。</p>
+<p>この例では、<code>momentsiq_id</code>が作成した経験のUIDと一致するかどうかを確認するために、<strong>Customer_Expertise</strong>訪問属性のルールを更新します。これにより、この例の経験だけが<strong>Customer_Expertise</strong>属性を豊かにします。</p>
+<figure><a class="slb" href="/images/early-access/moments-iq/moments-iq-expertise-conditions.png"><img src="/images/early-access/moments-iq/moments-iq-expertise-conditions.png"
+         alt="属性の条件"
+         title="属性の条件"/>
+    </a>
+</figure>
+<h2 id="結果">結果</h2>
+<p>訪問者がホームページをロードすると、ホームページは<code>div.col-main</code>プロパティの開始後に経験を埋め込みます。</p>
 <figure><a class="slb" href="/images/moments-iq/momentsiq-example-home-theater.png"><img src="/images/moments-iq/momentsiq-example-home-theater.png"/>
     </a>
 </figure>
-<p>顧客が質問に答えると、その答えは訪問のプロフィールに保存され、その答えに基づいてバッジが割り当てられます。</p>
+<p>顧客が質問に答えると、その答えは訪問者のプロフィールに保存され、その答えに基づいてバッジが割り当てられます。</p>
 
 </div>
 
@@ -309,11 +300,10 @@ IF &#34;Expertise Level Answered&#34;
 
   <aside class="fixed-lTK mw5 right-0 f6 bl b--light-gray pv4 pv0-ns ph3 nested-copy-line-height">
       <p class="b ttu">このページで</p>
-      <nav id="TableOfContents"><ul class="toc-h2"><li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E5%BF%85%E8%A6%81%E6%9D%A1%E4%BB%B6" href="javascript:void(0)">必要条件</a></li>
-              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%82%B9%E3%83%86%E3%83%83%E3%83%971%E3%83%87%E3%83%BC%E3%82%BF%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC%E5%A4%89%E6%95%B0%E3%81%AE%E4%BD%9C%E6%88%90" href="javascript:void(0)">ステップ1：データレイヤー変数の作成</a></li>
-              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%82%B9%E3%83%86%E3%83%83%E3%83%972%E3%82%BF%E3%82%B0%E3%81%AE%E4%BD%9C%E6%88%90" href="javascript:void(0)">ステップ2：タグの作成</a></li>
-              <ul class="toc-h3"><li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%83%AD%E3%83%BC%E3%83%89%E3%83%AB%E3%83%BC%E3%83%AB%E3%81%AE%E4%BD%9C%E6%88%90" href="javascript:void(0)">ロードルールの作成</a></li>
-              </ul><li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%82%B9%E3%83%86%E3%83%83%E3%83%974audiencestream%E5%B1%9E%E6%80%A7%E3%81%AE%E4%BD%9C%E6%88%90" href="javascript:void(0)">ステップ4：AudienceStream属性の作成</a></li>
+      <nav id="TableOfContents"><ul class="toc-h2"><li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E8%A6%81%E4%BB%B6" href="javascript:void(0)">要件</a></li>
+              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%82%B9%E3%83%86%E3%83%83%E3%83%971%E3%82%BF%E3%82%B0%E3%82%92%E4%BD%9C%E6%88%90%E3%81%99%E3%82%8B" href="javascript:void(0)">ステップ1：タグを作成する</a></li>
+              <ul class="toc-h3"><li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%83%AD%E3%83%BC%E3%83%89%E3%83%AB%E3%83%BC%E3%83%AB%E3%82%92%E4%BD%9C%E6%88%90%E3%81%99%E3%82%8B" href="javascript:void(0)">ロードルールを作成する</a></li>
+              </ul><li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%82%B9%E3%83%86%E3%83%83%E3%83%972audiencestream%E3%81%AE%E5%B1%9E%E6%80%A7%E3%82%92%E4%BD%9C%E6%88%90%E3%81%99%E3%82%8B" href="javascript:void(0)">ステップ2：AudienceStreamの属性を作成する</a></li>
               <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E7%B5%90%E6%9E%9C" href="javascript:void(0)">結果</a></li>
               </nav>
   </aside></nav>

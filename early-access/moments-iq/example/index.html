@@ -173,65 +173,55 @@ var utag_data = {
 
   
     <p class="f4 fw3 lh-copy">
-      この記事では、訪問を専門知識の評価を通じて導くMoments iQの経験の一例を提供します。
+      この記事では、訪問者を専門知識の評価を通じて導くMoments iQの経験の一例を提供します。
     </p>
   
 </div>
 
 <div class="prose nested-links" id="prose">
-  <p>以下の例では、電子機器のサイトに体験を埋め込み、訪問にその専門知識のレベルを尋ねます。これにより、訪問が製品ラインにどれだけ慣れているかを判断し、それをホームインストールサービスやスピーカーケーブルや延長保証などの追加サービスや製品の提案に利用することができます。</p>
+  <p>以下の例では、訪問者の専門知識レベルを尋ねるために、電子機器のサイトに体験を埋め込みます。これにより、訪問者が製品ラインにどれだけ慣れているかを判断し、それをホームインストールサービスやスピーカーケーブルや延長保証などの追加のアクセサリーを提案するために使用することができます。</p>
 <h2 id="必要条件">必要条件</h2>
 <p>この例では、以下が必要です：</p>
 <ul>
-<li>Moments iQ。</li>
+<li>Moments iQ.</li>
 </ul>
-<h2 id="ステップ1データレイヤー変数の作成">ステップ1：データレイヤー変数の作成</h2>
-<p>以下のMoments iQ変数を<strong>CSVから一括インポート</strong>を使用してデータレイヤーに追加します：</p>
-<pre tabindex="0"><code>momentsiq_question1, UDO Variable
-momentsiq_question1_type, UDO Variable
-momentsid_id, UDO Variable
-momentsiq_answer1, UDO Variable
-</code></pre><p>データレイヤー変数を一括で追加する方法の詳細については、<a href="/iq-tag-management/data-layer/manage-variables/#bulk-import-variables">変数の管理</a>を参照してください。</p>
-<h2 id="ステップ2タグの作成">ステップ2：タグの作成</h2>
-<p>以下の体験はカテゴリーページに表示されます。</p>
-<p>訪問との最初のエンゲージメントのために、以下のプロパティを持つTealium Moments iQタグを追加して<a href="/early-access/moments-iq/manage/#create-a-moments-iq-tag">Moments iQ体験を作成</a>します：</p>
+<h2 id="ステップ1-タグの作成">ステップ1 タグの作成</h2>
+<p>以下の体験はホームページに表示されます。</p>
+<p><a href="/early-access/moments-iq/manage/#create-a-moments-iq-tag">Create a Moments iQ experience</a> 訪問者との最初のエンゲージメントのために、以下のプロパティを持つTealium Moments iQタグを追加します：</p>
 <ul>
-<li><strong>タイトル</strong>： <code>訪問の専門知識</code></li>
-<li><strong>体験の配置</strong>： <code>中央</code></li>
-<li><strong>体験のタイプ</strong>： <code>埋め込み</code></li>
-<li><strong>体験の位置</strong>： <code>開始後</code></li>
-<li><strong>リダイレクトがタブを開く</strong>： <code>偽</code></li>
-<li><strong>ヘッダーテキスト</strong>： <code>専門知識</code></li>
-<li><strong>メインテキスト</strong>： <code>あなたをよりよく知るためにご協力ください</code></li>
-<li><strong>質問テキスト</strong>： <code>ホームシアター機器に関するあなたの経験レベルは何ですか？</code></li>
-<li><strong>回答タイプ</strong>： <code>ラジオボタン</code></li>
-<li><strong>回答</strong>： <code>[&quot;プロフェッショナル&quot;,&quot;アドバンスド&quot;,&quot;ベーシック&quot;,&quot;なし&quot;]</code></li>
+<li><strong>タイトル</strong>: <code>訪問者の専門知識</code></li>
+<li><strong>体験の配置</strong>: <code>中央</code></li>
+<li><strong>体験のタイプ</strong>: <code>埋め込み</code></li>
+<li><strong>体験の位置</strong>: <code>開始後</code></li>
+<li><strong>リダイレクトがタブを開く</strong>: <code>偽</code></li>
+<li><strong>ヘッダーテキスト</strong>: <code>専門知識</code></li>
+<li><strong>メインテキスト</strong>: <code>あなたを知るための助け</code></li>
+<li><strong>質問テキスト</strong>: <code>ホームシアター機器に関するあなたの経験レベルは何ですか？</code></li>
+<li><strong>回答タイプ</strong>: <code>ラジオボタン</code></li>
+<li><strong>回答</strong>: <code>[&quot;プロフェッショナル&quot;,&quot;アドバンスド&quot;,&quot;ベーシック&quot;,&quot;なし&quot;]</code></li>
 </ul>
 <p><strong>配置セレクター</strong>の下に、体験をロードしたいCSSプロパティを入力します（例えば、<code>div.col-main</code>）。</p>
 <h3 id="ロードルールの作成">ロードルールの作成</h3>
-<p>体験をホームページでのみロードするために、以下のプロパティを持つ<strong>ホームページ</strong>ロードルールを作成します：</p>
+<p>ホームページでのみ体験をロードするために、以下のプロパティを持つ<strong>ホームページ</strong>ロードルールを作成します：</p>
 <ul>
-<li><strong>変数</strong>： <code>js.page_type</code></li>
-<li><strong>演算子</strong>： <code>equals (ignore case)</code></li>
-<li><strong>値</strong>： <code>home</code></li>
+<li><strong>変数</strong>: <code>js.page_type</code></li>
+<li><strong>演算子</strong>: <code>等しい（大文字小文字を無視）</code></li>
+<li><strong>値</strong>: <code>home</code></li>
 </ul>
-<h2 id="ステップ3回答の保存">ステップ3：回答の保存</h2>
-<p>Moments iQ体験への訪問の回答を使用して訪問の体験をパーソナライズするためには、アプリケーションとユースケースに応じて、訪問の回答をローカル保存またはセッション保存に保存する必要があります。</p>
-<p>これを達成するために、JavaScript Code拡張機能を使用して、動的キーを指定するために変数<code>momentsiq_id</code>（Moments iQタグのUID）を使用して、回答をローカル保存に保存します。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">setItem</span>(<span style="color:#e6db74">&#39;moments_answer_&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span>[<span style="color:#e6db74">&#39;momentsiq_id&#39;</span>], <span style="color:#a6e22e">b</span>[<span style="color:#e6db74">&#39;momentsiq_answer1&#39;</span>]);
-</span></span></code></pre></div><p>拡張機能に条件を追加して、<code>momentsiq_submit</code>イベントが発生したときにのみ実行されるようにします：</p>
-<figure><a class="slb" href="/images/moments-iq/moments-js-code-extension-condition.png"><img src="/images/moments-iq/moments-js-code-extension-condition.png"/>
+<p>この例では、タグUIDが<code>123</code>であると仮定します。</p>
+<h2 id="ステップ2-回答を保存する">ステップ2: 回答を保存する</h2>
+<p>訪問者のMoments iQ体験への回答を使用して訪問者の体験をパーソナライズするためには、訪問者の回答を保存する必要があります。この例では、クライアントサイドの機能と訪問者のウェブブラウザのみを使用しているため、Persist data values拡張機能を使用してクッキーに値を保存します。</p>
+<p>以下の例では、訪問者のブラウザがクッキーを保存する設定になっている限り、クッキー<code>MomentsiQExp123</code>に値を保存しています：</p>
+<figure><a class="slb" href="/images/early-access/moments-iq/manage-moments-persist-data-value.png"><img src="/images/early-access/moments-iq/manage-moments-persist-data-value.png"
+         alt="Persist Data Value"
+         title="Persist Data Value"/>
     </a>
 </figure>
-<p>結果としてローカル保存に保存されるキー/値は次のようになります：</p>
-<figure><a class="slb" href="/images/moments-iq/moments-local-storage.png"><img src="/images/moments-iq/moments-local-storage.png"/>
-    </a>
-</figure>
-<p>保存された値を取得する必要がある場合は：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">answer</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#e6db74">&#39;moments_answer_&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span>[<span style="color:#e6db74">&#39;momentsiq_id&#39;</span>]);
-</span></span></code></pre></div><p>詳細については、<a href="/iq-tag-management/data-layer/data-layer-variables/#local-and-session-storage">ローカル保存とセッション保存</a>と<a href="/iq-tag-management/extensions/extensions-list/advanced-javascript-code-extension/">Advanced JavaScript Code Extension</a>を参照してください。</p>
+<p>拡張機能に条件を追加して、<code>momentsiq_submit</code>イベントが発生したときにのみ実行されるようにします。この場合、<code>momentsiq_id</code>が<code>123</code>に等しいかどうかを確認します。</p>
+<p>JavaScript拡張機能を通じて<code>b[&quot;MomentsiQExp123&quot;,&quot;momentsiq_answer1&quot;]</code>または<code>MomentsiQExp123</code>クッキー変数を通じてクッキーからデータにアクセスすることができます。</p>
+<p>詳細については、<a href="/iq-tag-management/extensions/extensions-list/persist-data-value-extension/">Persist data value extension</a>を参照してください。</p>
 <h2 id="結果">結果</h2>
-<p>訪問がホームページをロードすると、ホームページは<code>div.col-main</code>要素の開始後に体験を埋め込みます。</p>
+<p>訪問者がホームページをロードすると、ホームページは<code>div.col-main</code>要素の開始後に体験を埋め込みます。</p>
 <figure><a class="slb" href="/images/moments-iq/momentsiq-example-home-theater.png"><img src="/images/moments-iq/momentsiq-example-home-theater.png"/>
     </a>
 </figure>
@@ -310,10 +300,9 @@ momentsiq_answer1, UDO Variable
   <aside class="fixed-lTK mw5 right-0 f6 bl b--light-gray pv4 pv0-ns ph3 nested-copy-line-height">
       <p class="b ttu">このページで</p>
       <nav id="TableOfContents"><ul class="toc-h2"><li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E5%BF%85%E8%A6%81%E6%9D%A1%E4%BB%B6" href="javascript:void(0)">必要条件</a></li>
-              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%82%B9%E3%83%86%E3%83%83%E3%83%971%E3%83%87%E3%83%BC%E3%82%BF%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC%E5%A4%89%E6%95%B0%E3%81%AE%E4%BD%9C%E6%88%90" href="javascript:void(0)">ステップ1：データレイヤー変数の作成</a></li>
-              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%82%B9%E3%83%86%E3%83%83%E3%83%972%E3%82%BF%E3%82%B0%E3%81%AE%E4%BD%9C%E6%88%90" href="javascript:void(0)">ステップ2：タグの作成</a></li>
+              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%82%B9%E3%83%86%E3%83%83%E3%83%971-%E3%82%BF%E3%82%B0%E3%81%AE%E4%BD%9C%E6%88%90" href="javascript:void(0)">ステップ1 タグの作成</a></li>
               <ul class="toc-h3"><li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%83%AD%E3%83%BC%E3%83%89%E3%83%AB%E3%83%BC%E3%83%AB%E3%81%AE%E4%BD%9C%E6%88%90" href="javascript:void(0)">ロードルールの作成</a></li>
-              </ul><li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%82%B9%E3%83%86%E3%83%83%E3%83%973%E5%9B%9E%E7%AD%94%E3%81%AE%E4%BF%9D%E5%AD%98" href="javascript:void(0)">ステップ3：回答の保存</a></li>
+              </ul><li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%82%B9%E3%83%86%E3%83%83%E3%83%972-%E5%9B%9E%E7%AD%94%E3%82%92%E4%BF%9D%E5%AD%98%E3%81%99%E3%82%8B" href="javascript:void(0)">ステップ2: 回答を保存する</a></li>
               <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E7%B5%90%E6%9E%9C" href="javascript:void(0)">結果</a></li>
               </nav>
   </aside></nav>

@@ -6,7 +6,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
      
-    <title>jQuery clickHandler (jQuery v1.6 以下) 拡張機能 | 拡張機能のリスト | Tealium開発者ドキュメント</title>
+    <title>jQuery clickHandler (jQuery v1.6 およびそれ以下) 拡張機能 | 拡張機能のリスト | Tealium開発者ドキュメント</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
@@ -231,7 +231,7 @@ var utag_data = {
         <a href="/iq-tag-management/extensions/extensions-list/e-commerce-extension/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".e-commerce-extension">Eコマース</a></li><li data-level="4" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
         <a href="/iq-tag-management/extensions/extensions-list/advanced-javascript-code-extension/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".advanced-javascript-code-extension">JavaScriptコードの拡張機能</a></li><li data-level="4" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
         <a href="/iq-tag-management/extensions/extensions-list/javascript-code-basic-extension/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".javascript-code-extension-basic">JavaScriptコード（基本）</a></li><li data-level="4" class="selected relative w-100 hover-accent-color-light fw4 f5  ind2">
-        <a href="/iq-tag-management/extensions/extensions-list/jquery-clickhandler-extension/" class="db link pr2 pv2  bg-secondary primary-color " data-target=".jquery-clickhandler-extension">jQuery clickHandler (jQuery v1.6 以下)</a></li><li data-level="4" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
+        <a href="/iq-tag-management/extensions/extensions-list/jquery-clickhandler-extension/" class="db link pr2 pv2  bg-secondary primary-color " data-target=".jquery-clickhandler-extension">jQuery clickHandler (jQuery v1.6 およびそれ以下)</a></li><li data-level="4" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
         <a href="/iq-tag-management/extensions/extensions-list/jquery-onhandler-extension/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".jquery-onhandler-extension">jQuery onHandler (jQuery 1.7以降)</a></li><li data-level="4" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
         <a href="/iq-tag-management/extensions/extensions-list/flatten-json-objects-extension/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".flatten-json-objects-extension">JSONオブジェクトのフラット化</a></li><li data-level="4" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
         <a href="/iq-tag-management/extensions/extensions-list/tealium-events-extension/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".tealium-events-extension">Tealiumイベント</a></li><li data-level="4" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
@@ -424,7 +424,7 @@ var utag_data = {
 </ul>
 </nav>
 
-<h1 class="lh-title mt30 mb3">jQuery clickHandler (jQuery v1.6 以下) 拡張機能</h1>
+<h1 class="lh-title mt30 mb3">jQuery clickHandler (jQuery v1.6 およびそれ以下) 拡張機能</h1>
 </header>
 
 <div class="mv2 mid-gray fn w-100">
@@ -432,52 +432,56 @@ var utag_data = {
 
   
     <p class="f4 fw3 lh-copy">
-      jQueryのバージョン1.6以下で要素がクリックされたときにトラッキングイベントをトリガーするために、jQuery clickHandler拡張機能を使用します。
+      jQueryのバージョン1.6およびそれ以下で要素がクリックされたときにトラッキングイベントをトリガーするために、jQuery clickHandler拡張機能を使用します。
     </p>
   
 </div>
 
 <div class="prose nested-links" id="prose">
-  <h2 id="前提条件">前提条件</h2>
+  <p class="note"><i class="fa fa-exclamation-triangle"></i>組み込みのイベントリスナーシステムは、jQueryを必要とせずにイベントのリスニングとトラッキングイベントのトリガーを行うノーコードソリューションを提供します。詳細については、<a href="/iq-tag-management/events/about/">イベントについて</a>を参照してください。</p>
+<h2 id="必要条件">必要条件</h2>
+<p>この拡張機能には以下が必要です：</p>
 <ul>
-<li><a href="/iq-tag-management/extensions/about/">拡張機能について</a></li>
-<li>jQuery バージョン 1.6 以下</li>
+<li>jQueryバージョン1.6およびそれ以前</li>
 </ul>
-<h2 id="仕組み">仕組み</h2>
-<p>jQuery clickHandler拡張機能は、トラッキング対象となるjQueryセレクタ識別子を選択し、次にトリガーアクションイベントのタイプを選択することで動作します。訪問がクリックしたリンク、ページビュー、またはカスタムイベントを、カスタムJavaScriptコードを提供することでトラッキングすることができます。</p>
-<p><code>utag.view()</code>、<code>utag.link()</code>、または独自のカスタムコードをトリガーすることができます。拡張機能で構成した変数は、イベントデータとして自動的に<code>utag.view</code>と<code>utag.link</code>に渡されます。</p>
+<h2 id="動作方法">動作方法</h2>
+<p>jQuery clickHandler拡張機能は、トラッキング対象となるjQueryセレクタ識別子を選択し、次にトリガーアクションイベントのタイプを選択することで動作します。訪問者がクリックしたリンク、ページビュー、またはカスタムJavaScriptコードを提供することで任意のカスタムイベントをトラッキングすることができます。</p>
+<p><code>utag.view()</code>、<code>utag.link()</code>、または独自のカスタムコードをトリガーすることができます。拡張機能で設定した変数は、イベントデータとして自動的に<code>utag.view</code>および<code>utag.link</code>に渡されます。</p>
 <h2 id="拡張機能の使用">拡張機能の使用</h2>
-<p>拡張機能が追加されると、以下の構成オプションが利用可能になります：</p>
+<p>拡張機能が追加されると、以下の設定オプションが利用可能になります：</p>
 <ul>
 <li>
 <p><strong>jQueryセレクタ</strong>：トラッキング対象の要素のjQuery識別子。</p>
-  <p class="note"><i class="fa fa-exclamation-triangle"></i>要素のjQueryセレクタを決定するには、Web Companionの<a href="/iq-tag-management/troubleshooting/web-companion/">ページ内要素セレクタ</a>ツールを使用してください。</p>
+  <p class="note"><i class="fa fa-exclamation-triangle"></i>要素のjQueryセレクタを決定するには、Web Companionの<a href="/iq-tag-management/troubleshooting/web-companion/">On-page Element Selector</a>ツールを使用してください。</p>
 </li>
 <li>
-<p><strong>トリガー</strong>：この拡張機能をトリガーするイベントをドロップダウンメニューから選択します。</p>
+<p><strong>Trigger On</strong>：この拡張機能をトリガーするイベントをドロップダウンメニューから選択します。</p>
 <ul>
 <li><strong>click</strong>：（デフォルト）ボタンが要素上で押されてから離されます。</li>
 <li><strong>mousedown</strong>：（推奨）要素上でボタンが押されます。</li>
 <li><strong>mouseup</strong>：ポインタが要素上にある状態でボタンが離されます。</li>
 <li><strong>mouseover</strong>：ポインタが要素上に保持されます。</li>
 <li><strong>change</strong>：<code>&lt;input&gt;</code>要素または<code>&lt;select&gt;</code>要素の値が変更されます。</li>
-<li><strong>blur</strong>：マウスが要素から離れたときや<strong>Tab</strong>キーが押されたときに要素がフォーカスを失います。</li>
-<li><strong>focus</strong>：マウスクリックや<strong>Tab</strong>キーによって要素が選択されたときにフォーカスが当てられます。</li>
+<li><strong>blur</strong>：マウスがそれから離れたときや<strong>Tab</strong>キーが押されたときに要素がフォーカスを失います。</li>
+<li><strong>focus</strong>：マウスクリックまたは<strong>Tab</strong>キーによって要素が選択されたときにフォーカスが当てられます。</li>
 </ul>
 </li>
 <li>
-<p><strong>トラッキングイベント</strong>：トラッキングしたいイベントをドロップダウンメニューから選択します。</p>
+<p><strong>Tracking Event</strong>：トラッキングしたいイベントをドロップダウンメニューから選択します。</p>
 <ul>
 <li><strong>link</strong>：（デフォルト）<code>utag.link()</code>への呼び出しをトリガーします。</li>
 <li><strong>view</strong>：<code>utag.view()</code>への呼び出しをトリガーします。</li>
-<li><strong>custom</strong>：カスタムJavaScriptコードをトリガーします。このオプションを選択すると表示される組み込みエディタにカスタムコードを入力します。</li>
+<li><strong>custom</strong>：カスタムJavaScriptコードをトリガーします。このオプションが選択されると表示される組み込みエディタにカスタムコードを入力します。</li>
 </ul>
 </li>
 <li>
-<p><strong>Set</strong>：構成したい変数を選択します。</p>
+<p><strong>Set</strong>：設定したい変数を選択します。</p>
 </li>
 <li>
-<p><strong>To</strong>：変数に割り当てたい値のタイプを選択します。隣接するテキストフィールドに新しい値を入力します。さらに変数を構成したい場合は、テキストボックスの最後にある**+**ボタンをクリックします。</p>
+<p><strong>To</strong>：変数に割り当てたい値のタイプを選択します。隣接するテキストフィールドに新しい値を入力します。さらに多くの変数を設定したい場合は、テキストボックスの最後にある**+**ボタンをクリックします。</p>
+</li>
+<li>
+<p><strong>Condition</strong>：（オプション）拡張機能が実行されるかどうかを制御する条件を追加することができます。</p>
 </li>
 </ul>
 
@@ -554,8 +558,8 @@ var utag_data = {
 
   <aside class="fixed-lTK mw5 right-0 f6 bl b--light-gray pv4 pv0-ns ph3 nested-copy-line-height">
       <p class="b ttu">このページで</p>
-      <nav id="TableOfContents"><ul class="toc-h2"><li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E5%89%8D%E6%8F%90%E6%9D%A1%E4%BB%B6" href="javascript:void(0)">前提条件</a></li>
-              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E4%BB%95%E7%B5%84%E3%81%BF" href="javascript:void(0)">仕組み</a></li>
+      <nav id="TableOfContents"><ul class="toc-h2"><li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E5%BF%85%E8%A6%81%E6%9D%A1%E4%BB%B6" href="javascript:void(0)">必要条件</a></li>
+              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E5%8B%95%E4%BD%9C%E6%96%B9%E6%B3%95" href="javascript:void(0)">動作方法</a></li>
               <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD%E3%81%AE%E4%BD%BF%E7%94%A8" href="javascript:void(0)">拡張機能の使用</a></li>
               </nav>
   </aside></nav>
