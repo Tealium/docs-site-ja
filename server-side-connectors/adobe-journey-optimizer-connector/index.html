@@ -400,13 +400,6 @@ var utag_data = {
 <li>APIエンドポイント：<code>https://platform.adobe.io</code></li>
 <li>ドキュメンテーション：<a href="https://developer.adobe.com/journey-optimizer-apis/">Adobe Journey Optimizer APIs</a></li>
 </ul>
-<h2 id="バッチ制限">バッチ制限</h2>
-<p>このコネクタは、ベンダーへの大量データ転送をサポートするためにバッチリクエストを使用します。詳細については、<a href="/server-side/connectors/batched-actions/">バッチアクション</a>を参照してください。リクエストは、以下のいずれかの閾値が達成されるか、プロファイルが公開されるまでキューに入れられます：</p>
-<ul>
-<li>リクエストの最大数：20</li>
-<li>最古のリクエストからの最大時間：5分</li>
-<li>リクエストの最大サイズ：1 MB</li>
-</ul>
 <h2 id="アクション">アクション</h2>
 <table>
 <thead>
@@ -418,14 +411,19 @@ var utag_data = {
 </thead>
 <tbody>
 <tr>
-<td>単一メッセージ実行</td>
+<td>単一メッセージ実行（リアルタイム）</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>単一メッセージ実行（バッチ）</td>
 <td>✓</td>
 <td>✓</td>
 </tr>
 </tbody>
 </table>
 <h2 id="設定">設定</h2>
-<p>コネクタマーケットプレイスに移動し、新しいコネクタを追加します。コネクタの追加方法の一般的な指示については、<a href="/server-side/connectors/about/">コネクタについて</a>を参照してください。</p>
+<p>コネクタマーケットプレイスに移動し、新しいコネクタを追加します。コネクタの追加方法の一般的な指示については、<a href="/server-side/connectors/about/">About Connectors</a>を参照してください。</p>
 <p>コネクタを追加した後、以下の設定を行います：</p>
 <ul>
 <li><strong>クライアントID</strong><br>
@@ -439,7 +437,13 @@ API呼び出しがデフォルト（prod）以外の環境を参照するよう�
 </ul>
 <h2 id="アクション-1">アクション</h2>
 <p>以下のセクションでは、各アクションでサポートされているパラメータをリストします。</p>
-<h3 id="単一メッセージ実行">単一メッセージ実行</h3>
+<h3 id="単一メッセージ実行バッチ">単一メッセージ実行（バッチ）</h3>
+<p>このアクションは、ベンダーへの大量のデータ転送をサポートするためにバッチリクエストを使用します。詳細については、<a href="/server-side/connectors/batched-actions/">Batched Actions</a>を参照してください。リクエストは、以下の閾値のいずれかが満たされるか、プロファイルが公開されるまでキューに入れられます：</p>
+<ul>
+<li>リクエストの最大数：20</li>
+<li>最古のリクエストからの最大時間：5分</li>
+<li>リクエストの最大サイズ：1 MB</li>
+</ul>
 <h4 id="パラメータ">パラメータ</h4>
 <table>
 <thead>
@@ -490,7 +494,7 @@ API呼び出しがデフォルト（prod）以外の環境を参照するよう�
 </tr>
 <tr>
 <td>モバイル電話番号</td>
-<td>SMSテキストメッセージの受信者の携帯電話番号。</td>
+<td>SMSテキストメッセージ用の受信者の携帯電話番号。</td>
 </tr>
 <tr>
 <td>プロファイル</td>
@@ -498,11 +502,78 @@ API呼び出しがデフォルト（prod）以外の環境を参照するよう�
 </tr>
 <tr>
 <td>テンプレート変数</td>
-<td><strong>テンプレート</strong>のデータ入力としてテンプレート変数を提供します。使用例については、<a href="/server-side/connectors/webhook-connectors/template-variables/">テンプレート変数ガイド</a>のドキュメンテーションを参照してください。<br>ドット表記法でネストしたテンプレート変数の名前を指定します。例：<code>items.name</code>。<br>ネストしたテンプレート変数は通常、データレイヤーリスト属性から作成されます。</td>
+<td><strong>テンプレート</strong>のデータ入力としてテンプレート変数を提供します。使用例については、<a href="/server-side/connectors/webhook-connectors/template-variables/">Template Variables Guide</a>のドキュメンテーションを参照してください。<br>ドット表記法でネストしたテンプレート変数を名付けます。例：<code>items.name</code>。<br>ネストしたテンプレート変数は通常、データレイヤーリスト属性から作成されます。</td>
 </tr>
 <tr>
 <td>テンプレート</td>
-<td>ボディパラメータで参照されるテンプレートを提供します。<a href="/server-side/connectors/webhook-connectors/trimou-templating-engine/">テンプレートガイド</a>を参照してください。<br>テンプレートは、例えば<code>{{SomeTemplateName}}</code>のように、サポートされているフィールドに名前で注入されます。</td>
+<td>ボディパラメータで参照されるテンプレートを提供します。<a href="/server-side/connectors/webhook-connectors/trimou-templating-engine/">Templates Guide</a>を参照してください。<br>テンプレートは、名前で二重中括弧を使用してサポートされるフィールドに挿入されます。例：<code>{{SomeTemplateName}}</code>。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="単一メッセージ実行リアルタイム">単一メッセージ実行（リアルタイム）</h3>
+<h4 id="パラメータ-1">パラメータ</h4>
+<table>
+<thead>
+<tr>
+<th><strong>パラメータ</strong></th>
+<th><strong>説明</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>キャンペーンID</td>
+<td>（必須）キャンペーン識別子。</td>
+</tr>
+<tr>
+<td>リクエストID</td>
+<td>ユニークなリクエスト識別子。</td>
+</tr>
+<tr>
+<td>ネームスペース</td>
+<td>AEPプロファイルのネームスペース。</td>
+</tr>
+</tbody>
+</table>
+<h4 id="受信者パラメータ-1">受信者パラメータ</h4>
+<table>
+<thead>
+<tr>
+<th><strong>パラメータ</strong></th>
+<th><strong>説明</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>タイプ</td>
+<td>（必須）受信者のタイプ。例えば、<code>aep</code>。</td>
+</tr>
+<tr>
+<td>ユーザーID</td>
+<td>（必須）AEPプロファイル識別子。</td>
+</tr>
+<tr>
+<td>コンテキスト</td>
+<td>メッセージ内容の動的変数置換に使用されるコンテキストデータ。</td>
+</tr>
+<tr>
+<td>メールアドレス</td>
+<td>受信者のメールアドレスで、外部ユーザーIDでもあります。</td>
+</tr>
+<tr>
+<td>モバイル電話番号</td>
+<td>SMSテキストメッセージ用の受信者の携帯電話番号。</td>
+</tr>
+<tr>
+<td>プロファイル</td>
+<td>メッセージ内容の動的変数置換に使用されるプロファイルデータ。</td>
+</tr>
+<tr>
+<td>テンプレート変数</td>
+<td><strong>テンプレート</strong>のデータ入力としてテンプレート変数を提供します。使用例については、<a href="/server-side/connectors/webhook-connectors/template-variables/">Template Variables Guide</a>のドキュメンテーションを参照してください。<br>ドット表記法でネストしたテンプレート変数を名付けます。例：<code>items.name</code>。<br>ネストしたテンプレート変数は通常、データレイヤーリスト属性から作成されます。</td>
+</tr>
+<tr>
+<td>テンプレート</td>
+<td>ボディパラメータで参照されるテンプレートを提供します。<a href="/server-side/connectors/webhook-connectors/trimou-templating-engine/">Templates Guide</a>を参照してください。<br>テンプレートは、名前で二重中括弧を使用してサポートされるフィールドに挿入されます。例：<code>{{SomeTemplateName}}</code>。</td>
 </tr>
 </tbody>
 </table>
@@ -566,7 +637,7 @@ API呼び出しがデフォルト（prod）以外の環境を参照するよう�
 
         </div>
         <div class="bt-l b--moon-gray pt3 f6">
-          <p>最終更新日 ::  1年January月1日
+          <p>最終更新日 ::  2024年April月17日
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           </p>
         </div>
@@ -581,11 +652,11 @@ API呼び出しがデフォルト（prod）以外の環境を参照するよう�
   <aside class="fixed-lTK mw5 right-0 f6 bl b--light-gray pv4 pv0-ns ph3 nested-copy-line-height">
       <p class="b ttu">このページで</p>
       <nav id="TableOfContents"><ul class="toc-h2"><li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#api%E6%83%85%E5%A0%B1" href="javascript:void(0)">API情報</a></li>
-              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%83%90%E3%83%83%E3%83%81%E5%88%B6%E9%99%90" href="javascript:void(0)">バッチ制限</a></li>
               <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%82%A2%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3" href="javascript:void(0)">アクション</a></li>
               <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E8%A8%AD%E5%AE%9A" href="javascript:void(0)">設定</a></li>
               <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%82%A2%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3" href="javascript:void(0)">アクション</a></li>
-              <ul class="toc-h3"><li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E5%8D%98%E4%B8%80%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8%E5%AE%9F%E8%A1%8C" href="javascript:void(0)">単一メッセージ実行</a></li>
+              <ul class="toc-h3"><li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E5%8D%98%E4%B8%80%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8%E5%AE%9F%E8%A1%8C%E3%83%90%E3%83%83%E3%83%81" href="javascript:void(0)">単一メッセージ実行（バッチ）</a></li>
+              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E5%8D%98%E4%B8%80%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8%E5%AE%9F%E8%A1%8C%E3%83%AA%E3%82%A2%E3%83%AB%E3%82%BF%E3%82%A4%E3%83%A0" href="javascript:void(0)">単一メッセージ実行（リアルタイム）</a></li>
               </nav>
   </aside></nav>
 

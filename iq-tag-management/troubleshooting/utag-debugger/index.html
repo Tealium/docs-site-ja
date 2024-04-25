@@ -426,19 +426,25 @@ var utag_data = {
 
   
     <p class="f4 fw3 lh-copy">
-      ユニバーサルタグ（UTAG）デバッガーは、ユニバーサルデータオブジェクトとイベントトラッキングコールの検証に使用するツールです。
+      ユニバーサルタグ（UTAG）デバッガーは、ユニバーサルデータオブジェクトとトラッキングコールの検証に使用するツールです。
     </p>
   
 </div>
 
 <div class="prose nested-links" id="prose">
-  <h2 id="仕組み">仕組み</h2>
-<p>ユニバーサルタグ（UTAG）デバッガーは、<a href="/platforms/javascript/universal-data-object/">ユニバーサルデータオブジェクト</a>と<a href="/platforms/javascript/track/">event tracking calls</a>の検証に使用するツールです。UTAGデバッガーはWeb Companionと似ていますが、データレイヤーと<code>utag.js</code>内の各トラッキングイベントでキャプチャされたデータに焦点を当てている点が異なります。</p>
-<p class="note"><i class="fa fa-exclamation-triangle"></i>ツールに表示されるデータオブジェクトは、<strong>All Tags - Before Load Rules</strong>の範囲にある拡張機能の後、および<strong>All Tags - After Load Rules</strong>の範囲にある拡張機能の前にキャプチャされます。<a href="/iq-tag-management/getting-started/order-of-operations/">order of operations</a>について詳しく学びましょう。</p>
-<h2 id="tealium-tools拡張機能のインストール">Tealium Tools拡張機能のインストール</h2>
-<p>このツールを使用するには、まずTealium Tools拡張機能を使用してChromeブラウザに追加する必要があります。この拡張機能をChromeまたはFirefoxにインストールする方法については、<a href="/iq-tag-management/tealium-tools/browser-extension/">Tealium Tools Browser Extension</a>を参照してください。</p>
-<h2 id="jsonコード">JSONコード</h2>
-<p>このJSONコードをコピーします。これをTealium Toolsに貼り付けてツールを追加します。</p>
+  <h2 id="使い方">使い方</h2>
+<p>ユニバーサルタグ（UTAG）デバッガーツールは、サイト上の<code>utag.js</code>によってトリガーされる<a href="/platforms/javascript/universal-data-object/">ユニバーサルデータオブジェクト</a>とイベントトラッキングコールを表示します。</p>
+<figure><a class="slb" href="/images/iq-tag-management/utag-debugger.png"><img src="/images/iq-tag-management/utag-debugger.png"/>
+    </a>
+</figure>
+<h2 id="インストール">インストール</h2>
+<h3 id="tealium-tools">Tealium Tools</h3>
+<p>UTAGデバッガーをTealium Toolとしてインストールするには、まず<a href="/iq-tag-management/tealium-tools/browser-extension/">Tealium Toolsブラウザ拡張機能</a>をインストールします。</p>
+<p>拡張機能をインストールしたら、以下の手順でカスタムツールを追加します：</p>
+<ol>
+<li>ブラウザの右上にあるTealiumアイコンをクリックしてTealium Toolsを開きます。</li>
+<li><strong>カスタムツール</strong>タブに移動し、<strong>+ カスタムツール</strong>の四角をクリックし、次に<strong>カスタムツールを追加</strong>をクリックします。</li>
+<li>次に、以下のJSONコードを<strong>JSON定義による追加</strong>フィールドにコピー＆ペーストし、<strong>カスタムツールを追加</strong>をクリックします：
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;id&#34;</span> : <span style="color:#e6db74">&#34;teal.sol.debug&#34;</span>,
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;title&#34;</span> : <span style="color:#e6db74">&#34;UTAG Debugger&#34;</span>,
@@ -446,91 +452,78 @@ var utag_data = {
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;no_ui&#34;</span> : <span style="color:#66d9ef">true</span>,
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;scripts&#34;</span> : {
 </span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;utag_monitor&#34;</span> : {
-</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;js&#34;</span> : <span style="color:#e6db74">&#34;void(window.open(\&#34;\&#34;,\&#34;utagmon\&#34;,\&#34;width=600,height=600,location=0,menubar=0,status=1,toolbar=0,resizable=1,scrollbars=1\&#34;).document.write(\&#34;&lt;script language=&#39;JavaScript&#39; id=&#39;utagmon&#39; src=&#39;//tags.tiqcdn.com/utag/tealium-solutions/main/prod/utag.4.js?opt_show_enrich=0&amp;opt_show_meta=0&amp;opt_show_query=0&amp;opt_show_jspage=0&amp;opt_show_tiq=1&amp;opt_show_cookie=0&amp;_cb=\&#34;+Math.random()+\&#34;&#39;&gt;&lt;/\&#34;+\&#34;script&gt;\&#34;));&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;js&#34;</span> : <span style="color:#e6db74">&#34;void(window.open(\&#34;\&#34;,\&#34;utagmon\&#34;,\&#34;width=700,height=600,location=0,menubar=0,status=1,toolbar=0,resizable=1,scrollbars=1\&#34;).document.write(\&#34;&lt;script language=&#39;JavaScript&#39; id=&#39;utagmon&#39; src=&#39;//tags.tiqcdn.com/utag/tealium-solutions/main/prod/utag.4.js?opt_show_enrich=0&amp;opt_show_meta=0&amp;opt_show_query=0&amp;opt_show_jspage=0&amp;opt_show_tiq=1&amp;opt_show_cookie=0&amp;_cb=\&#34;+Math.random()+\&#34;&#39;&gt;&lt;/\&#34;+\&#34;script&gt;\&#34;));&#34;</span>,
 </span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;auto_inject&#34;</span> : <span style="color:#66d9ef">true</span>
 </span></span><span style="display:flex;"><span>        }
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h3 id="jsonをカスタムツールに貼り付ける">JSONをカスタムツールに貼り付ける</h3>
-<p>ブラウザ拡張機能をインストールした後、以下の手順でJSONをカスタムツールにカット＆ペーストします：</p>
-<ol>
-<li>ブラウザの右上にあるTealiumアイコンをクリックしてTealium Toolsを開きます。</li>
-<li><strong>Custom Tools</strong>タブをクリックします。</li>
-<li><strong>Custom Tools</strong>タブから、以下のJSONコードをカット＆ペーストします：</li>
-<li>完了すると、ツール名が表示される新しいボタンが<strong>Custom Tools</strong>タブの下に表示されます。</li>
+</span></span></code></pre></div></li>
+<li>完了すると、ツール名の新しいボタンが<strong>カスタムツール</strong>タブに表示されます。</li>
 </ol>
-<h2 id="ブックマークレットの作成">ブックマークレットの作成</h2>
-<p>以下の手順でツールを起動するブックマークレットを作成することもできます：</p>
-<ol>
-<li>
-<p>以下のコードを使用してブックマークレットを作成します：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">javascript</span><span style="color:#f92672">:</span><span style="color:#66d9ef">void</span>(window.<span style="color:#a6e22e">open</span>(<span style="color:#e6db74">&#34;&#34;</span>,<span style="color:#e6db74">&#34;utagmon&#34;</span>,<span style="color:#e6db74">&#34;width=600,height=600,location=0,menubar=0,status=1,toolbar=0,
+<h3 id="ブックマークレット">ブックマークレット</h3>
+<p>UTAGデバッガーをブックマークとしてインストールするには、以下のコードを新しいブックマークのURLにコピーします：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">javascript</span><span style="color:#f92672">:</span><span style="color:#66d9ef">void</span>(window.<span style="color:#a6e22e">open</span>(<span style="color:#e6db74">&#34;&#34;</span>,<span style="color:#e6db74">&#34;utagmon&#34;</span>,<span style="color:#e6db74">&#34;width=700,height=600,location=0,menubar=0,status=1,toolbar=0,
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">resizable=1,scrollbars=1&#34;</span>).document.<span style="color:#a6e22e">write</span>(<span style="color:#e6db74">&#34;&lt;script language=&#39;JavaScript&#39; id=&#39;utagmon&#39;
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">src=&#39;//tags.tiqcdn.com/utag/tealium-solutions/main/prod/utag.4.js?
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">opt_show_enrich=0&amp;opt_show_meta=0&amp;opt_show_tiq=1&amp;opt_show_dom=0&amp;opt_show_jspage=0&amp;opt_show_cookie=0&amp;_cb=&#34;</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>Math.<span style="color:#a6e22e">random</span>() <span style="color:#f92672">+</span><span style="color:#e6db74">&#34;&#39;&gt;&lt;/&#34;</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34;script&gt;&#34;</span>))
-</span></span></code></pre></div></li>
-<li>
-<p>ブックマークレットをブックマークバーにドラッグ＆ドロップします。<br>
-<figure><a class="slb" href="/images/iq-tag-management/utag-debugger-bookmarklet-instructions.jpg"><img src="/images/iq-tag-management/utag-debugger-bookmarklet-instructions.jpg"
-             alt="UTAG Debugger Bookmarklet Instructions"
-             title="UTAG Debugger Bookmarklet Instructions"/>
-        </a>
-    </figure></p>
-</li>
-<li>
-<p>ブックマークが使用可能になりました。</p>
-</li>
-</ol>
-<h2 id="utagデバッガーツールの使用">UTAGデバッガーツールの使用</h2>
-<p>UTAGデバッガーツールを使用するには、以下の手順を開始します：</p>
+</span></span></code></pre></div><h2 id="utagデバッガーの使用">UTAGデバッガーの使用</h2>
+<p>UTAGデバッガーを起動するには、以下の手順を実行します：</p>
 <ol>
-<li>希望のウェブサイトに移動します。</li>
-<li>Tealium Toolsを開き、<strong>Custom Tools</strong>タブをクリックします。</li>
-<li><strong>Ud</strong>ボタンをクリックします。<br>
-<strong>Universal Tag Debugger</strong>ツールが表示されます。<br>
-ブックマークを使用する場合は、ツールバーのブックマークレットをクリックするだけです。<figure><a class="slb" href="/images/iq-tag-management/screen-shot-2020-10-12-at-11.48.29-am.png"><img src="/images/iq-tag-management/screen-shot-2020-10-12-at-11.48.29-am.png"
-         alt="Toolbar Bookmarklet for UTAG Debugger"
-         title="Toolbar Bookmarklet for UTAG Debugger" width="427" height="425"/>
-    </a>
-</figure></li>
+<li>サイトに移動します。</li>
+<li>Tealium Toolsの場合、Tealium Toolsを開き、<strong>カスタムツール</strong>タブをクリックし、<strong>Ud</strong>ボタンをクリックします。<br>
+<figure><a class="slb" href="/images/iq-tag-management/utag-debugger-custom-tool.png"><img src="/images/iq-tag-management/utag-debugger-custom-tool.png"/>
+        </a>
+    </figure></li>
+<li>ブックマークレットの場合、ブラウザツールバーのブックマークをクリックします。
+<figure><a class="slb" href="/images/iq-tag-management/utag-debugger-bookmarklet.png"><img src="/images/iq-tag-management/utag-debugger-bookmarklet.png"/>
+        </a>
+    </figure></li>
 </ol>
-<p>上部のセクションには、ページ上で検出された<code>utag.js</code>ファイルが表示され、以下の内容が含まれます：</p>
+<h3 id="バージョンと表示オプション">バージョンと表示オプション</h3>
+<p>UTAGデバッガーが開いているとき、上部セクションには、ページ上で検出された<code>utag.js</code>ファイルが以下の情報とともに表示されます：</p>
 <ul>
-<li><code>account/profile/environment</code>パス</li>
-<li><code>utag</code>のバージョン</li>
-<li>表示エリアに表示するデータを変更するための表示オプションの数</li>
+<li>ページ上の<code>utag.js</code>ファイルの<code>account/profile/environment</code>。</li>
+<li>ページ上の<code>utag.js</code>ファイルのバージョン。</li>
 </ul>
-<h3 id="オプション">オプション</h3>
-<p>以下のオプションが利用可能で、ツールの使用とナビゲーションを支援します：</p>
-<ul>
-<li><strong>Bookmarklet</strong> – ポップアップの右上隅にあるブックマークレットリンクをツールバーに戻すことで、表示オプションを再保存できます。</li>
-<li><strong>Events</strong> – ページ上で検出されたトラッキングイベントは<code>view</code>イベントまたは<code>link</code>イベントになります。これらのチェックボックスを切り替えて表示をフィルタリングします。</li>
-<li><strong>Show Data</strong> – UDOデータは常に表示されますが、UTAGによって収集された追加のデータソースは、これらのチェックボックスを切り替えることで表示できます。</li>
-</ul>
-<h3 id="データ変数">データ変数</h3>
-<p>以下のデータ変数が利用可能です：</p>
-<figure><a class="slb" href="/images/iq-tag-management/screen-shot-2020-10-12-at-11.52.33-am.png"><img src="/images/iq-tag-management/screen-shot-2020-10-12-at-11.52.33-am.png"
-         alt="Data Layer Variables"
-         title="Data Layer Variables" width="424" height="88"/>
+<figure><a class="slb" href="/images/iq-tag-management/utag-debugger-options.png"><img src="/images/iq-tag-management/utag-debugger-options.png"/>
     </a>
 </figure>
+<p>以下の機能を使用します：</p>
 <ul>
-<li><strong>iQ</strong> – <code>utag.js</code>によって収集された組み込みデータ、DOM属性および<code>ut</code>で始まる変数（例：<code>ut.profile</code>）</li>
-<li><strong>Cookie</strong> – ページで利用可能なすべてのファーストパーティクッキー</li>
-<li><strong>JS Page</strong> – データレイヤーで定義されたJavaScriptページ変数（<code>utag_data</code>以外の変数）</li>
-<li><strong>Querystring</strong> – URLで見つかったクエリストリング変数</li>
-<li><strong>Meta</strong> – ページで利用可能なすべてのメタデータ値</li>
-<li><strong>AudienceStream</strong> – データレイヤーのエンリッチメントによって充填された変数</li>
+<li>
+<p><strong>ブックマークレット</strong> – 表示オプションを保存するために、リンクをブラウザのツールバーにドラッグします。</p>
+</li>
+<li>
+<p><strong>イベント</strong> – ページ上で検出されたトラッキングイベントは、<code>view</code>イベントまたは<code>link</code>イベントです。これらのチェックボックスを切り替えて表示をフィルタリングします。</p>
+</li>
+<li>
+<p><strong>スコープ</strong> - 表示するUDOデータのスコープを選択します。デフォルトは<strong>ロードルール前</strong>です。</p>
+  <p class="tip"><i class="fa fa-info-circle"></i>ツールに表示されるUDO変数は、<strong>すべてのタグ - ロードルール前</strong>にスコープされた拡張機能の後、および<strong>すべてのタグ - ロードルール後</strong>にスコープされた拡張機能の後にキャプチャされます。<a href="/iq-tag-management/getting-started/order-of-operations/">操作の順序</a>について詳しくはこちらをご覧ください。</p>
+</li>
+<li>
+<p><strong>データを表示</strong> – 表示する変数タイプを選択します。UDO変数は常に表示されます。</p>
+</li>
 </ul>
-<h3 id="イベント表示エリア">イベント表示エリア</h3>
-<p>イベント表示エリアは、ナビゲートするかページ内のイベントをトリガーすると自動的に更新されます。新しいページは<code>utag_view</code>イベントとしてリストされ、ページ内のイベントは<code>utag_link</code>イベントとしてリストされます。</p>
-<figure><a class="slb" href="/images/iq-tag-management/utagmon-event-display.jpg"><img src="/images/iq-tag-management/utagmon-event-display.jpg"
-         alt="UTAG Event Display"
-         title="UTAG Event Display" width="538" height="344"/>
+<h3 id="変数タイプ">変数タイプ</h3>
+<p>以下の変数タイプが利用可能です：</p>
+<ul>
+<li><strong>iQ</strong> – <code>utag.js</code>によって収集された組み込みデータ、DOM属性および<code>ut.</code>で始まる変数（例：<code>ut.profile</code>）。</li>
+<li><strong>Cookie</strong> – ページ内で利用可能なすべてのファーストパーティクッキー。</li>
+<li><strong>JSページ</strong> – データレイヤーで定義されたJavaScriptページ変数（<code>utag_data</code>以外の変数）。</li>
+<li><strong>クエリストリング</strong> – URL内で見つかったクエリストリング変数。</li>
+<li><strong>メタ</strong> – ページ内で利用可能なすべてのメタデータ値。</li>
+<li><strong>AudienceStream</strong> – データレイヤーの濃縮によって充填された変数。</li>
+<li><strong>ローカルストレージ</strong> – データレイヤーで定義されたローカルストレージ変数。</li>
+<li><strong>セッションストレージ</strong> – データレイヤーで定義されたセッションストレージ変数。</li>
+</ul>
+<p>詳細については、<a href="/iq-tag-management/data-layer/data-layer-variables/">データレイヤー変数タイプ</a>を参照してください。</p>
+<h3 id="イベント">イベント</h3>
+<p>データ表示エリアは、ナビゲートしたりイベントをトリガーしたりすると自動的に更新されます。新しいページは<code>utag_view</code>イベントとしてリストされ、ページ内イベントは<code>utag_link</code>イベントとしてリストされます。</p>
+<p>以下の例は、訪問した2つのページとトリガーした1つのイベントを示しています。結果は、2つの<code>utag_view</code>エントリと1つの<code>utag_link</code>エントリです。最新のアクティビティは常に上部に表示されます。</p>
+<figure><a class="slb" href="/images/iq-tag-management/utagmon-event-display.jpg"><img src="/images/iq-tag-management/utagmon-event-display.jpg"/>
     </a>
 </figure>
-<p>上記の例では、訪れたページが2つとトリガーされたイベントが1つ表示されています。これにより、<code>utag_view</code>エントリが2つと<code>utag_link</code>が1つ表示されます。最新のアクティビティは常に上部に表示されます。</p>
 
 </div>
 
@@ -590,15 +583,14 @@ var utag_data = {
 
   <aside class="fixed-lTK mw5 right-0 f6 bl b--light-gray pv4 pv0-ns ph3 nested-copy-line-height">
       <p class="b ttu">このページで</p>
-      <nav id="TableOfContents"><ul class="toc-h2"><li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E4%BB%95%E7%B5%84%E3%81%BF" href="javascript:void(0)">仕組み</a></li>
-              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#tealium-tools%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB" href="javascript:void(0)">Tealium Tools拡張機能のインストール</a></li>
-              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#json%E3%82%B3%E3%83%BC%E3%83%89" href="javascript:void(0)">JSONコード</a></li>
-              <ul class="toc-h3"><li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#json%E3%82%92%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%A0%E3%83%84%E3%83%BC%E3%83%AB%E3%81%AB%E8%B2%BC%E3%82%8A%E4%BB%98%E3%81%91%E3%82%8B" href="javascript:void(0)">JSONをカスタムツールに貼り付ける</a></li>
-              </ul><li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%83%96%E3%83%83%E3%82%AF%E3%83%9E%E3%83%BC%E3%82%AF%E3%83%AC%E3%83%83%E3%83%88%E3%81%AE%E4%BD%9C%E6%88%90" href="javascript:void(0)">ブックマークレットの作成</a></li>
-              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#utag%E3%83%87%E3%83%90%E3%83%83%E3%82%AC%E3%83%BC%E3%83%84%E3%83%BC%E3%83%AB%E3%81%AE%E4%BD%BF%E7%94%A8" href="javascript:void(0)">UTAGデバッガーツールの使用</a></li>
-              <ul class="toc-h3"><li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3" href="javascript:void(0)">オプション</a></li>
-              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%83%87%E3%83%BC%E3%82%BF%E5%A4%89%E6%95%B0" href="javascript:void(0)">データ変数</a></li>
-              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E8%A1%A8%E7%A4%BA%E3%82%A8%E3%83%AA%E3%82%A2" href="javascript:void(0)">イベント表示エリア</a></li>
+      <nav id="TableOfContents"><ul class="toc-h2"><li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E4%BD%BF%E3%81%84%E6%96%B9" href="javascript:void(0)">使い方</a></li>
+              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB" href="javascript:void(0)">インストール</a></li>
+              <ul class="toc-h3"><li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#tealium-tools" href="javascript:void(0)">Tealium Tools</a></li>
+              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%83%96%E3%83%83%E3%82%AF%E3%83%9E%E3%83%BC%E3%82%AF%E3%83%AC%E3%83%83%E3%83%88" href="javascript:void(0)">ブックマークレット</a></li>
+              </ul><li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#utag%E3%83%87%E3%83%90%E3%83%83%E3%82%AC%E3%83%BC%E3%81%AE%E4%BD%BF%E7%94%A8" href="javascript:void(0)">UTAGデバッガーの使用</a></li>
+              <ul class="toc-h3"><li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E3%81%A8%E8%A1%A8%E7%A4%BA%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3" href="javascript:void(0)">バージョンと表示オプション</a></li>
+              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E5%A4%89%E6%95%B0%E3%82%BF%E3%82%A4%E3%83%97" href="javascript:void(0)">変数タイプ</a></li>
+              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88" href="javascript:void(0)">イベント</a></li>
               </nav>
   </aside></nav>
 

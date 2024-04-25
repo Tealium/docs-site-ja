@@ -144,23 +144,23 @@ var utag_data = {
 
   
     <p class="f4 fw3 lh-copy">
-      Tealium Universal Tag の各リリースの変更の完全なリストです。
+      Tealium Universal Tag の各リリースの変更の完全なリスト。
     </p>
   
 </div>
 
 <div class="prose nested-links" id="prose">
-  <p><a href="https://support.tealiumiq.com/en/support/solutions/articles/36000363470">最新の修正と改善を活用するために、<code>utag.js</code> テンプレートを更新</a>してください。</p>
-<h3 id="utagjs-バージョン-450-以降への更新"><code>utag.js</code> バージョン 4.50 以降への更新</h3>
+  <p><a href="https://support.tealiumiq.com/en/support/solutions/articles/36000363470">最新の修正と改善を活用するために <code>utag.js</code> テンプレートを更新</a>してください。</p>
+<h2 id="utagjs-バージョン-450-以降への更新"><code>utag.js</code> バージョン 4.50 以降への更新</h2>
 <p>バージョン 4.50 以降に更新する際には、以下の手順をお勧めします。</p>
 <p class="note"><i class="fa fa-exclamation-triangle"></i>Tealium Collect タグとすべてのアクティブな同意管理テンプレート、特にイベントログ機能を更新してください。</p>
 <ul>
 <li>
-<p>同じサイトで複数の iQ プロファイルを実行している場合、サイト上のすべての <code>utag.js</code> テンプレートを最新バージョンに更新するために、次の手順を実行してください。</p>
+<p>同じサイトで複数の iQ プロファイルを実行している場合、サイト上のすべての <code>utag.js</code> テンプレートが新しいクッキーの動作を同時に使用するようにするために、次の手順を完了してください。これにより、競合や互換性の問題が防止されます。</p>
 <ol>
-<li>すべての <code>utag.js</code> テンプレートを最新バージョンに更新します。</li>
-<li>各プロファイルの <a href="/platforms/javascript/settings/#split_cookie"><code>split_cookie</code></a> オーバーライドを <code>false</code> に設定して、レガシーのクッキー動作を使用し、サイト上で引き続き実行されている古いバージョンの utag.js との互換性を維持します。</li>
-<li>すべての <code>utag.js</code> テンプレートが更新され、レガシーのクッキー動作を維持するために <code>split_cookie</code> オーバーライドが設定されている場合、すべてのプロファイルからクッキーオーバーライドを同時に削除できます。</li>
+<li>すべての <code>utag.js</code> テンプレートを最新バージョンに更新してください。</li>
+<li>各プロファイルの <a href="/platforms/javascript/settings/#split_cookie"><code>split_cookie</code></a> オーバーライドを <code>false</code> に設定して、レガシーのクッキーの動作を使用し、サイト上でまだ実行されている古いバージョンの utag.js との互換性を維持します。</li>
+<li>すべての <code>utag.js</code> テンプレートが更新され、レガシーのクッキーの動作を維持するために <code>split_cookie</code> オーバーライドが設定されている場合、すべてのプロファイルからクッキーオーバーライドを同時に削除できます。</li>
 </ol>
 </li>
 <li>
@@ -172,19 +172,20 @@ var utag_data = {
 </li>
 </ul>
 <p>詳細については、<a href="/platforms/javascript/settings/#always_set_v_id">Settings: <code>always_set_v_id</code></a>を参照してください。</p>
-<h2 id="2023年9月">2023年9月</h2>
-<h3 id="451">4.51</h3>
+<h2 id="451">4.51</h2>
+<p>(2023年9月)</p>
 <ul>
-<li><code>utag.js</code> バージョン 4.50 を使用している場合の特定のブラウザとタイムゾーン/地域設定でのクッキーの有効期限の問題を修正しました。</li>
+<li><code>utag.js</code> バージョン 4.50 を使用した場合の特定のブラウザとタイムゾーン/地域設定でのクッキーの有効期限の問題を修正しました。</li>
 </ul>
-<h3 id="450">4.50</h3>
-<p>バージョン 4.50 では、<code>utag.js</code> によって書き込まれるクッキーに関する透明性と制御が向上しています。</p>
-<p>以前は、マルチバリュークッキー（マルチクッキー）の使用を推奨していました。しかし、データプライバシーの監査などの透明性とシンプルさへの要求の増加に伴い、推奨事項を見直しました。現在は、スタンドアロンのクッキーを使用することを推奨しており、これが <code>utag.js</code> のデフォルトの動作になっています。</p>
+<h2 id="450">4.50</h2>
+<p>(2023年9月)</p>
+<p>バージョン 4.50 では、<code>utag.js</code> によって書き込まれるクッキーに対してより多くの透明性と制御が提供されます。</p>
+<p>以前は、マルチバリュークッキー（マルチクッキー）の使用を推奨していました。しかし、データプライバシーオーディットなどの透明性とシンプルさへの要求の増加により、推奨事項を見直しました。現在は、スタンドアロンのクッキーを使用することを推奨しており、これが <code>utag.js</code> のデフォルトの動作になっています。</p>
 <p>このリリースには、以下の更新が含まれています。</p>
 <ul>
-<li>複数の個別の <code>utag_main</code> クッキーを書き込むようになりました。複数の値を単一のクッキーに格納する従来の動作を使用するには、<a href="/platforms/javascript/settings/#split_cookie"><code>split_cookie</code></a> を <code>false</code> に設定してください。</li>
-<li><code>utag_main_v_id</code> の責任を <code>utag.js</code> から Tealium Collect タグに移しました。<code>utag.js</code> が <code>utag_main_v_id</code> クッキーを設定するようにするには、<a href="/platforms/javascript/settings/#always_set_v_id"><code>always_set_v_id</code></a> を <code>true</code> に設定してください。</li>
-<li>同意管理クッキーのログ記録用に同意マネージャークッキーに新しい <code>id</code> 要素を追加しました。このクッキーが最初に設定されると、見つかったすべての <code>utag_main_v_id</code> の値と一致しますが、その後は変更されません。この動作は、ユーザーとログ記録されたイベントの間のリンクを維持することを優先するものですが、すべての場合で一致が保証されるわけではありません。</li>
+<li>単一のマルチバリュークッキーではなく、個別の <code>utag_main</code> クッキーを書き込みます。複数の値を単一のクッキーに格納する従来の動作を使用するには、<a href="/platforms/javascript/settings/#split_cookie"><code>split_cookie</code></a> を <code>false</code> に設定してください。</li>
+<li><code>utag_main_v_id</code> の責任を <code>utag.js</code> から Tealium Collect タグに移します。<code>utag.js</code> が <code>utag_main_v_id</code> クッキーを設定するようにするには、<a href="/platforms/javascript/settings/#always_set_v_id"><code>always_set_v_id</code></a> を <code>true</code> に設定してください。</li>
+<li>同意管理クッキーのログ記録のための同意マネージャクッキーに新しい <code>id</code> 要素を追加します。このクッキーが最初に設定されると、見つかったすべての <code>utag_main_v_id</code> の値と一致しますが、その後は変更されません。この動作は、ユーザーとログ記録されたイベントのリンクを維持することを優先するものですが、すべての場合で一致が保証されるわけではありません。</li>
 <li>関連する <a href="/iq-tag-management/templates/about/">テンプレート</a> を更新することで簡単にアップグレードできます。</li>
 <li>次の utag 設定を追加しました：
 <ul>
@@ -195,138 +196,146 @@ var utag_data = {
 </li>
 <li>次のテンプレートを更新しました：
 <ul>
-<li><code>utag.js</code> (<code>loader</code>) をバージョン 4.50 に更新してクッキーの動作を更新</li>
-<li><code>cmGeneral</code> をバージョン 3.0.12 に更新して、同意ログテンプレートからデバイス ID を生成または取得するための集中ロジックを追加</li>
-<li><code>cmDoNotSell</code> をバージョン 1.4.0 に更新して、集中ロジックを呼び出す</li>
-<li><code>fullConsentEventHandler</code> をバージョン 1.0.3 に更新して、集中ロジックを呼び出す</li>
-<li><code>partialConsentEventHandler</code> をバージョン 1.0.3 に更新して、集中ロジックを呼び出す</li>
-<li><code>Collect</code> をバージョン <code>tv:20064.20230519</code>（2023年5月にリリース）に更新</li>
+<li><code>utag.js</code> (<code>loader</code>) をバージョン 4.50 に更新して、クッキーの動作を更新します。</li>
+<li><code>cmGeneral</code> をバージョン 3.0.12 に更新して、同意ログテンプレートからデバイス ID を生成または取得するための集中ロジックを追加します。</li>
+<li><code>cmDoNotSell</code> をバージョン 1.4.0 に更新して、集中ロジックを呼び出します。</li>
+<li><code>fullConsentEventHandler</code> をバージョン 1.0.3 に更新して、集中ロジックを呼び出します。</li>
+<li><code>partialConsentEventHandler</code> をバージョン 1.0.3 に更新して、集中ロジックを呼び出します。</li>
+<li><code>Collect</code> をバージョン <code>tv:20064.20230519</code>（2023年5月にリリース）に更新します。</li>
 </ul>
 </li>
 </ul>
 <p>utag 4.50 以降の透明性向上のための新しい設定の詳細については、<a href="https://tealium.com/blog/customer-experience/enhancing-cookie-transparency-with-utag-4-51-a-comprehensive-introduction/">Enhancing Cookie Transparency with utag 4.51</a>を参照してください。</p>
-<h2 id="2022年9月">2022年9月</h2>
-<h3 id="449">4.49</h3>
+<h2 id="449">4.49</h2>
+<p>(2022年9月)</p>
 <ul>
-<li><code>localStorage</code> と <code>sessionStorage</code> の値を <a href="/platforms/javascript/data-layer/#local-and-session-storage">データレイヤーオブジェクト</a> に自動的に追加するように修正しました。</li>
+<li><code>localStorage</code> と <code>sessionStorage</code> の値が <a href="/platforms/javascript/data-layer/#local-and-session-storage">データレイヤーオブジェクト</a> に自動的に追加されるようになりました。</li>
 <li><a href="/platforms/javascript/settings/#ignorelocalstorage"><code>ignoreSessionStorage</code></a> と <a href="/platforms/javascript/settings/#ignoresessionstorage"><code>ignoreLocalStorage</code></a> のオーバーライドオプションを追加しました。</li>
 <li>ファーストパーティドメインの顧客に対して <code>tealium_environment</code> と <code>ut.env</code> が正しく設定されない問題を修正しました。</li>
 </ul>
-<h2 id="445---448">4.45 - 4.48</h2>
-<h4 id="448-2021年4月">4.48 (2021年4月)</h4>
+<h2 id="448">4.48</h2>
+<p>(2021年4月)</p>
 <ul>
 <li><code>utag.js</code> バージョン 4.48 テンプレートを <code>secure_cookie</code> 設定で更新しました。</li>
 </ul>
-<h4 id="447-2021年1月">4.47 (2021年1月)</h4>
+<h2 id="447">4.47</h2>
+<p>(2021年1月)</p>
 <ul>
 <li>
 <p>潜在的な jQuery の脆弱性に対する防御コードを追加しました。JavaScript ファイルの <code>src</code> が直接設定されており、侵害された <code>Object.prototype</code> から継承されていないことを確認します。この問題は jQuery 3.5.0 で修正されましたが、<a href="https://blog.jquery.com/2020/05/04/jquery-3-5-1-released-fixing-a-regression/">3.5.1</a> で再導入されました。</p>
 </li>
 <li>
-<p><code>instance of</code> を使用せずに組み込みの <code>utag.ut.typeOf</code> 関数で <code>Array</code> 型をサポートするように更新しました。これにより、<code>utag.js</code> がテスト環境（Cypress など）の iframe で実行され、JavaScript の <code>instance of</code> 操作が正しく機能しない問題が修正されます。</p>
+<p><code>utag.js</code> がテスト環境（Cypress など）の iframe で実行され、JavaScript の <code>instance of</code> 操作が正しく機能しない問題を修正するために、ビルトインの <code>utag.ut.typeOf</code> 関数を使用して <code>Array</code> 型をチェックするように更新しました。</p>
 </li>
 </ul>
-<h4 id="446-2018年6月">4.46 (2018年6月)</h4>
+<h2 id="446">4.46</h2>
+<p>(2018年6月)</p>
 <ul>
-<li>次の新しい組み込み変数をサポートしました：
+<li>次の新しいビルトイン変数のサポートを追加しました：
 <ul>
 <li><code>tealium_session_number</code> - 既存の値 <code>utag.data['cp.utag_main__sn']</code> の複製</li>
-<li><code>tealium_session_event_number</code> - 現在のセッション（訪問）でのトラッキングコール（<code>utag.view()</code>、<code>utag.link()</code>）の数をカウントする <code>utag.data['cp.utag_main__se']</code> のクッキー値。これは、1 つのページロードに多くのトラッキングイベントがあるシングルページアプリケーション（SPA）で有用です。<code>noview</code> フラグを使用しているページでは、ページロード（ロードルールの評価）と <code>utag.view()</code> の最初の呼び出しの両方に対して値が &lsquo;1&rsquo; になります。</li>
+<li><code>tealium_session_event_number</code> - 現在のセッション（訪問）でのトラッキングコール（<code>utag.view()</code>、<code>utag.link()</code>）の数をカウントする <code>utag.data['cp.utag_main__se']</code> のクッキー値。これは、1 つのページロードに多くのトラッキングイベントがあるシングルページアプリケーション（SPA）で有用です。<code>noview</code> フラグを使用しているページでは、ページロード（ロードルール評価）と <code>utag.view()</code> の最初の呼び出しの両方に対して値が &lsquo;1&rsquo; になります。</li>
 </ul>
 </li>
-<li><code>utag.link</code>、<code>utag.view</code>、または <code>utag.track</code> の呼び出し時に空のパラメータリストを渡すことができるようになりました。以前のバージョンでは、<code>utag.link()</code> または <code>utag.view()</code> の呼び出しは正常に機能しますが、データレイヤーに &ldquo;cfg&rdquo; オブジェクトが追加されます。<code>utag.track()</code> の呼び出しは以前のバージョンでは例外が発生します。</li>
-<li><code>noview</code> フラグを使用しているページでは、次の点に注意してください。
+<li><code>utag.link</code>、<code>utag.view</code>、または <code>utag.track</code> の呼び出しに空のパラメータリストを渡すサポートを追加しました。以前のバージョンでは、<code>utag.link()</code> または <code>utag.view()</code> の呼び出しは正常に機能しますが、データレイヤーに <code>cfg</code> オブジェクトが追加されます。<code>utag.track()</code> の呼び出しは以前のバージョンでは例外が発生します。</li>
+<li><code>noview</code> フラグを使用しているページでは、次の点に注意してください：
 <ul>
-<li>データレイヤーには、ページロード（<code>utag.js</code> はデータレイヤーを使用してタグを読み込みます）と <code>utag.view</code> の最初の呼び出しの両方に対して &lsquo;1&rsquo; の値があります。</li>
-<li>クッキーはページのロード時に使用され、初期化されるため、最初のページで <code>utag.view</code> 呼び出しが十分に早く行われず、ブラウザでページが更新される場合、2 番目のページで行われる最初の <code>utag.view</code> 呼び出しに &lsquo;2&rsquo; に移動します。これは、ほとんどの実装が <code>utag.js</code> の実行直後に <code>utag.view</code> を呼び出すため、エッジケースです。</li>
+<li>データレイヤーには、<code>tealium_session_event_number</code> の値が &lsquo;1&rsquo; になります。これは、<code>utag.js</code> がデータレイヤーを使用してタグをロードし、タグをさらにロードする場合です。</li>
+<li>クッキーはページのロード時に使用され、初回のページで <code>utag.view</code> 呼び出しが十分に早く行われない場合、ブラウザでページがリフレッシュされると、2 番目のページで行われる最初の <code>utag.view</code> 呼び出しに &lsquo;2&rsquo; に移動します。これは、ほとんどの実装が <code>utag.js</code> の実行直後に <code>utag.view</code> を呼び出すため、エッジケースです。</li>
 </ul>
 </li>
-<li>この更新には、レガシープライバシーマネージャーエクステンションで使用される &ldquo;OU&rdquo; 関数の修正も含まれています。
+<li>この更新には、レガシープライバシーマネージャ拡張で使用される &ldquo;OU&rdquo; 関数の修正も含まれています。
 <ul>
-<li>OPTOUTMULTI クッキーは、<code>utag.view/link</code> の各呼び出しで再確認されます（ページの再読み込みは必要ありません）</li>
+<li>OPTOUTMULTI クッキーは、<code>utag.view/link</code> の各呼び出しで再確認されます（ページのリフレッシュは必要ありません）</li>
 <li>タグの UID によって直接発火されるタグは、発火する前に OPTOUTMULTI クッキーの設定を確認します</li>
 </ul>
 </li>
 </ul>
-<h4 id="445-2018年1月">4.45 (2018年1月)</h4>
+<h2 id="445">4.45</h2>
+<p>(2018年1月)</p>
 <ul>
-<li>以前のバージョン 4.40 で導入された、同じタグを複数回 iframe で読み込むページでブラウザの履歴に余分なエントリが追加されるバグを修正しました。この問題は、iframe ベースのタグベンダーを使用するシングルページアプリケーション（SPA）に影響を与える可能性があります。</li>
+<li>1つのタグが複数回 iframe で読み込まれるページで、同じタグを複数回ブラウザの履歴に追加するバグを修正しました。この問題は、iframe ベースのタグベンダーを使用するシングルページアプリケーション（SPA）に影響を与える可能性があります。</li>
 </ul>
-<h2 id="443---444">4.43 - 4.44</h2>
-<h4 id="444-2017年6月">4.44 (2017年6月)</h4>
+<h2 id="444">4.44</h2>
+<p>(2017年6月)</p>
 <ul>
-<li>&ldquo;tags.tiqcdn.cn&rdquo;（中国）でホストされている <code>utag.js</code> に対するビジターセッションカウントのサポートを追加しました。</li>
-<li><code>utag_main</code> クッキーのデフォルトの <code>utag_main</code> クッキードメインロジックを更新しました。これにより、<code>example.XX.jp</code> のようなドメインの場合、クッキーを XX.jp ドメインに設定できないため、<code>example.XX.jp</code> ドメインに設定されます。</li>
+<li>&ldquo;tags.tiqcdn.cn&rdquo;（中国）でホストされている <code>utag.js</code> に対するビジターセッションのカウントのサポートを追加しました。</li>
+<li>デフォルトの <code>utag_main</code> クッキードメインロジックを更新し、<code>example.XX.jp</code> のようなドメインに対して正しくクッキーを設定できるようにしました（XX.jp ドメインにクッキーを設定できないが、<code>example.XX.jp</code> ドメインに設定できるようになりました）。</li>
 </ul>
-<h4 id="443-2017年6月">4.43 (2017年6月)</h4>
+<h2 id="443">4.43</h2>
+<p>(2017年6月)</p>
 <ul>
-<li>グローバル変数 <code>i</code> の使用を削除しました。以前は、グローバル変数 <code>utag_cfg_ovrd</code>（設定オーバーライドオブジェクト）をループで使用していました。</li>
+<li>グローバル変数 <code>i</code> の使用を削除しました。以前は、グローバル変数 <code>utag_cfg_ovrd</code>（設定オーバーライドオブジェクト）をループするために使用されていました。</li>
 <li>レガシーの s2s サポートを削除しました（これは以前に Tealium iQ から削除されていました）。Cloud Delivery は Tealium Customer Data Hub でサポートされています。</li>
-<li><code>utag.ut.loader</code> ユーティリティ関数に渡されるエラーハンドラ関数のサポートを追加しました。これはモダンなブラウザのみで機能します（古いブラウザでは標準のコールバック &ldquo;cb&rdquo; 関数が使用されます）</li>
+<li><code>utag.ut.loader</code> ユーティリティ関数に渡されるエラーハンドラ関数のサポートを追加しました。これはモダンなブラウザのみで機能します（古いブラウザでは標準のコールバック <code>cb</code> 関数が使用されます）。</li>
 </ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">utag</span>.<span style="color:#a6e22e">ut</span>.<span style="color:#a6e22e">loader</span>({
 </span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;src&#34;</span>   <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;https://www.example.com/path/file.js&#34;</span>,
 </span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;cb&#34;</span>    <span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>(){<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;CALLBACK&#34;</span>)},
 </span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;error&#34;</span> <span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>(){<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;ERROR IN LOADING&#34;</span>)}
 </span></span><span style="display:flex;"><span>        });
-</span></span></code></pre></div><h2 id="440---442">4.40 - 4.42</h2>
-<h4 id="442-2016年8月">4.42 (2016年8月)</h4>
-<p>新しい組み込み Tealium イベント属性を追加しました。これらの新しい属性は、Tealium のビューやリンクイベントごとにデータレイヤーに追加されます。</p>
+</span></span></code></pre></div><h2 id="442">4.42</h2>
+<p>(2016年8月)</p>
+<p>新しいビルトイン Tealium イベント属性のサポートを追加しました。これらの新しい属性は、Tealium ビューやリンクイベントごとにデータレイヤーに追加されます。</p>
 <ul>
-<li><code>tealium_visitor_id</code>
-<code>cp.utag_main_v_id</code> クッキー内の Tealium が生成した ID</li>
-<li><code>tealium_session_id</code>
-現在のセッションの開始時刻のエポックタイムスタンプ（ミリ秒単位）の文字列</li>
-<li><code>tealium_account</code>
+<li><code>tealium_visitor_id</code><br>
+<code>cp.utag_main_v_id</code> クッキー内の既存の値</li>
+<li><code>tealium_session_id</code><br>
+現在のセッションの開始時のエポックタイムスタンプ（ミリ秒単位）の文字列</li>
+<li><code>tealium_account</code><br>
 <code>utag.js</code> ファイルへのパスのアカウント文字列値</li>
-<li><code>tealium_profile</code>
+<li><code>tealium_profile</code><br>
 <code>utag.js</code> ファイルへのパスのプロファイル文字列値</li>
-<li><code>tealium_environment</code>
+<li><code>tealium_environment</code><br>
 <code>utag.js</code> ファイルへのパスの環境文字列値。たとえば、&ldquo;dev&rdquo; または &ldquo;prod&rdquo;。</li>
-<li><code>tealium_datasource</code>
+<li><code>tealium_datasource</code><br>
 Tealium EventStream のデータソースキー</li>
-<li><code>tealium_random</code>
+<li><code>tealium_random</code><br>
 キャッシュバスティングに使用するランダムな数値（文字列）</li>
-<li><code>tealium_library_name</code>
+<li><code>tealium_library_name</code><br>
 ライブラリの名前（<code>utag.js</code>）</li>
-<li><code>tealium_library_version</code>
+<li><code>tealium_library_version</code><br>
 <code>utag.js</code> のバージョン。たとえば、このリリースの場合は &ldquo;4.42.0&rdquo;</li>
-<li><code>tealium_timestamp_epoch</code>
-現在のエポック時刻（秒単位）の整数</li>
-<li><code>tealium_timestamp_utc</code>
+<li><code>tealium_timestamp_epoch</code><br>
+現在のエポックタイム（秒単位）の整数</li>
+<li><code>tealium_timestamp_utc</code><br>
 UTC タイムゾーンの現在の ISO 文字列タイムスタンプ（古いブラウザでは使用できません）</li>
-<li><code>tealium_timestamp_local</code>
+<li><code>tealium_timestamp_local</code><br>
 ブラウザのタイムゾーンの現在の ISO 文字列タイムスタンプ（古いブラウザでは使用できません）</li>
 </ul>
-<h4 id="441">4.41</h4>
-<p><code>utag.ut.encode</code> 関数のフォールバック関数のタイポを修正しました。</p>
-<p><code>encodeURIComponent</code> 呼び出しは、<code>encodeURIComponent</code> が例外を発生させた場合に <code>escape</code> 呼び出しを使用するようにフォールバックします。</p>
-<h4 id="440-2016年4月">4.40 (2016年4月)</h4>
-<p>シングルページアプリケーション（SPA）で <code>utag.link</code> および <code>utag.view</code> を使用して新しいタグをロードできるようになりました。</p>
-<p>以前は、<code>utag.view</code> の呼び出しでは新しいタグはロードされませんでした。この機能は、<code>utag.view</code> の呼び出しによって新しいタグがロードされるようになりました。</p>
-<p>この機能は、デフォルトで有効になっており、<code>utag.view</code> によって新しい <code>utag.X.js</code> ファイルがロードされなかった場合にもロードルールが再評価されます。</p>
-<p>この機能を無効にするには、現在の動作を維持するために <code>utag.cfg.load_rules_ajax</code> フラグを <code>false</code> に設定してください。</p>
-<p class="note"><i class="fa fa-exclamation-triangle"></i><code>utag.link()</code> の呼び出しは新しいタグをロードしません。新しいタグをロードするには <code>utag.view()</code> の呼び出しを使用してください。</p>
-<p><strong>UID でタグを直接ロード</strong></p>
-<p>高度な実装、特に AJAX を使用している場合は、<code>utag.view()</code> の呼び出しを使用して新しいタグをロードし、タグの UID（Tealium iQ のタグタブで表示される）に基づいて発火させることができます。これにより、すべてのロードルールをバイパスできます。</p>
+<h2 id="441">4.41</h2>
+<p><code>utag.ut.encode</code> のフォールバック関数のタイポを修正するためのマイナーアップデート。</p>
+<p><code>encodeURIComponent</code> の呼び出しは、不正な形式の Unicode 文字のエンコード時に例外が発生した場合に <code>escape</code> の呼び出しにフォールバックするようになりました。</p>
+<h2 id="440">4.40</h2>
+<p>(2016年4月)</p>
+<p><code>utag.link</code> と <code>utag.view</code> を使用したシングルページアプリケーション（SPA）サイトの動作の改善。</p>
+<p>以前は、現在のデータレイヤーのアイテムが <code>utag.link/view</code> に渡され、<code>utag.data</code> グローバルオブジェクトにマージされていました。これは、各 <code>utag.link/view</code> の呼び出しでロードルールを再評価する必要があったためです。<code>utag.js</code> 4.40 テンプレートでは、この動作はもはや必要ありません。バージョン 4.40 では、<code>utag.data</code> グローバルオブジェクトは各 <code>utag.link</code> または <code>utag.view</code> の呼び出し後に更新されません。</p>
+<p class="note"><i class="fa fa-exclamation-triangle"></i>4.39 の動作との後方互換性をテストするために、次の JS 拡張を使用できます。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// JS 拡張（ロードルールの前）にスコープを設定
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">utag</span>.<span style="color:#a6e22e">ut</span>.<span style="color:#a6e22e">merge</span>( <span style="color:#a6e22e">b</span>, <span style="color:#a6e22e">utag</span>.<span style="color:#a6e22e">data</span>, <span style="color:#ae81ff">0</span> );
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">utag</span>.<span style="color:#a6e22e">ut</span>.<span style="color:#a6e22e">merge</span>( <span style="color:#a6e22e">utag</span>.<span style="color:#a6e22e">data</span>, <span style="color:#a6e22e">b</span> ,<span style="color:#ae81ff">1</span> );
+</span></span></code></pre></div><p>新しい &ldquo;noconsole&rdquo; フラグを追加しました。</p>
+<p><a href="/platforms/javascript/settings/">utag_cfg_ovrd オブジェクト</a> のこのフラグを true に設定すると、<code>utag.DB</code> の出力が Web コンソールに表示されなくなります。デバッグが有効になっている場合、出力は <code>utag.db_log</code> 配列に残ります。</p>
+<p>DOM で <code>utag.ut.loader</code> 関数を使用して DOM に iframe を作成する場合、同じ ID の iframe が既に存在する場合は、iframe が再度追加されず、代わりに iframe の src が更新されます。</p>
+<p><code>utag.view</code> または <code>utag.link</code> の呼び出しで JS ページ変数の値を更新します。<code>utag.view</code> または <code>utag.link</code> の呼び出しのたびに JS ページ変数が現在の値に更新されます。これにより、<code>b[&quot;js_page.my_global_var&quot;]</code> には <code>window.my_global_var</code> の最新の値が常に含まれます。</p>
+<p><code>utag.view</code> または <code>utag.link</code> の呼び出しで新しいタグをロードし、タグの UID に基づいて発火するための直接の方法を追加しました。これにより、すべてのロードルールをバイパスします。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">utag</span>.<span style="color:#a6e22e">view</span>({<span style="color:#a6e22e">page_name</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;New Page&#34;</span>}, <span style="color:#66d9ef">null</span>, [<span style="color:#ae81ff">5</span>]);
 </span></span></code></pre></div><ul>
 <li>パラメータ 1: データレイヤー</li>
 <li>パラメータ 2: コールバック関数（または null）</li>
 <li>パラメータ 3: ロードおよび発火する UID の配列</li>
 </ul>
-<p>ページトラッキングについては、<a href="https://community.tealiumiq.com/t5/JavaScript-utag-js/Page-Tracking/ta-p/15563">こちら</a>をご覧ください。</p>
-<p><strong>新しい &ldquo;Meta&rdquo; タグの自動読み取り</strong></p>
-<p>以前のバージョンの <code>utag.js</code> では、<code>name=</code> のメタタグが読み取られ、<code>utag.data</code> に <code>qp.</code> の値として格納されました。</p>
-<p>新しい <code>utag.js</code> 4.26 では、<code>property=</code>（&ldquo;Open Graph&rdquo; メタタグを参照）を持つメタタグも読み取ります。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">property</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;og:type&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;video.movie&#34;</span> /&gt; 
-</span></span></code></pre></div><p><strong>デフォルトで &ldquo;qp.&quot;（クエリストリング）および &ldquo;meta.&rdquo; 変数の小文字化を削除</strong></p>
-<p>これは、<code>utag.data</code> のデフォルトの動作のロジック変更です。小文字化するには、<a href="#utagcfglowerqp">utag.cfg.lowerqp フラグ</a> を <code>true</code> に設定します。ただし、デフォルトの設定では大文字と小文字が混在したままです。</p>
-<p class="tip"><i class="fa fa-info-circle"></i>前の <code>utag.js</code> の動作との後方互換性のために、<code>utag.cfg.lowerqp</code> フラグを true に設定してください。</p>
-<p><code>utag.cfg.lowermeta</code> フラグを <code>true</code> に設定すると、メタタグの名前を小文字化できます。メタタグの名前/値のペアの値は小文字化されません。</p>
-<p class="note"><i class="fa fa-exclamation-triangle"></i>大文字と小文字が混在するクエリストリングパラメータがある場合は、データソースの名前をデータソースタブで正確に一致するように更新する必要があります。このクエリストリングタイプのデータソースを参照するコードも更新する必要があります。</p>
+<p>ページトラッキングについては、<a href="https://community.tealiumiq.com/t5/JavaScript-utag-js/Page-Tracking/ta-p/15563">こちら</a>を参照してください。</p>
+<p><code>utag.js</code> 4.26 では、<code>utag.view</code> および <code>utag.link</code> の呼び出しによって、URL、メタタグ、またはクッキーの値などのすべての &ldquo;ビルトイン&rdquo; データポイントがデータレイヤーに追加されます。</p>
+<p>また、AJAX サイトの場合に変更される可能性のある動的なアイテム（たとえば、<code>b[&quot;dom.url&quot;]</code>）が再構築され、現在の値が使用されるようになります。現在の値は、初期の AJAX ページのランディング時の値とは異なる場合があります。</p>
+<p><code>utag.js</code> 4.26 に更新することで、<code>utag.link</code> および <code>utag.view</code> の呼び出しでは、渡したデータだけでなく、<code>b[&quot;qp.campaign&quot;]</code> のようなすべての &ldquo;ビルトイン&rdquo; データポイントが使用できるようになります。</p>
+<p>また、AJAX サイトの場合に変更される可能性のある動的なアイテム（たとえば、<code>b[&quot;dom.url&quot;]</code>）が再構築され、現在の値が使用されるようになります。現在の値は、初期の AJAX ページのランディング時の値とは異なる場合があります。</p>
+<p><code>utag.js</code> 4.26 の新機能を無効にするには、現在の動作を維持するためにこの機能を無効にします。詳細については、以下の <code>utag.cfg.load_rules_ajax</code> フラグの詳細を参照してください。</p>
+<p class="note"><i class="fa fa-exclamation-triangle"></i><code>utag.link()</code> の呼び出しは新しいタグをロードしません。新しいタグをロードするには <code>utag.view()</code> の呼び出しが必要です。</p>
+<p>以前は、<code>utag.view</code> および <code>utag.link</code> の呼び出しは、渡したデータしか知りませんでした。<code>b[&quot;qp.campaign&quot;]</code> のようなアイテムは使用できませんでした。現在は、<code>utag.link</code> および <code>utag.view</code> の呼び出しでも、URL、メタタグ、またはクッキーの値などのすべての &ldquo;ビルトイン&rdquo; データポイントがデータレイヤーに追加されます。</p>
+<p>また、AJAX サイトの場合に変更される可能性のある動的なアイテム（たとえば、<code>b[&quot;dom.url&quot;]</code>）が再構築され、現在の値が使用されるようになります。現在の値は、初期の AJAX ページのランディング時の値とは異なる場合があります。</p>
 <p><strong>utag.cfg の新しいオプション</strong></p>
-<p>Pre Loader スコープの <a href="/iq-tag-management/extensions/extensions-list/advanced-javascript-code-extension/">JavaScript コードエクステンション</a> とグローバル変数 <code>window.utag_cfg_ovrd</code> を使用します。</p>
+<p>Pre Loader スコープの <a href="/iq-tag-management/extensions/extensions-list/advanced-javascript-code-extension/">JavaScript Code Extension</a> とグローバル変数 <code>window.utag_cfg_ovrd</code> を使用します。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// Preloader Extension の JS コード
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>window.<span style="color:#a6e22e">utag_cfg_ovrd</span> <span style="color:#f92672">=</span> {
 </span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;noview&#34;</span>          <span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
@@ -336,23 +345,17 @@ UTC タイムゾーンの現在の ISO 文字列タイムスタンプ（古い�
 </span></span></code></pre></div><p><strong>次の新しいオプションが利用可能です：</strong></p>
 <ul>
 <li><code>utag.cfg.load_rules_ajax</code><br>
-<code>utag.view</code> および <code>utag.link</code> の各呼び出しのたびにロードルールを「再評価」するかどうかを設定します。<code>utag.view</code> の場合、これにより初期ページビュー時にロードされなかった場合に新しい <code>utag.X.js</code> ファイルがロードされる場合があります。</li>
+<code>utag.view</code> および <code>utag.link</code> の各呼び出しのたびにロードルールを &ldquo;再評価&rdquo; しない場合は、このフラグを <code>false</code> に設定します。<code>utag.view</code> の場合、これにより、初期のページビュー時にロードされなかった場合に新しい <code>utag.X.js</code> ファイルがロードされる場合があります。</li>
 <li><code>utag.udoname</code><br>
-データオブジェクトの名前。<code>utag.js</code> のコードはデータオブジェクトがグローバル変数であることを前提としています。たとえば、他のオブジェクト内のオブジェクトではありません。デフォルトでは <code>utag_data</code> に設定されています。</li>
+データオブジェクトの名前。<code>utag.js</code> のコードはデータオブジェクトがグローバル変数であることを前提としています。たとえば、別のオブジェクト内のオブジェクトではありません。デフォルトでは、<code>utag_data</code> に設定されています。</li>
 <li><code>utag.cfg.load_rules_at_wait</code><br>
-DOM の準備が完了したときにロードルールを再評価する場合は、このフラグを <code>true</code> に設定します。これにより、<code>utag.js</code> のロード後にデータが設定された場合に、DOM の準備が完了するまで待機してからタグを発火するためのレガシーサポートが有効になります。</li>
+DOM の準備が完了したときにロードルールを再評価する場合は、このフラグを <code>true</code> に設定します。これにより、<code>utag.js</code> のロード後にデータが設定された場合に、DOM の準備を待つためにロードルールを使用することができます。</li>
 <li><code>utag.cfg.lowerqp</code><br>
-クエリストリングの名前/値ペアを小文字化する場合は、このフラグを <code>true</code> に設定します。これは以前のデフォルトの動作でした。</li>
+クエリストリングの名前/値ペアを小文字にする場合は、このフラグを <code>true</code> に設定します。これは以前のデフォルトの動作でした。</li>
 <li><code>utag.cfg.lowermeta</code><br>
-メタタグの名前を小文字化する場合は、このフラグを <code>true</code> に設定します。メタタグの名前/値のペアの値は小文字化されません。</li>
+メタタグの名前を小文字にする場合は、このフラグを <code>true</code> に設定します。メタタグの名前/値ペアの値は小文字になりません。</li>
 <li><code>utag.cfg.noview</code><br>
-初期の <code>utag.view</code> 呼び出しが行われるタイミングを制御する場合は、このフラグを <code>true</code> に設定します。これは、初期ページのロードアクションではなく、アプリケーションがページビューイベントを制御する AJAX サイトで一般的です。</li>
-</ul>
-<p><strong>考慮事項</strong></p>
-<ul>
-<li>誤って複数の注文が発生する可能性があります。<code>utag.link</code> および <code>utag.view</code> の呼び出しでは、すべての &ldquo;DOM&rdquo; タイプのデータポイントがすべての呼び出しで利用可能です。たとえば、<code>b[&quot;qp.order_id&quot;]</code> のようなクエリストリングデータはページの読み込み時に読み取られ、注文イベントをトリガーします。ただし、同じ注文ページで <code>utag.link</code> 呼び出しを発行すると、<code>b[&quot;qp.order_id&quot;]</code> データが設定され、2 回目の注文イベントがトリガーされる可能性があります。</li>
-<li>最も直感的な動作をするためには、<code>utag.js</code> ファイルを読み込む前にすべての <code>utag_data</code> の値を設定し、<code>utag.cfg.load_rules_at_wait</code> を &ldquo;false&rdquo; のままにして、初期の <code>utag.view</code> 呼び出しのタイミングを制御します。</li>
-<li><code>utag.js</code> 4.26 に更新すると、クエリストリングパラメータを小文字化するデフォルトの動作が変更されることに注意してください</li>
+初期の <code>utag.view</code> 呼び出しが行われるタイミングを制御する場</li>
 </ul>
 </div>
 
@@ -412,15 +415,19 @@ DOM の準備が完了したときにロードルールを再評価する場合�
 
   <aside class="fixed-lTK mw5 right-0 f6 bl b--light-gray pv4 pv0-ns ph3 nested-copy-line-height">
       <p class="b ttu">このページで</p>
-      <nav id="TableOfContents"><ul class="toc-h3"><li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#utagjs-%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3-450-%E4%BB%A5%E9%99%8D%E3%81%B8%E3%81%AE%E6%9B%B4%E6%96%B0" href="javascript:void(0)">utag.js バージョン 4.50 以降への更新</a></li>
-              </ul><li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#2023%E5%B9%B49%E6%9C%88" href="javascript:void(0)">2023年9月</a></li>
-              <ul class="toc-h3"><li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#451" href="javascript:void(0)">4.51</a></li>
+      <nav id="TableOfContents"><ul class="toc-h2"><li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#utagjs-%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3-450-%E4%BB%A5%E9%99%8D%E3%81%B8%E3%81%AE%E6%9B%B4%E6%96%B0" href="javascript:void(0)">utag.js バージョン 4.50 以降への更新</a></li>
+              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#451" href="javascript:void(0)">4.51</a></li>
               <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#450" href="javascript:void(0)">4.50</a></li>
-              </ul><li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#2022%E5%B9%B49%E6%9C%88" href="javascript:void(0)">2022年9月</a></li>
-              <ul class="toc-h3"><li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#449" href="javascript:void(0)">4.49</a></li>
-              </ul><li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#445---448" href="javascript:void(0)">4.45 - 4.48</a></li>
-              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#443---444" href="javascript:void(0)">4.43 - 4.44</a></li>
-              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#440---442" href="javascript:void(0)">4.40 - 4.42</a></li>
+              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#449" href="javascript:void(0)">4.49</a></li>
+              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#448" href="javascript:void(0)">4.48</a></li>
+              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#447" href="javascript:void(0)">4.47</a></li>
+              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#446" href="javascript:void(0)">4.46</a></li>
+              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#445" href="javascript:void(0)">4.45</a></li>
+              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#444" href="javascript:void(0)">4.44</a></li>
+              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#443" href="javascript:void(0)">4.43</a></li>
+              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#442" href="javascript:void(0)">4.42</a></li>
+              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#441" href="javascript:void(0)">4.41</a></li>
+              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#440" href="javascript:void(0)">4.40</a></li>
               </nav>
   </aside></nav>
 

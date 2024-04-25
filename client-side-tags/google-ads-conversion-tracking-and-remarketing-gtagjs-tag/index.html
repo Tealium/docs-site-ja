@@ -6,7 +6,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
      
-    <title>Google Adsのコンバージョン追跡とリマーケティング（gtag.js）タグの構成ガイド | クライアントサイドタグ | Tealium開発者ドキュメント</title>
+    <title>Google Adsのコンバージョン追跡とリマーケティング（gtag.js）タグのセットアップガイド | クライアントサイドタグ | Tealium開発者ドキュメント</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
@@ -34,7 +34,7 @@
 <script>
 var utag_data = {
     site_section  : "client-side-tags",
-    reading_time  : "3",
+    reading_time  : "2",
     site_language : "ja",
     tealium_event : "page_view"
 }
@@ -209,6 +209,7 @@ var utag_data = {
         <a href="/client-side-tags/fullstory-tag/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".fullstory-tag">FullStory</a></li><li data-level="1" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
         <a href="/client-side-tags/fullstory-remote-command-tag/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".fullstory-remote-command-tag">FullStoryリモートコマンド</a></li><li data-level="1" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
         <a href="/client-side-tags/genesys-chat-widget-tag/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".genesys-chat-widget-tag">Genesysチャットウィジェットタグガイド</a></li><li data-level="1" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
+        <a href="/client-side-tags/glance-cobrowse-tag/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".glance-cobrowse-tag">Glance Cobrowse</a></li><li data-level="1" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
         <a href="/client-side-tags/glassbox-detector-tag/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".glassbox-detector-tag">Glassbox Detector</a></li><li data-level="1" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
         <a href="/client-side-tags/google-ad-manager-360-audience-pixel-tag/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".google-ad-manager-360-audience-pixel-tag-setup-guide">Google Ad Manager 360 Audience Pixel</a></li><li data-level="1" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
         <a href="/client-side-tags/google-ad-manager-conversion-tag/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".google-ad-manager-conversion-tag">Google Ad Manager コンバージョン</a></li><li data-level="1" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
@@ -223,7 +224,7 @@ var utag_data = {
         <a href="/client-side-tags/google-analytics-gtagjs-tag/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".google-analytics-gtagjs-tag">Google Analytics（gtag.js）</a></li><li data-level="1" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
         <a href="/client-side-tags/google-analytics-series/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".google-analytics-series">Google Analytics（シリーズ）</a></li><li data-level="1" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
         <a href="/client-side-tags/google-cloud-retail-tag/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".google-cloud-retail-tag">Google Cloud Retail</a></li><li data-level="1" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
-        <a href="/client-side-tags/google-consent-mode-tag/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".google-consent-mode-tag">Google Consent Modeタグ構成ガイド</a></li><li data-level="1" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
+        <a href="/client-side-tags/google-consent-mode-tag/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".google-consent-mode-tag">Google Consent Mode</a></li><li data-level="1" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
         <a href="/client-side-tags/google-consent-mode-tag-beta/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".google-consent-mode-tag-beta">Google Consent Modeタグ構成ガイド（BETA）</a></li><li data-level="1" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
         <a href="/client-side-tags/google-publisher-tag/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".google-publisher-tag">Google Publisherタグの構成ガイドとマッピング</a></li><li data-level="1" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
         <a href="/client-side-tags/google-universal-analytics-event-tracking/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".google-universal-analytics-event-tracking">Google Universal Analytics イベントトラッキング</a></li><li data-level="1" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
@@ -327,7 +328,6 @@ var utag_data = {
         <a href="/client-side-tags/salsify-tag/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".salsify-tag">Salsify</a></li><li data-level="1" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
         <a href="/client-side-tags/sas-ci-360/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".sas-customer-intelligenge-360-tag">SASカスタマーインテリジェンス360</a></li><li data-level="1" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
         <a href="/client-side-tags/schema-app-tag/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".schema-app-tag">Schema App</a></li><li data-level="1" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
-        <a href="/client-side-tags/session-ai-tag/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".session-ai-tag">Session AI</a></li><li data-level="1" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
         <a href="/client-side-tags/shopmessage-tag/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".shopmessage-tag">ShopMessage</a></li><li data-level="1" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
         <a href="/client-side-tags/shopzilla-tag/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".shopzilla-tag">Shopzillaタグ構成ガイド</a></li><li data-level="1" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
         <a href="/client-side-tags/simility-tag/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".simility-tag">Simility</a></li><li data-level="1" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
@@ -378,6 +378,7 @@ var utag_data = {
         <a href="/client-side-tags/zaius-tag/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".zaius-tag">Zaius</a></li><li data-level="1" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
         <a href="/client-side-tags/zanox-tag/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".zanox-tag">Zanoxタグ構成ガイド</a></li><li data-level="1" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
         <a href="/client-side-tags/zeta-tag/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".zeta-tag">Zeta</a></li><li data-level="1" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
+        <a href="/client-side-tags/session-ai-tag/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".session-ai-tag">セッションAI</a></li><li data-level="1" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
         <a href="/client-side-tags/flicker-free-test-and-target/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".flicker-free-test-and-target">フリッカーフリーテスト＆ターゲット</a></li><li data-level="1" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
         <a href="/client-side-tags/configuring-multiple-floodlight-tags/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".configuring-multiple-floodlight-tags">複数のFloodlightタグの構成</a></li></ul>
 </nav>
@@ -406,7 +407,7 @@ var utag_data = {
 </ul>
 </nav>
 
-<h1 class="lh-title mt30 mb3">Google Adsのコンバージョン追跡とリマーケティング（gtag.js）タグの構成ガイド</h1>
+<h1 class="lh-title mt30 mb3">Google Adsのコンバージョン追跡とリマーケティング（gtag.js）タグのセットアップガイド</h1>
 </header>
 
 <div class="mv2 mid-gray fn w-100">
@@ -420,11 +421,10 @@ var utag_data = {
 </div>
 
 <div class="prose nested-links" id="prose">
-  <p>潜在的な顧客と再接触するために、Google Adsのリマーケティングを使用してウェブサイトとアプリの訪問をリマーケティングリストに追加します。さらに、コンバージョン測定を活用して、広告との相互作用がどれだけ効果的に価値のある顧客活動につながっているかを確認します。</p>
+  <p>Google Adsのリマーケティングを使用して、ウェブサイトやアプリの訪問者をリマーケティングリストに追加して、潜在的な顧客と再接触しましょう。さらに、コンバージョン測定を活用して、広告との相互作用がどれだけ効果的に価値のある顧客活動につながっているかを確認できます。</p>
 <h2 id="タグのヒント">タグのヒント</h2>
 <ul>
-<li>
-<p>Eコマース拡張をサポートしています：</p>
+<li>Eコマース拡張をサポートしています：
 <ul>
 <li>小計/コンバージョン値</li>
 <li>注文通貨/コンバージョン通貨</li>
@@ -435,25 +435,15 @@ var utag_data = {
 <li>価格のリスト</li>
 </ul>
 </li>
-<li>
-<p>マッピングを使用して、標準の構成値とEコマース拡張の値を動的に上書きします。</p>
-</li>
-<li>
-<p><strong>カスタムコンバージョン変数</strong>にマッピングして、カスタム変数名で<code>myvar</code>を置き換えてカスタムコンバージョン変数を渡します。</p>
-</li>
-<li>
-<p><a href="https://support.google.com/google-ads/answer/7305793">ダイナミックリマーケティングのドキュメント</a></p>
-</li>
-<li>
-<p><a href="https://developers.google.com/adwords-remarketing-tag/">Google Adsのドキュメント</a></p>
-</li>
-<li>
-<p><strong>ハッシュ化されたメールアドレス</strong>と<strong>電話番号</strong>の値を暗号化して埋め込むために、<a href="/iq-tag-management/extensions/extensions-list/crypto-extension/">Crypto拡張機能</a>を使用します。</p>
-</li>
+<li>マッピングを使用して、標準の設定値とEコマース拡張の値を動的に上書きします。</li>
+<li>カスタムコンバージョン変数をマッピングして、<strong>カスタムコンバージョン変数</strong>に渡し、<code>myvar</code>をカスタム変数名に置き換えます。</li>
+<li><a href="https://support.google.com/google-ads/answer/7305793">ダイナミックリマーケティングのドキュメント</a></li>
+<li><a href="https://developers.google.com/adwords-remarketing-tag/">Google Adsのドキュメント</a></li>
+<li><strong>ハッシュ化されたメールアドレス</strong>と<strong>電話番号</strong>の値を暗号化して埋め込むために、<a href="/iq-tag-management/extensions/extensions-list/crypto-extension/">Crypto拡張</a>を使用します。</li>
 </ul>
-<h2 id="タグの構成">タグの構成</h2>
+<h2 id="タグの設定">タグの設定</h2>
 <p>新しいタグを追加するために、タグマーケットプレイスに移動します。詳細については、<a href="/iq-tag-management/tags/about/">タグについて</a>を参照してください。</p>
-<p>タグを追加する際に、次の構成を構成します：</p>
+<p>タグを追加する際に、以下の設定を構成します：</p>
 <ul>
 <li><strong>コンバージョンID</strong>：コンバージョンの一意のIDです。このIDは、Google Adsのコントロールパネルで確認できます（例：<code>AW-123456789</code>）。
 <ul>
@@ -461,22 +451,22 @@ var utag_data = {
 <li>複数のプロパティにデータを送信するために、カンマ区切りのリストを使用します。</li>
 </ul>
 </li>
-<li><strong>コンバージョンラベル</strong>：ここにデフォルトのラベルを構成し、マッピングを使用してこの値を動的に上書きします。
+<li><strong>コンバージョンラベル</strong>：ここにデフォルトのラベルを設定し、マッピングを使用してこの値を動的に上書きします。
 <ul>
 <li>複数のラベルにデータを送信するために、カンマ区切りのリストを使用します。このリストは、<strong>コンバージョンID</strong>と同じ数の<strong>コンバージョンラベル</strong>を使用するか、すべての<strong>コンバージョンID</strong>に対して単一のラベルを使用することができます。</li>
 </ul>
 </li>
-<li><strong>コンバージョン値</strong>：ここにデフォルトの値を構成するか、Eコマース拡張の小計値を使用するためにこれを空白のままにします。
+<li><strong>コンバージョン値</strong>：ここにデフォルトの値を設定するか、Eコマース拡張の小計値を使用するためにこれを空白のままにします。
 <ul>
 <li>マッピングを使用して、この値とEコマース拡張の値を動的に上書きします。</li>
 </ul>
 </li>
-<li><strong>グローバルオブジェクト</strong>：イベントキューに使用される<strong>グローバルオブジェクト</strong>の名前です。指定されていない場合は、<code>gtag</code>が使用されます。
+<li><strong>グローバルオブジェクト</strong>：イベントキューに使用される<strong>グローバルオブジェクト</strong>の名前です。指定しない場合は、<code>gtag</code>が使用されます。
 <ul>
 <li>ほとんどの実装では必要ありません。</li>
 </ul>
 </li>
-<li><strong>データレイヤー名</strong>：デフォルトでは、グローバルサイトタグによって初期化および参照されるデータレイヤーの名前は<strong>dataLayer</strong>となっています。プロジェクトに別の名前が必要な場合にのみデータレイヤーの名前を変更します。</li>
+<li><strong>データレイヤー名</strong>：デフォルトでは、グローバルサイトタグによって初期化および参照されるデータレイヤーの名前は<strong>dataLayer</strong>となっています。プロジェクトに別の名前が必要な場合にのみ、データレイヤーの名前を変更します。</li>
 <li><strong>リマーケティングの有効化</strong>：リマーケティングが有効になっている場合、このタグは自動的にEコマース拡張からデータを取得してGoogle Adsの<strong>Retail</strong>パラメータを埋め込みます。
 <ul>
 <li>ツールボックスの<strong>Retail</strong>タブに直接マッピングすると、Eコマース拡張を介して取得されるデータが上書きされます。</li>
@@ -488,18 +478,18 @@ var utag_data = {
 <li>このリストは、<code>tealiumiq.com</code>などのトップレベルドメインで構成される必要があります。</li>
 </ul>
 </li>
-<li><strong>エンリッチメント型コンバージョンの有効化</strong>
+<li><strong>強化型コンバージョンの有効化</strong>
 <ul>
-<li>エンリッチメント型コンバージョンのサポートは2022年6月に追加されました。古いバージョンのタグを使用していてこの機能を使用したい場合は、タグテンプレートを更新する必要があります。詳細については、<a href="/iq-tag-management/templates/about/">タグテンプレートの管理</a>を参照してください。</li>
-<li><strong>Web向けエンリッチメント型コンバージョン</strong>機能は、ウェブサイトからハッシュ化された第一者コンバージョンデータをプライバシーに配慮した方法で送信することで、コンバージョン測定の精度を向上させます。</li>
-<li><strong>エンリッチメント型コンバージョン</strong>を有効にする前に、Google Adsアカウントの<strong>ツールと構成 &gt; 測定/コンバージョン &gt; 構成 &gt; カスタマーデータの利用規約</strong>で<strong>カスタマーデータの利用規約</strong>を承認する必要があります。</li>
-<li>サーバーサイドの<strong>Web向けエンリッチメント型コンバージョン</strong>コネクタを使用して、非購入コンバージョンの<strong>トランザクションID</strong>に<code>tealium_random</code>などの一意の値をマッピングし、Googleがイベントの重複を排除できるようにします。さらに、変換のためのGoogle Adsの構成内で<strong>実装タイプ</strong>を<code>API</code>に構成します。</li>
-<li>このタグをEventStreamのGoogle Ads Enhanced Conversionコネクタと連携させる方法の詳細については、<a href="/tech-partners/tealium-google-enhanced-conversions-integration-guide/">Tealium + Google Enhanced Conversions Integration Guide</a>を参照してください。</li>
+<li><strong>Web向け強化型コンバージョン</strong>機能は、コンバージョン測定の精度を向上させることができます。これにより、ウェブサイトからハッシュ化されたファーストパーティのコンバージョンデータがプライバシーに配慮した方法で送信されます。</li>
+<li>強化型コンバージョンのサポートは2022年6月に追加されました。古いバージョンのタグを使用している場合、この機能を使用するにはタグテンプレートを更新する必要があります。詳細については、<a href="/iq-tag-management/templates/about/">タグテンプレートの管理</a>を参照してください。</li>
+<li><strong>強化型コンバージョン</strong>を有効にする前に、Google Adsアカウントで強化型コンバージョンを有効にする必要があります。詳細については、<a href="https://support.google.com/google-ads/answer/13258081?sjid=1600196321043643540-NC">Googleタグを使用してWeb向けに強化型コンバージョンを設定する</a>を参照してください。</li>
+<li>サーバーサイドの<strong>Web向け強化型コンバージョン</strong>コネクタを使用してこのクライアントサイドタグを補完する場合は、非購入コンバージョンの<strong>トランザクションID</strong>に<code>tealium_random</code>などの一意の値をマッピングし、Googleがイベントの重複を排除できるようにします。さらに、変換のためのGoogle Adsの構成内で<strong>実装タイプ</strong>を<code>API</code>に設定します。</li>
+<li>EventStreamでGoogle Ads Enhanced Conversionコネクタと連携するためにこのタグを設定する方法の詳細については、<a href="/tech-partners/tealium-google-enhanced-conversions-integration-guide/">Tealium + Google Enhanced Conversions Integration Guide</a>を参照してください。</li>
 </ul>
 </li>
 </ul>
 <h2 id="ロードルール">ロードルール</h2>
-<p>すべてのページでタグをロードするか、タグがロードされる条件を構成します。詳細については、<a href="/iq-tag-management/load-rules/about/">ロードルールについて</a>を参照してください。</p>
+<p>タグをすべてのページにロードするか、タグがロードされる条件を設定します。詳細については、<a href="/iq-tag-management/load-rules/about/">ロードルールについて</a>を参照してください。</p>
 <h2 id="データマッピング">データマッピング</h2>
 <p>マッピングとは、データレイヤー変数からベンダータグの対応する宛先変数にデータを送信するプロセスです。詳細については、<a href="/iq-tag-management/data-mappings/about/">データマッピングについて</a>を参照してください。</p>
 <p>利用可能なカテゴリは次のとおりです：</p>
@@ -909,7 +899,7 @@ var utag_data = {
 </tr>
 </tbody>
 </table>
-<h3 id="advanced">Advanced</h3>
+<h3 id="アドバンスド">アドバンスド</h3>
 <table>
 <thead>
 <tr>
@@ -927,17 +917,17 @@ var utag_data = {
 <tr>
 <td style="text-align:left"><code>custom.a</code></td>
 <td style="text-align:left">数値</td>
-<td style="text-align:left">訪問の年齢</td>
+<td style="text-align:left">訪問者の年齢</td>
 </tr>
 <tr>
 <td style="text-align:left"><code>custom.g</code></td>
 <td style="text-align:left">文字列</td>
-<td style="text-align:left">訪問の性別</td>
+<td style="text-align:left">訪問者の性別</td>
 </tr>
 <tr>
 <td style="text-align:left"><code>custom.hasaccount</code></td>
 <td style="text-align:left">真偽値</td>
-<td style="text-align:left">訪問がアカウントを持っているかどうか</td>
+<td style="text-align:left">訪問者がアカウントを持っているかどうか</td>
 </tr>
 <tr>
 <td style="text-align:left"><code>custom.cqs</code></td>
@@ -952,12 +942,12 @@ var utag_data = {
 <tr>
 <td style="text-align:left"><code>custom.ly</code></td>
 <td style="text-align:left">数値</td>
-<td style="text-align:left">訪問のロイヤリティスコア</td>
+<td style="text-align:left">訪問者のロイヤリティスコア</td>
 </tr>
 <tr>
 <td style="text-align:left"><code>custom.hs</code></td>
 <td style="text-align:left">数値</td>
-<td style="text-align:left">訪問の高額購入者スコア</td>
+<td style="text-align:left">訪問者の高額購入者スコア</td>
 </tr>
 <tr>
 <td style="text-align:left"><code>custom.myvar</code></td>
@@ -989,17 +979,17 @@ var utag_data = {
 <tr>
 <td style="text-align:left"><code>config.phone_conversion_css_class</code></td>
 <td style="text-align:left">文字列</td>
-<td style="text-align:left">電話コンバージョンCSSクラス名</td>
+<td style="text-align:left">電話コンバージョンのCSSクラス名</td>
 </tr>
 <tr>
 <td style="text-align:left"><code>config.phone_conversion_options.timeout</code></td>
 <td style="text-align:left">数値</td>
-<td style="text-align:left">電話コンバージョンタイムアウト</td>
+<td style="text-align:left">電話コンバージョンのタイムアウト</td>
 </tr>
 <tr>
 <td style="text-align:left"><code>config.phone_conversion_options.cache</code></td>
 <td style="text-align:left">真偽値</td>
-<td style="text-align:left">電話コンバージョンキャッシュ</td>
+<td style="text-align:left">電話コンバージョンのキャッシュ</td>
 </tr>
 </tbody>
 </table>
@@ -1088,7 +1078,7 @@ var utag_data = {
 </tr>
 <tr>
 <td style="text-align:left"><code>generate_lead</code></td>
-<td style="text-align:left">リードが生成されました。この変数を使用して、再エンゲージメントキャンペーンの効果を把握できます。</td>
+<td style="text-align:left">リードが生成されました。この変数を使用すると、再エンゲージメントキャンペーンの効果を把握することができます。</td>
 </tr>
 <tr>
 <td style="text-align:left"><code>login</code></td>
@@ -1104,7 +1094,7 @@ var utag_data = {
 </tr>
 <tr>
 <td style="text-align:left"><code>search</code></td>
-<td style="text-align:left">ユーザーが検索を実行しました。このイベントを使用して、ユーザーがウェブサイトやアプリで検索しているコンテンツをコンテキストに置いて特定することができます。たとえば、ユーザーが検索を実行した後にページを表示した場合にこのイベントを送信できます。</td>
+<td style="text-align:left">ユーザーが検索を実行しました。このイベントを使用して、ユーザーがウェブサイトやアプリで何を検索しているかをコンテキストに基づいて特定することができます。たとえば、ユーザーが検索を実行した後にページを表示した場合にこのイベントを送信できます。</td>
 </tr>
 <tr>
 <td style="text-align:left"><code>share</code></td>
@@ -1120,55 +1110,7 @@ var utag_data = {
 </tr>
 <tr>
 <td style="text-align:left"><code>view_search_results</code></td>
-<td style="text-align:left">ユーザーが検索結果を表示しました。Google Analyticsのエンリッチメントイベント測定を介して、このイベントを自動的に収集するように構成できます。</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>cst</code></td>
-<td style="text-align:left">カスタムイベント。</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>add_payment_info</code></td>
-<td style="text-align:left">ユーザーが支払い情報を送信しました。</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>add_to_cart</code></td>
-<td style="text-align:left">アイテムがカートに追加されました。</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>add_to_wishlist</code></td>
-<td style="text-align:left">アイテムがウィッシュリストに追加されました。このイベントを使用して、アプリ内で人気のあるギフトアイテムを特定できます。</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>begin_checkout</code></td>
-<td style="text-align:left">ユーザーがチェックアウトを開始しました。</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>checkout_progress</code></td>
-<td style="text-align:left">ユーザーがチェックアウトのプロセス中です。</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>purchase</code></td>
-<td style="text-align:left">ユーザーが1つ以上のアイテムを購入しました。</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>refund</code></td>
-<td style="text-align:left">ユーザーに1つ以上のアイテムが返金されました。</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>remove_from_cart</code></td>
-<td style="text-align:left">アイテムがカートから削除されました。</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>product_click</code></td>
-<td style="text-align:left">リストからアイテムが選択されました。</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>promotion_click</code></td>
-<td style="text-align:left">リストからプロモーションが選択されました。</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>set_checkout_option</code></td>
-<td style="text-align:left">ユーザーが配送方法などのチェックアウトオプションを選択しました。</td>
+<td style="text-align:left">ユーザーが検索結果を表示しました。Google Analyticsの強化イベント測定を介して、このイベントを自動的に収集するように設定することができます。</td>
 </tr>
 <tr>
 <td style="text-align:left"><code>view_item</code></td>
@@ -1180,11 +1122,11 @@ var utag_data = {
 </tr>
 <tr>
 <td style="text-align:left"><code>view_promotion</code></td>
-<td style="text-align:left">リストからプロモーションが表示されました。</td>
+<td style="text-align:left">プロモーションがリストから表示されました。</td>
 </tr>
 </tbody>
 </table>
-<h3 id="エンリッチメント型コンバージョン">エンリッチメント型コンバージョン</h3>
+<h3 id="強化型コンバージョン">強化型コンバージョン</h3>
 <table>
 <thead>
 <tr>
@@ -1197,7 +1139,7 @@ var utag_data = {
 <tr>
 <td style="text-align:left"><code>config.allow_enhanced_conversions</code></td>
 <td style="text-align:left">真偽値</td>
-<td style="text-align:left">エンリッチメント型コンバージョンを許可するかどうか。</td>
+<td style="text-align:left">強化型コンバージョンを許可するかどうか。</td>
 </tr>
 <tr>
 <td style="text-align:left"><code>user_data.email</code></td>
@@ -1331,7 +1273,7 @@ var utag_data = {
 
         </div>
         <div class="bt-l b--moon-gray pt3 f6">
-          <p>最終更新日 ::  2023年April月24日
+          <p>最終更新日 ::  2024年March月29日
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           </p>
         </div>
@@ -1346,7 +1288,7 @@ var utag_data = {
   <aside class="fixed-lTK mw5 right-0 f6 bl b--light-gray pv4 pv0-ns ph3 nested-copy-line-height">
       <p class="b ttu">このページで</p>
       <nav id="TableOfContents"><ul class="toc-h2"><li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%82%BF%E3%82%B0%E3%81%AE%E3%83%92%E3%83%B3%E3%83%88" href="javascript:void(0)">タグのヒント</a></li>
-              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%82%BF%E3%82%B0%E3%81%AE%E6%A7%8B%E6%88%90" href="javascript:void(0)">タグの構成</a></li>
+              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%82%BF%E3%82%B0%E3%81%AE%E8%A8%AD%E5%AE%9A" href="javascript:void(0)">タグの設定</a></li>
               <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%83%AD%E3%83%BC%E3%83%89%E3%83%AB%E3%83%BC%E3%83%AB" href="javascript:void(0)">ロードルール</a></li>
               <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%83%87%E3%83%BC%E3%82%BF%E3%83%9E%E3%83%83%E3%83%94%E3%83%B3%E3%82%B0" href="javascript:void(0)">データマッピング</a></li>
               <ul class="toc-h3"><li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E6%A8%99%E6%BA%96" href="javascript:void(0)">標準</a></li>
@@ -1359,12 +1301,12 @@ var utag_data = {
               <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E4%B8%8D%E5%8B%95%E7%94%A3" href="javascript:void(0)">不動産</a></li>
               <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E6%97%85%E8%A1%8C" href="javascript:void(0)">旅行</a></li>
               <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%A0%E3%83%AC%E3%82%AC%E3%82%B7%E3%83%BC" href="javascript:void(0)">カスタム/レガシー</a></li>
-              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#advanced" href="javascript:void(0)">Advanced</a></li>
+              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%82%A2%E3%83%89%E3%83%90%E3%83%B3%E3%82%B9%E3%83%89" href="javascript:void(0)">アドバンスド</a></li>
               <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E9%9B%BB%E8%A9%B1%E3%82%B3%E3%83%B3%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3" href="javascript:void(0)">電話コンバージョン</a></li>
               <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#e%E3%82%B3%E3%83%9E%E3%83%BC%E3%82%B9" href="javascript:void(0)">Eコマース</a></li>
               <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E5%9B%BA%E6%9C%89%E3%81%AE%E3%83%91%E3%83%A9%E3%83%A1%E3%83%BC%E3%82%BF" href="javascript:void(0)">イベント固有のパラメータ</a></li>
               <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#iab%E3%83%88%E3%83%A9%E3%83%B3%E3%82%B9%E3%83%9A%E3%82%A2%E3%83%AC%E3%83%B3%E3%82%B7%E3%83%BC%E3%81%8A%E3%82%88%E3%81%B3%E5%90%8C%E6%84%8F%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AFv2" href="javascript:void(0)">IABトランスペアレンシーおよび同意フレームワークv2</a></li>
-              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%82%A8%E3%83%B3%E3%83%AA%E3%83%83%E3%83%81%E3%83%A1%E3%83%B3%E3%83%88%E5%9E%8B%E3%82%B3%E3%83%B3%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3" href="javascript:void(0)">エンリッチメント型コンバージョン</a></li>
+              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E5%BC%B7%E5%8C%96%E5%9E%8B%E3%82%B3%E3%83%B3%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3" href="javascript:void(0)">強化型コンバージョン</a></li>
               </nav>
   </aside></nav>
 
@@ -1629,6 +1571,7 @@ var utag_data = {
 
 <div class="docsmenu mobilemenu dn" style="overflow-y:scroll;">
     <ul class="list dib ph0 ma0 scrolling-touch tc">
+  
   
   
   

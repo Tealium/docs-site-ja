@@ -6,7 +6,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
      
-    <title>訪問ID属性を作成する | ビジターのスティッチング | Tealium開発者ドキュメント</title>
+    <title>訪問者ID属性を作成する | ビジターのスティッチング | Tealium開発者ドキュメント</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
@@ -342,7 +342,7 @@ var utag_data = {
         <a href="/server-side/visitor-stitching/visitor-id-attribute/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".visitor-id-attribute">ビジターID属性</a></li><li data-level="3" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
         <a href="/server-side/visitor-stitching/diagram/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".visitor-stitching-example">訪問のスティッチング例</a></li><li data-level="3" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
         <a href="/server-side/visitor-stitching/guidelines/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".visitor-stitching-guidelines">ビジタースティッチングのガイドライン</a></li><li data-level="3" class="selected relative w-100 hover-accent-color-light fw4 f5  ind2">
-        <a href="/server-side/visitor-stitching/create-a-visitor-id-attribute/" class="db link pr2 pv2  bg-secondary primary-color " data-target=".create-visitor-id-attribute">訪問ID属性を作成する</a></li><li data-level="3" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
+        <a href="/server-side/visitor-stitching/create-a-visitor-id-attribute/" class="db link pr2 pv2  bg-secondary primary-color " data-target=".create-visitor-id-attribute">訪問者ID属性を作成する</a></li><li data-level="3" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
         <a href="/server-side/visitor-stitching/scenarios/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".visitor-stitching-scenarios">訪問のスティッチングシナリオ</a></li><li data-level="3" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
         <a href="/server-side/visitor-stitching/tapid/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".about-tapid-cookies">TAPIDクッキーについて</a></li></ul>
       </li><li class="relative w-100 fw8 f5 ">
@@ -500,7 +500,7 @@ var utag_data = {
 </ul>
 </nav>
 
-<h1 class="lh-title mt30 mb3">訪問ID属性を作成する</h1>
+<h1 class="lh-title mt30 mb3">訪問者ID属性を作成する</h1>
 </header>
 
 <div class="mv2 mid-gray fn w-100">
@@ -508,7 +508,7 @@ var utag_data = {
 
   
     <p class="f4 fw3 lh-copy">
-      この記事では、訪問ID属性を作成するための詳細な手順を提供します。この例では、訪問が購入する際に通常利用可能な<code>customer_id</code>をユーザー識別子として使用しています。
+      この記事では、訪問者ID属性を作成するための詳細な手順を提供します。この例では、訪問者が購入する際に通常利用可能な<code>customer_id</code>をユーザー識別子として使用します。
     </p>
   
 </div>
@@ -516,41 +516,40 @@ var utag_data = {
 <div class="prose nested-links" id="prose">
   <p><a href="/server-side/visitor-stitching/anonymous-user-visitor-id-attributes/">匿名IDとユーザー識別子</a>について詳しく学びましょう。</p>
 <h2 id="開始する前に">開始する前に</h2>
-<p>訪問ID属性を作成するには、まず、どのイベント属性がユーザー識別子として適しているかを決定します。ユーザー識別子の値は、各訪問に対して一意でなければなりません。ユーザー識別子は、資格を持つイベントと一致するルールを使用して訪問の文字列属性を構成するために使用されます。訪問の文字列属性は、ユーザー識別子が各訪問に対して一意であることを確認するために使用されます。訪問の文字列属性が訪問全体で一意であることが確認されると、それは訪問ID属性を構成するために使用されます。</p>
-<p>この例では、ユーザー識別子として<code>customer_id</code>を、資格を持つイベントとして<code>purchase</code>イベントを使用しています。</p>
+<p>訪問者ID属性を作成するには、まず、どのイベント属性がユーザーにとって良いユーザー識別子であるかを決定します。ユーザー識別子の値は、各訪問者に対して一意でなければなりません。ユーザー識別子は、資格を持つイベントに一致するルールを使用して訪問者の文字列属性を設定するために使用されます。訪問者の文字列属性は、ユーザー識別子が各訪問者に対して一意であることを確認するために使用されます。訪問者の文字列属性が訪問者全体で一意であることが確認された後、それは訪問者ID属性を設定するために使用されます。</p>
+<p>この例では、ユーザー識別子として<code>customer_id</code>を使用し、資格を持つイベントとして<code>purchase</code>イベントを使用します。</p>
 <h2 id="ステップ1-ルールを作成する">ステップ1: ルールを作成する</h2>
-<p>訪問ID属性を作成する前に、値が訪問ID属性に割り当てられるタイミングを指定するルールを作成する必要があります。</p>
-<p>以下の手順を使用して、訪問ID属性を<code>customer_id</code>に構成し、<code>customer_id</code>が割り当てられ、その値が&quot;none&quot;でない場合にルールを作成します。</p>
+<p>訪問者ID属性を作成する前に、値が訪問者ID属性に割り当てられるタイミングを指定するルールを作成する必要があります。</p>
+<p>訪問者ID属性を<code>customer_id</code>に設定し、<code>customer_id</code>が割り当てられ、その値が&quot;none&quot;でない場合にルールを設定するための手順は以下の通りです。</p>
 <ol>
-<li><strong>Server-Side Tools &gt; Manage Rules</strong>に移動します。</li>
-<li><strong>+ Add Rule</strong>をクリックします。<strong>Create Rule</strong>ダイアログが表示されます。</li>
-<li><strong>Title</strong>に、この場合は&quot;customer_id is assigned&quot;と入力します。</li>
-<li><strong>+ Attribute Condition</strong>をクリックします。</li>
-<li>属性に<code>customer_id</code>を選択し、演算子のドロップダウンリストから<strong>is assigned</strong>を選択します。</li>
-<li><strong>+ Attribute Condition</strong>をクリックし、属性に<code>customer_id</code>を選択し、演算子に**does not equal (ignore case)**を選択し、値に<code>&quot;none&quot;</code>を入力します。</li>
-<li><strong>Save</strong>をクリックします。<br>
+<li><strong>サーバーサイドツール &gt; ルールの管理</strong>に移動します。</li>
+<li><strong>+ ルールを追加</strong>をクリックします。<strong>ルールの作成</strong>ダイアログが表示されます。</li>
+<li><strong>タイトル</strong>を入力します。この場合は&quot;customer_idが割り当てられている&quot;とします。</li>
+<li><strong>+ 属性条件</strong>をクリックします。</li>
+<li>属性に<code>customer_id</code>を選択し、演算子のドロップダウンリストから<strong>割り当てられている</strong>を選択します。</li>
+<li><strong>+ 属性条件</strong>をクリックし、属性に<code>customer_id</code>を選択し、演算子に**等しくない（大文字・小文字を無視）**を選択し、値に<code>&quot;none&quot;</code>を入力します。</li>
+<li><strong>保存</strong>をクリックします。<br>
 <figure><a class="slb" href="/images/server-side/as-create-rule-check-for-none.png"><img src="/images/server-side/as-create-rule-check-for-none.png"
              alt="AS-create-rule-check-for-none.png"
              title="AS-create-rule-check-for-none.png"/>
         </a>
-    </figure><br>
-<br></li>
+    </figure></li>
 </ol>
-<h2 id="ステップ2-訪問の文字列属性を作成する">ステップ2: 訪問の文字列属性を作成する</h2>
-<p>Audience Discoveryで検証に使用する一時的な文字列属性を作成します。データを検証せずに訪問ID属性を作成すると、訪問プロファイルのステッチが不適切になる可能性があります。</p>
-<p>以下の手順を使用して文字列属性を作成します：</p>
+<h2 id="ステップ2-訪問者の文字列属性を作成する">ステップ2: 訪問者の文字列属性を作成する</h2>
+<p>Audience Discoveryで検証に使用する一時的な文字列属性を作成します。データを検証せずに訪問者ID属性を作成すると、訪問者プロファイルのステッチが不適切になる可能性があります。</p>
+<p>文字列属性を作成するための手順は以下の通りです：</p>
 <ol>
 <li>
-<p><strong>AudienceStream &gt; Visitor/Visit Attributes</strong>に移動します。</p>
+<p><strong>AudienceStream &gt; 訪問者/訪問属性</strong>に移動します。</p>
 </li>
 <li>
-<p><strong>+ Add Attribute</strong>をクリックします。</p>
+<p><strong>+ 属性を追加</strong>をクリックします。</p>
 </li>
 <li>
-<p>Add Attributeダイアログで、スコープに<strong>Visitor</strong>を選択し、<strong>Continue</strong>をクリックします。</p>
+<p>属性の追加ダイアログで、スコープに<strong>訪問者</strong>を選択し、<strong>続行</strong>をクリックします。</p>
 </li>
 <li>
-<p><strong>Choose a data type</strong>で<strong>String</strong>を選択し、<strong>Continue</strong>をクリックします。<br>
+<p><strong>データタイプを選択</strong>で、<strong>文字列</strong>を選択し、<strong>続行</strong>をクリックします。<br>
 <figure><a class="slb" href="/images/server-side/as-add-attribute-2.png"><img src="/images/server-side/as-add-attribute-2.png"
              alt="AS-add-attribute-2.png"
              title="AS-add-attribute-2.png"/>
@@ -558,47 +557,47 @@ var utag_data = {
     </figure></p>
 </li>
 <li>
-<p><strong>Add Attribute</strong>ダイアログで、<strong>Title</strong>を入力し、必要に応じて<strong>Notes</strong>を入力します。</p>
+<p><strong>属性の追加</strong>ダイアログで、<strong>タイトル</strong>を入力し、必要に応じて<strong>ノート</strong>を入力します。</p>
 </li>
 <li>
-<p><strong>Add Enrichment</strong>をクリックし、<strong>Set String</strong>を選択します。<figure><a class="slb" href="/images/server-side/as-addenrichment.png"><img src="/images/server-side/as-addenrichment.png"
+<p><strong>エンリッチメントを追加</strong>をクリックし、<strong>文字列を設定</strong>を選択します。<figure><a class="slb" href="/images/server-side/as-addenrichment.png"><img src="/images/server-side/as-addenrichment.png"
          alt="AS-AddEnrichment.png"
          title="AS-AddEnrichment.png"/>
     </a>
 </figure></p>
 </li>
 <li>
-<p><strong>Set String</strong>ダイアログで、<strong>Set String to</strong>に<code>customer_id</code>を選択します。</p>
+<p><strong>文字列を設定</strong>ダイアログで、<strong>文字列を設定する</strong>に<code>customer_id</code>を選択します。</p>
 </li>
 <li>
-<p><strong>WHEN</strong>に<strong>ANY EVENT</strong>を選択します。</p>
+<p><strong>WHEN</strong>には、<strong>ANY EVENT</strong>を選択します。</p>
 </li>
 <li>
-<p><strong>Choose a rule</strong>フィールドで、ステップ1で作成したルールを選択します。</p>
+<p><strong>ルールを選択</strong>フィールドで、ステップ1で作成したルールを選択します。</p>
 </li>
 <li>
-<p><strong>Finish</strong>をクリックします。</p>
+<p><strong>完了</strong>をクリックします。</p>
 </li>
 </ol>
 <h2 id="ステップ3-本番環境に公開する">ステップ3: 本番環境に公開する</h2>
-<p>ルールと属性を保存し、本番環境に公開します。これにより、AudienceStreamがデータの収集を開始します。ウェブサイトのユーザー数と収集されるデータの種類により、AudienceStreamでデータを確認できるまでの待ち時間が決まります。すべての訪問に利用可能なファーストパーティクッキーを使用している場合、データは15分以内に表示されるはずです。</p>
+<p>ルールと属性を保存し、本番環境に公開します。これにより、AudienceStreamがデータの収集を開始します。ウェブサイトのユーザー数と収集されるデータの種類により、AudienceStreamでデータを確認できるまでの待ち時間が決まります。すべての訪問者に利用可能なファーストパーティクッキーを使用している場合、データは15分以内に表示されるはずです。</p>
 <h2 id="ステップ4-データを確認する">ステップ4: データを確認する</h2>
-<p>選択した属性が一意であることを確認するために、Audience Discoveryを使用して、アクティブな訪問全体での属性の値の分布を表示します。詳細については、<a href="/server-side/audiences/audience-discovery/">Audience discovery</a>を参照してください。</p>
-<p><strong>不適切な訪問の文字列属性</strong></p>
-<p>不適切な訪問の文字列属性とは、同じ値を持つユーザーが何百人もいるものを指します。ステッチが有効になっている場合、これらのユーザーはすべて単一の訪問プロファイルに結合されますが、これは明らかに誤りです。</p>
-<p>例えば、&ldquo;unknown&quot;のインスタンスが複数見られる場合、そのインスタンスを除外する条件をルールに追加できます。訪問の文字列属性の値が同じである訪問が多数いる場合は、文字列属性を構成するための別のユーザー識別子を選択し、結果を再度確認します。</p>
-<p><strong>適切な訪問の文字列属性</strong></p>
-<p>適切な訪問の文字列属性の場合、同じ値を持つユーザーは一部のサンプルだけです。&ldquo;none&quot;の値を持つユーザーが複数いるかもしれませんが、これはすべての訪問が値を持っているわけではないので、これは正常です。訪問が同じ値を持つ理由を判断するのは難しいかもしれません。訪問の2%未満が同じ訪問の文字列属性を割り当てられている場合、選択したユーザー識別子を使用して訪問ID属性を構成し、訪問のステッチを有効にすることは問題ありません。</p>
-<h3 id="ステップ5-訪問id属性を作成する">ステップ5: 訪問ID属性を作成する</h3>
-<p>適切な訪問の文字列属性を持っていることを確認した後、訪問ID属性を作成します。訪問IDを検証に使用した文字列属性に構成し、新しく作成したルールを選択します。保存し、本番環境に公開してデータの記録を開始します。</p>
-<h3 id="ステップ6-訪問のステッチを有効にする">ステップ6: 訪問のステッチを有効にする</h3>
-<p>訪問ID属性を作成した後、<a href="https://support.tealiumiq.com/">Support Deskを訪問</a>して、アカウントで訪問のステッチを有効にするようリクエストします。</p>
-<h3 id="トレースを使用して動作を確認する">トレースを使用して動作を確認する</h3>
-<p>構成がライブになった後、ステッチの例は次のようになります：</p>
+<p>選択した属性が一意であることを確認するために、Audience Discoveryを使用して、アクティブな訪問者全体での属性値の分布を表示します。詳細については、<a href="/server-side/audiences/audience-discovery/">Audience discovery</a>を参照してください。</p>
+<p><strong>良くない訪問者の文字列属性</strong></p>
+<p>良くない訪問者の文字列属性とは、同じ値を持つユーザーが何百人もいるものを指します。ステッチが有効になっている場合、これらのユーザーはすべて一つの訪問者プロファイルに結合されることになり、これは明らかに誤りです。</p>
+<p>例えば、&ldquo;unknown&quot;のインスタンスが複数見られる場合、そのインスタンスを除外する条件をルールに追加できます。訪問者の文字列属性の値が同じである訪問者が多い場合は、文字列属性を設定するための別のユーザー識別子を選択し、結果を再度確認します。</p>
+<p><strong>良い訪問者の文字列属性</strong></p>
+<p>良い訪問者の文字列属性の場合、同じ値を持つユーザーは一部のサンプルだけです。&ldquo;none&quot;の値を持つユーザーが複数いることがありますが、これはすべての訪問者が値を持っているわけではないので、これは正常です。訪問者が同じ値を持つ理由を判断するのは難しいかもしれません。訪問者の2%以下が同じ訪問者の文字列属性を割り当てられている場合、選択したユーザー識別子を使用して訪問者ID属性を設定し、訪問者のステッチを有効にすることができます。</p>
+<h2 id="ステップ5-訪問者id属性を作成する">ステップ5: 訪問者ID属性を作成する</h2>
+<p>良い訪問者の文字列属性を持っていることを確認した後、訪問者ID属性を作成します。訪問者IDを検証に使用した文字列属性に設定し、新しく作成したルールを選択します。保存し、本番環境に公開してデータの記録を開始します。</p>
+<h2 id="ステップ6-訪問者のステッチを有効にする">ステップ6: 訪問者のステッチを有効にする</h2>
+<p>訪問者ID属性を作成した後、<a href="https://support.tealiumiq.com/">サポートデスクを訪問</a>して、アカウントで訪問者のステッチを有効にするようにリクエストします。</p>
+<h2 id="トレースを使用して動作を確認する">トレースを使用して動作を確認する</h2>
+<p>設定がライブになった後、ステッチの例は次のようになります：</p>
 <ol>
-<li>訪問が自分のコンピューターでウェブサイトにログインします。訪問プロファイルAが作成され、訪問ID属性がキャプチャされます。最終的にセッションは終了します。</li>
-<li>同じ訪問が後でモバイルデバイスからウェブサイトにログインします。訪問プロファイルBが作成され、訪問ID属性がキャプチャされます。</li>
-<li>AudienceStreamは、プロファイルAとプロファイルBが訪問ID属性の同じ値を共有していることを判断し、両方のプロファイルがステッチされてプロファイルCにマージされます。</li>
+<li>訪問者が自分のコンピュータでウェブサイトにログインします。訪問者プロファイルAが作成され、訪問者ID属性がキャプチャされます。最終的にセッションは終了します。</li>
+<li>同じ訪問者が後でモバイルデバイスからウェブサイトにログインします。訪問者プロファイルBが作成され、訪問者ID属性がキャプチャされます。</li>
+<li>AudienceStreamは、プロファイルAとプロファイルBが訪問者ID属性の同じ値を共有していることを判断し、両方のプロファイルがステッチされてプロファイルCにマージされます。</li>
 </ol>
 
 </div>
@@ -676,11 +675,11 @@ var utag_data = {
       <p class="b ttu">このページで</p>
       <nav id="TableOfContents"><ul class="toc-h2"><li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E9%96%8B%E5%A7%8B%E3%81%99%E3%82%8B%E5%89%8D%E3%81%AB" href="javascript:void(0)">開始する前に</a></li>
               <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%82%B9%E3%83%86%E3%83%83%E3%83%971-%E3%83%AB%E3%83%BC%E3%83%AB%E3%82%92%E4%BD%9C%E6%88%90%E3%81%99%E3%82%8B" href="javascript:void(0)">ステップ1: ルールを作成する</a></li>
-              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%82%B9%E3%83%86%E3%83%83%E3%83%972-%E8%A8%AA%E5%95%8F%E3%81%AE%E6%96%87%E5%AD%97%E5%88%97%E5%B1%9E%E6%80%A7%E3%82%92%E4%BD%9C%E6%88%90%E3%81%99%E3%82%8B" href="javascript:void(0)">ステップ2: 訪問の文字列属性を作成する</a></li>
+              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%82%B9%E3%83%86%E3%83%83%E3%83%972-%E8%A8%AA%E5%95%8F%E8%80%85%E3%81%AE%E6%96%87%E5%AD%97%E5%88%97%E5%B1%9E%E6%80%A7%E3%82%92%E4%BD%9C%E6%88%90%E3%81%99%E3%82%8B" href="javascript:void(0)">ステップ2: 訪問者の文字列属性を作成する</a></li>
               <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%82%B9%E3%83%86%E3%83%83%E3%83%973-%E6%9C%AC%E7%95%AA%E7%92%B0%E5%A2%83%E3%81%AB%E5%85%AC%E9%96%8B%E3%81%99%E3%82%8B" href="javascript:void(0)">ステップ3: 本番環境に公開する</a></li>
               <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%82%B9%E3%83%86%E3%83%83%E3%83%974-%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%99%E3%82%8B" href="javascript:void(0)">ステップ4: データを確認する</a></li>
-              <ul class="toc-h3"><li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%82%B9%E3%83%86%E3%83%83%E3%83%975-%E8%A8%AA%E5%95%8Fid%E5%B1%9E%E6%80%A7%E3%82%92%E4%BD%9C%E6%88%90%E3%81%99%E3%82%8B" href="javascript:void(0)">ステップ5: 訪問ID属性を作成する</a></li>
-              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%82%B9%E3%83%86%E3%83%83%E3%83%976-%E8%A8%AA%E5%95%8F%E3%81%AE%E3%82%B9%E3%83%86%E3%83%83%E3%83%81%E3%82%92%E6%9C%89%E5%8A%B9%E3%81%AB%E3%81%99%E3%82%8B" href="javascript:void(0)">ステップ6: 訪問のステッチを有効にする</a></li>
+              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%82%B9%E3%83%86%E3%83%83%E3%83%975-%E8%A8%AA%E5%95%8F%E8%80%85id%E5%B1%9E%E6%80%A7%E3%82%92%E4%BD%9C%E6%88%90%E3%81%99%E3%82%8B" href="javascript:void(0)">ステップ5: 訪問者ID属性を作成する</a></li>
+              <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%82%B9%E3%83%86%E3%83%83%E3%83%976-%E8%A8%AA%E5%95%8F%E8%80%85%E3%81%AE%E3%82%B9%E3%83%86%E3%83%83%E3%83%81%E3%82%92%E6%9C%89%E5%8A%B9%E3%81%AB%E3%81%99%E3%82%8B" href="javascript:void(0)">ステップ6: 訪問者のステッチを有効にする</a></li>
               <li class="mv2 f6"><a class="w-100 text-color-primary hover-primary-color link" data-id="#%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B9%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%A6%E5%8B%95%E4%BD%9C%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%99%E3%82%8B" href="javascript:void(0)">トレースを使用して動作を確認する</a></li>
               </nav>
   </aside></nav>

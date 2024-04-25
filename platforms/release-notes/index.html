@@ -296,17 +296,17 @@ var utag_data = {
           
 
           <h2 class="rn-section" id="tealium-universal-tag-utagjs-リリースノート"><a href="/platforms/javascript/release-notes/">Tealium Universal Tag (utag.js) リリースノート</a></h2>
-          <p><a href="https://support.tealiumiq.com/en/support/solutions/articles/36000363470">最新の修正と改善を活用するために、<code>utag.js</code> テンプレートを更新</a>してください。</p>
-<h3 id="utagjs-バージョン-450-以降への更新"><code>utag.js</code> バージョン 4.50 以降への更新</h3>
+          <p><a href="https://support.tealiumiq.com/en/support/solutions/articles/36000363470">最新の修正と改善を活用するために <code>utag.js</code> テンプレートを更新</a>してください。</p>
+<div class="f3"id="utagjs-バージョン-450-以降への更新"><code>utag.js</code> バージョン 4.50 以降への更新</div>
 <p>バージョン 4.50 以降に更新する際には、以下の手順をお勧めします。</p>
 <p class="note"><i class="fa fa-exclamation-triangle"></i>Tealium Collect タグとすべてのアクティブな同意管理テンプレート、特にイベントログ機能を更新してください。</p>
 <ul>
 <li>
-<p>同じサイトで複数の iQ プロファイルを実行している場合、サイト上のすべての <code>utag.js</code> テンプレートを最新バージョンに更新するために、次の手順を実行してください。</p>
+<p>同じサイトで複数の iQ プロファイルを実行している場合、サイト上のすべての <code>utag.js</code> テンプレートが新しいクッキーの動作を同時に使用するようにするために、次の手順を完了してください。これにより、競合や互換性の問題が防止されます。</p>
 <ol>
-<li>すべての <code>utag.js</code> テンプレートを最新バージョンに更新します。</li>
-<li>各プロファイルの <a href="/platforms/javascript/settings/#split_cookie"><code>split_cookie</code></a> オーバーライドを <code>false</code> に設定して、レガシーのクッキー動作を使用し、サイト上で引き続き実行されている古いバージョンの utag.js との互換性を維持します。</li>
-<li>すべての <code>utag.js</code> テンプレートが更新され、レガシーのクッキー動作を維持するために <code>split_cookie</code> オーバーライドが設定されている場合、すべてのプロファイルからクッキーオーバーライドを同時に削除できます。</li>
+<li>すべての <code>utag.js</code> テンプレートを最新バージョンに更新してください。</li>
+<li>各プロファイルの <a href="/platforms/javascript/settings/#split_cookie"><code>split_cookie</code></a> オーバーライドを <code>false</code> に設定して、レガシーのクッキーの動作を使用し、サイト上でまだ実行されている古いバージョンの utag.js との互換性を維持します。</li>
+<li>すべての <code>utag.js</code> テンプレートが更新され、レガシーのクッキーの動作を維持するために <code>split_cookie</code> オーバーライドが設定されている場合、すべてのプロファイルからクッキーオーバーライドを同時に削除できます。</li>
 </ol>
 </li>
 <li>
@@ -318,19 +318,20 @@ var utag_data = {
 </li>
 </ul>
 <p>詳細については、<a href="/platforms/javascript/settings/#always_set_v_id">Settings: <code>always_set_v_id</code></a>を参照してください。</p>
-<div class="f3"id="2023年9月">2023年9月</div>
-<h3 id="451">4.51</h3>
+<div class="f3"id="451">4.51</div>
+<p>(2023年9月)</p>
 <ul>
-<li><code>utag.js</code> バージョン 4.50 を使用している場合の特定のブラウザとタイムゾーン/地域設定でのクッキーの有効期限の問題を修正しました。</li>
+<li><code>utag.js</code> バージョン 4.50 を使用した場合の特定のブラウザとタイムゾーン/地域設定でのクッキーの有効期限の問題を修正しました。</li>
 </ul>
-<h3 id="450">4.50</h3>
-<p>バージョン 4.50 では、<code>utag.js</code> によって書き込まれるクッキーに関する透明性と制御が向上しています。</p>
-<p>以前は、マルチバリュークッキー（マルチクッキー）の使用を推奨していました。しかし、データプライバシーの監査などの透明性とシンプルさへの要求の増加に伴い、推奨事項を見直しました。現在は、スタンドアロンのクッキーを使用することを推奨しており、これが <code>utag.js</code> のデフォルトの動作になっています。</p>
+<div class="f3"id="450">4.50</div>
+<p>(2023年9月)</p>
+<p>バージョン 4.50 では、<code>utag.js</code> によって書き込まれるクッキーに対してより多くの透明性と制御が提供されます。</p>
+<p>以前は、マルチバリュークッキー（マルチクッキー）の使用を推奨していました。しかし、データプライバシーオーディットなどの透明性とシンプルさへの要求の増加により、推奨事項を見直しました。現在は、スタンドアロンのクッキーを使用することを推奨しており、これが <code>utag.js</code> のデフォルトの動作になっています。</p>
 <p>このリリースには、以下の更新が含まれています。</p>
 <ul>
-<li>複数の個別の <code>utag_main</code> クッキーを書き込むようになりました。複数の値を単一のクッキーに格納する従来の動作を使用するには、<a href="/platforms/javascript/settings/#split_cookie"><code>split_cookie</code></a> を <code>false</code> に設定してください。</li>
-<li><code>utag_main_v_id</code> の責任を <code>utag.js</code> から Tealium Collect タグに移しました。<code>utag.js</code> が <code>utag_main_v_id</code> クッキーを設定するようにするには、<a href="/platforms/javascript/settings/#always_set_v_id"><code>always_set_v_id</code></a> を <code>true</code> に設定してください。</li>
-<li>同意管理クッキーのログ記録用に同意マネージャークッキーに新しい <code>id</code> 要素を追加しました。このクッキーが最初に設定されると、見つかったすべての <code>utag_main_v_id</code> の値と一致しますが、その後は変更されません。この動作は、ユーザーとログ記録されたイベントの間のリンクを維持することを優先するものですが、すべての場合で一致が保証されるわけではありません。</li>
+<li>単一のマルチバリュークッキーではなく、個別の <code>utag_main</code> クッキーを書き込みます。複数の値を単一のクッキーに格納する従来の動作を使用するには、<a href="/platforms/javascript/settings/#split_cookie"><code>split_cookie</code></a> を <code>false</code> に設定してください。</li>
+<li><code>utag_main_v_id</code> の責任を <code>utag.js</code> から Tealium Collect タグに移します。<code>utag.js</code> が <code>utag_main_v_id</code> クッキーを設定するようにするには、<a href="/platforms/javascript/settings/#always_set_v_id"><code>always_set_v_id</code></a> を <code>true</code> に設定してください。</li>
+<li>同意管理クッキーのログ記録のための同意マネージャクッキーに新しい <code>id</code> 要素を追加します。このクッキーが最初に設定されると、見つかったすべての <code>utag_main_v_id</code> の値と一致しますが、その後は変更されません。この動作は、ユーザーとログ記録されたイベントのリンクを維持することを優先するものですが、すべての場合で一致が保証されるわけではありません。</li>
 <li>関連する <a href="/iq-tag-management/templates/about/">テンプレート</a> を更新することで簡単にアップグレードできます。</li>
 <li>次の utag 設定を追加しました：
 <ul>
@@ -341,12 +342,12 @@ var utag_data = {
 </li>
 <li>次のテンプレートを更新しました：
 <ul>
-<li><code>utag.js</code> (<code>loader</code>) をバージョン 4.50 に更新してクッキーの動作を更新</li>
-<li><code>cmGeneral</code> をバージョン 3.0.12 に更新して、同意ログテンプレートからデバイス ID を生成または取得するための集中ロジックを追加</li>
-<li><code>cmDoNotSell</code> をバージョン 1.4.0 に更新して、集中ロジックを呼び出す</li>
-<li><code>fullConsentEventHandler</code> をバージョン 1.0.3 に更新して、集中ロジックを呼び出す</li>
-<li><code>partialConsentEventHandler</code> をバージョン 1.0.3 に更新して、集中ロジックを呼び出す</li>
-<li><code>Collect</code> をバージョン <code>tv:20064.20230519</code>（2023年5月にリリース）に更新</li>
+<li><code>utag.js</code> (<code>loader</code>) をバージョン 4.50 に更新して、クッキーの動作を更新します。</li>
+<li><code>cmGeneral</code> をバージョン 3.0.12 に更新して、同意ログテンプレートからデバイス ID を生成または取得するための集中ロジックを追加します。</li>
+<li><code>cmDoNotSell</code> をバージョン 1.4.0 に更新して、集中ロジックを呼び出します。</li>
+<li><code>fullConsentEventHandler</code> をバージョン 1.0.3 に更新して、集中ロジックを呼び出します。</li>
+<li><code>partialConsentEventHandler</code> をバージョン 1.0.3 に更新して、集中ロジックを呼び出します。</li>
+<li><code>Collect</code> をバージョン <code>tv:20064.20230519</code>（2023年5月にリリース）に更新します。</li>
 </ul>
 </li>
 </ul>

@@ -342,7 +342,7 @@ var utag_data = {
         <a href="/server-side/visitor-stitching/visitor-id-attribute/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".visitor-id-attribute">ビジターID属性</a></li><li data-level="3" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
         <a href="/server-side/visitor-stitching/diagram/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".visitor-stitching-example">訪問のスティッチング例</a></li><li data-level="3" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
         <a href="/server-side/visitor-stitching/guidelines/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".visitor-stitching-guidelines">ビジタースティッチングのガイドライン</a></li><li data-level="3" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
-        <a href="/server-side/visitor-stitching/create-a-visitor-id-attribute/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".create-visitor-id-attribute">訪問ID属性を作成する</a></li><li data-level="3" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
+        <a href="/server-side/visitor-stitching/create-a-visitor-id-attribute/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".create-visitor-id-attribute">訪問者ID属性を作成する</a></li><li data-level="3" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
         <a href="/server-side/visitor-stitching/scenarios/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".visitor-stitching-scenarios">訪問のスティッチングシナリオ</a></li><li data-level="3" class="relative w-100 hover-accent-color-light fw4 f5  ind2">
         <a href="/server-side/visitor-stitching/tapid/" class="db link pr2 pv2  text-color-primary hover-primary-color " data-target=".about-tapid-cookies">TAPIDクッキーについて</a></li></ul>
       </li><li class="relative w-100 fw8 f5  active">
@@ -522,12 +522,14 @@ var utag_data = {
 <li>関数は32 MBのメモリを持っています。<br>
 関数が32 MB以上のメモリを使用しようとすると、以下のエラーがログに書き込まれます：<br>
 <code>Exception 400 BAD REQUEST - OutOfMemoryError: memory limit 32 mb is exceeded.</code></li>
+<li>最大関数サイズは64 KBで、これは約1500行のコードに相当します。<br>
+64 KB以上の関数は、サイズが縮小されるまで保存することはできません。</li>
 </ul>
 <h3 id="ランタイムバージョン">ランタイムバージョン</h3>
 <p>関数の実行環境、つまりランタイムバージョンは、関数のタイプにより異なります：</p>
 <ul>
-<li><strong>データ変換関数</strong> – 現在のランタイムバージョンはTransformation V0です。詳細は、<a href="/server-side/functions/data-transformation-functions/about/">データ変換関数について</a>を参照してください。</li>
-<li><strong>イベントとビジター関数</strong> – 最新のランタイムバージョンはAction V3です。既存の関数はAction V2を使用しており、これは非推奨です。詳細は以下を参照してください：
+<li><strong>データ変換関数</strong> – 現在のランタイムバージョンはTransformation V0です。詳細については、<a href="/server-side/functions/data-transformation-functions/about/">データ変換関数について</a>を参照してください。</li>
+<li><strong>イベントとビジター関数</strong> – 最新のランタイムバージョンはAction V3です。既存の関数はAction V2を使用しており、これは非推奨です。詳細については、以下を参照してください：
 <ul>
 <li><a href="/server-side/functions/event-visitor-functions/v2-functions/">イベントとビジター関数 V2</a></li>
 <li><a href="/server-side/functions/event-visitor-functions/event-visitor-v3/">イベントとビジター関数 V3</a></li>
@@ -535,53 +537,51 @@ var utag_data = {
 </ul>
 </li>
 </ul>
-<p>関数のランタイムバージョンは、コードエディタのコードタブに表示されます。以下に示すように：<figure><a class="slb" href="/images/server-side/functions-runtime-version-location.png"><img src="/images/server-side/functions-runtime-version-location.png"
-         alt="functions-runtime-version-location.png"
-         title="functions-runtime-version-location.png"/>
+<p>関数のランタイムバージョンは、コードエディタのコードタブに表示されます。以下に示すように：<figure><a class="slb" href="/images/server-side/functions-runtime-version-location.png"><img src="/images/server-side/functions-runtime-version-location.png"/>
     </a>
 </figure></p>
 <p>ランタイムバージョンは新機能を提供するために更新されることがあります。新しいランタイムバージョンが利用可能になると、以下のようなメッセージが<strong>関数概要</strong>ページに表示されます：<figure><a class="slb" href="/images/server-side/functions-new-runtime-available.png"><img src="/images/server-side/functions-new-runtime-available.png"
-         alt="functions-runtime-version-location.png"
-         title="functions-runtime-version-location.png"/>
+         alt="新しいランタイムバージョンが利用可能であることを示す警告メッセージ。更新の名前と概要が含まれています。"
+         title="新しいランタイムバージョンが利用可能であることを示す警告メッセージ。更新の名前と概要が含まれています。"/>
     </a>
 </figure></p>
-<p>Tealiumが新しいランタイムバージョンをリリースすると、古いバージョンは非推奨となり、最終的には廃止されます。使用中のランタイムバージョンが非推奨になったり、廃止されたりした場合、<strong>関数概要</strong>画面と関数の<strong>コード</strong>タブにメッセージが表示されます。</p>
+<p>Tealiumが新しいランタイムバージョンをリリースすると、古いバージョンは非推奨となり、最終的には廃止されます。ランタイムバージョンが非推奨になったり廃止されたりした場合、<strong>関数概要</strong>画面と関数の<strong>コード</strong>タブにメッセージが表示されます。</p>
 <h2 id="データ変換関数の実行時間制限">データ変換関数の実行時間制限</h2>
 <p>データ変換関数には以下の実行制限があります：</p>
 <ul>
 <li>1分あたりの実行時間は1時間 OR</li>
 <li>1分あたりの呼び出し回数は250,000回（1時間あたり15mm）</li>
-<li>各関数の呼び出しに対する実行時間は150ミリ秒<br>
+<li>各関数呼び出しの実行時間は150ミリ秒<br>
 関数が150ミリ秒の実行時間を超えると、以下のエラーがログに書き込まれます：<br>
 <code>Invocation timeout limit of 150 milliseconds is exceeded</code></li>
 </ul>
-<p>これらの実行制限は、アカウントと地域に基づいています。アカウントのすべての関数の実行時間と呼び出し回数の合計は、これらの制限を超えることはできません。</p>
-<p>いずれかの制限を超えると、関数の実行が一時的に停止（スロットル）されます。以下のメッセージが<strong>関数概要</strong>に表示され、スロットルされた関数の隣には黄色の警告アイコンが表示されます：</p>
+<p>これらの実行制限は、アカウントと地域に基づいています。アカウントの地域におけるすべての関数の実行時間と呼び出し回数の合計は、これらの制限を超えることはできません。</p>
+<p>いずれかの制限を超えると、関数の実行は一時的に停止（スロットリング）されます。以下のメッセージが<strong>関数概要</strong>に表示され、スロットリングされた関数の隣には黄色の警告アイコンが表示されます：</p>
 <figure><a class="slb" href="/images/server-side/throttle-msg.png"><img src="/images/server-side/throttle-msg.png"
-         alt="throttle-msg.png"
-         title="throttle-msg.png"/>
+         alt="過去24時間で、プロファイルの一部の関数がレート制限に達し、スロットリングされています。"
+         title="過去24時間で、プロファイルの一部の関数がレート制限に達し、スロットリングされています。"/>
     </a>
 </figure>
-<p>スロットルされた関数の詳細を表示する方法については、<a href="/server-side/functions/manage-functions/view-function-statistics/">関数統計を表示する</a>を参照してください。</p>
+<p>スロットリングされた関数の詳細を表示する方法については、<a href="/server-side/functions/manage-functions/view-function-statistics/">関数統計を表示する</a>を参照してください。</p>
 <h2 id="イベントとビジター関数の実行時間制限">イベントとビジター関数の実行時間制限</h2>
 <p>イベントとビジター関数には以下の実行制限があります：</p>
 <ul>
 <li>実行レート：1分あたり180,000イベント</li>
 <li>実行時間：1分あたり8時間</li>
-<li>各関数の呼び出しに対する実行時間：10秒<br>
+<li>各関数呼び出しの実行時間：10秒<br>
 関数が10秒の実行時間を超えると、以下のエラーがログに書き込まれます：<br>
 <code>Exception 504 - Invocation timeout limit of 10000 milliseconds is exceeded.</code></li>
 </ul>
 <h2 id="実行レートと実行時間例1">実行レートと実行時間：例1</h2>
-<p>この例では、外部APIと通信する関数が1回の呼び出しにつき約100 msかかると仮定します。また、アカウントに構成されている関数が1つだけで、この関数の平均実行レートは1秒あたり1000回の呼び出しとします。</p>
+<p>この例では、外部APIと通信する関数が呼び出し毎に約100 msかかると仮定します。また、アカウントに設定されている関数は1つだけで、この関数の平均実行レートは1秒あたり1000回の呼び出しとします。</p>
 <p>1分間の時間窓内での実行レートと実行時間は以下の通りです：</p>
-<p>実行レート = 1000 * 60 * 1分 = <strong>1分あたりの呼び出し回数は60,000回</strong></p>
+<p>実行レート = 1000 * 60 * 1分 = <strong>1分あたりの実行レートは60,000回の呼び出し</strong></p>
 <p>実行時間 = 1000回/秒 * 100 ms / 1000 = 100分 = <strong>1分あたりの実行時間は1.66時間</strong></p>
 <p>この場合、実行レートと実行時間はどちらも制限以下です。</p>
 <h2 id="実行レートと実行時間例2">実行レートと実行時間：例2</h2>
-<p>この例では、一時的に外部APIのパフォーマンスが低下し、関数の実行時間が1回の呼び出しにつき800 msになると仮定します。つまり、実行時間が8倍に増えます。</p>
+<p>この例では、外部APIのパフォーマンスが一時的に低下し、関数の実行時間が呼び出し毎に800 msになると仮定します。つまり、実行時間が8倍に増加します。</p>
 <p>実行時間 = (1000回/秒 * 100 ms / 1000) * 8 = 800分 = <strong>1分あたりの実行時間は13.28時間</strong>。</p>
-<p>この場合、実行時間は1分あたり13.28時間で、これは最大の8時間/分を超えています。関数の呼び出しはスロットルされる可能性があります。</p>
+<p>この場合の実行時間は1分あたり13.28時間で、これは最大8時間/分を超えています。関数の呼び出しはスロットリングされる可能性があります。</p>
 
 </div>
 
